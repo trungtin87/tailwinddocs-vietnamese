@@ -3,23 +3,23 @@ import Logo from "@/docs/img/guides/parcel.react.svg";
 
 export let tile: Tile = {
   title: "Parcel",
-  description: "The zero-configuration build tool for the web.",
+  description: "Công cụ build không cần cấu hình cho web.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Parcel",
-  description: "Setting up Tailwind CSS in a Parcel project.",
+  title: "Cài đặt Tailwind CSS với Parcel",
+  description: "Thiết lập Tailwind CSS trong dự án Parcel.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Parcel project if you don’t have one set up already. The most common approach is to add
-        Parcel as a dev-dependency to your project as outlined in their{" "}
-        <a href="https://parceljs.org/getting-started/webapp/">getting started guide</a>.
+        Bắt đầu bằng cách tạo một dự án Parcel mới nếu bạn chưa thiết lập. Cách phổ biến nhất là thêm
+        Parcel như một dev-dependency vào dự án như được mô tả trong{" "}
+        <a href="https://parceljs.org/getting-started/webapp/">hướng dẫn bắt đầu</a> của họ.
       </p>
     ),
     code: {
@@ -36,10 +36,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/postcss</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/postcss</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -51,10 +51,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure PostCSS",
+    title: "Cấu hình PostCSS",
     body: (
       <p>
-        Create a <code>.postcssrc</code> file in your project root, and enable the <code>@tailwindcss/postcss</code>{" "}
+        Tạo file <code>.postcssrc</code> trong thư mục gốc dự án, và bật plugin <code>@tailwindcss/postcss</code>{" "}
         plugin.
       </p>
     ),
@@ -74,7 +74,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Create a <code>./src/index.css</code> file and add an <code>@import</code> for Tailwind CSS.
+        Tạo file <code>./src/index.css</code> và thêm <code>@import</code> cho Tailwind CSS.
       </p>
     ),
     code: {
@@ -86,10 +86,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>npx parcel src/index.html</code>.
+        Chạy quá trình build với <code>npx parcel src/index.html</code>.
       </p>
     ),
     code: {
@@ -101,11 +101,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
     body: (
       <p>
-        Add your CSS file to the <code>{"<head>"}</code> and start using Tailwind’s utility classes to style your
-        content.
+        Thêm file CSS vào <code>{"<head>"}</code> và bắt đầu sử dụng các utility class của Tailwind để style
+        nội dung của bạn.
       </p>
     ),
     code: {

@@ -4,23 +4,23 @@ import LogoDark from "@/docs/img/guides/tanstack-white.react.svg";
 
 export let tile: Tile = {
   title: "TanStack Start",
-  description: "Full-stack Framework powered by TanStack Router for React and Solid.",
+  description: "Framework full-stack được hỗ trợ bởi TanStack Router cho React và Solid.",
   Logo,
   LogoDark,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with TanStack Start",
-  description: "Setting up Tailwind CSS in a TanStack Start project.",
+  title: "Cài đặt Tailwind CSS với TanStack Start",
+  description: "Thiết lập Tailwind CSS trong dự án TanStack Start.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create project",
+    title: "Tạo dự án",
     body: (
       <p>
-        Start by creating a new TanStack Start project if you don’t have one set up already. The most common approach is
-        to use <a href="https://tanstack.com/start/latest/docs/framework/react/overview">Create Start App</a>.
+        Bắt đầu bằng cách tạo một dự án TanStack Start mới nếu bạn chưa thiết lập. Cách phổ biến nhất là
+        sử dụng <a href="https://tanstack.com/start/latest/docs/framework/react/overview">Create Start App</a>.
       </p>
     ),
     code: {
@@ -33,10 +33,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/vite</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/vite</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -48,10 +48,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure Vite Plugin",
+    title: "Cấu hình Vite Plugin",
     body: (
       <p>
-        Add the <code>@tailwindcss/vite</code> plugin to your Vite configuration.
+        Thêm plugin <code>@tailwindcss/vite</code> vào cấu hình Vite của bạn.
       </p>
     ),
     code: {
@@ -79,7 +79,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to <code>./src/styles.css</code> that imports Tailwind CSS.
+        Thêm <code>@import</code> vào <code>./src/styles.css</code> để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -91,10 +91,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Import the CSS file in your root route",
+    title: "Import file CSS vào root route",
     body: (
       <p>
-        Import the CSS file in your <code>__root.tsx</code> file with the <code>?url</code> query.
+        Import file CSS vào file <code>__root.tsx</code> của bạn với query <code>?url</code>.
       </p>
     ),
     code: {
@@ -121,15 +121,15 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "src/routes/index.tsx",
       lang: "tsx",
       code: js`
         import { createFileRoute } from '@tanstack/react-router'
 
-        export const Route = createFileRoute('/')({
+        export const Route = createFileRoute('/')(({
           component: App,
         })
 

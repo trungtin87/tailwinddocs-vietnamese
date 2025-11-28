@@ -4,22 +4,22 @@ import LogoDark from "@/docs/img/guides/angular-white.react.svg";
 
 export let tile: Tile = {
   title: "Angular",
-  description: "Platform for building mobile and desktop web applications.",
+  description: "Nền tảng để xây dựng ứng dụng web cho mobile và desktop.",
   Logo,
   LogoDark,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Angular",
-  description: "Setting up Tailwind CSS in an Angular project.",
+  title: "Cài đặt Tailwind CSS với Angular",
+  description: "Thiết lập Tailwind CSS trong dự án Angular.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Angular project if you don’t have one set up already. The most common approach is to use{" "}
+        Bắt đầu bằng cách tạo một dự án Angular mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng{" "}
         <a href="https://angular.dev/tools/cli/setup-local">Angular CLI</a>.
       </p>
     ),
@@ -33,10 +33,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/postcss</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/postcss</code> và các peer dependencies thông qua npm.
       </p>
     ),
 
@@ -50,11 +50,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure PostCSS Plugins",
+    title: "Cấu hình PostCSS Plugins",
     body: (
       <p>
-        Create a <code>.postcssrc.json</code> file in the root of your project and add the{" "}
-        <code>@tailwindcss/postcss</code> plugin to your PostCSS configuration.
+        Tạo file <code>.postcssrc.json</code> ở thư mục gốc của dự án và thêm plugin{" "}
+        <code>@tailwindcss/postcss</code> vào cấu hình PostCSS của bạn.
       </p>
     ),
     code: {
@@ -74,7 +74,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to <code>./src/styles.css</code> that imports Tailwind CSS.
+        Thêm <code>@import</code> vào <code>./src/styles.css</code> để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -86,10 +86,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>ng serve</code>.
+        Chạy quá trình build với <code>ng serve</code>.
       </p>
     ),
     code: {
@@ -101,8 +101,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "app.component.html",
       lang: "html",

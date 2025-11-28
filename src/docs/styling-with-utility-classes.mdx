@@ -7,12 +7,12 @@ import { MultiCursorAnimation, MultiCursorPreview } from "@/components/multi-cur
 import { MultiCursorCode } from "@/components/multi-cursor/example.tsx";
 import erinLindford from "./img/erin-lindford.jpg";
 
-export const title = "Styling with utility classes";
-export const description = "Building complex components from a constrained set of primitive utilities.";
+export const title = "Styling với utility classes";
+export const description = "Xây dựng các thành phần phức tạp từ một tập hợp hạn chế các tiện ích nguyên thủy.";
 
-## Overview
+## Tổng quan
 
-You style things with Tailwind by combining many single-purpose presentational classes _(utility classes)_ directly in your markup:
+Bạn style các thành phần với Tailwind bằng cách kết hợp nhiều class trình bày đơn mục đích _(utility classes)_ trực tiếp trong markup của bạn:
 
 <Figure>
 
@@ -68,34 +68,34 @@ You style things with Tailwind by combining many single-purpose presentational c
 
 </Figure>
 
-For example, in the UI above we've used:
+Ví dụ, trong UI ở trên chúng tôi đã sử dụng:
 
-- The [display](/docs/display#flex) and [padding](/docs/padding) utilities (`flex`, `shrink-0`, and `p-6`) to control the overall layout
-- The [max-width](/docs/max-width) and [margin](/docs/margin) utilities (`max-w-sm` and `mx-auto`) to constrain the card width and center it horizontally
-- The [background-color](/docs/background-color), [border-radius](/docs/border-radius), and [box-shadow](/docs/box-shadow) utilities (`bg-white`, `rounded-xl`, and `shadow-lg`) to style the card's appearance
-- The [width](/docs/width) and [height](/docs/height) utilities (`size-12`) to set the width and height of the logo image
-- The [gap](/docs/gap) utilities (`gap-x-4`) to handle the spacing between the logo and the text
-- The [font-size](/docs/font-size), [color](/docs/text-color), and [font-weight](/docs/font-weight) utilities (`text-xl`, `text-black`, `font-medium`, etc.) to style the card text
+- Các tiện ích [display](/docs/display#flex) và [padding](/docs/padding) (`flex`, `shrink-0`, và `p-6`) để kiểm soát bố cục tổng thể
+- Các tiện ích [max-width](/docs/max-width) và [margin](/docs/margin) (`max-w-sm` và `mx-auto`) để giới hạn chiều rộng thẻ và căn giữa nó theo chiều ngang
+- Các tiện ích [background-color](/docs/background-color), [border-radius](/docs/border-radius), và [box-shadow](/docs/box-shadow) (`bg-white`, `rounded-xl`, và `shadow-lg`) để style giao diện của thẻ
+- Các tiện ích [width](/docs/width) và [height](/docs/height) (`size-12`) để đặt chiều rộng và chiều cao của hình ảnh logo
+- Các tiện ích [gap](/docs/gap) (`gap-x-4`) để xử lý khoảng cách giữa logo và văn bản
+- Các tiện ích [font-size](/docs/font-size), [color](/docs/text-color), và [font-weight](/docs/font-weight) (`text-xl`, `text-black`, `font-medium`, v.v.) để style văn bản của thẻ
 
-Styling things this way contradicts a lot of traditional best practices, but once you try it you'll quickly notice some really important benefits:
+Việc style theo cách này mâu thuẫn với nhiều best practice truyền thống, nhưng một khi bạn thử nó, bạn sẽ nhanh chóng nhận thấy một số lợi ích thực sự quan trọng:
 
-- **You get things done faster** — you don't spend any time coming up with class names, making decisions about selectors, or switching between HTML and CSS files, so your designs come together very fast.
-- **Making changes feels safer** — adding or removing a utility class to an element only ever affects that element, so you never have to worry about accidentally breaking something another page that's using the same CSS.
-- **Maintaining old projects is easier** — changing something just means finding that element in your project and changing the classes, not trying to remember how all of that custom CSS works that you haven't touched in six months.
-- **Your code is more portable** — since both the structure and styling live in the same place, you can easily copy and paste entire chunks of UI around, even between different projects.
-- **Your CSS stops growing** — since utility classes are so reusable, your CSS doesn't continue to grow linearly with every new feature you add to a project.
+- **Bạn hoàn thành công việc nhanh hơn** — bạn không tốn thời gian nghĩ ra tên class, đưa ra quyết định về selector, hoặc chuyển đổi giữa các file HTML và CSS, vì vậy các thiết kế của bạn được hoàn thiện rất nhanh.
+- **Thực hiện thay đổi cảm thấy an toàn hơn** — thêm hoặc xóa một utility class vào một phần tử chỉ ảnh hưởng đến phần tử đó, vì vậy bạn không bao giờ phải lo lắng về việc vô tình làm hỏng thứ gì đó ở trang khác đang sử dụng cùng một CSS.
+- **Bảo trì các dự án cũ dễ dàng hơn** — thay đổi một cái gì đó chỉ có nghĩa là tìm phần tử đó trong dự án của bạn và thay đổi các class, không phải cố gắng nhớ cách tất cả CSS tùy chỉnh đó hoạt động mà bạn đã không chạm vào trong sáu tháng.
+- **Code của bạn dễ di chuyển hơn** — vì cả cấu trúc và kiểu dáng đều nằm cùng một nơi, bạn có thể dễ dàng sao chép và dán toàn bộ các đoạn UI xung quanh, ngay cả giữa các dự án khác nhau.
+- **CSS của bạn ngừng phát triển** — vì các utility class có khả năng tái sử dụng cao, CSS của bạn không tiếp tục phát triển tuyến tính với mỗi tính năng mới bạn thêm vào dự án.
 
-These benefits make a big difference on small projects, but they are even more valuable for teams working on long-running projects at scale.
+Những lợi ích này tạo ra sự khác biệt lớn trên các dự án nhỏ, nhưng chúng thậm chí còn có giá trị hơn đối với các nhóm làm việc trên các dự án dài hạn ở quy mô lớn.
 
-### Why not just use inline styles?
+### Tại sao không chỉ sử dụng inline styles?
 
-A common reaction to this approach is wondering, “isn’t this just inline styles?” and in some ways it is — you’re applying styles directly to elements instead of assigning them a class name and then styling that class.
+Một phản ứng phổ biến đối với cách tiếp cận này là tự hỏi, "đây không phải chỉ là inline styles sao?" và theo một số cách thì đúng là vậy — bạn đang áp dụng các kiểu trực tiếp vào các phần tử thay vì gán cho chúng một tên class và sau đó style class đó.
 
-But using utility classes has many important advantages over inline styles, for example:
+Nhưng sử dụng utility classes có nhiều lợi thế quan trọng so với inline styles, ví dụ:
 
-- **Designing with constraints** — using inline styles, every value is a magic number. With utilities, you’re choosing styles from a [predefined design system](/docs/theme), which makes it much easier to build visually consistent UIs.
-- **Hover, focus, and other states** — inline styles can’t target states like hover or focus, but Tailwind’s [state variants](/docs/hover-focus-and-other-states) make it easy to style those states with utility classes.
-- **Media queries** — you can’t use media queries in inline styles, but you can use Tailwind’s [responsive variants](/docs/responsive-design) to build fully responsive interfaces easily.
+- **Thiết kế với các ràng buộc** — sử dụng inline styles, mọi giá trị đều là một con số ma thuật. Với các tiện ích, bạn đang chọn các kiểu từ một [hệ thống thiết kế được xác định trước](/docs/theme), điều này giúp xây dựng các UI nhất quán về mặt hình ảnh dễ dàng hơn nhiều.
+- **Hover, focus, và các trạng thái khác** — inline styles không thể nhắm mục tiêu các trạng thái như hover hoặc focus, nhưng các [biến thể trạng thái](/docs/hover-focus-and-other-states) của Tailwind giúp dễ dàng style các trạng thái đó bằng utility classes.
+- **Media queries** — bạn không thể sử dụng media queries trong inline styles, nhưng bạn có thể sử dụng các [biến thể phản hồi](/docs/responsive-design) của Tailwind để xây dựng các giao diện phản hồi hoàn toàn một cách dễ dàng.
 
 This component is fully responsive and includes a button with hover and active styles, and is built entirely with utility classes:
 
@@ -142,11 +142,11 @@ This component is fully responsive and includes a button with hover and active s
 
 </Figure>
 
-## Thinking in utility classes
+## Tư duy theo utility classes
 
-### Styling hover and focus states
+### Style trạng thái hover và focus
 
-To style an element on states like hover or focus, prefix any utility with the state you want to target, for example `hover:bg-sky-700`:
+Để style một phần tử trên các trạng thái như hover hoặc focus, hãy thêm tiền tố tên trạng thái vào bất kỳ tiện ích nào, ví dụ `hover:bg-sky-700`:
 
 <Figure hint="Hover over this button to see the background color change">
 
@@ -167,7 +167,7 @@ To style an element on states like hover or focus, prefix any utility with the s
 
 </Figure>
 
-These prefixes are called [variants](/docs/hover-focus-and-other-states) in Tailwind, and they only apply the styles from a utility class when the condition for that variant matches.
+Các tiền tố này được gọi là [biến thể](/docs/hover-focus-and-other-states) trong Tailwind, và chúng chỉ áp dụng các kiểu từ một utility class khi điều kiện cho biến thể đó khớp.
 
 Here's what the generated CSS looks like for the `hover:bg-sky-700` class:
 
@@ -180,9 +180,9 @@ Here's what the generated CSS looks like for the `hover:bg-sky-700` class:
 }
 ```
 
-Notice how this class does nothing _unless_ the element is hovered? Its _only_ job is to provide hover styles — nothing else.
+Lưu ý cách class này không làm gì cả _trừ khi_ phần tử được hover? Công việc _duy nhất_ của nó là cung cấp các kiểu hover — không gì khác.
 
-This is different from how you'd write traditional CSS, where a single class would usually provide the styles for many states:
+Điều này khác với cách bạn viết CSS truyền thống, nơi một class đơn lẻ thường sẽ cung cấp các kiểu cho nhiều trạng thái:
 
 ```html
 /* [!code filename:HTML] */
@@ -198,18 +198,18 @@ This is different from how you'd write traditional CSS, where a single class wou
 </style>
 ```
 
-You can even stack variants in Tailwind to apply a utility when multiple conditions match, like combining `hover:` and `disabled:`
+Bạn thậm chí có thể xếp chồng các biến thể trong Tailwind để áp dụng một tiện ích khi nhiều điều kiện khớp, giống như kết hợp `hover:` và `disabled:`
 
 ```html
 <!-- [!code classes:disabled:hover:bg-sky-500] -->
 <button class="bg-sky-500 disabled:hover:bg-sky-500 ...">Save changes</button>
 ```
 
-Learn more in the documentation styling elements on [hover, focus, and other states](/docs/hover-focus-and-other-states).
+Tìm hiểu thêm trong tài liệu về style các phần tử trên [hover, focus, và các trạng thái khác](/docs/hover-focus-and-other-states).
 
-### Media queries and breakpoints
+### Media queries và breakpoints
 
-Just like hover and focus states, you can style elements at different breakpoints by prefixing any utility with the breakpoint where you want that style to apply:
+Cũng giống như các trạng thái hover và focus, bạn có thể style các phần tử ở các breakpoint khác nhau bằng cách thêm tiền tố breakpoint vào bất kỳ tiện ích nào:
 
 <Figure hint="Resize this example to see the layout change">
 
@@ -235,7 +235,7 @@ Just like hover and focus states, you can style elements at different breakpoint
 
 </Figure>
 
-In the example above, the `sm:` prefix makes sure that `grid-cols-3` only triggers at the `sm` breakpoint and above, which is 40rem out of the box:
+Trong ví dụ trên, tiền tố `sm:` đảm bảo rằng `grid-cols-3` chỉ kích hoạt ở breakpoint `sm` và lớn hơn, mặc định là 40rem:
 
 ```css
 /* [!code filename: Generated CSS] */
@@ -246,11 +246,11 @@ In the example above, the `sm:` prefix makes sure that `grid-cols-3` only trigge
 }
 ```
 
-Learn more in the [responsive design](/docs/responsive-design) documentation.
+Tìm hiểu thêm trong tài liệu [thiết kế phản hồi](/docs/responsive-design).
 
-### Targeting dark mode
+### Nhắm mục tiêu dark mode
 
-Styling an element in dark mode is just a matter of adding the `dark:` prefix to any utility you want to apply when dark mode is active:
+Style một phần tử trong chế độ tối chỉ là vấn đề thêm tiền tố `dark:` vào bất kỳ tiện ích nào bạn muốn áp dụng khi chế độ tối được kích hoạt:
 
 <Figure>
 
@@ -350,7 +350,7 @@ Styling an element in dark mode is just a matter of adding the `dark:` prefix to
 
 </Figure>
 
-Just like with hover states or media queries, the important thing to understand is that a single utility class will never include _both_ the light and dark styles — you style things in dark mode by using multiple classes, one for the light mode styles and another for the dark mode styles.
+Cũng giống như với các trạng thái hover hoặc media queries, điều quan trọng cần hiểu là một utility class đơn lẻ sẽ không bao giờ bao gồm _cả_ kiểu sáng và tối — bạn style mọi thứ trong chế độ tối bằng cách sử dụng nhiều class, một cho kiểu chế độ sáng và một cho kiểu chế độ tối.
 
 ```css
 /* [!code filename: Generated CSS] */
@@ -361,11 +361,11 @@ Just like with hover states or media queries, the important thing to understand 
 }
 ```
 
-Learn more in the [dark mode](/docs/dark-mode) documentation.
+Tìm hiểu thêm trong tài liệu [chế độ tối](/docs/dark-mode).
 
-### Using class composition
+### Sử dụng class composition
 
-A lot of the time with Tailwind you'll even use multiple classes to build up the value for a single CSS property, for example adding multiple filters to an element:
+Rất nhiều lần với Tailwind, bạn thậm chí sẽ sử dụng nhiều class để xây dựng giá trị cho một thuộc tính CSS duy nhất, ví dụ như thêm nhiều bộ lọc vào một phần tử:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -375,7 +375,7 @@ A lot of the time with Tailwind you'll even use multiple classes to build up the
 </div>
 ```
 
-Both of these effects rely on the `filter` property in CSS, so Tailwind uses CSS variables to make it possible to compose these effects together:
+Cả hai hiệu ứng này đều dựa vào thuộc tính `filter` trong CSS, vì vậy Tailwind sử dụng các biến CSS để có thể kết hợp các hiệu ứng này lại với nhau:
 
 ```css
 /* [!code filename:Generated CSS] */
@@ -389,15 +389,15 @@ Both of these effects rely on the `filter` property in CSS, so Tailwind uses CSS
 }
 ```
 
-The generated CSS above is slightly simplified, but the trick here is that each utility sets a CSS variable just for the effect it's meant to apply. Then the `filter` property looks at all of these variables, falling back to nothing if the variable hasn't been set.
+CSS được tạo ở trên đã được đơn giản hóa một chút, nhưng thủ thuật ở đây là mỗi tiện ích đặt một biến CSS chỉ cho hiệu ứng mà nó định áp dụng. Sau đó, thuộc tính `filter` xem xét tất cả các biến này, quay lại không có gì nếu biến chưa được đặt.
 
-Tailwind uses this same approach for [gradients](/docs/background-image#adding-a-linear-gradient), [shadow colors](/docs/box-shadow#setting-the-shadow-color), [transforms](/docs/translate), and more.
+Tailwind sử dụng cùng một cách tiếp cận này cho [gradients](/docs/background-image#adding-a-linear-gradient), [màu bóng](/docs/box-shadow#setting-the-shadow-color), [biến đổi](/docs/translate), và nhiều hơn nữa.
 
-### Using arbitrary values
+### Sử dụng giá trị tùy ý
 
-Many utilities in Tailwind are driven by [theme variables](/docs/theme), like `bg-blue-500`, `text-xl`, and `shadow-md`, which map to your underlying color palette, type scale, and shadows.
+Nhiều tiện ích trong Tailwind được điều khiển bởi [các biến theme](/docs/theme), như `bg-blue-500`, `text-xl`, và `shadow-md`, ánh xạ tới bảng màu, thang đo kiểu chữ và bóng của bạn.
 
-When you need to use a one-off value outside of your theme, use the special square bracket syntax for specifying arbitrary values:
+Khi bạn cần sử dụng một giá trị một lần nằm ngoài theme của mình, hãy sử dụng cú pháp ngoặc vuông đặc biệt để chỉ định các giá trị tùy ý:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -408,7 +408,7 @@ When you need to use a one-off value outside of your theme, use the special squa
 </button>
 ```
 
-This can be useful for one-off colors outside of your color palette _(like the Facebook blue above)_, but also when you need a complex custom value like a very specific grid:
+Điều này có thể hữu ích cho các màu một lần nằm ngoài bảng màu của bạn _(như màu xanh Facebook ở trên)_, nhưng cũng khi bạn cần một giá trị tùy chỉnh phức tạp như một lưới rất cụ thể:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -418,7 +418,7 @@ This can be useful for one-off colors outside of your color palette _(like the F
 </div>
 ```
 
-It's also useful when you need to use CSS features like `calc()`, even if you are using your theme values:
+Nó cũng hữu ích khi bạn cần sử dụng các tính năng CSS như `calc()`, ngay cả khi bạn đang sử dụng các giá trị theme của mình:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -428,7 +428,7 @@ It's also useful when you need to use CSS features like `calc()`, even if you ar
 </div>
 ```
 
-There's even a syntax for generating completely arbitrary CSS including an arbitrary property name, which can be useful for setting CSS variables:
+Thậm chí còn có một cú pháp để tạo CSS hoàn toàn tùy ý bao gồm tên thuộc tính tùy ý, có thể hữu ích để đặt các biến CSS:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -438,13 +438,13 @@ There's even a syntax for generating completely arbitrary CSS including an arbit
 </div>
 ```
 
-Learn more in the documentation on [using arbitrary values](/docs/adding-custom-styles#using-arbitrary-values).
+Tìm hiểu thêm trong tài liệu về [sử dụng giá trị tùy ý](/docs/adding-custom-styles#using-arbitrary-values).
 
-#### How does this even work?
+#### Làm thế nào nó hoạt động?
 
-Tailwind CSS isn't one big static stylesheet like you might be used to with other CSS frameworks — it generates the CSS needed based on the classes you're actually using when you compile your CSS.
+Tailwind CSS không phải là một stylesheet tĩnh lớn như bạn có thể quen thuộc với các framework CSS khác — nó tạo ra CSS cần thiết dựa trên các class bạn thực sự đang sử dụng khi bạn biên dịch CSS của mình.
 
-It does this by scanning all of the files in your project looking for any symbol that looks like it could be a class name:
+Nó thực hiện điều này bằng cách quét tất cả các file trong dự án của bạn để tìm bất kỳ ký hiệu nào trông giống như tên class:
 
 ```jsx
 // [!code filename:Button.jsx]
@@ -471,17 +471,17 @@ export default function Button({ size, children }) {
 }
 ```
 
-After it's found all of the potential classes, Tailwind generates the CSS for each one and compiles it all into one stylesheet of just the styles you actually need.
+Sau khi tìm thấy tất cả các class tiềm năng, Tailwind tạo ra CSS cho mỗi class và biên dịch tất cả thành một stylesheet chỉ chứa các kiểu bạn thực sự cần.
 
-Since the CSS is generated based on the class name, Tailwind can recognize classes using arbitrary values like `bg-[#316ff6]` and generate the necessary CSS, even when the value isn't part of your theme.
+Vì CSS được tạo dựa trên tên class, Tailwind có thể nhận ra các class sử dụng giá trị tùy ý như `bg-[#316ff6]` và tạo ra CSS cần thiết, ngay cả khi giá trị không phải là một phần của theme của bạn.
 
-Learn more about how this works in [detecting classes in source files](/docs/detecting-classes-in-source-files).
+Tìm hiểu thêm về cách hoạt động này trong [phát hiện class trong file nguồn](/docs/detecting-classes-in-source-files).
 
-### Complex selectors
+### Các selector phức tạp
 
-Sometimes you need to style an element under a combination of conditions, for example in dark mode, at a specific breakpoint, when hovered, and when the element has a specific data attribute.
+Đôi khi bạn cần style một phần tử dưới sự kết hợp của các điều kiện, ví dụ như trong chế độ tối, tại một breakpoint cụ thể, khi được hover, và khi phần tử có một thuộc tính dữ liệu cụ thể.
 
-Here's an example of what that looks like with Tailwind:
+Dưới đây là ví dụ về cách nó trông như thế nào với Tailwind:
 
 <CodeExampleStack>
 
@@ -504,7 +504,7 @@ Here's an example of what that looks like with Tailwind:
 
 </CodeExampleStack>
 
-Tailwind also supports things like `group-hover`, which let you style an element when a specific parent is hovered:
+Tailwind cũng hỗ trợ những thứ như `group-hover`, cho phép bạn style một phần tử khi một phần tử cha cụ thể được hover:
 
 <CodeExampleStack>
 
@@ -528,9 +528,9 @@ Tailwind also supports things like `group-hover`, which let you style an element
 
 </CodeExampleStack>
 
-This `group-*` syntax works with other variants too, like `group-focus`, `group-active`, and [many more](/docs/hover-focus-and-other-states#styling-based-on-parent-state).
+Cú pháp `group-*` này cũng hoạt động với các biến thể khác, như `group-focus`, `group-active`, và [nhiều hơn nữa](/docs/hover-focus-and-other-states#styling-based-on-parent-state).
 
-For really complex scenarios _(especially when styling HTML you don't control)_, Tailwind supports [arbitrary variants](/docs/adding-custom-styles#arbitrary-variants) which let you write any selector you want, directly in a class name:
+Đối với các kịch bản thực sự phức tạp _(đặc biệt là khi style HTML mà bạn không kiểm soát)_, Tailwind hỗ trợ [biến thể tùy ý](/docs/adding-custom-styles#arbitrary-variants) cho phép bạn viết bất kỳ selector nào bạn muốn, trực tiếp trong tên class:
 
 <CodeExampleStack>
 
@@ -553,9 +553,9 @@ div > [data-active] + span {
 
 </CodeExampleStack>
 
-### When to use inline styles
+### Khi nào nên sử dụng inline styles
 
-Inline styles are still very useful in Tailwind CSS projects, particularly when a value is coming from a dynamic source like a database or API:
+Inline styles vẫn rất hữu ích trong các dự án Tailwind CSS, đặc biệt là khi một giá trị đến từ một nguồn động như cơ sở dữ liệu hoặc API:
 
 ```jsx
 // [!code filename:branded-button.jsx]
@@ -575,7 +575,7 @@ export function BrandedButton({ buttonColor, textColor, children }) {
 }
 ```
 
-You might also reach for an inline style for very complicated arbitrary values that are difficult to read when formatted as a class name:
+Bạn cũng có thể sử dụng inline style cho các giá trị tùy ý rất phức tạp khó đọc khi được định dạng dưới dạng tên class:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -587,7 +587,7 @@ You might also reach for an inline style for very complicated arbitrary values t
 </div>
 ```
 
-Another useful pattern is setting CSS variables based on dynamic sources using inline styles, then referencing those variables with utility classes:
+Một mẫu hữu ích khác là đặt các biến CSS dựa trên các nguồn động bằng cách sử dụng inline styles, sau đó tham chiếu các biến đó bằng các utility class:
 
 ```jsx
 // [!code filename:branded-button.jsx]
@@ -609,11 +609,11 @@ export function BrandedButton({ buttonColor, buttonColorHover, textColor, childr
 }
 ```
 
-## Managing duplication
+## Quản lý sự trùng lặp
 
-When you build entire projects with just utility classes, you'll inevitably find yourself repeating certain patterns to recreate the same design in different places.
+Khi bạn xây dựng toàn bộ dự án chỉ với các utility class, bạn chắc chắn sẽ thấy mình lặp lại các mẫu nhất định để tạo lại cùng một thiết kế ở những nơi khác nhau.
 
-For example, here the utility classes for each avatar image are repeated five separate times:
+Ví dụ, ở đây các utility class cho mỗi hình ảnh avatar được lặp lại năm lần riêng biệt:
 
 <Figure>
 
@@ -687,13 +687,13 @@ For example, here the utility classes for each avatar image are repeated five se
 
 </Figure>
 
-Don't panic! In practice this isn't the problem you might be worried it is, and the strategies for dealing with it are things you already do every day.
+Đừng hoảng sợ! Trong thực tế, đây không phải là vấn đề bạn có thể lo lắng, và các chiến lược để giải quyết nó là những điều bạn đã làm hàng ngày.
 
-### Using loops
+### Sử dụng vòng lặp
 
-A lot of the time a design element that shows up more than once in the rendered page is only actually authored once because the actual markup is rendered in a loop.
+Rất nhiều lần một phần tử thiết kế xuất hiện nhiều hơn một lần trong trang được hiển thị thực sự chỉ được tác giả viết một lần vì markup thực tế được hiển thị trong một vòng lặp.
 
-For example, the duplicate avatars at the beginning of this guide would almost certainly be rendered in a loop in a real project:
+Ví dụ, các avatar trùng lặp ở đầu hướng dẫn này gần như chắc chắn sẽ được hiển thị trong một vòng lặp trong một dự án thực tế:
 
 <Figure>
 
@@ -761,11 +761,11 @@ For example, the duplicate avatars at the beginning of this guide would almost c
 
 </Figure>
 
-When elements are rendered in a loop like this, the actual class list is only written once so there's no actual duplication problem to solve.
+Khi các phần tử được hiển thị trong một vòng lặp như thế này, danh sách class thực tế chỉ được viết một lần nên không có vấn đề trùng lặp thực sự nào để giải quyết.
 
-### Using multi-cursor editing
+### Sử dụng chỉnh sửa đa con trỏ
 
-When duplication is localized to a group of elements in a single file, the easiest way to deal with it is to use [multi-cursor editing](https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor) to quickly select and edit the class list for each element at once:
+Khi sự trùng lặp được bản địa hóa cho một nhóm các phần tử trong một file duy nhất, cách dễ nhất để giải quyết nó là sử dụng [chỉnh sửa đa con trỏ](https://code.visualstudio.com/docs/editor/codebasics#_multiple-selections-multicursor) để nhanh chóng chọn và chỉnh sửa danh sách class cho mỗi phần tử cùng một lúc:
 
 <MultiCursorAnimation>
   <Figure>
@@ -778,11 +778,11 @@ When duplication is localized to a group of elements in a single file, the easie
   </Figure>
 </MultiCursorAnimation>
 
-You'd be surprised at how often this ends up being the best solution. If you can quickly edit all of the duplicated class lists simultaneously, there's no benefit to introducing any additional abstraction.
+Bạn sẽ ngạc nhiên về mức độ thường xuyên mà điều này trở thành giải pháp tốt nhất. Nếu bạn có thể nhanh chóng chỉnh sửa tất cả các danh sách class trùng lặp cùng một lúc, không có lợi ích gì khi giới thiệu thêm bất kỳ sự trừu tượng nào.
 
-### Using components
+### Sử dụng components
 
-If you need to reuse some styles across multiple files, the best strategy is to create a _component_ if you're using a front-end framework like React, Svelte, or Vue, or a _template partial_ if you're using a templating language like Blade, ERB, Twig, or Nunjucks.
+Nếu bạn cần tái sử dụng một số kiểu trên nhiều file, chiến lược tốt nhất là tạo một _component_ nếu bạn đang sử dụng một framework front-end như React, Svelte, hoặc Vue, hoặc một _template partial_ nếu bạn đang sử dụng một ngôn ngữ tạo mẫu như Blade, ERB, Twig, hoặc Nunjucks.
 
 <Figure>
 

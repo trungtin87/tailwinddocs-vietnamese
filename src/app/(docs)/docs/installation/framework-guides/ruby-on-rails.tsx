@@ -4,23 +4,23 @@ import LogoDark from "@/docs/img/guides/rails-white.react.svg";
 
 export let tile: Tile = {
   title: "Ruby on Rails",
-  description: "Full-stack framework with all the tools needed to build amazing web apps.",
+  description: "Framework full-stack với đầy đủ công cụ cần thiết để xây dựng các ứng dụng web tuyệt vời.",
   Logo,
   LogoDark,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Ruby on Rails",
-  description: "Setting up Tailwind CSS in Ruby on Rails v8+ project.",
+  title: "Cài đặt Tailwind CSS với Ruby on Rails",
+  description: "Thiết lập Tailwind CSS trong dự án Ruby on Rails v8+.",
 
   // NOTE: This intro is not used currently but is here for reference as we'll want to bring it back once the rails gem is updated for a stable v4 release.
   intro: (
     <div className="prose prose-slate dark:prose-dark relative z-10 mb-16 max-w-3xl">
       <p>
-        The quickest way to start using Tailwind CSS in your Rails project is to use{" "}
-        <a href="https://github.com/rails/tailwindcss-rails">Tailwind CSS for Rails</a> by running{" "}
-        <code>rails new my-project --css tailwind</code>. This will automatically configure your Tailwind setup based on
-        the official Rails example. If you'd like to configure Tailwind manually, continue with the rest of this guide.
+        Cách nhanh nhất để bắt đầu sử dụng Tailwind CSS trong dự án Rails của bạn là sử dụng{" "}
+        <a href="https://github.com/rails/tailwindcss-rails">Tailwind CSS for Rails</a> bằng cách chạy{" "}
+        <code>rails new my-project --css tailwind</code>. Điều này sẽ tự động cấu hình thiết lập Tailwind của bạn dựa trên
+        ví dụ chính thức của Rails. Nếu bạn muốn cấu hình Tailwind thủ công, hãy tiếp tục với phần còn lại của hướng dẫn này.
       </p>
     </div>
   ),
@@ -28,11 +28,11 @@ export let page: Page = {
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Rails project if you don't have one set up already. The most common approach is to use
-        the <a href="https://guides.rubyonrails.org/command_line.html">Rails Command Line</a>.
+        Bắt đầu bằng cách tạo một dự án Rails mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng
+        <a href="https://guides.rubyonrails.org/command_line.html">Rails Command Line</a>.
       </p>
     ),
     code: {
@@ -45,11 +45,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install the <code>tailwindcss-rails</code> gem then run the install command to set up Tailwind CSS in your
-        project.
+        Cài đặt gem <code>tailwindcss-rails</code> sau đó chạy lệnh cài đặt để thiết lập Tailwind CSS trong dự án của bạn.
       </p>
     ),
 
@@ -63,10 +62,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>./bin/dev</code>.
+        Chạy quá trình build với <code>./bin/dev</code>.
       </p>
     ),
     code: {
@@ -78,8 +77,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind's utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "index.html.erb",
       lang: "html",

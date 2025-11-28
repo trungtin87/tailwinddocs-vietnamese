@@ -56,12 +56,12 @@ export default function WhyTailwindCssSection() {
       </div>
 
       <GridContainer className="2xl:before:hidden 2xl:after:hidden">
-        <CategoryHeader className="text-pink-500 dark:text-pink-400">Why Tailwind CSS?</CategoryHeader>
+        <CategoryHeader className="text-pink-500 dark:text-pink-400">Tại sao lại là Tailwind CSS?</CategoryHeader>
       </GridContainer>
 
       <GridContainer>
         <h2 className="max-w-lg px-2 text-[2.5rem]/10 font-medium tracking-tighter text-balance max-sm:px-4 2xl:mt-0">
-          Built for the modern web.
+          Được xây dựng cho web hiện đại.
         </h2>
       </GridContainer>
 
@@ -75,8 +75,8 @@ export default function WhyTailwindCssSection() {
 
       <GridContainer>
         <p className="max-w-(--breakpoint-md) px-2 text-base/7 text-gray-600 max-sm:px-4 dark:text-gray-400">
-          Tailwind is unapologetically modern, and takes advantage of all the latest and greatest CSS features to make
-          the developer experience as enjoyable as possible.
+          Tailwind hiện đại một cách không khoan nhượng, và tận dụng tất cả các tính năng CSS mới nhất và tuyệt vời nhất để làm cho
+          trải nghiệm của nhà phát triển trở nên thú vị nhất có thể.
         </p>
       </GridContainer>
 
@@ -88,10 +88,10 @@ export default function WhyTailwindCssSection() {
                 <ResponsiveDesignIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Responsive design</BentoTitle>
+                <BentoTitle>Thiết kế đáp ứng (Responsive)</BentoTitle>
                 <BentoDescription>
-                  Okay, it’s not exactly cutting edge, but just throw a screen size in front of literally any utility to
-                  apply it at a specific breakpoint.
+                  Được rồi, nó không hẳn là mới mẻ, nhưng chỉ cần thêm kích thước màn hình vào trước bất kỳ tiện ích nào để
+                  áp dụng nó tại một điểm ngắt cụ thể.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -265,10 +265,10 @@ export default function WhyTailwindCssSection() {
                 <FiltersIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Filters</BentoTitle>
+                <BentoTitle>Bộ lọc (Filters)</BentoTitle>
                 <BentoDescription>
-                  What’s a website these days without a few backdrop blurs? Keep stacking filters until your designer
-                  asks you to please, please stop.
+                  Một trang web ngày nay sẽ ra sao nếu thiếu vài hiệu ứng làm mờ nền? Cứ tiếp tục chồng các bộ lọc cho đến khi thiết kế của bạn
+                  cầu xin bạn dừng lại.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -315,11 +315,11 @@ export default function WhyTailwindCssSection() {
                 <DarkModeIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Dark mode</BentoTitle>
+                <BentoTitle>Chế độ tối (Dark mode)</BentoTitle>
                 <BentoDescription>
-                  If you’re not a fan of burning your retinas, just stick{" "}
-                  <code className="font-medium text-gray-950 dark:text-white">dark:</code> in front of any color to
-                  apply it in dark mode.
+                  Nếu bạn không muốn đốt cháy võng mạc của mình, chỉ cần thêm{" "}
+                  <code className="font-medium text-gray-950 dark:text-white">dark:</code> vào trước bất kỳ màu nào để
+                  áp dụng nó trong chế độ tối.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -334,9 +334,9 @@ export default function WhyTailwindCssSection() {
                 <CssVariablesIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>CSS variables</BentoTitle>
+                <BentoTitle>Biến CSS</BentoTitle>
                 <BentoDescription>
-                  Customizing your theme is as simple as creating a few CSS variables.
+                  Tùy chỉnh giao diện của bạn đơn giản như việc tạo một vài biến CSS.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -384,10 +384,9 @@ export default function WhyTailwindCssSection() {
                 <P3ColorsIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>P3 colors</BentoTitle>
+                <BentoTitle>Màu P3</BentoTitle>
                 <BentoDescription>
-                  The color palette now uses more vibrant wide gamut colors without you needing to understand what any
-                  of that even means.
+                  Bảng màu hiện sử dụng các màu gam rộng sống động hơn mà bạn không cần phải hiểu bất kỳ điều gì về nó.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -493,9 +492,9 @@ export default function WhyTailwindCssSection() {
                 <CssGridIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>CSS grid layout</BentoTitle>
+                <BentoTitle>Bố cục lưới CSS (Grid Layout)</BentoTitle>
                 <BentoDescription>
-                  Using grid utilities directly in your HTML makes it so much easier to reason about complex layouts.
+                  Sử dụng các tiện ích lưới trực tiếp trong HTML giúp việc suy luận về các bố cục phức tạp trở nên dễ dàng hơn nhiều.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -543,10 +542,9 @@ export default function WhyTailwindCssSection() {
                 <TransitionsAndAnimationsIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Transitions and animations</BentoTitle>
+                <BentoTitle>Hiệu ứng chuyển tiếp và hoạt ảnh</BentoTitle>
                 <BentoDescription>
-                  Transitions that work the way you'd expect — throw a few utilities on an element and you're in
-                  business.
+                  Các hiệu ứng chuyển tiếp hoạt động theo cách bạn mong đợi — chỉ cần thêm một vài tiện ích vào một phần tử và bạn đã sẵn sàng.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -563,9 +561,9 @@ export default function WhyTailwindCssSection() {
                 <CascadeLayersIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Cascade layers</BentoTitle>
+                <BentoTitle>Các lớp xếp chồng (Cascade layers)</BentoTitle>
                 <BentoDescription>
-                  Tailwind uses CSS layers so you don’t have to worry about specificity issues.
+                  Tailwind sử dụng các lớp CSS để bạn không phải lo lắng về các vấn đề độ ưu tiên (specificity).
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -606,9 +604,9 @@ export default function WhyTailwindCssSection() {
                 <LogicalPropertiesIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Logical properties</BentoTitle>
+                <BentoTitle>Thuộc tính logic</BentoTitle>
                 <BentoDescription>
-                  Supporting multiple language text directions is no longer a nightmare.
+                  Hỗ trợ hướng văn bản đa ngôn ngữ không còn là cơn ác mộng nữa.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -679,9 +677,9 @@ export default function WhyTailwindCssSection() {
                 <ContainerQueriesIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>Container queries</BentoTitle>
+                <BentoTitle>Truy vấn container (Container queries)</BentoTitle>
                 <BentoDescription>
-                  Tag an element as a container to let children adapt to changes in its size.
+                  Gắn thẻ một phần tử là container để cho phép các phần tử con thích ứng với những thay đổi về kích thước của nó.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -729,8 +727,8 @@ export default function WhyTailwindCssSection() {
               <div>
                 <BentoTitle>Gradients</BentoTitle>
                 <BentoDescription>
-                  No need to remember that complicated gradient syntax — create silky-smooth gradients with just a few
-                  utility classes.
+                  Không cần phải nhớ cú pháp gradient phức tạp đó — tạo ra các gradient mượt mà chỉ với một vài
+                  lớp tiện ích.
                 </BentoDescription>
               </div>
             </BentoHeader>
@@ -787,10 +785,10 @@ export default function WhyTailwindCssSection() {
                 <_3DTransformsIcon />
               </BentoIcon>
               <div>
-                <BentoTitle>3D transforms</BentoTitle>
+                <BentoTitle>Biến đổi 3D</BentoTitle>
                 <BentoDescription>
-                  Sometimes two dimensions aren’t enough. Scale, rotate, and translate any element in 3D space to add a
-                  touch of depth.
+                  Đôi khi hai chiều là không đủ. Thu phóng, xoay và dịch chuyển bất kỳ phần tử nào trong không gian 3D để thêm một
+                  chút chiều sâu.
                 </BentoDescription>
               </div>
             </BentoHeader>

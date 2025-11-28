@@ -3,21 +3,21 @@ import Logo from "@/docs/img/guides/gatsby.react.svg";
 
 export let tile: Tile = {
   title: "Gatsby",
-  description: "Framework for building static sites with React and GraphQL.",
+  description: "Framework để xây dựng các trang web tĩnh với React và GraphQL.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Gatsby",
-  description: "Setting up Tailwind CSS in a Gatsby project.",
+  title: "Cài đặt Tailwind CSS với Gatsby",
+  description: "Thiết lập Tailwind CSS trong dự án Gatsby.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Gatsby project if you don’t have one set up already. The most common approach is to use{" "}
+        Bắt đầu bằng cách tạo một dự án Gatsby mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng{" "}
         <a href="https://www.gatsbyjs.com/docs/reference/gatsby-cli/#how-to-use-gatsby-cli">Gatsby CLI</a>.
       </p>
     ),
@@ -31,10 +31,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Using npm, install <code>@tailwindcss/postcss</code>, its peer dependencies, and{" "}
+        Sử dụng npm, cài đặt <code>@tailwindcss/postcss</code>, các peer dependencies, và{" "}
         <code>gatsby-plugin-postcss</code>.
       </p>
     ),
@@ -47,12 +47,12 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Enable the Gatsby PostCSS plugin",
+    title: "Bật plugin Gatsby PostCSS",
     body: (
       <p>
-        In your <code>gatsby-config.js</code> file, enable <code>gatsby-plugin-postcss</code>. See{" "}
-        <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/">the plugin's documentation</a> for more
-        information.
+        Trong file <code>gatsby-config.js</code> của bạn, bật <code>gatsby-plugin-postcss</code>. Xem{" "}
+        <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/">tài liệu của plugin</a> để biết thêm
+        thông tin.
       </p>
     ),
     code: {
@@ -70,11 +70,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure PostCSS Plugins",
+    title: "Cấu hình PostCSS Plugins",
     body: (
       <p>
-        Create a <code>postcss.config.js</code> file in the root of your project and add the{" "}
-        <code>@tailwindcss/postcss</code> plugin to your PostCSS configuration.
+        Tạo file <code>postcss.config.js</code> ở thư mục gốc của dự án và thêm plugin{" "}
+        <code>@tailwindcss/postcss</code> vào cấu hình PostCSS của bạn.
       </p>
     ),
     code: {
@@ -94,7 +94,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Create a <code>./src/styles/global.css</code> file and add an <code>@import</code> for Tailwind CSS.
+        Tạo file <code>./src/styles/global.css</code> và thêm <code>@import</code> cho Tailwind CSS.
       </p>
     ),
     code: {
@@ -106,11 +106,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Import the CSS file",
+    title: "Import file CSS",
     body: (
       <p>
-        Create a <code>gatsby-browser.js</code> file at the root of your project if it doesn’t already exist, and import
-        your newly-created <code>./src/styles/global.css</code> file.
+        Tạo file <code>gatsby-browser.js</code> ở thư mục gốc của dự án nếu chưa có, và import file
+        <code>./src/styles/global.css</code> vừa tạo.
       </p>
     ),
     code: {
@@ -122,10 +122,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>gatsby develop</code>.
+        Chạy quá trình build với <code>gatsby develop</code>.
       </p>
     ),
     code: {
@@ -137,8 +137,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "index.js",
       lang: "js",

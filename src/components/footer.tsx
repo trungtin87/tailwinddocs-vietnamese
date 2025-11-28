@@ -60,7 +60,7 @@ export function FooterMeta({ className }: { className?: string }) {
           <span>Copyright ©&nbsp;2025&nbsp;Tailwind Labs Inc.</span>
           <span className="max-sm:hidden">&middot;</span>
           <Link href="/brand" className="hover:underline">
-            Trademark Policy
+            Chính sách thương hiệu
           </Link>
         </div>
       </div>
@@ -75,7 +75,7 @@ function TailwindCSS() {
       <ul className="mt-4 grid gap-4">
         <li>
           <Link href="/docs" className="hover:underline">
-            Documentation
+            Tài liệu
           </Link>
         </li>
         <li>
@@ -95,7 +95,7 @@ function TailwindCSS() {
         </li>
         <li>
           <Link href="/sponsor" className="hover:underline">
-            Sponsor
+            Tài trợ
           </Link>
         </li>
       </ul>
@@ -114,17 +114,17 @@ function TailwindPlus() {
       <ul className="mt-4 grid gap-4">
         <li>
           <a href="/plus/ui-blocks?ref=footer" className="hover:underline">
-            UI Blocks
+            Khối UI
           </a>
         </li>
         <li>
           <a href="/plus/templates?ref=footer" className="hover:underline">
-            Templates
+            Mẫu
           </a>
         </li>
         <li>
           <a href="/plus/ui-kit?ref=footer" className="hover:underline">
-            UI Kit
+            Bộ UI
           </a>
         </li>
       </ul>
@@ -135,7 +135,7 @@ function TailwindPlus() {
 function Resources() {
   return (
     <>
-      <h3 className="font-semibold">Resources</h3>
+      <h3 className="font-semibold">Tài nguyên</h3>
       <ul className="mt-4 grid gap-4">
         <li>
           <Link href="https://www.refactoringui.com" className="hover:underline">
@@ -165,7 +165,7 @@ function Resources() {
 function Community() {
   return (
     <>
-      <h3 className="font-semibold">Community</h3>
+      <h3 className="font-semibold">Cộng đồng</h3>
       <ul className="mt-4 grid gap-4">
         <li>
           <Link href="https://github.com/tailwindlabs/tailwindcss" className="hover:underline">

@@ -111,12 +111,12 @@ export default function ExplainerSection() {
       </div>
 
       <GridContainer className="2xl:before:hidden 2xl:after:hidden">
-        <CategoryHeader className="text-sky-500 dark:text-sky-400">How it works</CategoryHeader>
+        <CategoryHeader className="text-sky-500 dark:text-sky-400">Cách hoạt động</CategoryHeader>
       </GridContainer>
 
       <GridContainer>
         <h2 className="mt-4 px-2 text-[2.5rem]/10 font-medium tracking-tighter max-sm:px-4 2xl:mt-0">
-          Ship faster and smaller.
+          Vận chuyển nhanh hơn và nhỏ gọn hơn.
         </h2>
       </GridContainer>
 
@@ -127,8 +127,8 @@ export default function ExplainerSection() {
 
       <GridContainer>
         <p className="max-w-(--breakpoint-md) px-2 text-base/7 text-gray-600 max-sm:px-4 dark:text-gray-400">
-          Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle
-          is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the
+          Tailwind tự động loại bỏ tất cả CSS không sử dụng khi build cho production, điều này có nghĩa là gói CSS cuối cùng của bạn
+          sẽ nhỏ nhất có thể. Trên thực tế, hầu hết các dự án Tailwind gửi ít hơn 10kB CSS tới
           client.
         </p>
       </GridContainer>

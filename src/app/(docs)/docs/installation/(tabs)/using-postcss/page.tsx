@@ -4,13 +4,13 @@ import dedent from "dedent";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Installing Tailwind CSS with PostCSS",
+  title: "Cài đặt Tailwind CSS với PostCSS",
   description:
-    "Installing Tailwind CSS as a PostCSS plugin is the most seamless way to integrate it with frameworks like Next.js and Angular.",
+    "Cài đặt Tailwind CSS dưới dạng plugin PostCSS là cách liền mạch nhất để tích hợp nó với các framework như Next.js và Angular.",
   openGraph: {
     type: "article",
-    title: "Installing with PostCSS",
-    description: "Integrate Tailwind CSS with frameworks like Next.js and Angular.",
+    title: "Cài đặt với PostCSS",
+    description: "Tích hợp Tailwind CSS với các framework như Next.js và Angular.",
     images: "https://tailwindcss.com/api/og?path=/docs/installation/using-postcss",
     url: "https://tailwindcss.com/docs/installation/using-postcss",
   },
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 
 const steps: Step[] = [
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>tailwindcss</code>, <code>@tailwindcss/postcss</code>, and <code>postcss</code> via npm.
+        Cài đặt <code>tailwindcss</code>, <code>@tailwindcss/postcss</code>, và <code>postcss</code> qua npm.
       </p>
     ),
     code: {
@@ -33,11 +33,11 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Add Tailwind to your PostCSS configuration",
+    title: "Thêm Tailwind vào cấu hình PostCSS của bạn",
     body: (
       <p>
-        Add <code>@tailwindcss/postcss</code> to your <code>postcss.config.mjs</code> file, or wherever PostCSS is
-        configured in your project.
+        Thêm <code>@tailwindcss/postcss</code> vào file <code>postcss.config.mjs</code> của bạn, hoặc bất cứ nơi nào PostCSS được
+        cấu hình trong dự án của bạn.
       </p>
     ),
     code: {
@@ -57,7 +57,7 @@ const steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to your CSS file that imports Tailwind CSS.
+        Thêm một <code>@import</code> vào file CSS của bạn để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -69,11 +69,11 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build của bạn",
     body: (
       <p>
-        Run your build process with <code>npm run dev</code> or whatever command is configured in your{" "}
-        <code>package.json</code> file.
+        Chạy quá trình build của bạn với <code>npm run dev</code> hoặc bất kỳ lệnh nào được cấu hình trong file{" "}
+        <code>package.json</code> của bạn.
       </p>
     ),
     code: {
@@ -85,12 +85,12 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your HTML",
+    title: "Bắt đầu sử dụng Tailwind trong HTML của bạn",
     body: (
       <p>
-        Make sure your compiled CSS is included in the <code>{"<head>"}</code>{" "}
-        <em>(your framework might handle this for you)</em>, then start using Tailwind’s utility classes to style your
-        content.
+        Đảm bảo CSS đã biên dịch của bạn được bao gồm trong <code>{"<head>"}</code>{" "}
+        <em>(framework của bạn có thể xử lý việc này cho bạn)</em>, sau đó bắt đầu sử dụng các utility class của Tailwind để style
+        nội dung của bạn.
       </p>
     ),
     code: {
@@ -122,19 +122,19 @@ export default function Page() {
     <>
       <div id="content-wrapper" className="prose relative z-10 mb-10 max-w-3xl" data-content="true">
         <h3 data-title="true" className="sr-only">
-          Installing Tailwind CSS as a PostCSS plugin
+          Cài đặt Tailwind CSS dưới dạng plugin PostCSS
         </h3>
         <p>
-          Installing Tailwind CSS as a PostCSS plugin is the most seamless way to integrate it with frameworks like
-          Next.js and Angular.
+          Cài đặt Tailwind CSS dưới dạng plugin PostCSS là cách liền mạch nhất để tích hợp nó với các framework như
+          Next.js và Angular.
         </p>
       </div>
       <Steps steps={steps} />
       <div className="my-4 md:my-16">
-        <Cta label="Explore our framework guides" href="/docs/installation/framework-guides">
-          <strong className="font-semibold text-gray-950 dark:text-white">Are you stuck?</strong> Setting up Tailwind
-          with PostCSS can be a bit different across different build tools. Check our framework guides to see if we have
-          more specific instructions for your particular setup.
+        <Cta label="Khám phá hướng dẫn framework của chúng tôi" href="/docs/installation/framework-guides">
+          <strong className="font-semibold text-gray-950 dark:text-white">Bạn đang gặp khó khăn?</strong> Thiết lập Tailwind
+          với PostCSS có thể hơi khác nhau giữa các công cụ build khác nhau. Kiểm tra hướng dẫn framework của chúng tôi để xem liệu chúng tôi có
+          hướng dẫn cụ thể hơn cho thiết lập cụ thể của bạn không.
         </Cta>
       </div>
     </>

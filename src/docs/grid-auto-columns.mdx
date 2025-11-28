@@ -2,7 +2,7 @@ import { ApiTable } from "@/components/api-table.tsx";
 import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "grid-auto-columns";
-export const description = "Utilities for controlling the size of implicitly-created grid columns.";
+export const description = "Các utility để kiểm soát kích thước của các cột grid được tạo ngầm định.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for controlling the size of implicitly-cre
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `auto-cols-min` and `auto-cols-max` to control the size of implicitly-created grid columns:
+Sử dụng các utility như `auto-cols-min` và `auto-cols-max` để kiểm soát kích thước của các cột grid được tạo ngầm định:
 
 ```html
 <!-- [!code classes:auto-cols-max] -->
@@ -30,11 +30,11 @@ Use utilities like `auto-cols-min` and `auto-cols-max` to control the size of im
 </div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
-<UsingACustomValue utility="auto-cols" name="size of implicitly-created grid columns" value="minmax(0,2fr)" />
+<UsingACustomValue utility="auto-cols" name="kích thước của các cột grid được tạo ngầm định" value="minmax(0,2fr)" />
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign
   property="grid-auto-columns"

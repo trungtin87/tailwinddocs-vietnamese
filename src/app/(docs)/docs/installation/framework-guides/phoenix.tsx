@@ -3,22 +3,22 @@ import Logo from "@/docs/img/guides/phoenix.react.svg";
 
 export let tile: Tile = {
   title: "Phoenix",
-  description: "A framework to build rich, interactive applications with Elixir.",
+  description: "Framework để xây dựng các ứng dụng tương tác phong phú với Elixir.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Phoenix",
-  description: "Setting up Tailwind CSS in a Phoenix project.",
+  title: "Cài đặt Tailwind CSS với Phoenix",
+  description: "Thiết lập Tailwind CSS trong dự án Phoenix.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Phoenix project if you don't have one set up already. You can follow their{" "}
-        <a href="https://hexdocs.pm/phoenix/installation.html">installation guide</a> to get up and running.
+        Bắt đầu bằng cách tạo một dự án Phoenix mới nếu bạn chưa thiết lập. Bạn có thể làm theo{" "}
+        <a href="https://hexdocs.pm/phoenix/installation.html">hướng dẫn cài đặt</a> để bắt đầu.
       </p>
     ),
     code: {
@@ -31,10 +31,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install the Tailwind plugin",
+    title: "Cài đặt Tailwind plugin",
     body: (
       <p>
-        Add the Tailwind plugin to your dependencies and run <code>mix deps.get</code> to install it.
+        Thêm Tailwind plugin vào dependencies và chạy <code>mix deps.get</code> để cài đặt.
       </p>
     ),
     code: {
@@ -52,11 +52,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure the Tailwind plugin",
+    title: "Cấu hình Tailwind plugin",
     body: (
       <p>
-        In your <code>config/config.exs</code> file you can set which version of Tailwind CSS you want to use and
-        customize your asset paths.
+        Trong file <code>config/config.exs</code> của bạn, bạn có thể thiết lập phiên bản Tailwind CSS muốn sử dụng và
+        tùy chỉnh đường dẫn assets.
       </p>
     ),
     code: {
@@ -79,10 +79,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Update your deployment script",
+    title: "Cập nhật deployment script",
     body: (
       <p>
-        Configure your <code>assets.deploy</code> alias to build your CSS on deployment.
+        Cấu hình alias <code>assets.deploy</code> để build CSS khi triển khai.
       </p>
     ),
     code: {
@@ -104,10 +104,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Enable watcher in development",
+    title: "Bật watcher trong môi trường development",
     body: (
       <p>
-        Add Tailwind to your list of watchers in your <code>./config/dev.exs</code> file.
+        Thêm Tailwind vào danh sách watchers trong file <code>./config/dev.exs</code> của bạn.
       </p>
     ),
     code: {
@@ -124,8 +124,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
-    body: <p>Run the install command to download the standalone Tailwind CLI.</p>,
+    title: "Cài đặt Tailwind CSS",
+    body: <p>Chạy lệnh cài đặt để tải Tailwind CLI standalone.</p>,
     code: {
       name: "Terminal",
       lang: "shell",
@@ -138,7 +138,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to <code>./assets/css/app.css</code> that imports Tailwind CSS.
+        Thêm <code>@import</code> vào <code>./assets/css/app.css</code> để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -150,10 +150,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Remove the default CSS import",
+    title: "Xóa CSS import mặc định",
     body: (
       <p>
-        Remove the CSS import from <code>./assets/js/app.js</code>, as Tailwind is now handling this for you.
+        Xóa CSS import từ <code>./assets/js/app.js</code>, vì Tailwind đang xử lý điều này cho bạn.
       </p>
     ),
     code: {
@@ -167,10 +167,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>mix phx.server</code>.
+        Chạy quá trình build với <code>mix phx.server</code>.
       </p>
     ),
     code: {
@@ -182,8 +182,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "index.html.heex",
       lang: "html",

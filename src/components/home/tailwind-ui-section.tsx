@@ -69,12 +69,12 @@ export default function TailwindUiSection() {
       </div>
 
       <GridContainer className="2xl:before:hidden 2xl:after:hidden">
-        <CategoryHeader className="text-pink-600 dark:text-pink-500">Ready-made Components</CategoryHeader>
+        <CategoryHeader className="text-pink-600 dark:text-pink-500">Thành phần có sẵn</CategoryHeader>
       </GridContainer>
 
       <GridContainer>
         <h2 className="px-2 text-[2.5rem]/10 font-medium tracking-tighter max-sm:px-4 2xl:mt-0">
-          Move even faster with Tailwind Plus.
+          Di chuyển nhanh hơn nữa với Tailwind Plus.
         </h2>
       </GridContainer>
 
@@ -88,9 +88,9 @@ export default function TailwindUiSection() {
 
       <GridContainer>
         <p className="max-w-(--breakpoint-md) px-2 text-base/7 text-gray-600 max-sm:px-4 dark:text-gray-400">
-          Tailwind Plus is a collection of beautiful, fully responsive UI components, designed and developed by us, the
-          creators of Tailwind CSS. It's got hundreds of ready-to-use examples to choose from, and is guaranteed to help
-          you find the perfect starting point for what you want to build.
+          Tailwind Plus là một bộ sưu tập các thành phần UI đẹp mắt, hoàn toàn đáp ứng, được thiết kế và phát triển bởi chúng tôi,
+          những người tạo ra Tailwind CSS. Nó có hàng trăm ví dụ sẵn sàng sử dụng để bạn lựa chọn, và đảm bảo giúp
+          bạn tìm thấy điểm khởi đầu hoàn hảo cho những gì bạn muốn xây dựng.
         </p>
       </GridContainer>
 
@@ -100,7 +100,7 @@ export default function TailwindUiSection() {
             href="https://tailwindcss.com/plus?ref=home"
             className="inline-block rounded-4xl bg-black px-4 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600"
           >
-            Explore Tailwind Plus
+            Khám phá Tailwind Plus
           </a>
         </div>
       </GridContainer>
@@ -201,9 +201,9 @@ export default function TailwindUiSection() {
                   />
                 </svg>
                 <div className="text-center xl:text-left">
-                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">Templates</p>
+                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">Mẫu (Templates)</p>
                   <p className="mt-2 hidden text-sm text-gray-600 lg:block dark:text-gray-400">
-                    Visually-stunning, easy to customize site templates built with React and Next.js.
+                    Các mẫu trang web tuyệt đẹp, dễ tùy chỉnh được xây dựng với React và Next.js.
                   </p>
                 </div>
               </TabButton>
@@ -274,9 +274,9 @@ export default function TailwindUiSection() {
                   </g>
                 </svg>
                 <div className="text-center xl:text-left">
-                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">UI Blocks</p>
+                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">Khối UI (UI Blocks)</p>
                   <p className="mt-2 hidden text-sm text-gray-600 lg:block dark:text-gray-400">
-                    Over 500+ professionally designed, fully responsive, expertly crafted components.
+                    Hơn 500+ thành phần được thiết kế chuyên nghiệp, hoàn toàn đáp ứng, được chế tác tinh xảo.
                   </p>
                 </div>
               </TabButton>
@@ -355,9 +355,9 @@ export default function TailwindUiSection() {
                   </g>
                 </svg>
                 <div className="text-center xl:text-left">
-                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">UI Kit</p>
+                  <p className="font-mono text-sm font-semibold tracking-widest uppercase">Bộ UI (UI Kit)</p>
                   <p className="mt-2 hidden text-sm text-gray-600 lg:block dark:text-gray-400">
-                    A starter kit for building your own component systems with React and Tailwind CSS.
+                    Một bộ khởi động để xây dựng hệ thống thành phần của riêng bạn với React và Tailwind CSS.
                   </p>
                 </div>
               </TabButton>
@@ -807,7 +807,7 @@ export function TabButton(
         "group flex items-center gap-4 p-4 text-sm/7 focus:outline-none max-lg:flex-col sm:p-6 lg:grid lg:grid-cols-[auto_1fr]",
         props.className,
       )}
-      // {...props}
+    // {...props}
     >
       {props.children}
     </Tab>

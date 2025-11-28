@@ -4,13 +4,13 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Framework guides",
+  title: "Hướng dẫn Framework",
   description:
-    "Framework-specific guides that cover our recommended approach to installing Tailwind CSS in a number of popular environments.",
+    "Các hướng dẫn cụ thể cho từng framework bao gồm cách tiếp cận được đề xuất của chúng tôi để cài đặt Tailwind CSS trong một số môi trường phổ biến.",
   openGraph: {
     type: "article",
-    title: "Framework guides",
-    description: "Our recommended approach to installing Tailwind CSS in popular frameworks.",
+    title: "Hướng dẫn Framework",
+    description: "Cách tiếp cận được đề xuất của chúng tôi để cài đặt Tailwind CSS trong các framework phổ biến.",
     images: "https://tailwindcss.com/api/og?path=/docs/installation/framework-guides",
     url: "https://tailwindcss.com/docs/installation/framework-guides",
   },
@@ -23,11 +23,10 @@ export default async function FrameworkGuides() {
     <>
       <div id="content-wrapper" className="prose mb-10 max-w-3xl" data-content="true">
         <h3 className="sr-only" data-title="true">
-          Framework Guides
+          Hướng dẫn Framework
         </h3>
         <p>
-          Framework-specific guides that cover our recommended approach to installing Tailwind CSS in a number of
-          popular environments.
+          Các hướng dẫn cụ thể cho từng framework bao gồm cách tiếp cận được đề xuất của chúng tôi để cài đặt Tailwind CSS trong một số môi trường phổ biến.
         </p>
       </div>
       <ul className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-3">
@@ -37,10 +36,10 @@ export default async function FrameworkGuides() {
       </ul>
       <div className="my-4 md:my-16">
         <Cta>
-          Don't see your framework of choice? Try using the{" "}
-          <Link href="/docs/installation/tailwind-cli">Tailwind CLI</Link>, the{" "}
-          <Link href="/docs/installation/using-vite">Vite plugin</Link>, or the{" "}
-          <Link href="/docs/installation/using-postcss">PostCSS plugin</Link> instead.
+          Bạn không thấy framework mình chọn? Hãy thử sử dụng{" "}
+          <Link href="/docs/installation/tailwind-cli">Tailwind CLI</Link>,{" "}
+          <Link href="/docs/installation/using-vite">Vite plugin</Link>, hoặc{" "}
+          <Link href="/docs/installation/using-postcss">PostCSS plugin</Link> thay thế.
         </Cta>
       </div>
     </>

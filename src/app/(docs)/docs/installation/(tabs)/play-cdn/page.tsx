@@ -5,11 +5,11 @@ import dedent from "dedent";
 
 export const metadata: Metadata = {
   title: "Play CDN",
-  description: "Use the Play CDN to try Tailwind right in the browser without any build step.",
+  description: "Sử dụng Play CDN để thử Tailwind ngay trong trình duyệt mà không cần bước build nào.",
   openGraph: {
     type: "article",
     title: "Play CDN",
-    description: "Try Tailwind CSS right in the browser without any build step.",
+    description: "Thử Tailwind CSS ngay trong trình duyệt mà không cần bước build nào.",
     images: "https://tailwindcss.com/api/og?path=/docs/installation/play-cdn",
     url: "https://tailwindcss.com/docs/installation/play-cdn",
   },
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 
 const steps: Step[] = [
   {
-    title: "Add the Play CDN script to your HTML",
+    title: "Thêm script Play CDN vào HTML của bạn",
     body: (
       <p>
-        Add the Play CDN script tag to the <code>&lt;head&gt;</code> of your HTML file, and start using Tailwind’s
-        utility classes to style your content.
+        Thêm thẻ script Play CDN vào <code>&lt;head&gt;</code> của file HTML của bạn, và bắt đầu sử dụng các utility class của Tailwind
+        để style nội dung của bạn.
       </p>
     ),
     code: {
@@ -47,10 +47,10 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Try adding some custom CSS",
+    title: "Thử thêm một số CSS tùy chỉnh",
     body: (
       <p>
-        Use <code>type="text/tailwindcss"</code> to add custom CSS that supports all of Tailwind's CSS features.
+        Sử dụng <code>type="text/tailwindcss"</code> để thêm CSS tùy chỉnh hỗ trợ tất cả các tính năng CSS của Tailwind.
       </p>
     ),
     code: {
@@ -87,11 +87,11 @@ export default function Page() {
     <>
       <div id="content-wrapper" className="prose relative z-10 mb-10 max-w-3xl" data-content="true">
         <h3 className="sr-only" data-title="true">
-          Using Play CDN
+          Sử dụng Play CDN
         </h3>
         <p>
-          Use the Play CDN to try Tailwind right in the browser without any build step. The Play CDN is designed for
-          development purposes only, and is not intended for production.
+          Sử dụng Play CDN để thử Tailwind ngay trong trình duyệt mà không cần bước build nào. Play CDN được thiết kế cho
+          mục đích phát triển, và không dành cho production.
         </p>
       </div>
       <Steps steps={steps} />

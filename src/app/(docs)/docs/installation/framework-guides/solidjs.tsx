@@ -3,22 +3,22 @@ import Logo from "@/docs/img/guides/solidjs.react.svg";
 
 export let tile: Tile = {
   title: "SolidJS",
-  description: "A tool for building simple, performant, and reactive user interfaces.",
+  description: "Công cụ để xây dựng giao diện người dùng đơn giản, hiệu năng cao và reactive.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with SolidJS",
-  description: "Setting up Tailwind CSS in a SolidJS project.",
+  title: "Cài đặt Tailwind CSS với SolidJS",
+  description: "Thiết lập Tailwind CSS trong dự án SolidJS.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new SolidJS project if you don't have one set up already. The most common approach is to use{" "}
-        <a href="https://www.solidjs.com/guides/getting-started">the SolidJS Vite template</a>.
+        Bắt đầu bằng cách tạo một dự án SolidJS mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng{" "}
+        <a href="https://www.solidjs.com/guides/getting-started">SolidJS Vite template</a>.
       </p>
     ),
     code: {
@@ -31,10 +31,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/vite</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/vite</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -46,10 +46,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure Vite Plugin",
+    title: "Cấu hình Vite Plugin",
     body: (
       <p>
-        Add the <code>@tailwindcss/vite</code> plugin to your Vite configuration.
+        Thêm plugin <code>@tailwindcss/vite</code> vào cấu hình Vite của bạn.
       </p>
     ),
     code: {
@@ -81,7 +81,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to <code>./src/index.css</code> that imports Tailwind CSS.
+        Thêm <code>@import</code> vào <code>./src/index.css</code> để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -93,10 +93,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>npm run dev</code>.
+        Chạy quá trình build với <code>npm run dev</code>.
       </p>
     ),
     code: {
@@ -108,8 +108,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "App.jsx",
       lang: "jsx",

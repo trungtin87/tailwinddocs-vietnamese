@@ -7,7 +7,7 @@ import { UsingACustomValue } from "@/components/content.tsx";
 import colors from "./utils/colors";
 
 export const title = "caret-color";
-export const description = "Utilities for controlling the color of the text input cursor.";
+export const description = "Các utility để kiểm soát màu sắc của con trỏ nhập văn bản.";
 
 <ApiTable
   rows={[
@@ -22,13 +22,13 @@ export const description = "Utilities for controlling the color of the text inpu
     ["caret-[<value>]", "caret-color: <value>;"],
   ]}
 />
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `caret-rose-500` and `caret-lime-600` to change the color of the text input cursor:
+Sử dụng các utility như `caret-rose-500` và `caret-lime-600` để thay đổi màu sắc của con trỏ nhập văn bản:
 
-<Figure hint="Focus the textarea to see the new caret color">
+<Figure hint="Focus vào textarea để xem màu caret mới">
 
 <Example>
   {
@@ -48,11 +48,11 @@ Use utilities like `caret-rose-500` and `caret-lime-600` to change the color of 
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
-<UsingACustomValue element="textarea" utility="caret" value="#50d71e" name="caret color" variable="caret-color" />
+<UsingACustomValue element="textarea" utility="caret" value="#50d71e" name="màu caret" variable="caret-color" />
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign
   element="textarea"
@@ -61,6 +61,6 @@ Use utilities like `caret-rose-500` and `caret-lime-600` to change the color of 
   featuredClass="caret-lime-600"
 />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors element="textarea" utility="caret" />

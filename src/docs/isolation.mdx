@@ -3,7 +3,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "isolation";
 export const description =
-  "Utilities for controlling whether an element should explicitly create a new stacking context.";
+  "Các utility để kiểm soát việc một phần tử có nên tạo stacking context mới một cách rõ ràng hay không.";
 
 <ApiTable
   rows={[
@@ -12,11 +12,11 @@ export const description =
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `isolate` and `isolation-auto` utilities to control whether an element should explicitly create a new stacking context:
+Sử dụng các utility `isolate` và `isolation-auto` để kiểm soát việc một phần tử có nên tạo stacking context mới một cách rõ ràng hay không:
 
 ```html
 <!-- [!code classes:isolate] -->
@@ -25,6 +25,6 @@ Use the `isolate` and `isolation-auto` utilities to control whether an element s
 </div>
 ```
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="isolation" defaultClass="isolate" featuredClass="isolation-auto" />

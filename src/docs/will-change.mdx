@@ -3,7 +3,7 @@ import { Example } from "@/components/example.tsx";
 import { UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "will-change";
-export const description = "Utilities for optimizing upcoming animations of elements that are expected to change.";
+export const description = "Các utility để tối ưu hóa các animation sắp tới của các phần tử dự kiến sẽ thay đổi.";
 
 <ApiTable
   rows={[
@@ -16,11 +16,11 @@ export const description = "Utilities for optimizing upcoming animations of elem
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Optimizing with will change
+### Tối ưu hóa với will change
 
-Use the `will-change-scroll`, `will-change-contents` and `will-change-transform` utilities to optimize an element that's expected to change in the near future by instructing the browser to prepare the necessary animation before it actually begins:
+Sử dụng các utility `will-change-scroll`, `will-change-contents` và `will-change-transform` để tối ưu hóa một phần tử dự kiến sẽ thay đổi trong tương lai gần bằng cách hướng dẫn trình duyệt chuẩn bị animation cần thiết trước khi nó thực sự bắt đầu:
 
 ```html
 <!-- [!code classes:will-change-scroll] -->
@@ -29,11 +29,11 @@ Use the `will-change-scroll`, `will-change-contents` and `will-change-transform`
 </div>
 ```
 
-It's recommended that you apply these utilities just before an element changes, and then remove it shortly after it finishes using `will-change-auto`.
+Được khuyến nghị là bạn nên áp dụng các utility này ngay trước khi một phần tử thay đổi, và sau đó xóa nó ngay sau khi hoàn thành bằng cách sử dụng `will-change-auto`.
 
-The `will-change` property is intended to be used as a last resort when dealing with **known performance problems**. Avoid using these utilities too much, or simply in anticipation of performance issues, as it could actually cause the page to be less performant.
+Thuộc tính `will-change` được dự định sử dụng như một giải pháp cuối cùng khi xử lý **các vấn đề hiệu suất đã biết**. Tránh sử dụng các utility này quá nhiều, hoặc chỉ đơn giản là dự đoán các vấn đề hiệu suất, vì nó thực sự có thể khiến trang kém hiệu suất hơn.
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue
   utility="will-change"

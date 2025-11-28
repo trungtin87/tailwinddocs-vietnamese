@@ -6,11 +6,11 @@ import { type Step, Steps } from "@/components/installation-steps";
 export const metadata: Metadata = {
   title: "Tailwind CLI",
   description:
-    "The simplest and fastest way to get up and running with Tailwind CSS from scratch is with the Tailwind CLI tool.",
+    "Cách đơn giản nhất và nhanh nhất để bắt đầu với Tailwind CSS từ đầu là sử dụng công cụ Tailwind CLI.",
   openGraph: {
     type: "article",
     title: "Tailwind CLI",
-    description: "The simplest and fastest way to get up and running with Tailwind CSS from scratch.",
+    description: "Cách đơn giản nhất và nhanh nhất để bắt đầu với Tailwind CSS từ đầu.",
     images: "https://tailwindcss.com/api/og?path=/docs/installation/tailwind-cli",
     url: "https://tailwindcss.com/docs/installation/tailwind-cli",
   },
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 
 const steps: Step[] = [
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>tailwindcss</code> and <code>@tailwindcss/cli</code> via npm.
+        Cài đặt <code>tailwindcss</code> và <code>@tailwindcss/cli</code> qua npm.
       </p>
     ),
     code: {
@@ -31,10 +31,10 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Import Tailwind in your CSS",
+    title: "Import Tailwind vào CSS của bạn",
     body: (
       <p>
-        Add the <code>@import "tailwindcss";</code> import to your main CSS file.
+        Thêm dòng import <code>@import "tailwindcss";</code> vào file CSS chính của bạn.
       </p>
     ),
     code: {
@@ -44,8 +44,8 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Start the Tailwind CLI build process",
-    body: <p>Run the CLI tool to scan your source files for classes and build your CSS.</p>,
+    title: "Bắt đầu quá trình build Tailwind CLI",
+    body: <p>Chạy công cụ CLI để quét các file nguồn của bạn tìm các class và build CSS của bạn.</p>,
     code: {
       name: "Terminal",
       lang: "shell",
@@ -53,11 +53,11 @@ const steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your HTML",
+    title: "Bắt đầu sử dụng Tailwind trong HTML của bạn",
     body: (
       <p>
-        Add your compiled CSS file to the <code>{"<head>"}</code> and start using Tailwind’s utility classes to style
-        your content.
+        Thêm file CSS đã biên dịch của bạn vào <code>{"<head>"}</code> và bắt đầu sử dụng các utility class của Tailwind để style
+        nội dung của bạn.
       </p>
     ),
     code: {
@@ -89,13 +89,13 @@ export default function Page() {
     <>
       <div id="content-wrapper" className="prose relative z-10 mb-10 max-w-3xl" data-content="true">
         <h3 className="sr-only" data-title="true">
-          Installing Tailwind CLI
+          Cài đặt Tailwind CLI
         </h3>
         <p>
-          The simplest and fastest way to get up and running with Tailwind CSS from scratch is with the Tailwind CLI
-          tool. The CLI is also available as a{" "}
-          <Link href="https://github.com/tailwindlabs/tailwindcss/releases/latest">standalone executable</Link> if you
-          want to use it without installing Node.js.
+          Cách đơn giản nhất và nhanh nhất để bắt đầu với Tailwind CSS từ đầu là sử dụng công cụ Tailwind CLI.
+          CLI cũng có sẵn dưới dạng một{" "}
+          <Link href="https://github.com/tailwindlabs/tailwindcss/releases/latest">tệp thực thi độc lập</Link> nếu bạn
+          muốn sử dụng nó mà không cần cài đặt Node.js.
         </p>
       </div>
       <Steps steps={steps} />

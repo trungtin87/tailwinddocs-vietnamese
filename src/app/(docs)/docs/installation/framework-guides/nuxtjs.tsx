@@ -3,21 +3,21 @@ import Logo from "@/docs/img/guides/nuxtjs.react.svg";
 
 export let tile: Tile = {
   title: "Nuxt",
-  description: "Intuitive Vue framework for building universal applications.",
+  description: "Framework Vue trực quan để xây dựng các ứng dụng universal.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Nuxt",
-  description: "Setting up Tailwind CSS in a Nuxt project.",
+  title: "Cài đặt Tailwind CSS với Nuxt",
+  description: "Thiết lập Tailwind CSS trong dự án Nuxt.",
 };
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Nuxt project if you don’t have one set up already. The most common approach is to use{" "}
+        Bắt đầu bằng cách tạo một dự án Nuxt mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng{" "}
         <a href="https://nuxt.com/docs/4.x/getting-started/installation#new-project">Create Nuxt</a>.
       </p>
     ),
@@ -31,10 +31,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/vite</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/vite</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -46,10 +46,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Configure Vite Plugin",
+    title: "Cấu hình Vite Plugin",
     body: (
       <p>
-        Add the <code>@tailwindcss/vite</code> plugin to your Nuxt configuration as a Vite plugin.
+        Thêm plugin <code>@tailwindcss/vite</code> vào cấu hình Nuxt của bạn như một Vite plugin.
       </p>
     ),
     code: {
@@ -76,7 +76,7 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Create an <code>./app/assets/css/main.css</code> file and add an <code>@import</code> that imports Tailwind CSS.
+        Tạo file <code>./app/assets/css/main.css</code> và thêm <code>@import</code> để import Tailwind CSS.
       </p>
     ),
     code: {
@@ -88,11 +88,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Add the CSS file globally",
+    title: "Thêm file CSS toàn cục",
     body: (
       <p>
-        Add your newly-created <code>./app/assets/css/main.css</code> to the <code>css</code> array in your{" "}
-        <code>nuxt.config.ts</code> file.
+        Thêm file <code>./app/assets/css/main.css</code> vừa tạo vào mảng <code>css</code> trong file{" "}
+        <code>nuxt.config.ts</code> của bạn.
       </p>
     ),
     code: {
@@ -116,10 +116,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>npm run dev</code>.
+        Chạy quá trình build với <code>npm run dev</code>.
       </p>
     ),
     code: {
@@ -131,8 +131,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind’s utility classes to style your content.</p>,
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
+    body: <p>Bắt đầu sử dụng các utility class của Tailwind để style nội dung của bạn.</p>,
     code: {
       name: "app.vue",
       lang: "vue",

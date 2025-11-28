@@ -3,34 +3,34 @@ import Logo from "@/docs/img/guides/laravel.react.svg";
 
 export let tile: Tile = {
   title: "Laravel",
-  description: "PHP web application framework with expressive, elegant syntax.",
+  description: "Framework ứng dụng web PHP với cú pháp tường minh, thanh lịch.",
   Logo,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Laravel",
-  description: "Setting up Tailwind CSS in a Laravel project.",
+  title: "Cài đặt Tailwind CSS với Laravel",
+  description: "Thiết lập Tailwind CSS trong dự án Laravel.",
 };
 
 export let tabs: Tab[] = [
   {
     slug: "vite",
-    title: "Using Vite",
+    title: "Sử dụng Vite",
   },
   {
     slug: "mix",
-    title: "Using Laravel Mix",
+    title: "Sử dụng Laravel Mix",
   },
 ];
 
 export let steps: Step[] = [
   {
     tabs: ["vite"],
-    title: "Create your project",
+    title: "Tạo dự án của bạn",
     body: (
       <p>
-        Start by creating a new Laravel project if you don’t have one set up already. The most common approach is to use{" "}
-        <a href="https://laravel.com/docs#creating-an-application">the Laravel installer</a>.
+        Bắt đầu bằng cách tạo một dự án Laravel mới nếu bạn chưa thiết lập. Cách phổ biến nhất là sử dụng{" "}
+        <a href="https://laravel.com/docs#creating-an-application">Laravel installer</a>.
       </p>
     ),
     code: {
@@ -45,10 +45,10 @@ export let steps: Step[] = [
 
   {
     tabs: ["vite"],
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/vite</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/vite</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -61,10 +61,10 @@ export let steps: Step[] = [
   },
   {
     tabs: ["mix"],
-    title: "Install Tailwind CSS",
+    title: "Cài đặt Tailwind CSS",
     body: (
       <p>
-        Install <code>@tailwindcss/postcss</code> and its peer dependencies via npm.
+        Cài đặt <code>@tailwindcss/postcss</code> và các peer dependencies thông qua npm.
       </p>
     ),
     code: {
@@ -78,10 +78,10 @@ export let steps: Step[] = [
 
   {
     tabs: ["vite"],
-    title: "Configure Vite Plugin",
+    title: "Cấu hình Vite Plugin",
     body: (
       <p>
-        Add the <code>@tailwindcss/vite</code> plugin to your Vite configuration.
+        Thêm plugin <code>@tailwindcss/vite</code> vào cấu hình Vite của bạn.
       </p>
     ),
     code: {
@@ -105,10 +105,10 @@ export let steps: Step[] = [
 
   {
     tabs: ["mix"],
-    title: "Add Tailwind to your Laravel Mix configuration",
+    title: "Thêm Tailwind vào cấu hình Laravel Mix của bạn",
     body: (
       <p>
-        In your <code>webpack.mix.js</code> file, add <code>tailwindcss</code> as a PostCSS plugin.
+        Trong file <code>webpack.mix.js</code> của bạn, thêm <code>tailwindcss</code> như một plugin PostCSS.
       </p>
     ),
     code: {
@@ -129,8 +129,8 @@ export let steps: Step[] = [
     title: "Import Tailwind CSS",
     body: (
       <p>
-        Add an <code>@import</code> to <code>./resources/css/app.css</code> that imports Tailwind CSS. Additionally,
-        tell Tailwind CSS to scan some directories for utilities.
+        Thêm <code>@import</code> vào <code>./resources/css/app.css</code> để import Tailwind CSS. Ngoài ra,
+        hãy báo cho Tailwind CSS biết để quét một số thư mục tìm các utility.
       </p>
     ),
     code: {
@@ -149,10 +149,10 @@ export let steps: Step[] = [
 
   {
     tabs: ["vite"],
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>npm run dev</code>.
+        Chạy quá trình build với <code>npm run dev</code>.
       </p>
     ),
     code: {
@@ -166,10 +166,10 @@ export let steps: Step[] = [
 
   {
     tabs: ["mix"],
-    title: "Start your build process",
+    title: "Bắt đầu quá trình build",
     body: (
       <p>
-        Run your build process with <code>npm run watch</code>.
+        Chạy quá trình build với <code>npm run watch</code>.
       </p>
     ),
     code: {
@@ -183,11 +183,11 @@ export let steps: Step[] = [
 
   {
     tabs: ["vite"],
-    title: "Start using Tailwind in your project",
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
     body: (
       <p>
-        Make sure your compiled CSS is included in the <code>{"<head>"}</code> then start using Tailwind’s utility
-        classes to style your content.
+        Đảm bảo CSS đã biên dịch được thêm vào <code>{"<head>"}</code> sau đó bắt đầu sử dụng các utility class của Tailwind
+        để style nội dung của bạn.
       </p>
     ),
     code: {
@@ -215,11 +215,11 @@ export let steps: Step[] = [
   },
   {
     tabs: ["mix"],
-    title: "Start using Tailwind in your project",
+    title: "Bắt đầu sử dụng Tailwind trong dự án của bạn",
     body: (
       <p>
-        Make sure your compiled CSS is included in the <code>{"<head>"}</code> then start using Tailwind’s utility
-        classes to style your content.
+        Đảm bảo CSS đã biên dịch được thêm vào <code>{"<head>"}</code> sau đó bắt đầu sử dụng các utility class của Tailwind
+        để style nội dung của bạn.
       </p>
     ),
     code: {

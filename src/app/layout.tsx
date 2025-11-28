@@ -129,11 +129,11 @@ let darkModeScript = js`
 export const metadata: Metadata = {
   metadataBase: new URL("https://tailwindcss.com"),
   title: {
-    default: "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
+    default: "Tailwind CSS - Xây dựng trang web hiện đại nhanh chóng mà không cần rời khỏi HTML.",
     template: "%s - Tailwind CSS",
   },
   description:
-    "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+    "Tailwind CSS là một framework CSS ưu tiên tiện ích giúp xây dựng trang web hiện đại nhanh chóng mà không cần rời khỏi HTML.",
 };
 
 export default async function RootLayout({
@@ -143,7 +143,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="vi"
       className={`${inter.variable} ${plexMono.variable} ${source.variable} ${ubuntuMono.variable} antialiased dark:bg-gray-950`}
       suppressHydrationWarning
     >
