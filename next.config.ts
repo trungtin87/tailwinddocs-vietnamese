@@ -503,5 +503,8 @@ const nextConfig = {
   // },
 } satisfies NextConfig;
 
-const withMDX = require("@next/mdx")();
-module.exports = withMDX(nextConfig);
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);
