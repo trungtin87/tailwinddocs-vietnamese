@@ -7,7 +7,7 @@ const nextConfig = {
     "/**/*": ["./src/docs/*.mdx"],
   },
   output: "export",
-  basePath: "/tailwindcss.com",
+  basePath: "/tailwinddocs-vietnamese",
   images: {
     unoptimized: true,
   },
