@@ -6,7 +6,7 @@ import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "mask-size";
-export const description = "Utilities for controlling the size of an element's mask image.";
+export const description = "Các tiện ích để kiểm soát kích thước của mask image của một phần tử.";
 
 <ApiTable
   rows={[
@@ -18,11 +18,11 @@ export const description = "Utilities for controlling the size of an element's m
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Filling the container
+### Lấp đầy container
 
-Use the `mask-cover` utility to scale the mask image until it fills the mask layer, cropping the image if needed:
+Sử dụng tiện ích `mask-cover` để chia tỷ lệ mask image cho đến khi nó lấp đầy lớp mask, cắt hình ảnh nếu cần:
 
 <Figure>
 
@@ -45,9 +45,9 @@ Use the `mask-cover` utility to scale the mask image until it fills the mask lay
 
 </Figure>
 
-### Filling without cropping
+### Lấp đầy mà không cắt
 
-Use the `mask-contain` utility to scale the mask image to the outer edges without cropping or stretching:
+Sử dụng tiện ích `mask-contain` để chia tỷ lệ mask image đến các cạnh ngoài mà không cắt hoặc kéo giãn:
 
 <Figure>
 
@@ -70,9 +70,9 @@ Use the `mask-contain` utility to scale the mask image to the outer edges withou
 
 </Figure>
 
-### Using the default size
+### Sử dụng kích thước mặc định
 
-Use the `mask-auto` utility to display the mask image at its default size:
+Sử dụng tiện ích `mask-auto` để hiển thị mask image ở kích thước mặc định của nó:
 
 <Figure>
 
@@ -95,7 +95,7 @@ Use the `mask-auto` utility to display the mask image at its default size:
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="mask-size" value="auto_100px" name="mask image size" variable="mask-size" />
 

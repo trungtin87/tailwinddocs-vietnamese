@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "visibility";
-export const description = "Utilities for controlling the visibility of an element.";
+export const description = "Các tiện ích để kiểm soát khả năng hiển thị của một phần tử.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for controlling the visibility of an eleme
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Making elements invisible
+### Ẩn phần tử
 
-Use the `invisible` utility to hide an element, but still maintain its place in the document, affecting the layout of other elements:
+Sử dụng tiện ích `invisible` để ẩn một phần tử, nhưng vẫn duy trì vị trí của nó trong tài liệu, ảnh hưởng đến bố cục của các phần tử khác:
 
 <Figure>
 
@@ -47,18 +47,18 @@ Use the `invisible` utility to hide an element, but still maintain its place in 
 
 </Figure>
 
-To completely remove an element from the document, use the [display](/docs/display#hidden) property instead.
+Để loại bỏ hoàn toàn một phần tử khỏi tài liệu, hãy sử dụng thuộc tính [display](/docs/display#hidden) thay thế.
 
-### Collapsing elements
+### Thu gọn phần tử
 
-Use the `collapse` utility to hide table rows, row groups, columns, and column groups as if they were set to `display: none`, but without impacting the size of other rows and columns:
+Sử dụng tiện ích `collapse` để ẩn các hàng, nhóm hàng, cột và nhóm cột của table như thể chúng được đặt thành `display: none`, nhưng không ảnh hưởng đến kích thước của các hàng và cột khác:
 
 <Figure>
 
 <Example padding={false}>
   {
     <div className="py-8">
-      <div className="mb-3 pl-4 text-sm font-medium text-gray-500 dark:text-gray-400">Showing all rows</div>
+      <div className="mb-3 pl-4 text-sm font-medium text-gray-500 dark:text-gray-400">Đang hiển thị tất cả các hàng</div>
       <table className="w-full border-collapse border-y border-gray-400 bg-white text-sm dark:border-gray-500 dark:bg-gray-800">
         <thead className="bg-gray-50 dark:bg-gray-700">
           <tr>
@@ -110,7 +110,7 @@ Use the `collapse` utility to hide table rows, row groups, columns, and column g
         </tbody>
       </table>
       <div className="mt-10 mb-3 pl-4 text-sm font-medium text-gray-500 dark:text-gray-400">
-        Hiding a row using <code className="text-xs text-gray-700 dark:text-gray-300">`collapse`</code>
+        Ẩn một hàng sử dụng <code className="text-xs text-gray-700 dark:text-gray-300">`collapse`</code>
       </div>
       <table className="w-full border-collapse border-y border-gray-400 bg-white text-sm dark:border-gray-500 dark:bg-gray-800">
         <thead className="bg-gray-50 dark:bg-gray-700">
@@ -163,7 +163,7 @@ Use the `collapse` utility to hide table rows, row groups, columns, and column g
         </tbody>
       </table>
       <div className="mt-10 mb-3 pl-4 text-sm font-medium text-gray-500 dark:text-gray-400">
-        Hiding a row using <code className="text-xs text-gray-700 dark:text-gray-300">`hidden`</code>
+        Ẩn một hàng sử dụng <code className="text-xs text-gray-700 dark:text-gray-300">`hidden`</code>
       </div>
       <table className="w-full border-collapse border-y border-gray-400 bg-white text-sm dark:border-gray-500 dark:bg-gray-800">
         <thead className="bg-gray-50 dark:bg-gray-700">
@@ -251,11 +251,11 @@ Use the `collapse` utility to hide table rows, row groups, columns, and column g
 
 </Figure>
 
-This makes it possible to dynamically toggle rows and columns without affecting the table layout.
+Điều này cho phép chuyển đổi động các hàng và cột mà không ảnh hưởng đến bố cục của table.
 
-### Making elements visible
+### Hiển thị phần tử
 
-Use the `visible` utility to make an element visible:
+Sử dụng tiện ích `visible` để hiển thị một phần tử:
 
 <Figure>
 
@@ -280,7 +280,7 @@ Use the `visible` utility to make an element visible:
 
 </Figure>
 
-This is mostly useful for undoing the `invisible` utility at different screen sizes.
+Điều này chủ yếu hữu ích để hủy bỏ tiện ích `invisible` ở các kích thước màn hình khác nhau.
 
 ### Responsive design
 

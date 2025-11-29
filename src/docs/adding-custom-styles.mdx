@@ -1,17 +1,17 @@
 import { CodeExampleStack } from "@/components/code-example";
 
-export const title = "Adding custom styles";
-export const description = "Best practices for adding your own custom styles in Tailwind projects.";
+export const title = "Thêm các style tùy chỉnh";
+export const description = "Các phương pháp tốt nhất để thêm các style tùy chỉnh của riêng bạn trong các dự án Tailwind.";
 
-Often the biggest challenge when working with a framework is figuring out what you’re supposed to do when there’s something you need that the framework doesn’t handle for you.
+Thường thì thách thức lớn nhất khi làm việc với một framework là tìm ra những gì bạn phải làm khi có thứ gì đó bạn cần mà framework không xử lý cho bạn.
 
-Tailwind has been designed from the ground up to be extensible and customizable, so that no matter what you’re building you never feel like you’re fighting the framework.
+Tailwind đã được thiết kế ngay từ đầu để có thể mở rộng và tùy chỉnh, để dù bạn đang xây dựng cái gì, bạn không bao giờ cảm thấy như mình đang chiến đấu với framework.
 
-This guide covers topics like customizing your design tokens, how to break out of those constraints when necessary, adding your own custom CSS, and extending the framework with plugins.
+Hướng dẫn này bao gồm các chủ đề như tùy chỉnh các design token của bạn, cách phá vỡ các ràng buộc đó khi cần thiết, thêm CSS tùy chỉnh của riêng bạn và mở rộng framework bằng các plugin.
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
-If you want to change things like your color palette, spacing scale, typography scale, or breakpoints, add your customizations using the `@theme` directive in your CSS:
+Nếu bạn muốn thay đổi những thứ như bảng màu, thang đo khoảng cách, thang đo typography hoặc các breakpoint, hãy thêm các tùy chỉnh của bạn bằng cách sử dụng directive `@theme` trong CSS của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -34,13 +34,13 @@ If you want to change things like your color palette, spacing scale, typography 
 }
 ```
 
-Learn more about customizing your theme in the [theme variables documentation](/docs/theme).
+Tìm hiểu thêm về cách tùy chỉnh theme của bạn trong [tài liệu về biến theme](/docs/theme).
 
-## Using arbitrary values
+## Sử dụng các giá trị tùy ý
 
-While you can usually build the bulk of a well-crafted design using a constrained set of design tokens, once in a while you need to break out of those constraints to get things pixel-perfect.
+Mặc dù bạn thường có thể xây dựng phần lớn một thiết kế được trau chuốt kỹ lưỡng bằng cách sử dụng một tập hợp các design token bị hạn chế, nhưng đôi khi bạn cần phải phá vỡ các ràng buộc đó để làm cho mọi thứ hoàn hảo đến từng pixel.
 
-When you find yourself really needing something like `top: 117px` to get a background image in just the right spot, use Tailwind's square bracket notation to generate a class on the fly with any arbitrary value:
+Khi bạn thấy mình thực sự cần một cái gì đó như `top: 117px` để đặt hình nền vào đúng vị trí, hãy sử dụng ký hiệu ngoặc vuông của Tailwind để tạo ra một class ngay lập tức với bất kỳ giá trị tùy ý nào:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -50,7 +50,7 @@ When you find yourself really needing something like `top: 117px` to get a backg
 </div>
 ```
 
-This is basically like inline styles, with the major benefit that you can combine it with interactive modifiers like `hover` and responsive modifiers like `lg`:
+Điều này về cơ bản giống như inline styles, với lợi ích chính là bạn có thể kết hợp nó với các modifier tương tác như `hover` và các modifier phản hồi như `lg`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -60,7 +60,7 @@ This is basically like inline styles, with the major benefit that you can combin
 </div>
 ```
 
-This works for everything in the framework, including things like background colors, font sizes, pseudo-element content, and more:
+Điều này hoạt động cho mọi thứ trong framework, bao gồm những thứ như màu nền, kích thước phông chữ, nội dung pseudo-element, và nhiều hơn nữa:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -70,7 +70,7 @@ This works for everything in the framework, including things like background col
 </div>
 ```
 
-If you're referencing a CSS variable as an arbitrary value, you can use the custom property syntax:
+Nếu bạn đang tham chiếu một biến CSS như một giá trị tùy ý, bạn có thể sử dụng cú pháp custom property:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -80,11 +80,11 @@ If you're referencing a CSS variable as an arbitrary value, you can use the cust
 </div>
 ```
 
-This is just a shorthand for <code>fill-{'[var(--my-brand-color)]'}</code> that adds the `var()` function for you automatically.
+Đây chỉ là cách viết tắt cho <code>fill-{'[var(--my-brand-color)]'}</code> giúp thêm hàm `var()` cho bạn một cách tự động.
 
-### Arbitrary properties
+### Thuộc tính tùy ý
 
-If you ever need to use a CSS property that Tailwind doesn't include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS:
+Nếu bạn cần sử dụng một thuộc tính CSS mà Tailwind không bao gồm utility sẵn có, bạn cũng có thể sử dụng ký hiệu ngoặc vuông để viết CSS hoàn toàn tùy ý:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -94,7 +94,7 @@ If you ever need to use a CSS property that Tailwind doesn't include a utility f
 </div>
 ```
 
-This is _really_ like inline styles, but again with the benefit that you can use modifiers:
+Điều này _thực sự_ giống như inline styles, nhưng một lần nữa với lợi ích là bạn có thể sử dụng các modifier:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -104,7 +104,7 @@ This is _really_ like inline styles, but again with the benefit that you can use
 </div>
 ```
 
-This can be useful for things like CSS variables as well, especially when they need to change under different conditions:
+Điều này cũng có thể hữu ích cho những thứ như biến CSS, đặc biệt là khi chúng cần thay đổi trong các điều kiện khác nhau:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -114,9 +114,9 @@ This can be useful for things like CSS variables as well, especially when they n
 </div>
 ```
 
-### Arbitrary variants
+### Variant tùy ý
 
-Arbitrary _variants_ are like arbitrary values but for doing on-the-fly selector modification, like you can with built-in pseudo-class variants like `hover:{utility}` or responsive variants like `md:{utility}` but using square bracket notation directly in your HTML.
+Các _variant_ tùy ý giống như các giá trị tùy ý nhưng để sửa đổi selector ngay lập tức, giống như bạn có thể làm với các variant pseudo-class tích hợp sẵn như `hover:{utility}` hoặc các variant phản hồi như `md:{utility}` nhưng sử dụng ký hiệu ngoặc vuông trực tiếp trong HTML của bạn.
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -128,11 +128,11 @@ Arbitrary _variants_ are like arbitrary values but for doing on-the-fly selector
 </ul>
 ```
 
-Learn more in the [arbitrary variants](/docs/hover-focus-and-other-states#using-arbitrary-variants) documentation.
+Tìm hiểu thêm trong tài liệu về [variant tùy ý](/docs/hover-focus-and-other-states#using-arbitrary-variants).
 
-### Handling whitespace
+### Xử lý khoảng trắng
 
-When an arbitrary value needs to contain a space, use an underscore (`_`) instead and Tailwind will automatically convert it to a space at build-time:
+Khi một giá trị tùy ý cần chứa khoảng trắng, hãy sử dụng dấu gạch dưới (`_`) thay thế và Tailwind sẽ tự động chuyển đổi nó thành khoảng trắng tại thời điểm build:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -142,7 +142,7 @@ When an arbitrary value needs to contain a space, use an underscore (`_`) instea
 </div>
 ```
 
-In situations where underscores are common but spaces are invalid, Tailwind will preserve the underscore instead of converting it to a space, for example in URLs:
+Trong các tình huống mà dấu gạch dưới là phổ biến nhưng khoảng trắng không hợp lệ, Tailwind sẽ giữ nguyên dấu gạch dưới thay vì chuyển đổi nó thành khoảng trắng, ví dụ như trong các URL:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -152,7 +152,7 @@ In situations where underscores are common but spaces are invalid, Tailwind will
 </div>
 ```
 
-In the rare case that you actually need to use an underscore but it's ambiguous because a space is valid as well, escape the underscore with a backslash and Tailwind won't convert it to a space:
+Trong trường hợp hiếm hoi mà bạn thực sự cần sử dụng dấu gạch dưới nhưng nó gây nhầm lẫn vì khoảng trắng cũng hợp lệ, hãy escape dấu gạch dưới bằng dấu gạch chéo ngược và Tailwind sẽ không chuyển đổi nó thành khoảng trắng:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -162,7 +162,7 @@ In the rare case that you actually need to use an underscore but it's ambiguous 
 </div>
 ```
 
-If you're using something like JSX where the backslash is stripped from the rendered HTML, use [String.raw()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw) so the backslash isn't treated as a JavaScript escape character:
+Nếu bạn đang sử dụng thứ gì đó như JSX nơi dấu gạch chéo ngược bị loại bỏ khỏi HTML được render, hãy sử dụng [String.raw()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw) để dấu gạch chéo ngược không bị coi là ký tự escape của JavaScript:
 
 ```jsx
 <div className={String.raw`before:content-['hello\_world']`}>
@@ -170,23 +170,23 @@ If you're using something like JSX where the backslash is stripped from the rend
 </div>
 ```
 
-### Resolving ambiguities
+### Giải quyết sự mơ hồ
 
-Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for `font-size` and the other is for `color`.
+Nhiều utility trong Tailwind chia sẻ một namespace chung nhưng ánh xạ tới các thuộc tính CSS khác nhau. Ví dụ `text-lg` và `text-black` đều chia sẻ namespace `text-`, nhưng một cái dành cho `font-size` và cái kia dành cho `color`.
 
-When using arbitrary values, Tailwind can generally handle this ambiguity automatically based on the value you pass in:
+Khi sử dụng các giá trị tùy ý, Tailwind thường có thể tự động xử lý sự mơ hồ này dựa trên giá trị bạn truyền vào:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:text-[22px],text-[#bada55]] -->
-<!-- Will generate a font-size utility -->
+<!-- Sẽ tạo ra một utility font-size -->
 <div class="text-[22px]">...</div>
 
-<!-- Will generate a color utility -->
+<!-- Sẽ tạo ra một utility color -->
 <div class="text-[#bada55]">...</div>
 ```
 
-Sometimes it really is ambiguous though, for example when using CSS variables:
+Tuy nhiên, đôi khi nó thực sự mơ hồ, ví dụ như khi sử dụng các biến CSS:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -194,21 +194,21 @@ Sometimes it really is ambiguous though, for example when using CSS variables:
 <div class="text-(--my-var)">...</div>
 ```
 
-In these situations, you can "hint" the underlying type to Tailwind by adding a [CSS data type](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types) before the value:
+Trong những tình huống này, bạn có thể "gợi ý" kiểu cơ bản cho Tailwind bằng cách thêm một [kiểu dữ liệu CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types) trước giá trị:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:text-(length:--my-var),text-(color:--my-var)] -->
-<!-- Will generate a font-size utility -->
+<!-- Sẽ tạo ra một utility font-size -->
 <div class="text-(length:--my-var)">...</div>
 
-<!-- Will generate a color utility -->
+<!-- Sẽ tạo ra một utility color -->
 <div class="text-(color:--my-var)">...</div>
 ```
 
-## Using custom CSS
+## Sử dụng CSS tùy chỉnh
 
-While Tailwind is designed to handle the bulk of your styling needs, there is nothing stopping you from just writing plain CSS when you need to:
+Mặc dù Tailwind được thiết kế để xử lý phần lớn các nhu cầu styling của bạn, nhưng không có gì ngăn cản bạn viết CSS thuần khi bạn cần:
 
 ```css
 /* [!code filename:CSS] */
@@ -220,9 +220,9 @@ While Tailwind is designed to handle the bulk of your styling needs, there is no
 }
 ```
 
-### Adding base styles
+### Thêm các style cơ bản
 
-If you just want to set some defaults for the page (like the text color, background color, or font family), the easiest option is just adding some classes to the `html` or `body` elements:
+Nếu bạn chỉ muốn thiết lập một số mặc định cho trang (như màu văn bản, màu nền hoặc phông chữ), tùy chọn dễ nhất là chỉ cần thêm một số class vào các phần tử `html` hoặc `body`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -233,9 +233,9 @@ If you just want to set some defaults for the page (like the text color, backgro
 </html>
 ```
 
-This keeps your base styling decisions in your markup alongside all of your other styles, instead of hiding them in a separate file.
+Điều này giữ các quyết định styling cơ bản của bạn trong markup cùng với tất cả các style khác, thay vì ẩn chúng trong một file riêng biệt.
 
-If you want to add your own default base styles for specific HTML elements, use the `@layer` directive to add those styles to Tailwind's `base` layer:
+Nếu bạn muốn thêm các style cơ bản mặc định của riêng mình cho các phần tử HTML cụ thể, hãy sử dụng directive `@layer` để thêm các style đó vào layer `base` của Tailwind:
 
 ```css
 /* [!code filename:CSS] */
@@ -252,11 +252,11 @@ If you want to add your own default base styles for specific HTML elements, use 
 }
 ```
 
-### Adding component classes
+### Thêm các class component
 
-Use the `components` layer for any more complicated classes you want to add to your project that you'd still like to be able to override with utility classes.
+Sử dụng layer `components` cho bất kỳ class phức tạp nào bạn muốn thêm vào dự án của mình mà bạn vẫn muốn có thể ghi đè bằng các class utility.
 
-Traditionally these would be classes like `card`, `btn`, `badge` — that kind of thing.
+Theo truyền thống, đây sẽ là các class như `card`, `btn`, `badge` — kiểu như vậy.
 
 ```css
 /* [!code filename:CSS] */
@@ -272,20 +272,20 @@ Traditionally these would be classes like `card`, `btn`, `badge` — that kind o
 }
 ```
 
-By defining component classes in the `components` layer, you can still use utility classes to override them when necessary:
+Bằng cách định nghĩa các class component trong layer `components`, bạn vẫn có thể sử dụng các class utility để ghi đè chúng khi cần thiết:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:card,rounded-none] -->
-<!-- Will look like a card, but with square corners -->
+<!-- Sẽ trông giống như một thẻ, nhưng với các góc vuông -->
 <div class="card rounded-none">
   <!-- ... -->
 </div>
 ```
 
-Using Tailwind you probably don't need these types of classes as often as you think. Read our guide on [managing duplication](/docs/styling-with-utility-classes#managing-duplication) for our recommendations.
+Sử dụng Tailwind, bạn có thể không cần các loại class này thường xuyên như bạn nghĩ. Hãy đọc hướng dẫn của chúng tôi về [quản lý sự lặp lại](/docs/styling-with-utility-classes#managing-duplication) để biết các đề xuất của chúng tôi.
 
-The `components` layer is also a good place to put custom styles for any third-party components you're using:
+Layer `components` cũng là một nơi tốt để đặt các style tùy chỉnh cho bất kỳ component bên thứ ba nào bạn đang sử dụng:
 
 ```css
 /* [!code filename:CSS] */
@@ -296,9 +296,9 @@ The `components` layer is also a good place to put custom styles for any third-p
 }
 ```
 
-### Using variants
+### Sử dụng các variant
 
-Use the `@variant` directive to apply a Tailwind variant within custom CSS:
+Sử dụng directive `@variant` để áp dụng một variant Tailwind trong CSS tùy chỉnh:
 
 <CodeExampleStack>
 
@@ -328,7 +328,7 @@ Use the `@variant` directive to apply a Tailwind variant within custom CSS:
 
 </CodeExampleStack>
 
-If you need to apply multiple variants at the same time, use nesting:
+Nếu bạn cần áp dụng nhiều variant cùng một lúc, hãy sử dụng lồng nhau:
 
 <CodeExampleStack>
 
@@ -364,13 +364,13 @@ If you need to apply multiple variants at the same time, use nesting:
 
 </CodeExampleStack>
 
-## Adding custom utilities
+## Thêm các utility tùy chỉnh
 
-### Simple utilities
+### Utility đơn giản
 
-In addition to using the utilities that ship with Tailwind, you can also add your own custom utilities. This can be useful when there's a CSS feature you'd like to use in your project that Tailwind doesn't include utilities for out of the box.
+Ngoài việc sử dụng các utility đi kèm với Tailwind, bạn cũng có thể thêm các utility tùy chỉnh của riêng mình. Điều này có thể hữu ích khi có một tính năng CSS mà bạn muốn sử dụng trong dự án của mình mà Tailwind không bao gồm utility sẵn có.
 
-Use the `@utility` directive to add a custom utility to your project:
+Sử dụng directive `@utility` để thêm một utility tùy chỉnh vào dự án của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -379,7 +379,7 @@ Use the `@utility` directive to add a custom utility to your project:
 }
 ```
 
-You can now use this utility in your HTML:
+Bây giờ bạn có thể sử dụng utility này trong HTML của mình:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -389,7 +389,7 @@ You can now use this utility in your HTML:
 </div>
 ```
 
-It will also work with variants like `hover`, `focus` and `lg`:
+Nó cũng sẽ hoạt động với các variant như `hover`, `focus` và `lg`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -399,11 +399,11 @@ It will also work with variants like `hover`, `focus` and `lg`:
 </div>
 ```
 
-Custom utilities are automatically inserted into the `utilities` layer along with all of the built-in utilities in the framework.
+Các utility tùy chỉnh được tự động chèn vào layer `utilities` cùng với tất cả các utility tích hợp sẵn trong framework.
 
-### Complex utilities
+### Utility phức tạp
 
-If your custom utility is more complex than a single class name, use nesting to define the utility:
+Nếu utility tùy chỉnh của bạn phức tạp hơn một tên class đơn lẻ, hãy sử dụng lồng nhau để định nghĩa utility:
 
 ```css
 /* [!code filename:CSS] */
@@ -414,9 +414,9 @@ If your custom utility is more complex than a single class name, use nesting to 
 }
 ```
 
-### Functional utilities
+### Utility chức năng
 
-In addition to registering simple utilities with the `@utility` directive, you can also register functional utilities that accept an argument:
+Ngoài việc đăng ký các utility đơn giản với directive `@utility`, bạn cũng có thể đăng ký các utility chức năng chấp nhận một đối số:
 
 ```css
 /* [!code filename:CSS] */
@@ -426,11 +426,11 @@ In addition to registering simple utilities with the `@utility` directive, you c
 }
 ```
 
-The special `--value()` function is used to resolve the utility value.
+Hàm đặc biệt `--value()` được sử dụng để giải quyết giá trị utility.
 
-#### Matching theme values
+#### Khớp giá trị theme
 
-Use the `--value(--theme-key-*)` syntax to resolve the utility value against a set of theme keys:
+Sử dụng cú pháp `--value(--theme-key-*)` để giải quyết giá trị utility dựa trên một tập hợp các key theme:
 
 ```css
 /* [!code filename:CSS] */
@@ -447,11 +447,11 @@ Use the `--value(--theme-key-*)` syntax to resolve the utility value against a s
 }
 ```
 
-This will match utilities like `tab-2`, `tab-4`, and `tab-github`.
+Điều này sẽ khớp với các utility như `tab-2`, `tab-4`, và `tab-github`.
 
-#### Bare values
+#### Giá trị trần (Bare values)
 
-To resolve the value as a bare value, use the `--value({type})` syntax, where `{type}` is the data type you want to validate the bare value as:
+Để giải quyết giá trị như một giá trị trần, hãy sử dụng cú pháp `--value({type})`, trong đó `{type}` là kiểu dữ liệu bạn muốn xác thực giá trị trần:
 
 ```css
 /* [!code filename:CSS] */
@@ -460,13 +460,13 @@ To resolve the value as a bare value, use the `--value({type})` syntax, where `{
 }
 ```
 
-This will match utilities like `tab-1` and `tab-76`.
+Điều này sẽ khớp với các utility như `tab-1` và `tab-76`.
 
-Available bare value data types are: `number`, `integer`, `ratio`, and `percentage`.
+Các kiểu dữ liệu giá trị trần có sẵn là: `number`, `integer`, `ratio`, và `percentage`.
 
-#### Literal values
+#### Giá trị literal
 
-To support literal values, use the `--value('literal')` syntax (notice the quotes):
+Để hỗ trợ các giá trị literal, hãy sử dụng cú pháp `--value('literal')` (chú ý dấu ngoặc kép):
 
 ```css
 /* [!code filename:CSS] */
@@ -475,11 +475,11 @@ To support literal values, use the `--value('literal')` syntax (notice the quote
 }
 ```
 
-This will match utilities like `tab-inherit`, `tab-initial`, and `tab-unset`.
+Điều này sẽ khớp với các utility như `tab-inherit`, `tab-initial`, và `tab-unset`.
 
-#### Arbitrary values
+#### Giá trị tùy ý
 
-To support arbitrary values, use the `--value([{type}])` syntax (notice the square brackets) to tell Tailwind which types are supported as an arbitrary value:
+Để hỗ trợ các giá trị tùy ý, hãy sử dụng cú pháp `--value([{type}])` (chú ý dấu ngoặc vuông) để cho Tailwind biết những kiểu nào được hỗ trợ như một giá trị tùy ý:
 
 ```css
 /* [!code filename:CSS] */
@@ -488,13 +488,13 @@ To support arbitrary values, use the `--value([{type}])` syntax (notice the squa
 }
 ```
 
-This will match utilities like `tab-[1]` and `tab-[76]`.
+Điều này sẽ khớp với các utility như `tab-[1]` và `tab-[76]`.
 
-Available arbitrary value data types are: `absolute-size`, `angle`, `bg-size`, `color`, `family-name`, `generic-name`, `image`, `integer`, `length`, `line-width`, `number`, `percentage`, `position`, `ratio`, `relative-size`, `url`, `vector`, and `*`.
+Các kiểu dữ liệu giá trị tùy ý có sẵn là: `absolute-size`, `angle`, `bg-size`, `color`, `family-name`, `generic-name`, `image`, `integer`, `length`, `line-width`, `number`, `percentage`, `position`, `ratio`, `relative-size`, `url`, `vector`, và `*`.
 
-#### Supporting theme, bare, and arbitrary values together
+#### Hỗ trợ theme, bare, và arbitrary values cùng nhau
 
-All three forms of the `--value()` function can be used within a rule as multiple declarations, and any declarations that fail to resolve will be omitted in the output:
+Cả ba dạng của hàm `--value()` đều có thể được sử dụng trong một quy tắc dưới dạng nhiều khai báo, và bất kỳ khai báo nào không giải quyết được sẽ bị bỏ qua trong đầu ra:
 
 ```css
 /* [!code filename:CSS] */
@@ -510,7 +510,7 @@ All three forms of the `--value()` function can be used within a rule as multipl
 }
 ```
 
-This makes it possible to treat the value differently in each case if necessary, for example translating a bare integer to a percentage:
+Điều này giúp bạn có thể xử lý giá trị khác nhau trong từng trường hợp nếu cần thiết, ví dụ như dịch một số nguyên trần thành phần trăm:
 
 ```css
 /* [!code filename:CSS] */
@@ -523,7 +523,7 @@ This makes it possible to treat the value differently in each case if necessary,
 }
 ```
 
-The `--value()` function can also take multiple arguments and resolve them left to right if you don't need to treat the return value differently in different cases:
+Hàm `--value()` cũng có thể nhận nhiều đối số và giải quyết chúng từ trái sang phải nếu bạn không cần xử lý giá trị trả về khác nhau trong các trường hợp khác nhau:
 
 ```css
 /* [!code filename:CSS] */
@@ -545,9 +545,9 @@ The `--value()` function can also take multiple arguments and resolve them left 
 }
 ```
 
-#### Negative values
+#### Giá trị âm
 
-To support negative values, register separate positive and negative utilities into separate declarations:
+Để hỗ trợ các giá trị âm, hãy đăng ký các utility dương và âm riêng biệt vào các khai báo riêng biệt:
 
 ```css
 /* [!code filename:CSS] */
@@ -563,9 +563,9 @@ To support negative values, register separate positive and negative utilities in
 }
 ```
 
-#### Modifiers
+#### Modifier
 
-Modifiers are handled using the `--modifier()` function which works exactly like the `--value()` function but operates on a modifier if present:
+Các modifier được xử lý bằng cách sử dụng hàm `--modifier()`, hoạt động chính xác giống như hàm `--value()` nhưng tác động lên một modifier nếu có:
 
 ```css
 /* [!code filename:CSS] */
@@ -578,11 +578,11 @@ Modifiers are handled using the `--modifier()` function which works exactly like
 }
 ```
 
-If a modifier isn't present, any declaration depending on a modifier is just not included in the output.
+Nếu một modifier không hiện diện, bất kỳ khai báo nào phụ thuộc vào modifier sẽ không được bao gồm trong đầu ra.
 
-#### Fractions
+#### Phân số
 
-To handle fractions, we rely on the CSS `ratio` data type. If this is used with `--value()`, it's a signal to Tailwind to treat the value and modifier as a single value:
+Để xử lý phân số, chúng tôi dựa vào kiểu dữ liệu `ratio` của CSS. Nếu nó được sử dụng với `--value()`, đó là tín hiệu để Tailwind xử lý giá trị và modifier như một giá trị duy nhất:
 
 ```css
 /* [!code filename:CSS] */
@@ -593,11 +593,11 @@ To handle fractions, we rely on the CSS `ratio` data type. If this is used with 
 }
 ```
 
-This will match utilities like `aspect-square`, `aspect-3/4`, and `aspect-[7/9]`.
+Điều này sẽ khớp với các utility như `aspect-square`, `aspect-3/4`, và `aspect-[7/9]`.
 
-## Adding custom variants
+## Thêm các variant tùy chỉnh
 
-In addition to using the variants that ship with Tailwind, you can also add your own custom variants using the `@custom-variant` directive:
+Ngoài việc sử dụng các variant đi kèm với Tailwind, bạn cũng có thể thêm các variant tùy chỉnh của riêng mình bằng cách sử dụng directive `@custom-variant`:
 
 ```css
 @custom-variant theme-midnight {
@@ -607,7 +607,7 @@ In addition to using the variants that ship with Tailwind, you can also add your
 }
 ```
 
-Now you can use the `theme-midnight:<utility>` variant in your HTML:
+Bây giờ bạn có thể sử dụng variant `theme-midnight:<utility>` trong HTML của mình:
 
 ```html
 <!-- [!code classes:theme-midnight:bg-black] -->
@@ -616,13 +616,13 @@ Now you can use the `theme-midnight:<utility>` variant in your HTML:
 </html>
 ```
 
-You can create variants using the shorthand syntax when nesting isn't required:
+Bạn có thể tạo các variant bằng cách sử dụng cú pháp viết tắt khi không yêu cầu lồng nhau:
 
 ```css
 @custom-variant theme-midnight (&:where([data-theme="midnight"] *));
 ```
 
-When a custom variant has multiple rules, they can be nested within each other:
+Khi một variant tùy chỉnh có nhiều quy tắc, chúng có thể được lồng vào nhau:
 
 ```css
 @custom-variant any-hover {

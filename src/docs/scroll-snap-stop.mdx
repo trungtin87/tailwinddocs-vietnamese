@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "scroll-snap-stop";
-export const description = "Utilities for controlling whether you can skip past possible snap positions.";
+export const description = "Các utility để kiểm soát việc bạn có thể bỏ qua các vị trí snap có thể hay không.";
 
 <ApiTable
   rows={[
@@ -13,11 +13,11 @@ export const description = "Utilities for controlling whether you can skip past 
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Forcing snap position stops
+### Buộc dừng tại vị trí snap
 
-Use the `snap-always` utility together with the [snap-mandatory](/docs/scroll-snap-type#mandatory-scroll-snapping) utility to force a snap container to always stop on an element before the user can continue scrolling to the next item:
+Sử dụng utility `snap-always` cùng với utility [snap-mandatory](/docs/scroll-snap-type#mandatory-scroll-snapping) để buộc snap container luôn dừng tại một phần tử trước khi người dùng có thể tiếp tục cuộn đến item tiếp theo:
 
 <Figure hint="Scroll in the grid of images to see the expected behavior">
 
@@ -104,9 +104,9 @@ Use the `snap-always` utility together with the [snap-mandatory](/docs/scroll-sn
 
 </Figure>
 
-### Skipping snap position stops
+### Bỏ qua dừng tại vị trí snap
 
-Use the `snap-normal` utility to allow a snap container to skip past possible scroll snap positions:
+Sử dụng utility `snap-normal` để cho phép snap container bỏ qua các vị trí scroll snap có thể:
 
 <Figure hint="Scroll in the grid of images to see the expected behavior">
 
@@ -193,6 +193,6 @@ Use the `snap-normal` utility to allow a snap container to skip past possible sc
 
 </Figure>
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="scroll-snap-stop" defaultClass="snap-always" featuredClass="snap-normal" />

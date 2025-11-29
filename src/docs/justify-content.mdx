@@ -7,7 +7,7 @@ import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "justify-content";
 export const description =
-  "Utilities for controlling how flex and grid items are positioned along a container's main axis.";
+  "Các tiện ích để kiểm soát cách các mục flex và grid được định vị dọc theo trục chính của container.";
 
 <ApiTable
   rows={[
@@ -25,11 +25,11 @@ export const description =
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Start
+### Đầu (Start)
 
-Use the `justify-start` utility to justify items against the start of the container's main axis:
+Sử dụng tiện ích `justify-start` để căn chỉnh các mục về phía đầu trục chính của container:
 
 <Figure>
 
@@ -57,11 +57,11 @@ Use the `justify-start` utility to justify items against the start of the contai
 
 </Figure>
 
-### Center
+### Giữa (Center)
 
-Use the `justify-center` or `justify-center-safe` utilities to justify items along the center of the container's main axis:
+Sử dụng các tiện ích `justify-center` hoặc `justify-center-safe` để căn chỉnh các mục dọc theo trung tâm trục chính của container:
 
-<Figure hint="Resize the container to see the alignment behavior">
+<Figure hint="Thay đổi kích thước container để xem hành vi căn chỉnh">
 
 <Example resizable>
   {
@@ -124,13 +124,13 @@ Use the `justify-center` or `justify-center-safe` utilities to justify items alo
 
 </Figure>
 
-When there is not enough space available, the `justify-center-safe` utility will align items to the start of the container instead of the center.
+Khi không có đủ không gian, tiện ích `justify-center-safe` sẽ căn chỉnh các mục về phía đầu của container thay vì ở giữa.
 
-### End
+### Cuối (End)
 
-Use the `justify-end` or `justify-end-safe` utilities to justify items against the end of the container's main axis:
+Sử dụng các tiện ích `justify-end` hoặc `justify-end-safe` để căn chỉnh các mục về phía cuối trục chính của container:
 
-<Figure hint="Resize the container to see the alignment behavior">
+<Figure hint="Thay đổi kích thước container để xem hành vi căn chỉnh">
 
 <Example resizable>
   {
@@ -191,11 +191,11 @@ Use the `justify-end` or `justify-end-safe` utilities to justify items against t
 
 </Figure>
 
-When there is not enough space available, the `justify-end-safe` utility will align items to the start of the container instead of the end.
+Khi không có đủ không gian, tiện ích `justify-end-safe` sẽ căn chỉnh các mục về phía đầu của container thay vì phía cuối.
 
-### Space between
+### Khoảng cách giữa (Space between)
 
-Use the `justify-between` utility to justify items along the container's main axis such that there is an equal amount of space between each item:
+Sử dụng tiện ích `justify-between` để căn chỉnh các mục dọc theo trục chính của container sao cho có một khoảng cách bằng nhau giữa mỗi mục:
 
 <Figure>
 
@@ -223,9 +223,9 @@ Use the `justify-between` utility to justify items along the container's main ax
 
 </Figure>
 
-### Space around
+### Khoảng cách xung quanh (Space around)
 
-Use the `justify-around` utility to justify items along the container's main axis such that there is an equal amount of space on each side of each item:
+Sử dụng tiện ích `justify-around` để căn chỉnh các mục dọc theo trục chính của container sao cho có một khoảng cách bằng nhau ở mỗi bên của mỗi mục:
 
 <Figure>
 
@@ -253,9 +253,9 @@ Use the `justify-around` utility to justify items along the container's main axi
 
 </Figure>
 
-### Space evenly
+### Khoảng cách đều (Space evenly)
 
-Use the `justify-evenly` utility to justify items along the container's main axis such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `justify-around`:
+Sử dụng tiện ích `justify-evenly` để căn chỉnh các mục dọc theo trục chính của container sao cho có một khoảng cách bằng nhau xung quanh mỗi mục, nhưng cũng tính đến việc gấp đôi khoảng cách mà bạn thường thấy giữa mỗi mục khi sử dụng `justify-around`:
 
 <Figure>
 
@@ -283,9 +283,9 @@ Use the `justify-evenly` utility to justify items along the container's main axi
 
 </Figure>
 
-### Stretch
+### Kéo dãn (Stretch)
 
-Use the `justify-stretch` utility to allow auto-sized content items to fill the available space along the container's main axis:
+Sử dụng tiện ích `justify-stretch` để cho phép các mục nội dung có kích thước tự động lấp đầy không gian có sẵn dọc theo trục chính của container:
 
 <Figure>
 
@@ -313,9 +313,9 @@ Use the `justify-stretch` utility to allow auto-sized content items to fill the 
 
 </Figure>
 
-### Normal
+### Bình thường (Normal)
 
-Use the `justify-normal` utility to pack content items in their default position as if no `justify-content` value was set:
+Sử dụng tiện ích `justify-normal` để đóng gói các mục nội dung ở vị trí mặc định của chúng như thể không có giá trị `justify-content` nào được thiết lập:
 
 <Figure>
 
@@ -343,6 +343,6 @@ Use the `justify-normal` utility to pack content items in their default position
 
 </Figure>
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="justify-content" defaultClass="flex justify-start" featuredClass="justify-between" />

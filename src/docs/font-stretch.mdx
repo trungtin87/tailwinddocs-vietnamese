@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "font-stretch";
-export const description = "Utilities for selecting the width of a font face.";
+export const description = "Các utility để kiểm soát độ kéo giãn font của một phần tử.";
 
 <ApiTable
   rows={[
@@ -23,11 +23,11 @@ export const description = "Utilities for selecting the width of a font face.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `font-stretch-condensed` and `font-stretch-expanded` to set the width of a font face:
+Sử dụng các utility như `font-stretch-condensed` và `font-stretch-expanded` để thiết lập độ kéo giãn font của một phần tử:
 
 <Figure>
 
@@ -87,11 +87,11 @@ Use utilities like `font-stretch-condensed` and `font-stretch-expanded` to set t
 
 </Figure>
 
-This only applies to fonts that have multiple width variations available, otherwise the browser selects the closest match.
+Điều này chỉ áp dụng cho các font cung cấp nhiều độ rộng — nếu không, trình duyệt sẽ chọn kết quả khớp gần nhất.
 
-### Using percentages
+### Sử dụng phần trăm
 
-Use `font-stretch-<percentage>` utilities like `font-stretch-50%` and `font-stretch-125%` to set the width of a font face using a percentage:
+Sử dụng các utility `font-stretch-<percentage>` như `font-stretch-50%` và `font-stretch-125%` để thiết lập độ kéo giãn font của một phần tử thành một phần trăm cụ thể:
 
 <Figure>
 
@@ -129,10 +129,10 @@ Use `font-stretch-<percentage>` utilities like `font-stretch-50%` and `font-stre
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="p" utility="font-stretch" value="66.66%" name="font width" variable="font-width" />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="font-stretch" defaultClass="font-stretch-normal" featuredClass="font-stretch-expanded" />

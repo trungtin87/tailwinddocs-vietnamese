@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "background-image";
-export const description = "Utilities for controlling an element's background image.";
+export const description = "Các utility để kiểm soát hình nền của một phần tử.";
 
 <svg className="hidden">
   <symbol id="gradient-color-stop" viewBox="0 0 32 34">
@@ -63,11 +63,11 @@ export const description = "Utilities for controlling an element's background im
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `bg-[<value>]` syntax to set the background image of an element:
+Sử dụng cú pháp `bg-[<value>]` để thiết lập hình nền của một phần tử:
 
 <Figure>
 
@@ -86,9 +86,9 @@ Use the `bg-[<value>]` syntax to set the background image of an element:
 
 </Figure>
 
-### Adding a linear gradient
+### Thêm gradient tuyến tính
 
-Use utilities like `bg-linear-to-r` and `bg-linear-<angle>` with the [color stop utilities](#setting-gradient-color-stops) to add a linear gradient to an element:
+Sử dụng các utility như `bg-linear-to-r` và `bg-linear-<angle>` với [các utility điểm dừng màu](#setting-gradient-color-stops) để thêm gradient tuyến tính vào một phần tử:
 
 <Figure>
 
@@ -113,9 +113,9 @@ Use utilities like `bg-linear-to-r` and `bg-linear-<angle>` with the [color stop
 
 </Figure>
 
-### Adding a radial gradient
+### Thêm gradient xuyên tâm
 
-Use the `bg-radial` and `bg-radial-[<position>]` utilities with the [color stop utilities](#setting-gradient-color-stops) to add a radial gradient to an element:
+Sử dụng các utility `bg-radial` và `bg-radial-[<position>]` với [các utility điểm dừng màu](#setting-gradient-color-stops) để thêm gradient xuyên tâm vào một phần tử:
 
 <Figure>
 
@@ -138,9 +138,9 @@ Use the `bg-radial` and `bg-radial-[<position>]` utilities with the [color stop 
 
 </Figure>
 
-### Adding a conic gradient
+### Thêm gradient hình nón
 
-Use the `bg-conic` and `bg-conic-<angle>` utilities with the [color stop utilities](#setting-gradient-color-stops) to add a conic gradient to an element:
+Sử dụng các utility `bg-conic` và `bg-conic-<angle>` với [các utility điểm dừng màu](#setting-gradient-color-stops) để thêm gradient hình nón vào một phần tử:
 
 <Figure>
 
@@ -163,9 +163,9 @@ Use the `bg-conic` and `bg-conic-<angle>` utilities with the [color stop utiliti
 
 </Figure>
 
-### Setting gradient color stops
+### Thiết lập điểm dừng màu gradient
 
-Use utilities like `from-indigo-500`, `via-purple-500`, and `to-pink-500` to set the colors of the gradient stops:
+Sử dụng các utility như `from-indigo-500`, `via-purple-500`, và `to-pink-500` để thiết lập màu của các điểm dừng gradient:
 
 <Figure>
 
@@ -204,9 +204,9 @@ Use utilities like `from-indigo-500`, `via-purple-500`, and `to-pink-500` to set
 
 </Figure>
 
-### Setting gradient stop positions
+### Thiết lập vị trí điểm dừng gradient
 
-Use utilities like `from-10%`, `via-30%`, and `to-90%` to set more precise positions for the gradient color stops:
+Sử dụng các utility như `from-10%`, `via-30%`, và `to-90%` để thiết lập vị trí chính xác hơn cho các điểm dừng màu gradient:
 
 <Figure>
 
@@ -254,9 +254,9 @@ Use utilities like `from-10%`, `via-30%`, and `to-90%` to set more precise posit
 
 </Figure>
 
-### Changing interpolation mode
+### Thay đổi chế độ nội suy
 
-Use the interpolation modifier to control the interpolation mode of a gradient:
+Sử dụng modifier nội suy để kiểm soát chế độ nội suy của một gradient:
 
 <Figure>
 
@@ -320,18 +320,18 @@ Use the interpolation modifier to control the interpolation mode of a gradient:
 
 </Figure>
 
-By default gradients are interpolated in the `oklab` color space.
+Theo mặc định, các gradient được nội suy trong không gian màu `oklab`.
 
-### Removing background images
+### Xóa hình nền
 
-Use the `bg-none` utility to remove an existing background image from an element:
+Sử dụng utility `bg-none` để xóa hình nền hiện có khỏi một phần tử:
 
 ```html
 <!-- [!code classes:bg-none] -->
 <div class="bg-none"></div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue
   utilities={["bg-linear", "from"]}
@@ -340,10 +340,10 @@ Use the `bg-none` utility to remove an existing background image from an element
   variable="gradient"
 />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="background-image" defaultClass="from-purple-400" featuredClass="from-yellow-500" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors utilities={["from", "via", "to"]} />

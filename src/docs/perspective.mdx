@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "perspective";
-export const description = "Utilities for controlling an element's perspective when placed in 3D space.";
+export const description = "Các tiện ích để kiểm soát perspective của một phần tử khi được đặt trong không gian 3D.";
 
 <ApiTable
   rows={[
@@ -19,11 +19,11 @@ export const description = "Utilities for controlling an element's perspective w
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `perspective-normal` and `perspective-distant` to control how close or how far away the z-plane is from the screen:
+Sử dụng các tiện ích như `perspective-normal` và `perspective-distant` để kiểm soát độ gần hoặc xa của mặt phẳng z so với màn hình:
 
 <Figure>
 
@@ -111,11 +111,11 @@ Use utilities like `perspective-normal` and `perspective-distant` to control how
 
 </Figure>
 
-This is like moving a camera closer to or further away from an object.
+Điều này giống như di chuyển máy ảnh lại gần hoặc ra xa một đối tượng.
 
-### Removing a perspective
+### Loại bỏ perspective
 
-Use the `perspective-none` utility to remove a perspective transform from an element:
+Sử dụng tiện ích `perspective-none` để loại bỏ biến đổi phối cảnh khỏi một phần tử:
 
 ```html
 <!-- [!code classes:perspective-none] -->
@@ -124,7 +124,7 @@ Use the `perspective-none` utility to remove a perspective transform from an ele
 </div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="perspective" value="750px" />
 
@@ -132,6 +132,6 @@ Use the `perspective-none` utility to remove a perspective transform from an ele
 
 <ResponsiveDesign property="perspective" defaultClass="perspective-midrange" featuredClass="perspective-dramatic" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourTheme utility="perspective" name="perspective" customName="remote" customValue="1800px" />

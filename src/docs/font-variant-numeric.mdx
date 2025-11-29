@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "font-variant-numeric";
-export const description = "Utilities for controlling the variant of numbers.";
+export const description = "Các tiện ích để kiểm soát biến thể của số.";
 
 <ApiTable
   rows={[
@@ -20,11 +20,11 @@ export const description = "Utilities for controlling the variant of numbers.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Using ordinal glyphs
+### Sử dụng ordinal glyphs
 
-Use the `ordinal` utility to enable special glyphs for the ordinal markers in fonts that support them:
+Sử dụng tiện ích `ordinal` để kích hoạt các ký tự đặc biệt cho các ordinal marker trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -37,9 +37,9 @@ Use the `ordinal` utility to enable special glyphs for the ordinal markers in fo
 
 </Figure>
 
-### Using slashed zeroes
+### Sử dụng slashed zeroes
 
-Use the `slashed-zero` utility to force a zero with a slash in fonts that support them:
+Sử dụng tiện ích `slashed-zero` để buộc sử dụng số 0 có gạch chéo trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -52,9 +52,9 @@ Use the `slashed-zero` utility to force a zero with a slash in fonts that suppor
 
 </Figure>
 
-### Using lining figures
+### Sử dụng lining figures
 
-Use the `lining-nums` utility to use numeric glyphs that are aligned by their baseline in fonts that support them:
+Sử dụng tiện ích `lining-nums` để sử dụng các ký tự số được căn chỉnh theo đường cơ sở (baseline) của chúng trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -69,9 +69,9 @@ Use the `lining-nums` utility to use numeric glyphs that are aligned by their ba
 
 </Figure>
 
-### Using oldstyle figures
+### Sử dụng oldstyle figures
 
-Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have descenders in fonts that support them:
+Sử dụng tiện ích `oldstyle-nums` để sử dụng các ký tự số trong đó một số số có phần descender trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -86,9 +86,9 @@ Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have de
 
 </Figure>
 
-### Using proportional figures
+### Sử dụng proportional figures
 
-Use the `proportional-nums` utility to use numeric glyphs that have proportional widths in fonts that support them:
+Sử dụng tiện ích `proportional-nums` để sử dụng các ký tự số có chiều rộng tỷ lệ trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -109,9 +109,9 @@ Use the `proportional-nums` utility to use numeric glyphs that have proportional
 
 </Figure>
 
-### Using tabular figures
+### Sử dụng tabular figures
 
-Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular widths in fonts that support them:
+Sử dụng tiện ích `tabular-nums` để sử dụng các ký tự số có chiều rộng đồng nhất/dạng bảng trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -132,9 +132,9 @@ Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular w
 
 </Figure>
 
-### Using diagonal fractions
+### Sử dụng diagonal fractions
 
-Use the `diagonal-fractions` utility to replace numbers separated by a slash with common diagonal fractions in fonts that support them:
+Sử dụng tiện ích `diagonal-fractions` để thay thế các số được phân tách bằng dấu gạch chéo bằng các phân số chéo phổ biến trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -149,9 +149,9 @@ Use the `diagonal-fractions` utility to replace numbers separated by a slash wit
 
 </Figure>
 
-### Using stacked fractions
+### Sử dụng stacked fractions
 
-Use the `stacked-fractions` utility to replace numbers separated by a slash with common stacked fractions in fonts that support them:
+Sử dụng tiện ích `stacked-fractions` để thay thế các số được phân tách bằng dấu gạch chéo bằng các phân số xếp chồng phổ biến trong các font chữ hỗ trợ chúng:
 
 <Figure>
 
@@ -170,9 +170,9 @@ Use the `stacked-fractions` utility to replace numbers separated by a slash with
 
 </Figure>
 
-### Stacking multiple utilities
+### Xếp chồng nhiều tiện ích
 
-The `font-variant-numeric` utilities are composable so you can enable multiple variants by combining them:
+Các tiện ích `font-variant-numeric` có thể kết hợp được để bạn có thể kích hoạt nhiều biến thể bằng cách kết hợp chúng:
 
 <Figure>
 
@@ -207,9 +207,9 @@ The `font-variant-numeric` utilities are composable so you can enable multiple v
 
 </Figure>
 
-### Resetting numeric font variants
+### Đặt lại các biến thể font số
 
-Use the `normal-nums` property to reset numeric font variants:
+Sử dụng thuộc tính `normal-nums` để đặt lại các biến thể font số:
 
 ```html
 <!-- [!code classes:slashed-zero,tabular-nums,normal-nums] -->

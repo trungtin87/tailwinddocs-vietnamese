@@ -4,20 +4,20 @@ import { Iframe } from "@/components/iframe";
 import { Example } from "@/components/example";
 import { Figure } from "@/components/figure";
 
-export const title = "Theme variables";
-export const description = "Using utility classes as an API for your design tokens.";
+export const title = "Biến theme";
+export const description = "Sử dụng các lớp tiện ích như một API cho các design token của bạn.";
 
-## Overview
+## Tổng quan
 
-Tailwind is a framework for building custom designs, and different designs need different typography, colors, shadows, breakpoints, and more.
+Tailwind là một framework để xây dựng các thiết kế tùy chỉnh, và các thiết kế khác nhau cần kiểu chữ, màu sắc, bóng, điểm ngắt (breakpoints) và nhiều thứ khác nhau.
 
-These low-level design decisions are often called _design tokens_, and in Tailwind projects you store those values in _theme variables_.
+Những quyết định thiết kế cấp thấp này thường được gọi là _design tokens_, và trong các dự án Tailwind, bạn lưu trữ các giá trị đó trong _biến theme_.
 
-### What are theme variables?
+### Biến theme là gì?
 
-Theme variables are special CSS variables defined using the `@theme` directive that influence which utility classes exist in your project.
+Biến theme là các biến CSS đặc biệt được xác định bằng cách sử dụng chỉ thị `@theme` ảnh hưởng đến các lớp tiện ích nào tồn tại trong dự án của bạn.
 
-For example, you can add a new color to your project by defining a theme variable like `--color-mint-500`:
+Ví dụ, bạn có thể thêm một màu mới vào dự án của mình bằng cách xác định một biến theme như `--color-mint-500`:
 
 ```css
 /* [!code filename:app.css] */
@@ -29,7 +29,7 @@ For example, you can add a new color to your project by defining a theme variabl
 }
 ```
 
-Now you can use utility classes like `bg-mint-500`, `text-mint-500`, or `fill-mint-500` in your HTML:
+Bây giờ bạn có thể sử dụng các lớp tiện ích như `bg-mint-500`, `text-mint-500`, hoặc `fill-mint-500` trong HTML của bạn:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -39,7 +39,7 @@ Now you can use utility classes like `bg-mint-500`, `text-mint-500`, or `fill-mi
 </div>
 ```
 
-Tailwind also generates regular CSS variables for your theme variables so you can reference your design tokens in arbitrary values or inline styles:
+Tailwind cũng tạo ra các biến CSS thông thường cho các biến theme của bạn để bạn có thể tham chiếu các design token của mình trong các giá trị tùy ý hoặc các kiểu nội dòng (inline styles):
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -49,21 +49,21 @@ Tailwind also generates regular CSS variables for your theme variables so you ca
 </div>
 ```
 
-Learn more about how theme variables map to different utility classes in the [theme variable namespaces](#theme-variable-namespaces) documentation.
+Tìm hiểu thêm về cách các biến theme ánh xạ tới các lớp tiện ích khác nhau trong tài liệu [không gian tên biến theme](#theme-variable-namespaces).
 
-#### Why `@theme` instead of `:root`?
+#### Tại sao lại là `@theme` thay vì `:root`?
 
-Theme variables aren't _just_ CSS variables — they also instruct Tailwind to create new utility classes that you can use in your HTML.
+Biến theme không _chỉ_ là các biến CSS — chúng cũng hướng dẫn Tailwind tạo ra các lớp tiện ích mới mà bạn có thể sử dụng trong HTML của mình.
 
-Since they do more than regular CSS variables, Tailwind uses special syntax so that defining theme variables is always explicit. Theme variables are also required to be defined top-level and not nested under other selectors or media queries, and using a special syntax makes it possible to enforce that.
+Vì chúng làm nhiều việc hơn các biến CSS thông thường, Tailwind sử dụng cú pháp đặc biệt để việc xác định các biến theme luôn rõ ràng. Các biến theme cũng được yêu cầu phải được xác định ở cấp cao nhất và không được lồng dưới các selector hoặc media queries khác, và việc sử dụng một cú pháp đặc biệt giúp có thể thực thi điều đó.
 
-Defining regular CSS variables with `:root` can still be useful in Tailwind projects when you want to define a variable that isn't meant to be connected to a utility class. Use `@theme` when you want a design token to map directly to a utility class, and use `:root` for defining regular CSS variables that shouldn't have corresponding utility classes.
+Việc xác định các biến CSS thông thường với `:root` vẫn có thể hữu ích trong các dự án Tailwind khi bạn muốn xác định một biến không có ý định kết nối với một lớp tiện ích. Sử dụng `@theme` khi bạn muốn một design token ánh xạ trực tiếp tới một lớp tiện ích, và sử dụng `:root` để xác định các biến CSS thông thường không nên có các lớp tiện ích tương ứng.
 
-### Relationship to utility classes
+### Mối quan hệ với các lớp tiện ích
 
-Some utility classes in Tailwind like `flex` and `object-cover` are static, and are always the same from project to project. But many others are driven by theme variables, and only exist because of the theme variables you've defined.
+Một số lớp tiện ích trong Tailwind như `flex` và `object-cover` là tĩnh, và luôn giống nhau từ dự án này sang dự án khác. Nhưng nhiều lớp khác được điều khiển bởi các biến theme, và chỉ tồn tại vì các biến theme bạn đã xác định.
 
-For example, theme variables defined in the `--font-*` namespace determine all of the `font-family` utilities that exist in a project:
+Ví dụ, các biến theme được xác định trong không gian tên `--font-*` xác định tất cả các tiện ích `font-family` tồn tại trong một dự án:
 
 ```css
 /* [!code filename:./node_modules/tailwindcss/theme.css] */
@@ -78,9 +78,9 @@ For example, theme variables defined in the `--font-*` namespace determine all o
 }
 ```
 
-The `font-sans`, `font-serif`, and `font-mono` utilities only exist by default because Tailwind's default theme defines the `--font-sans`, `--font-serif`, and `--font-mono` theme variables.
+Các tiện ích `font-sans`, `font-serif`, và `font-mono` chỉ tồn tại theo mặc định vì theme mặc định của Tailwind xác định các biến theme `--font-sans`, `--font-serif`, và `--font-mono`.
 
-If another theme variable like `--font-poppins` were defined, a `font-poppins` utility class would become available to go with it:
+Nếu một biến theme khác như `--font-poppins` được xác định, một lớp tiện ích `font-poppins` sẽ trở nên có sẵn để đi cùng với nó:
 
 ```css
 /* [!code filename:app.css] */
@@ -98,11 +98,11 @@ If another theme variable like `--font-poppins` were defined, a `font-poppins` u
 <h1 class="font-poppins">This headline will use Poppins.</h1>
 ```
 
-You can name your theme variables whatever you want within these namespaces, and a corresponding utility with the same name will become available to use in your HTML.
+Bạn có thể đặt tên cho các biến theme của mình bất cứ điều gì bạn muốn trong các không gian tên này, và một tiện ích tương ứng với cùng tên sẽ trở nên có sẵn để sử dụng trong HTML của bạn.
 
-#### Relationship to variants
+#### Mối quan hệ với các biến thể
 
-Some theme variables are used to define variants rather than utilities. For example theme variables in the `--breakpoint-*` namespace determine which responsive breakpoint variants exist in your project:
+Một số biến theme được sử dụng để xác định các biến thể thay vì các tiện ích. Ví dụ, các biến theme trong không gian tên `--breakpoint-*` xác định các biến thể điểm ngắt phản hồi nào tồn tại trong dự án của bạn:
 
 ```css
 /* [!code filename:app.css] */
@@ -114,7 +114,7 @@ Some theme variables are used to define variants rather than utilities. For exam
 }
 ```
 
-Now you can use the `3xl:*` variant to only trigger a utility when the viewport is 120rem or wider:
+Bây giờ bạn có thể sử dụng biến thể `3xl:*` để chỉ kích hoạt một tiện ích khi viewport rộng 120rem hoặc hơn:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -124,21 +124,21 @@ Now you can use the `3xl:*` variant to only trigger a utility when the viewport 
 </div>
 ```
 
-Learn more about how theme variables map to different utility classes and variants in the [theme variable namespaces](#theme-variable-namespaces) documentation.
+Tìm hiểu thêm về cách các biến theme ánh xạ tới các lớp tiện ích và biến thể khác nhau trong tài liệu [không gian tên biến theme](#theme-variable-namespaces).
 
-### Theme variable namespaces
+### Không gian tên biến theme
 
-Theme variables are defined in _namespaces_ and each namespace corresponds to one or more utility class or variant APIs.
+Các biến theme được xác định trong _không gian tên_ và mỗi không gian tên tương ứng với một hoặc nhiều API lớp tiện ích hoặc biến thể.
 
-Defining new theme variables in these namespaces will make new corresponding utilities and variants available in your project:
+Việc xác định các biến theme mới trong các không gian tên này sẽ làm cho các tiện ích và biến thể tương ứng mới có sẵn trong dự án của bạn:
 
 {
 
 <table>
   <thead>
     <tr>
-      <th>Namespace</th>
-      <th>Utility classes</th>
+      <th>Không gian tên</th>
+      <th>Lớp tiện ích</th>
     </tr>
   </thead>
   <tbody>
@@ -147,7 +147,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--color-*</code>
       </td>
       <td>
-        Color utilities like <code>bg-red-500</code>, <code>text-sky-300</code>, and many more
+        Các tiện ích màu sắc như <code>bg-red-500</code>, <code>text-sky-300</code>, và nhiều hơn nữa
       </td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--font-*</code>
       </td>
       <td>
-        Font family utilities like <code>font-sans</code>
+        Các tiện ích font family như <code>font-sans</code>
       </td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--text-*</code>
       </td>
       <td>
-        Font size utilities like <code>text-xl</code>
+        Các tiện ích kích thước font chữ như <code>text-xl</code>
       </td>
     </tr>
     <tr>
@@ -171,7 +171,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--font-weight-*</code>
       </td>
       <td>
-        Font weight utilities like <code>font-bold</code>
+        Các tiện ích độ đậm font chữ như <code>font-bold</code>
       </td>
     </tr>
     <tr>
@@ -179,7 +179,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--tracking-*</code>
       </td>
       <td>
-        Letter spacing utilities like <code>tracking-wide</code>
+        Các tiện ích khoảng cách chữ cái như <code>tracking-wide</code>
       </td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--leading-*</code>
       </td>
       <td>
-        Line height utilities like <code>leading-tight</code>
+        Các tiện ích chiều cao dòng như <code>leading-tight</code>
       </td>
     </tr>
     <tr>
@@ -195,7 +195,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--breakpoint-*</code>
       </td>
       <td>
-        Responsive breakpoint variants like <code>sm:*</code>
+        Các biến thể điểm ngắt phản hồi như <code>sm:*</code>
       </td>
     </tr>
     <tr>
@@ -203,7 +203,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--container-*</code>
       </td>
       <td>
-        Container query variants like <code>@sm:*</code> and size utilities like <code>max-w-md</code>
+        Các biến thể truy vấn container như <code>@sm:*</code> và các tiện ích kích thước như <code>max-w-md</code>
       </td>
     </tr>
     <tr>
@@ -211,7 +211,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--spacing-*</code>
       </td>
       <td>
-        Spacing and sizing utilities like <code>px-4</code>, <code>max-h-16</code>, and many more
+        Các tiện ích khoảng cách và kích thước như <code>px-4</code>, <code>max-h-16</code>, và nhiều hơn nữa
       </td>
     </tr>
     <tr>
@@ -219,7 +219,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--radius-*</code>
       </td>
       <td>
-        Border radius utilities like <code>rounded-sm</code>
+        Các tiện ích bán kính viền như <code>rounded-sm</code>
       </td>
     </tr>
     <tr>
@@ -227,7 +227,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--shadow-*</code>
       </td>
       <td>
-        Box shadow utilities like <code>shadow-md</code>
+        Các tiện ích box shadow như <code>shadow-md</code>
       </td>
     </tr>
     <tr>
@@ -235,7 +235,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--inset-shadow-*</code>
       </td>
       <td>
-        Inset box shadow utilities like <code>inset-shadow-xs</code>
+        Các tiện ích inset box shadow như <code>inset-shadow-xs</code>
       </td>
     </tr>
     <tr>
@@ -243,7 +243,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--drop-shadow-*</code>
       </td>
       <td>
-        Drop shadow filter utilities like <code>drop-shadow-md</code>
+        Các tiện ích bộ lọc drop shadow như <code>drop-shadow-md</code>
       </td>
     </tr>
     <tr>
@@ -251,7 +251,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--blur-*</code>
       </td>
       <td>
-        Blur filter utilities like <code>blur-md</code>
+        Các tiện ích bộ lọc mờ như <code>blur-md</code>
       </td>
     </tr>
     <tr>
@@ -259,7 +259,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--perspective-*</code>
       </td>
       <td>
-        Perspective utilities like <code>perspective-near</code>
+        Các tiện ích phối cảnh như <code>perspective-near</code>
       </td>
     </tr>
     <tr>
@@ -267,7 +267,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--aspect-*</code>
       </td>
       <td>
-        Aspect ratio utilities like <code>aspect-video</code>
+        Các tiện ích tỷ lệ khung hình như <code>aspect-video</code>
       </td>
     </tr>
     <tr>
@@ -275,7 +275,7 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--ease-*</code>
       </td>
       <td>
-        Transition timing function utilities like <code>ease-out</code>
+        Các tiện ích hàm thời gian chuyển tiếp như <code>ease-out</code>
       </td>
     </tr>
     <tr>
@@ -283,20 +283,20 @@ Defining new theme variables in these namespaces will make new corresponding uti
         <code>--animate-*</code>
       </td>
       <td>
-        Animation utilities like <code>animate-spin</code>
+        Các tiện ích hoạt ảnh như <code>animate-spin</code>
       </td>
     </tr>
   </tbody>
 </table>
 }
 
-For a list of all of the default theme variables, see the [default theme variable reference](#default-theme-variable-reference).
+Để có danh sách tất cả các biến theme mặc định, xem [tham chiếu biến theme mặc định](#default-theme-variable-reference).
 
-### Default theme variables
+### Biến theme mặc định
 
-When you import `tailwindcss` at the top of your CSS file, it includes a set of default theme variables to get you started.
+Khi bạn import `tailwindcss` ở đầu tệp CSS của mình, nó bao gồm một tập hợp các biến theme mặc định để bạn bắt đầu.
 
-Here's what you're actually importing when you import `tailwindcss`:
+Đây là những gì bạn thực sự đang import khi bạn import `tailwindcss`:
 
 ```css
 /* [!code filename:node_modules/tailwindcss/index.css] */
@@ -308,7 +308,7 @@ Here's what you're actually importing when you import `tailwindcss`:
 @import "./utilities.css" layer(utilities);
 ```
 
-That `theme.css` file includes the default color palette, type scale, shadows, fonts, and more:
+Tệp `theme.css` đó bao gồm bảng màu mặc định, thang đo kiểu chữ, bóng, font chữ, và nhiều hơn nữa:
 
 ```css
 /* [!code filename:node_modules/tailwindcss/theme.css] */
@@ -330,17 +330,17 @@ That `theme.css` file includes the default color palette, type scale, shadows, f
 }
 ```
 
-This is why utilities like `bg-red-200`, `font-serif`, and `shadow-sm` exist out of the box — they're driven by the default theme, not hardcoded into the framework like `flex-col` or `pointer-events-none`.
+Đây là lý do tại sao các tiện ích như `bg-red-200`, `font-serif`, và `shadow-sm` tồn tại ngay lập tức — chúng được điều khiển bởi theme mặc định, không được hardcode vào framework như `flex-col` hoặc `pointer-events-none`.
 
-For a list of all of the default theme variables, see the [default theme variable reference](#default-theme-variable-reference).
+Để có danh sách tất cả các biến theme mặc định, xem [tham chiếu biến theme mặc định](#default-theme-variable-reference).
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
-The default theme variables are very general purpose and suitable for building dramatically different designs, but they are still just a starting point. It's very common to customize things like the color palette, fonts, and shadows to build exactly the design you have in mind.
+Các biến theme mặc định rất đa năng và phù hợp để xây dựng các thiết kế khác nhau đáng kể, nhưng chúng vẫn chỉ là một điểm khởi đầu. Rất phổ biến để tùy chỉnh những thứ như bảng màu, font chữ, và bóng để xây dựng chính xác thiết kế mà bạn có trong đầu.
 
-### Extending the default theme
+### Mở rộng theme mặc định
 
-Use `@theme` to define new theme variables and extend the default theme:
+Sử dụng `@theme` để xác định các biến theme mới và mở rộng theme mặc định:
 
 ```css
 /* [!code filename:app.css] */
@@ -352,7 +352,7 @@ Use `@theme` to define new theme variables and extend the default theme:
 }
 ```
 
-This makes a new `font-script` utility class available that you can use in your HTML, just like the default `font-sans` or `font-mono` utilities:
+Điều này làm cho một lớp tiện ích `font-script` mới có sẵn mà bạn có thể sử dụng trong HTML của mình, giống như các tiện ích `font-sans` hoặc `font-mono` mặc định:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -360,11 +360,11 @@ This makes a new `font-script` utility class available that you can use in your 
 <p class="font-script">This will use the Great Vibes font family.</p>
 ```
 
-Learn more about how theme variables map to different utility classes and variants in the [theme variable namespaces](#theme-variable-namespaces) documentation.
+Tìm hiểu thêm về cách các biến theme ánh xạ tới các lớp tiện ích và biến thể khác nhau trong tài liệu [không gian tên biến theme](#theme-variable-namespaces).
 
-### Overriding the default theme
+### Ghi đè theme mặc định
 
-Override a default theme variable value by redefining it within `@theme`:
+Ghi đè một giá trị biến theme mặc định bằng cách xác định lại nó trong `@theme`:
 
 ```css
 /* [!code filename:app.css] */
@@ -376,7 +376,7 @@ Override a default theme variable value by redefining it within `@theme`:
 }
 ```
 
-Now the `sm:*` variant will trigger at 30rem instead of the default 40rem viewport size:
+Bây giờ biến thể `sm:*` sẽ kích hoạt ở 30rem thay vì kích thước viewport 40rem mặc định:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -386,7 +386,7 @@ Now the `sm:*` variant will trigger at 30rem instead of the default 40rem viewpo
 </div>
 ```
 
-To completely override an entire namespace in the default theme, set the entire namespace to `initial` using the special asterisk syntax:
+Để ghi đè hoàn toàn một không gian tên trong theme mặc định, hãy đặt toàn bộ không gian tên thành `initial` bằng cách sử dụng cú pháp dấu sao đặc biệt:
 
 ```css
 /* [!code filename:app.css] */
@@ -403,13 +403,13 @@ To completely override an entire namespace in the default theme, set the entire 
 }
 ```
 
-When you do this, all of the default utilities that use that namespace _(like `bg-red-500`)_ will be removed, and only your custom values _(like `bg-midnight`)_ will be available.
+Khi bạn làm điều này, tất cả các tiện ích mặc định sử dụng không gian tên đó _(như `bg-red-500`)_ sẽ bị xóa, và chỉ các giá trị tùy chỉnh của bạn _(như `bg-midnight`)_ sẽ có sẵn.
 
-Learn more about how theme variables map to different utility classes and variants in the [theme variable namespaces](#theme-variable-namespaces) documentation.
+Tìm hiểu thêm về cách các biến theme ánh xạ tới các lớp tiện ích và biến thể khác nhau trong tài liệu [không gian tên biến theme](#theme-variable-namespaces).
 
-### Using a custom theme
+### Sử dụng một theme tùy chỉnh
 
-To completely disable the default theme and use only custom values, set the global theme variable namespace to `initial`:
+Để vô hiệu hóa hoàn toàn theme mặc định và chỉ sử dụng các giá trị tùy chỉnh, hãy đặt không gian tên biến theme toàn cầu thành `initial`:
 
 ```css
 /* [!code filename:app.css] */
@@ -431,11 +431,11 @@ To completely disable the default theme and use only custom values, set the glob
 }
 ```
 
-Now none of the default utility classes that are driven by theme variables will be available, and you'll only be able to use utility classes matching your custom theme variables like `font-body` and `text-dusk`.
+Bây giờ không có lớp tiện ích mặc định nào được điều khiển bởi các biến theme sẽ có sẵn, và bạn sẽ chỉ có thể sử dụng các lớp tiện ích khớp với các biến theme tùy chỉnh của bạn như `font-body` và `text-dusk`.
 
-### Defining animation keyframes
+### Xác định keyframes hoạt ảnh
 
-Define the `@keyframes` rules for your `--animate-*` theme variables within `@theme` to include them in your generated CSS:
+Xác định các quy tắc `@keyframes` cho các biến theme `--animate-*` của bạn trong `@theme` để bao gồm chúng trong CSS được tạo của bạn:
 
 ```css
 /* [!code filename:app.css] */
@@ -457,11 +457,11 @@ Define the `@keyframes` rules for your `--animate-*` theme variables within `@th
 }
 ```
 
-If you want your custom `@keyframes` rules to always be included even when not adding an `--animate-*` theme variable, define them outside of `@theme` instead.
+Nếu bạn muốn các quy tắc `@keyframes` tùy chỉnh của mình luôn được bao gồm ngay cả khi không thêm một biến theme `--animate-*`, hãy xác định chúng bên ngoài `@theme` thay thế.
 
-### Referencing other variables
+### Tham chiếu các biến khác
 
-When defining theme variables that reference other variables, use the `inline` option:
+Khi xác định các biến theme tham chiếu các biến khác, hãy sử dụng tùy chọn `inline`:
 
 ```css
 /* [!code filename:app.css] */
@@ -473,7 +473,7 @@ When defining theme variables that reference other variables, use the `inline` o
 }
 ```
 
-Using the `inline` option, the utility class will use the theme variable _value_ instead of referencing the actual theme variable:
+Sử dụng tùy chọn `inline`, lớp tiện ích sẽ sử dụng _giá trị_ biến theme thay vì tham chiếu biến theme thực tế:
 
 ```css
 /* [!code filename:dist.css] */
@@ -482,9 +482,9 @@ Using the `inline` option, the utility class will use the theme variable _value_
 }
 ```
 
-Without using `inline`, your utility classes might resolve to unexpected values because of how variables are resolved in CSS.
+Nếu không sử dụng `inline`, các lớp tiện ích của bạn có thể giải quyết thành các giá trị không mong muốn vì cách các biến được giải quyết trong CSS.
 
-For example, this text will fall back to `sans-serif` instead of using `Inter` like you might expect:
+Ví dụ, văn bản này sẽ quay trở lại `sans-serif` thay vì sử dụng `Inter` như bạn có thể mong đợi:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -497,11 +497,11 @@ For example, this text will fall back to `sans-serif` instead of using `Inter` l
 </div>
 ```
 
-This happens because `var(--font-sans)` is resolved where `--font-sans` is defined _(on `#parent`)_, and `--font-inter` has no value there since it's not defined until deeper in the tree _(on `#child`)_.
+Điều này xảy ra vì `var(--font-sans)` được giải quyết ở nơi `--font-sans` được xác định _(trên `#parent`)_, và `--font-inter` không có giá trị ở đó vì nó không được xác định cho đến khi sâu hơn trong cây _(trên `#child`)_.
 
-### Generating all CSS variables
+### Tạo tất cả các biến CSS
 
-By default only used CSS variables will be generated in the final CSS output. If you want to always generate all CSS variables, you can use the `static` theme option:
+Theo mặc định, chỉ các biến CSS được sử dụng mới được tạo trong đầu ra CSS cuối cùng. Nếu bạn muốn luôn tạo tất cả các biến CSS, bạn có thể sử dụng tùy chọn theme `static`:
 
 ```css
 /* [!code filename:app.css] */
@@ -514,9 +514,9 @@ By default only used CSS variables will be generated in the final CSS output. If
 }
 ```
 
-### Sharing across projects
+### Chia sẻ giữa các dự án
 
-Since theme variables are defined in CSS, sharing them across projects is just a matter of throwing them into their own CSS file that you can import in each project:
+Vì các biến theme được xác định trong CSS, việc chia sẻ chúng giữa các dự án chỉ là vấn đề ném chúng vào tệp CSS riêng của chúng mà bạn có thể import trong mỗi dự án:
 
 ```css
 /* [!code filename:./packages/brand/theme.css] */
@@ -535,7 +535,7 @@ Since theme variables are defined in CSS, sharing them across projects is just a
 }
 ```
 
-Then you can use `@import` to include your theme variables in other projects:
+Sau đó, bạn có thể sử dụng `@import` để bao gồm các biến theme của mình trong các dự án khác:
 
 ```css
 /* [!code filename:./packages/admin/app.css] */
@@ -544,11 +544,11 @@ Then you can use `@import` to include your theme variables in other projects:
 @import "../brand/theme.css";
 ```
 
-You can put shared theme variables like this in their own package in monorepo setups or even publish them to NPM and import them just like any other third-party CSS files.
+Bạn có thể đặt các biến theme được chia sẻ như thế này trong gói riêng của chúng trong các thiết lập monorepo hoặc thậm chí xuất bản chúng lên NPM và import chúng giống như bất kỳ tệp CSS của bên thứ ba nào khác.
 
-## Using your theme variables
+## Sử dụng các biến theme của bạn
 
-All of your theme variables are turned into regular CSS variables when you compile your CSS:
+Tất cả các biến theme của bạn được chuyển thành các biến CSS thông thường khi bạn biên dịch CSS của mình:
 
 ```css
 /* [!code filename:dist.css] */
@@ -570,11 +570,11 @@ All of your theme variables are turned into regular CSS variables when you compi
 }
 ```
 
-This makes it easy to reference all of your design tokens in any of your custom CSS or inline styles.
+Điều này giúp dễ dàng tham chiếu tất cả các design token của bạn trong bất kỳ CSS tùy chỉnh hoặc kiểu nội dòng nào của bạn.
 
-### With custom CSS
+### Với CSS tùy chỉnh
 
-Use your theme variables to get access to your design tokens when you're writing custom CSS that needs to use the same values:
+Sử dụng các biến theme của bạn để truy cập vào các design token của bạn khi bạn đang viết CSS tùy chỉnh cần sử dụng cùng các giá trị:
 
 ```css
 /* [!code filename:app.css] */
@@ -608,11 +608,11 @@ Use your theme variables to get access to your design tokens when you're writing
 }
 ```
 
-This is often useful when styling HTML you don't control, like Markdown content coming from a database or API and rendered to HTML.
+Điều này thường hữu ích khi tạo kiểu cho HTML mà bạn không kiểm soát, như nội dung Markdown đến từ cơ sở dữ liệu hoặc API và được hiển thị thành HTML.
 
-### With arbitrary values
+### Với các giá trị tùy ý
 
-Using theme variables in arbitrary values can be useful, especially in combination with the `calc()` function.
+Sử dụng các biến theme trong các giá trị tùy ý có thể hữu ích, đặc biệt là khi kết hợp với hàm `calc()`.
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -626,13 +626,13 @@ Using theme variables in arbitrary values can be useful, especially in combinati
 </div>
 ```
 
-In the above example, we're subtracting 1px from the `--radius-xl` value on a nested inset element to make sure it has a concentric border radius.
+Trong ví dụ trên, chúng tôi đang trừ 1px từ giá trị `--radius-xl` trên một phần tử inset lồng nhau để đảm bảo nó có bán kính viền đồng tâm.
 
-### Referencing in JavaScript
+### Tham chiếu trong JavaScript
 
-Most of the time when you need to reference your theme variables in JS you can just use the CSS variables directly, just like any other CSS value.
+Hầu hết thời gian khi bạn cần tham chiếu các biến theme của mình trong JS, bạn chỉ cần sử dụng các biến CSS trực tiếp, giống như bất kỳ giá trị CSS nào khác.
 
-For example, the popular [Motion](https://motion.dev/docs/react-quick-start) library for React lets you animate to and from CSS variable values:
+Ví dụ, thư viện [Motion](https://motion.dev/docs/react-quick-start) phổ biến cho React cho phép bạn tạo hoạt ảnh đến và đi từ các giá trị biến CSS:
 
 ```jsx
 // [!code filename:JSX]
@@ -640,7 +640,7 @@ For example, the popular [Motion](https://motion.dev/docs/react-quick-start) lib
 <motion.div animate={{ backgroundColor: "var(--color-blue-500)" }} />
 ```
 
-If you need access to a resolved CSS variable value in JS, you can use `getComputedStyle` to get the value of a theme variable on the document root:
+Nếu bạn cần quyền truy cập vào giá trị biến CSS đã giải quyết trong JS, bạn có thể sử dụng `getComputedStyle` để lấy giá trị của một biến theme trên document root:
 
 ```js
 // [!code filename:spaghetti.js]
@@ -648,9 +648,9 @@ let styles = getComputedStyle(document.documentElement);
 let shadow = styles.getPropertyValue("--shadow-xl");
 ```
 
-## Default theme variable reference
+## Tham chiếu biến theme mặc định
 
-For reference, here's a complete list of the theme variables included by default when you import Tailwind CSS into your project:
+Để tham khảo, đây là danh sách đầy đủ các biến theme được bao gồm theo mặc định khi bạn import Tailwind CSS vào dự án của mình:
 
 ```css
 /* [!code filename:tailwindcss/theme.css] */
@@ -1092,3 +1092,5 @@ For reference, here's a complete list of the theme variables included by default
   }
 }
 ```
+
+

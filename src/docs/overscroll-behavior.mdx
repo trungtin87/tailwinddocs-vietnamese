@@ -5,7 +5,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "overscroll-behavior";
 export const description =
-  "Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.";
+  "Các tiện ích để kiểm soát hành vi của trình duyệt khi cuộn đến giới hạn của vùng cuộn.";
 
 <ApiTable
   rows={[
@@ -21,13 +21,13 @@ export const description =
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Preventing parent overscrolling
+### Ngăn chặn cuộn cha
 
-Use the `overscroll-contain` utility to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve "bounce" effects when scrolling past the end of the container in operating systems that support it:
+Sử dụng tiện ích `overscroll-contain` để ngăn việc cuộn trong vùng mục tiêu kích hoạt cuộn trong phần tử cha, nhưng vẫn giữ hiệu ứng "nảy" (bounce) khi cuộn qua cuối container trên các hệ điều hành hỗ trợ nó:
 
-<Figure hint="Scroll to see behavior">
+<Figure hint="Cuộn để xem hành vi">
 
 <Example padding={false}>
   {
@@ -64,11 +64,11 @@ Use the `overscroll-contain` utility to prevent scrolling in the target area fro
 
 </Figure>
 
-### Preventing overscroll bouncing
+### Ngăn chặn hiệu ứng nảy khi cuộn quá giới hạn
 
-Use the `overscroll-none` utility to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent "bounce" effects when scrolling past the end of the container:
+Sử dụng tiện ích `overscroll-none` để ngăn việc cuộn trong vùng mục tiêu kích hoạt cuộn trong phần tử cha, và cũng ngăn chặn hiệu ứng "nảy" khi cuộn qua cuối container:
 
-<Figure hint="Scroll to see behavior">
+<Figure hint="Cuộn để xem hành vi">
 
 <Example padding={false}>
   {
@@ -105,11 +105,11 @@ Use the `overscroll-none` utility to prevent scrolling in the target area from t
 
 </Figure>
 
-### Using the default overscroll behavior
+### Sử dụng hành vi cuộn quá giới hạn mặc định
 
-Use the `overscroll-auto` utility to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area:
+Sử dụng tiện ích `overscroll-auto` để cho phép người dùng tiếp tục cuộn vùng cuộn cha khi họ chạm đến giới hạn của vùng cuộn chính:
 
-<Figure hint="Scroll to see behavior">
+<Figure hint="Cuộn để xem hành vi">
 
 <Example padding={false}>
   {
@@ -146,6 +146,6 @@ Use the `overscroll-auto` utility to make it possible for the user to continue s
 
 </Figure>
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="overscroll-behavior" defaultClass="overscroll-auto" featuredClass="overscroll-contain" />

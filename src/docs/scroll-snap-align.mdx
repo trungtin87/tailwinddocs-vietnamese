@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "scroll-snap-align";
-export const description = "Utilities for controlling the scroll snap alignment of an element.";
+export const description = "Các tiện ích để kiểm soát căn chỉnh scroll snap của một phần tử.";
 
 <ApiTable
   rows={[
@@ -15,13 +15,13 @@ export const description = "Utilities for controlling the scroll snap alignment 
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Snapping to the center
+### Snap vào giữa
 
-Use the `snap-center` utility to snap an element to its center when being scrolled inside a snap container:
+Sử dụng tiện ích `snap-center` để snap một phần tử vào giữa của nó khi được cuộn bên trong một snap container:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -106,11 +106,11 @@ Use the `snap-center` utility to snap an element to its center when being scroll
 
 </Figure>
 
-### Snapping to the start
+### Snap vào đầu
 
-Use the `snap-start` utility to snap an element to its start when being scrolled inside a snap container:
+Sử dụng tiện ích `snap-start` để snap một phần tử vào đầu của nó khi được cuộn bên trong một snap container:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -190,11 +190,11 @@ Use the `snap-start` utility to snap an element to its start when being scrolled
 
 </Figure>
 
-### Snapping to the end
+### Snap vào cuối
 
-Use the `snap-end` utility to snap an element to its end when being scrolled inside a snap container:
+Sử dụng tiện ích `snap-end` để snap một phần tử vào cuối của nó khi được cuộn bên trong một snap container:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -276,6 +276,6 @@ Use the `snap-end` utility to snap an element to its end when being scrolled ins
 
 </Figure>
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="scroll-snap-align" defaultClass="snap-center" featuredClass="snap-start" />

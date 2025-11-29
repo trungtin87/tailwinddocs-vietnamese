@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import colors from "./utils/colors";
 
 export const title = "fill";
-export const description = "Utilities for styling the fill of SVG elements.";
+export const description = "Các tiện ích để tạo kiểu cho fill của các phần tử SVG.";
 
 <ApiTable
   rows={[
@@ -19,11 +19,11 @@ export const description = "Utilities for styling the fill of SVG elements.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `fill-indigo-500` and `fill-lime-600` to change the fill color of an SVG:
+Sử dụng các tiện ích như `fill-indigo-500` và `fill-lime-600` để thay đổi màu fill của một SVG:
 
 <Figure>
 
@@ -50,13 +50,13 @@ Use utilities like `fill-indigo-500` and `fill-lime-600` to change the fill colo
 
 </Figure>
 
-This can be useful for styling icon sets like [Heroicons](https://heroicons.com).
+Điều này có thể hữu ích để tạo kiểu cho các bộ icon như [Heroicons](https://heroicons.com).
 
-### Using the current color
+### Sử dụng màu hiện tại
 
-Use the `fill-current` utility to set the fill color to the current text color:
+Sử dụng tiện ích `fill-current` để đặt màu fill thành màu văn bản hiện tại:
 
-<Figure hint="Hover over the button to see the fill color change">
+<Figure hint="Di chuột qua nút để thấy màu fill thay đổi">
 
 <Example>
   {
@@ -87,7 +87,7 @@ Use the `fill-current` utility to set the fill color to the current text color:
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="svg" utility="fill" name="fill color" value="#243c5a" variable="fill-color" />
 
@@ -95,6 +95,6 @@ Use the `fill-current` utility to set the fill color to the current text color:
 
 <ResponsiveDesign element="svg" property="fill" defaultClass="fill-cyan-500" featuredClass="fill-cyan-700" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors element="svg" utility="fill" />

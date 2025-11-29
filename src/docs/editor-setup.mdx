@@ -5,20 +5,20 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 import { UsingACustomValue } from "@/components/content.tsx";
 
-export const title = "Editor setup";
-export const description = "Tooling to improve the developer experience when working with Tailwind CSS.";
+export const title = "Thiết lập trình soạn thảo";
+export const description = "Công cụ để cải thiện trải nghiệm nhà phát triển khi làm việc với Tailwind CSS.";
 
-## Syntax support
+## Hỗ trợ cú pháp
 
-Tailwind CSS uses custom CSS syntax like `@theme`, `@variant`, and `@source`, and in some editors this can trigger warnings or errors where these rules aren't recognized.
+Tailwind CSS sử dụng cú pháp CSS tùy chỉnh như `@theme`, `@variant`, và `@source`, và trong một số trình soạn thảo điều này có thể kích hoạt cảnh báo hoặc lỗi khi các quy tắc này không được nhận diện.
 
-If you're using VS Code, our official [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) plugin includes a dedicated Tailwind CSS language mode that has support for all of the custom at-rules and functions Tailwind uses.
+Nếu bạn đang sử dụng VS Code, plugin chính thức [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) của chúng tôi bao gồm một chế độ ngôn ngữ Tailwind CSS chuyên dụng có hỗ trợ cho tất cả các at-rule và hàm tùy chỉnh mà Tailwind sử dụng.
 
-In some cases, you may need to disable native CSS linting/validations if your editor is very strict about the syntax it expects in your CSS files.
+Trong một số trường hợp, bạn có thể cần vô hiệu hóa linting/validation CSS native nếu trình soạn thảo của bạn rất nghiêm ngặt về cú pháp mà nó mong đợi trong các file CSS của bạn.
 
 ## Zed
 
-[Zed](https://zed.dev/?utm_source=tailwind) is a fast, modern code editor, designed from the ground-up for cutting-edge development workflows, including agentic editing with AI. It has built-in support for Tailwind CSS autocompletions, linting, and hover previews, without the need to install and configure a separate extension. It also integrates tightly with Prettier, so our official [Prettier plugin](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) works seamlessly with Zed when installed.
+[Zed](https://zed.dev/?utm_source=tailwind) là một trình soạn thảo mã nhanh, hiện đại, được thiết kế từ đầu cho các quy trình làm việc phát triển tiên tiến, bao gồm chỉnh sửa agentic với AI. Nó có hỗ trợ tích hợp sẵn cho tự động hoàn thành, linting và xem trước khi hover của Tailwind CSS, mà không cần cài đặt và cấu hình extension riêng biệt. Nó cũng tích hợp chặt chẽ với Prettier, vì vậy [plugin Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) chính thức của chúng tôi hoạt động mượt mà với Zed khi được cài đặt.
 
 <img
   src={require("./img/zed-intellisense.png").default.src}
@@ -28,11 +28,11 @@ In some cases, you may need to disable native CSS linting/validations if your ed
   className="rounded-lg"
 />
 
-Check out [Zed](https://zed.dev/?utm_source=tailwind) and learn more about [how it works with Tailwind CSS](https://zed.dev/docs/languages/tailwindcss?utm_source=tailwind).
+Xem [Zed](https://zed.dev/?utm_source=tailwind) và tìm hiểu thêm về [cách nó hoạt động với Tailwind CSS](https://zed.dev/docs/languages/tailwindcss?utm_source=tailwind).
 
 ## IntelliSense for VS Code
 
-The official [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension for Visual Studio Code enhances the Tailwind development experience by providing users with advanced features such as autocomplete, syntax highlighting, and linting.
+Extension chính thức [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) cho Visual Studio Code nâng cao trải nghiệm phát triển Tailwind bằng cách cung cấp cho người dùng các tính năng nâng cao như tự động hoàn thành, làm nổi bật cú pháp và linting.
 
 <img
   src={require("./img/intellisense.png").default.src}
@@ -42,20 +42,20 @@ The official [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/it
   className="rounded-lg"
 />
 
-- **Autocomplete** — providing intelligent suggestions for utility classes, as well as [CSS functions and directives](/docs/functions-and-directives).
-- **Linting** — highlighting errors and potential bugs in both your CSS and your markup.
-- **Hover previews** — revealing the complete CSS for utility classes when you hover over them.
-- **Syntax highlighting** — so that Tailwind features that use custom CSS syntax are highlighted correctly.
+- **Tự động hoàn thành** — cung cấp gợi ý thông minh cho các utility class, cũng như [các hàm và chỉ thị CSS](/docs/functions-and-directives).
+- **Linting** — làm nổi bật lỗi và các lỗi tiềm ẩn trong cả CSS và markup của bạn.
+- **Xem trước khi hover** — hiển thị CSS đầy đủ cho các utility class khi bạn hover lên chúng.
+- **Làm nổi bật cú pháp** — để các tính năng Tailwind sử dụng cú pháp CSS tùy chỉnh được làm nổi bật chính xác.
 
-Check out the project [on GitHub](https://github.com/tailwindcss/intellisense) to learn more, or [add it to Visual Studio Code](vscode:extension/bradlc.vscode-tailwindcss) to get started now.
+Xem dự án [trên GitHub](https://github.com/tailwindcss/intellisense) để tìm hiểu thêm, hoặc [thêm vào Visual Studio Code](vscode:extension/bradlc.vscode-tailwindcss) để bắt đầu ngay bây giờ.
 
-## Class sorting with Prettier
+## Sắp xếp class với Prettier
 
-We maintain an official [Prettier plugin](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) for Tailwind CSS that automatically sorts your classes following our [recommended class order](/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted).
+Chúng tôi duy trì một [plugin Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) chính thức cho Tailwind CSS tự động sắp xếp các class của bạn theo [thứ tự class được khuyến nghị](/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted) của chúng tôi.
 
 <img src={require("./img/prettier-banner.jpg").default.src} alt="" width={2400} height={819} className="rounded-lg" />
 
-It works seamlessly with custom Tailwind configurations, and because it’s just a Prettier plugin, it works anywhere Prettier works—including every popular editor and IDE, and of course on the command line.
+Nó hoạt động mượt mà với các cấu hình Tailwind tùy chỉnh, và vì nó chỉ là một plugin Prettier, nó hoạt động ở mọi nơi Prettier hoạt động—bao gồm mọi trình soạn thảo và IDE phổ biến, và tất nhiên là trên dòng lệnh.
 
 {/* prettier-ignore */}
 ```html
@@ -67,10 +67,10 @@ It works seamlessly with custom Tailwind configurations, and because it’s just
 <button class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">Submit</button>
 ```
 
-Check out the plugin [on GitHub](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to learn more and get started.
+Xem plugin [trên GitHub](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) để tìm hiểu thêm và bắt đầu.
 
 ## JetBrains IDEs
 
-JetBrains IDEs like WebStorm, PhpStorm, and others include support for intelligent Tailwind CSS completions in your HTML.
+Các JetBrains IDE như WebStorm, PhpStorm và các IDE khác bao gồm hỗ trợ cho việc hoàn thành Tailwind CSS thông minh trong HTML của bạn.
 
-[Learn more about Tailwind CSS support in JetBrains IDEs &rarr;](https://www.jetbrains.com/help/webstorm/tailwind-css.html)
+[Tìm hiểu thêm về hỗ trợ Tailwind CSS trong JetBrains IDE &rarr;](https://www.jetbrains.com/help/webstorm/tailwind-css.html)

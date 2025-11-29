@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import colors from "./utils/colors";
 
 export const title = "stroke";
-export const description = "Utilities for styling the stroke of SVG elements.";
+export const description = "Các tiện ích để tạo kiểu cho stroke của các phần tử SVG.";
 
 <ApiTable
   rows={[
@@ -22,11 +22,11 @@ export const description = "Utilities for styling the stroke of SVG elements.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `stroke-indigo-500` and `stroke-lime-600` to change the stroke color of an SVG:
+Sử dụng các tiện ích như `stroke-indigo-500` và `stroke-lime-600` để thay đổi màu stroke của một SVG:
 
 <Figure>
 
@@ -53,13 +53,13 @@ Use utilities like `stroke-indigo-500` and `stroke-lime-600` to change the strok
 
 </Figure>
 
-This can be useful for styling icon sets like [Heroicons](https://heroicons.com).
+Điều này có thể hữu ích để tạo kiểu cho các bộ icon như [Heroicons](https://heroicons.com).
 
-### Using the current color
+### Sử dụng màu hiện tại
 
-Use the `stroke-current` utility to set the stroke color to the current text color:
+Sử dụng tiện ích `stroke-current` để đặt màu stroke thành màu văn bản hiện tại:
 
-<Figure hint="Hover over the button to see the stroke color change">
+<Figure hint="Di chuột qua nút để thấy màu stroke thay đổi">
 
 <Example>
   {
@@ -90,7 +90,7 @@ Use the `stroke-current` utility to set the stroke color to the current text col
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="svg" utility="stroke" name="stroke color" value="#243c5a" variable="stroke-color" />
 
@@ -98,6 +98,6 @@ Use the `stroke-current` utility to set the stroke color to the current text col
 
 <ResponsiveDesign element="svg" property="stroke" defaultClass="stroke-cyan-500" featuredClass="stroke-cyan-700" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors element="svg" utility="stroke" />

@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "order";
-export const description = "Utilities for controlling the order of flex and grid items.";
+export const description = "Các tiện ích để kiểm soát thứ tự của các mục flex và grid.";
 
 <ApiTable
   rows={[
@@ -18,11 +18,11 @@ export const description = "Utilities for controlling the order of flex and grid
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Explicitly setting a sort order
+### Đặt thứ tự sắp xếp rõ ràng
 
-Use `order-<number>` utilities like `order-1` and `order-3` to render flex and grid items in a different order than they appear in the document:
+Sử dụng các tiện ích `order-<number>` như `order-1` và `order-3` để hiển thị các mục flex và grid theo thứ tự khác với thứ tự xuất hiện trong tài liệu:
 
 <Figure>
 
@@ -47,9 +47,9 @@ Use `order-<number>` utilities like `order-1` and `order-3` to render flex and g
 
 </Figure>
 
-### Ordering items first or last
+### Sắp xếp mục đầu tiên hoặc cuối cùng
 
-Use the `order-first` and `order-last` utilities to render flex and grid items first or last:
+Sử dụng các tiện ích `order-first` và `order-last` để hiển thị các mục flex và grid đầu tiên hoặc cuối cùng:
 
 <Figure>
 
@@ -74,9 +74,9 @@ Use the `order-first` and `order-last` utilities to render flex and grid items f
 
 </Figure>
 
-### Using negative values
+### Sử dụng giá trị âm
 
-To use a negative order value, prefix the class name with a dash to convert it to a negative value:
+Để sử dụng giá trị order âm, thêm dấu gạch ngang trước tên class để chuyển nó thành giá trị âm:
 
 ```html
 <!-- [!code classes:-order-1] -->
@@ -85,7 +85,7 @@ To use a negative order value, prefix the class name with a dash to convert it t
 </div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="order" value="min(var(--total-items),10)" />
 

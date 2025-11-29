@@ -3,21 +3,21 @@ import { Iframe } from "@/components/iframe";
 import { Example } from "@/components/example";
 import { Figure } from "@/components/figure";
 
-export const title = "Responsive design";
-export const description = "Using responsive utility variants to build adaptive user interfaces.";
+export const title = "Thiết kế Responsive";
+export const description = "Sử dụng các biến thể tiện ích responsive để xây dựng giao diện người dùng thích ứng.";
 
-## Overview
+## Tổng quan
 
-Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.
+Mọi lớp tiện ích trong Tailwind đều có thể được áp dụng có điều kiện tại các breakpoint khác nhau, điều này giúp việc xây dựng các giao diện responsive phức tạp trở nên dễ dàng mà không cần rời khỏi HTML của bạn.
 
-First, make sure you've added the [viewport meta tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) to the `<head>` of your document:
+Đầu tiên, hãy đảm bảo bạn đã thêm [thẻ meta viewport](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) vào `<head>` của tài liệu:
 
 ```html
 <!-- [!code filename:index.html] -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
-Then to add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the `:` character:
+Sau đó, để thêm một tiện ích nhưng chỉ cho nó có hiệu lực tại một breakpoint nhất định, tất cả những gì bạn cần làm là thêm tiền tố tên breakpoint vào trước tiện ích, theo sau là ký tự `:`:
 
 ```html
 <!-- [!code filename:HTML]  -->
@@ -27,15 +27,15 @@ Then to add a utility but only have it take effect at a certain breakpoint, all 
 <img class="w-16 md:w-32 lg:w-48" src="..." />
 ```
 
-There are five breakpoints by default, inspired by common device resolutions:
+Có năm breakpoint mặc định, lấy cảm hứng từ các độ phân giải thiết bị phổ biến:
 
 {
 
 <table>
   <thead>
     <tr>
-      <th>Breakpoint prefix</th>
-      <th>Minimum width</th>
+      <th>Tiền tố Breakpoint</th>
+      <th>Chiều rộng tối thiểu</th>
       <th>CSS</th>
     </tr>
   </thead>
@@ -99,9 +99,9 @@ There are five breakpoints by default, inspired by common device resolutions:
 </table>
 }
 
-This works for **every utility class in the framework**, which means you can change literally anything at a given breakpoint — even things like letter spacing or cursor styles.
+Điều này hoạt động cho **mọi lớp tiện ích trong framework**, nghĩa là bạn có thể thay đổi bất cứ thứ gì tại một breakpoint nhất định — ngay cả những thứ như khoảng cách chữ hoặc kiểu con trỏ.
 
-Here's a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens:
+Dưới đây là một ví dụ đơn giản về thành phần trang tiếp thị sử dụng bố cục xếp chồng trên màn hình nhỏ và bố cục song song trên màn hình lớn hơn:
 
 <Figure>
 
@@ -170,28 +170,28 @@ Here's a simple example of a marketing page component that uses a stacked layout
 
 </Figure>
 
-Here's how the example above works:
+Dưới đây là cách ví dụ trên hoạt động:
 
-- By default, the outer `div` is `display: block`, but by adding the `md:flex` utility, it becomes `display: flex` on medium screens and larger.
-- When the parent is a flex container, we want to make sure the image never shrinks, so we've added `md:shrink-0` to prevent shrinking on medium screens and larger. Technically we could have just used `shrink-0` since it would do nothing on smaller screens, but since it only matters on `md` screens, it's a good idea to make that clear in the class name.
-- On small screens the image is automatically full width by default. On medium screens and up, we've constrained the width to a fixed size and ensured the image is full height using `md:h-full md:w-48`.
+- Theo mặc định, `div` bên ngoài là `display: block`, nhưng bằng cách thêm tiện ích `md:flex`, nó trở thành `display: flex` trên màn hình trung bình và lớn hơn.
+- Khi phần tử cha là một flex container, chúng ta muốn đảm bảo hình ảnh không bao giờ bị thu nhỏ, vì vậy chúng ta đã thêm `md:shrink-0` để ngăn thu nhỏ trên màn hình trung bình và lớn hơn. Về mặt kỹ thuật, chúng ta có thể chỉ cần sử dụng `shrink-0` vì nó sẽ không làm gì trên màn hình nhỏ hơn, nhưng vì nó chỉ quan trọng trên màn hình `md`, nên việc làm rõ điều đó trong tên lớp là một ý tưởng hay.
+- Trên màn hình nhỏ, hình ảnh tự động có chiều rộng đầy đủ theo mặc định. Trên màn hình trung bình trở lên, chúng ta đã giới hạn chiều rộng ở một kích thước cố định và đảm bảo hình ảnh có chiều cao đầy đủ bằng cách sử dụng `md:h-full md:w-48`.
 
-We've only used one breakpoint in this example, but you could easily customize this component at other sizes using the `sm`, `lg`, `xl`, or `2xl` responsive prefixes as well.
+Chúng ta chỉ sử dụng một breakpoint trong ví dụ này, nhưng bạn có thể dễ dàng tùy chỉnh thành phần này ở các kích thước khác bằng cách sử dụng các tiền tố responsive `sm`, `lg`, `xl` hoặc `2xl`.
 
-## Working mobile-first
+## Làm việc theo hướng mobile-first
 
-Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.
+Tailwind sử dụng hệ thống breakpoint mobile-first, tương tự như những gì bạn có thể đã quen trong các framework khác như Bootstrap.
 
-What this means is that unprefixed utilities (like `uppercase`) take effect on all screen sizes, while prefixed utilities (like `md:uppercase`) only take effect at the specified breakpoint _and above_.
+Điều này có nghĩa là các tiện ích không có tiền tố (như `uppercase`) có hiệu lực trên tất cả các kích thước màn hình, trong khi các tiện ích có tiền tố (như `md:uppercase`) chỉ có hiệu lực tại breakpoint được chỉ định _trở lên_.
 
-### Targeting mobile screens
+### Nhắm mục tiêu màn hình di động
 
-Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the `sm:` prefixed version. Don't think of `sm:` as meaning "on small screens", think of it as "at the small _breakpoint_".
+Điểm khiến mọi người ngạc nhiên nhất về cách tiếp cận này là để tạo kiểu cho thiết bị di động, bạn cần sử dụng phiên bản không có tiền tố của tiện ích, chứ không phải phiên bản có tiền tố `sm:`. Đừng nghĩ `sm:` có nghĩa là "trên màn hình nhỏ", hãy nghĩ về nó là "tại _breakpoint_ nhỏ".
 
 <TipBad>
   {
     <>
-      Don't use <code>sm:</code> to target mobile devices
+      Đừng sử dụng <code>sm:</code> để nhắm mục tiêu thiết bị di động
     </>
   }
 </TipBad>
@@ -202,7 +202,7 @@ Where this approach surprises people most often is that to style something for m
 <div class="sm:text-center"></div>
 ```
 
-<TipGood>{<>Use unprefixed utilities to target mobile, and override them at larger breakpoints</>}</TipGood>
+<TipGood>{<>Sử dụng các tiện ích không có tiền tố để nhắm mục tiêu thiết bị di động và ghi đè chúng tại các breakpoint lớn hơn</>}</TipGood>
 
 ```html
 <!-- [!code filename:HTML]  -->
@@ -210,13 +210,13 @@ Where this approach surprises people most often is that to style something for m
 <div class="text-center sm:text-left"></div>
 ```
 
-For this reason, it's often a good idea to implement the mobile layout for a design first, then layer on any changes that make sense for `sm` screens, followed by `md` screens, etc.
+Vì lý do này, thường là một ý tưởng hay khi triển khai bố cục di động cho một thiết kế trước, sau đó xếp lớp các thay đổi hợp lý cho màn hình `sm`, tiếp theo là màn hình `md`, v.v.
 
-### Targeting a breakpoint range
+### Nhắm mục tiêu một khoảng breakpoint
 
-By default, styles applied by rules like `md:flex` will apply at that breakpoint and stay applied at larger breakpoints.
+Theo mặc định, các kiểu được áp dụng bởi các quy tắc như `md:flex` sẽ áp dụng tại breakpoint đó và duy trì áp dụng tại các breakpoint lớn hơn.
 
-If you'd like to apply a utility _only_ when a specific breakpoint range is active, stack a responsive variant like `md` with a `max-*` variant to limit that style to a specific range:
+Nếu bạn muốn áp dụng một tiện ích _chỉ_ khi một khoảng breakpoint cụ thể đang hoạt động, hãy xếp chồng một biến thể responsive như `md` với một biến thể `max-*` để giới hạn kiểu đó trong một khoảng cụ thể:
 
 ```html
 <!-- [!code filename:HTML]  -->
@@ -225,14 +225,14 @@ If you'd like to apply a utility _only_ when a specific breakpoint range is acti
 </div>
 ```
 
-Tailwind generates a corresponding `max-*` variant for each breakpoint, so out of the box the following variants are available:
+Tailwind tạo ra một biến thể `max-*` tương ứng cho mỗi breakpoint, vì vậy các biến thể sau có sẵn ngay lập tức:
 
 {
 
 <table>
   <thead>
     <tr>
-      <th>Variant</th>
+      <th>Biến thể</th>
       <th>Media query</th>
     </tr>
   </thead>
@@ -281,9 +281,9 @@ Tailwind generates a corresponding `max-*` variant for each breakpoint, so out o
 </table>
 }
 
-### Targeting a single breakpoint
+### Nhắm mục tiêu một breakpoint đơn lẻ
 
-To target a single breakpoint, target the range for that breakpoint by stacking a responsive variant like `md` with the `max-*` variant for the next breakpoint:
+Để nhắm mục tiêu một breakpoint đơn lẻ, hãy nhắm mục tiêu khoảng cho breakpoint đó bằng cách xếp chồng một biến thể responsive như `md` với biến thể `max-*` cho breakpoint tiếp theo:
 
 ```html
 <!-- [!code filename:HTML]  -->
@@ -292,13 +292,13 @@ To target a single breakpoint, target the range for that breakpoint by stacking 
 </div>
 ```
 
-Read about [targeting breakpoint ranges](#targeting-a-breakpoint-range) to learn more.
+Đọc về [nhắm mục tiêu khoảng breakpoint](#targeting-a-breakpoint-range) để tìm hiểu thêm.
 
-## Using custom breakpoints
+## Sử dụng breakpoint tùy chỉnh
 
-### Customizing your theme
+### Tùy chỉnh theme của bạn
 
-Use the `--breakpoint-*` theme variables to customize your breakpoints:
+Sử dụng các biến theme `--breakpoint-*` để tùy chỉnh các breakpoint của bạn:
 
 ```css
 /* [!code filename:app.css] */
@@ -312,7 +312,7 @@ Use the `--breakpoint-*` theme variables to customize your breakpoints:
 }
 ```
 
-This updates the `2xl` breakpoint to use `100rem` instead of the default `96rem`, and creates new `xs` and `3xl` breakpoints that can be used in your markup:
+Điều này cập nhật breakpoint `2xl` sử dụng `100rem` thay vì mặc định `96rem`, và tạo các breakpoint `xs` và `3xl` mới có thể được sử dụng trong markup của bạn:
 
 ```html
 <!-- [!code filename:HTML]  -->
@@ -324,15 +324,15 @@ This updates the `2xl` breakpoint to use `100rem` instead of the default `96rem`
 </div>
 ```
 
-Note that it's important to always use the same unit for defining your breakpoints or the generated utilities may be sorted in an unexpected order, causing breakpoint classes to override each other in unexpected ways.
+Lưu ý rằng điều quan trọng là luôn sử dụng cùng một đơn vị để xác định các breakpoint của bạn, nếu không các tiện ích được tạo có thể được sắp xếp theo thứ tự không mong muốn, khiến các lớp breakpoint ghi đè lẫn nhau theo những cách không mong muốn.
 
-Tailwind uses `rem` for the default breakpoints, so if you are adding additional breakpoints to the defaults, make sure you use `rem` as well.
+Tailwind sử dụng `rem` cho các breakpoint mặc định, vì vậy nếu bạn thêm các breakpoint bổ sung vào mặc định, hãy đảm bảo bạn cũng sử dụng `rem`.
 
-Learn more about customizing your theme in the [theme documentation](/docs/theme).
+Tìm hiểu thêm về tùy chỉnh theme của bạn trong [tài liệu theme](/docs/theme).
 
-### Removing default breakpoints
+### Xóa các breakpoint mặc định
 
-To remove a default breakpoint, reset its value to the `initial` keyword:
+Để xóa một breakpoint mặc định, hãy đặt lại giá trị của nó thành từ khóa `initial`:
 
 ```css
 /* [!code filename:app.css] */
@@ -344,7 +344,7 @@ To remove a default breakpoint, reset its value to the `initial` keyword:
 }
 ```
 
-You can also reset all of the default breakpoints using `--breakpoint-*: initial`, then define all of your breakpoints from scratch:
+Bạn cũng có thể đặt lại tất cả các breakpoint mặc định bằng cách sử dụng `--breakpoint-*: initial`, sau đó xác định tất cả các breakpoint của bạn từ đầu:
 
 ```css
 /* [!code filename:app.css] */
@@ -359,11 +359,11 @@ You can also reset all of the default breakpoints using `--breakpoint-*: initial
 }
 ```
 
-Learn more removing default theme values in the [theme documentation](/docs/theme).
+Tìm hiểu thêm về việc xóa các giá trị theme mặc định trong [tài liệu theme](/docs/theme).
 
-### Using arbitrary values
+### Sử dụng giá trị tùy ý
 
-If you need to use a one-off breakpoint that doesn’t make sense to include in your theme, use the `min` or `max` variants to generate a custom breakpoint on the fly using any arbitrary value.
+Nếu bạn cần sử dụng một breakpoint dùng một lần không hợp lý để đưa vào theme của mình, hãy sử dụng các biến thể `min` hoặc `max` để tạo một breakpoint tùy chỉnh ngay lập tức bằng cách sử dụng bất kỳ giá trị tùy ý nào.
 
 ```html
 <!-- [!code word:min-\[320px\]\:text-center] -->
@@ -373,17 +373,17 @@ If you need to use a one-off breakpoint that doesn’t make sense to include in 
 </div>
 ```
 
-Learn more about arbitrary value support in the [arbitrary values](/docs/adding-custom-styles#using-arbitrary-values) documentation.
+Tìm hiểu thêm về hỗ trợ giá trị tùy ý trong tài liệu [giá trị tùy ý](/docs/adding-custom-styles#using-arbitrary-values).
 
 ## Container queries
 
-### What are container queries?
+### Container queries là gì?
 
-[Container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) are a modern CSS feature that let you style something based on the size of a parent element instead of the size of the entire viewport. They let you build components that are a lot more portable and reusable because they can change based on the actual space available for that component.
+[Container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries) là một tính năng CSS hiện đại cho phép bạn tạo kiểu cho thứ gì đó dựa trên kích thước của phần tử cha thay vì kích thước của toàn bộ khung nhìn. Chúng cho phép bạn xây dựng các thành phần linh hoạt và có thể tái sử dụng hơn nhiều vì chúng có thể thay đổi dựa trên không gian thực tế có sẵn cho thành phần đó.
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `@container` class to mark an element as a container, then use variants like `@sm` and `@md` to style child elements based on the size of the container:
+Sử dụng lớp `@container` để đánh dấu một phần tử là container, sau đó sử dụng các biến thể như `@sm` và `@md` để tạo kiểu cho các phần tử con dựa trên kích thước của container:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -396,11 +396,11 @@ Use the `@container` class to mark an element as a container, then use variants 
 </div>
 ```
 
-Just like breakpoint variants, container queries are mobile-first in Tailwind CSS and apply at the target container size and up.
+Giống như các biến thể breakpoint, container queries là mobile-first trong Tailwind CSS và áp dụng tại kích thước container mục tiêu trở lên.
 
-### Max-width container queries
+### Container queries chiều rộng tối đa
 
-Use variants like `@max-sm` and `@max-md` to apply a style below a specific container size:
+Sử dụng các biến thể như `@max-sm` và `@max-md` để áp dụng một kiểu dưới một kích thước container cụ thể:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -412,9 +412,9 @@ Use variants like `@max-sm` and `@max-md` to apply a style below a specific cont
 </div>
 ```
 
-### Container query ranges
+### Khoảng container query
 
-Stack a regular container query variant with a max-width container query variant to target a specific range:
+Xếp chồng một biến thể container query thông thường với một biến thể container query chiều rộng tối đa để nhắm mục tiêu một khoảng cụ thể:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -426,9 +426,9 @@ Stack a regular container query variant with a max-width container query variant
 </div>
 ```
 
-### Named containers
+### Container được đặt tên
 
-For complex designs that use multiple nested containers, you can name containers using `@container/{name}` and target specific containers with variants like `@sm/{name}` and `@md/{name}`:
+Đối với các thiết kế phức tạp sử dụng nhiều container lồng nhau, bạn có thể đặt tên cho các container bằng cách sử dụng `@container/{name}` và nhắm mục tiêu các container cụ thể bằng các biến thể như `@sm/{name}` và `@md/{name}`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -442,11 +442,11 @@ For complex designs that use multiple nested containers, you can name containers
 </div>
 ```
 
-This makes it possible to style something based on the size of a distant container, rather than just the nearest container.
+Điều này giúp bạn có thể tạo kiểu cho thứ gì đó dựa trên kích thước của một container ở xa, thay vì chỉ container gần nhất.
 
-### Using custom container sizes
+### Sử dụng kích thước container tùy chỉnh
 
-Use the `--container-*` theme variables to customize your container sizes:
+Sử dụng các biến theme `--container-*` để tùy chỉnh kích thước container của bạn:
 
 ```css
 /* [!code filename:app.css] */
@@ -458,7 +458,7 @@ Use the `--container-*` theme variables to customize your container sizes:
 }
 ```
 
-This adds a new `8xl` container query variant that can be used in your markup:
+Điều này thêm một biến thể container query `8xl` mới có thể được sử dụng trong markup của bạn:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -471,13 +471,13 @@ This adds a new `8xl` container query variant that can be used in your markup:
 </div>
 ```
 
-Learn more about customizing your theme in the [theme documentation](/docs/theme).
+Tìm hiểu thêm về tùy chỉnh theme của bạn trong [tài liệu theme](/docs/theme).
 
 <h3 id="using-arbitrary-container-query-values">
-  <a href="#using-arbitrary-container-query-values">Using arbitrary values</a>
+  <a href="#using-arbitrary-container-query-values">Sử dụng giá trị container query tùy ý</a>
 </h3>
 
-Use variants like `@min-[475px]` and `@max-[960px]` for one-off container query sizes you don't want to add to your theme:
+Sử dụng các biến thể như `@min-[475px]` và `@max-[960px]` cho các kích thước container query dùng một lần mà bạn không muốn thêm vào theme của mình:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -489,9 +489,9 @@ Use variants like `@min-[475px]` and `@max-[960px]` for one-off container query 
 </div>
 ```
 
-### Using container query units
+### Sử dụng đơn vị container query
 
-Use [container query length units](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) like `cqw` as arbitrary values in other utility classes to reference the container size:
+Sử dụng [đơn vị độ dài container query](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) như `cqw` làm giá trị tùy ý trong các lớp tiện ích khác để tham chiếu kích thước container:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -503,17 +503,17 @@ Use [container query length units](https://developer.mozilla.org/en-US/docs/Web/
 </div>
 ```
 
-### Container size reference
+### Tham chiếu kích thước container
 
-By default, Tailwind includes container sizes ranging from 16rem _(256px)_ to 80rem _(1280px)_:
+Theo mặc định, Tailwind bao gồm các kích thước container từ 16rem _(256px)_ đến 80rem _(1280px)_:
 
 {
 
 <table>
   <thead>
     <tr>
-      <th>Variant</th>
-      <th>Minimum width</th>
+      <th>Biến thể</th>
+      <th>Chiều rộng tối thiểu</th>
       <th>CSS</th>
     </tr>
   </thead>
@@ -664,3 +664,4 @@ By default, Tailwind includes container sizes ranging from 16rem _(256px)_ to 80
   </tbody>
 </table>
 }
+

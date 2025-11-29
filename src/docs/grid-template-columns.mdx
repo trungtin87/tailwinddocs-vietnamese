@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "grid-template-columns";
-export const description = "Utilities for specifying the columns in a grid layout.";
+export const description = "Các tiện ích để chỉ định các cột trong bố cục grid.";
 
 <ApiTable
   rows={[
@@ -17,11 +17,11 @@ export const description = "Utilities for specifying the columns in a grid layou
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Specifying the grid columns
+### Chỉ định các cột grid
 
-Use `grid-cols-<number>` utilities like `grid-cols-2` and `grid-cols-4` to create grids with _n_ equally sized columns:
+Sử dụng các tiện ích `grid-cols-<number>` như `grid-cols-2` và `grid-cols-4` để tạo các grid với _n_ cột có kích thước bằng nhau:
 
 <Figure>
 
@@ -55,9 +55,9 @@ Use `grid-cols-<number>` utilities like `grid-cols-2` and `grid-cols-4` to creat
 
 </Figure>
 
-### Implementing a subgrid
+### Triển khai subgrid
 
-Use the `grid-cols-subgrid` utility to adopt the column tracks defined by the item's parent:
+Sử dụng tiện ích `grid-cols-subgrid` để áp dụng các column track được xác định bởi cha của mục:
 
 <Figure>
 
@@ -92,7 +92,7 @@ Use the `grid-cols-subgrid` utility to adopt the column tracks defined by the it
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="grid-cols" name="columns" value="200px_minmax(900px,_1fr)_100px" />
 

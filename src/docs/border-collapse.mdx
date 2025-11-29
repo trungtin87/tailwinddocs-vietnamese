@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "border-collapse";
-export const description = "Utilities for controlling whether table borders should collapse or be separated.";
+export const description = "Các tiện ích để kiểm soát liệu border của table nên gộp lại hay tách rời.";
 
 <ApiTable
   rows={[
@@ -13,11 +13,11 @@ export const description = "Utilities for controlling whether table borders shou
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Collapsing table borders
+### Gộp border của table
 
-Use the `border-collapse` utility to combine adjacent cell borders into a single border when possible:
+Sử dụng tiện ích `border-collapse` để kết hợp các border của các ô kề nhau thành một border duy nhất khi có thể:
 
 <Figure>
 
@@ -92,11 +92,11 @@ Use the `border-collapse` utility to combine adjacent cell borders into a single
 
 </Figure>
 
-Note that this includes collapsing borders on the top-level `<table>` tag.
+Lưu ý rằng điều này bao gồm việc gộp các border trên thẻ `<table>` cấp cao nhất.
 
-### Separating table borders
+### Tách border của table
 
-Use the `border-separate` utility to force each cell to display its own separate borders:
+Sử dụng tiện ích `border-separate` để buộc mỗi ô hiển thị các border riêng biệt của nó:
 
 <Figure>
 

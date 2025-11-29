@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "list-style-image";
-export const description = "Utilities for controlling the marker images for list items.";
+export const description = "Các tiện ích để kiểm soát hình ảnh dấu đầu dòng cho các mục trong danh sách.";
 
 <ApiTable
   rows={[
@@ -14,11 +14,11 @@ export const description = "Utilities for controlling the marker images for list
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `list-image-[<value>]` syntax to control the marker image for list items:
+Sử dụng cú pháp `list-image-[<value>]` để kiểm soát hình ảnh dấu đầu dòng cho các mục trong danh sách:
 
 <Figure>
 
@@ -46,9 +46,9 @@ Use the `list-image-[<value>]` syntax to control the marker image for list items
 
 </Figure>
 
-### Using a CSS variable
+### Sử dụng biến CSS
 
-Use the <code>list-image-{'(<custom-property>)'}</code> syntax to control the marker image for list items using a CSS variable:
+Sử dụng cú pháp <code>list-image-{'(<custom-property>)'}</code> để kiểm soát hình ảnh dấu đầu dòng cho các mục trong danh sách sử dụng biến CSS:
 
 ```html
 <!-- [!code classes:list-image-(--my-list-image)] -->
@@ -57,11 +57,11 @@ Use the <code>list-image-{'(<custom-property>)'}</code> syntax to control the ma
 </ul>
 ```
 
-This is just a shorthand for <code>list-image-{'[var(<custom-property>)]'}</code> that adds the `var()` function for you automatically.
+Đây chỉ là viết tắt cho <code>list-image-{'[var(<custom-property>)]'}</code> tự động thêm hàm `var()` cho bạn.
 
-### Removing a marker image
+### Loại bỏ hình ảnh dấu đầu dòng
 
-Use the `list-image-none` utility to remove an existing marker image from list items:
+Sử dụng tiện ích `list-image-none` để loại bỏ hình ảnh dấu đầu dòng hiện có khỏi các mục trong danh sách:
 
 ```html
 <!-- [!code classes:list-image-none] -->

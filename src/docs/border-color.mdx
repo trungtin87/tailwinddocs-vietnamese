@@ -11,7 +11,7 @@ import colors from "./utils/colors";
 import dedent from "dedent";
 
 export const title = "border-color";
-export const description = "Utilities for controlling the color of an element's borders.";
+export const description = "Các utility để kiểm soát màu của border của một phần tử.";
 
 <ApiTable
   rows={[
@@ -40,11 +40,11 @@ export const description = "Utilities for controlling the color of an element's 
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `border-rose-500` and `border-lime-100` to control the border color of an element:
+Sử dụng các utility như `border-rose-500` và `border-lime-100` để kiểm soát màu border của một phần tử:
 
 <Figure>
 
@@ -82,9 +82,9 @@ Use utilities like `border-rose-500` and `border-lime-100` to control the border
 
 </Figure>
 
-### Changing the opacity
+### Thay đổi độ mờ (opacity)
 
-Use the color opacity modifier to control the opacity of an element's border color:
+Sử dụng modifier độ mờ màu để kiểm soát độ mờ của màu border của một phần tử:
 
 <Figure>
 
@@ -124,9 +124,9 @@ Use the color opacity modifier to control the opacity of an element's border col
 
 </Figure>
 
-### Individual sides
+### Các cạnh riêng lẻ
 
-Use utilities like `border-t-indigo-500` and `border-r-lime-100` to set the border color for one side of an element:
+Sử dụng các utility như `border-t-indigo-500` và `border-r-lime-100` để thiết lập màu border cho một cạnh của một phần tử:
 
 <Figure>
 
@@ -171,9 +171,9 @@ Use utilities like `border-t-indigo-500` and `border-r-lime-100` to set the bord
 
 </Figure>
 
-### Horizontal and vertical sides
+### Các cạnh ngang và dọc
 
-Use utilities like `border-x-indigo-500` and `border-y-lime-100` to set the border color on two sides of an element at the same time:
+Sử dụng các utility như `border-x-indigo-500` và `border-y-lime-100` để thiết lập màu border trên hai cạnh của một phần tử cùng một lúc:
 
 <Figure>
 
@@ -204,9 +204,9 @@ Use utilities like `border-x-indigo-500` and `border-y-lime-100` to set the bord
 
 </Figure>
 
-### Using logical properties
+### Sử dụng các thuộc tính logic
 
-Use utilities like `border-s-indigo-500` and `border-e-lime-100` to set the `border-inline-start-color` and `border-inline-end-color` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right border based on the text direction:
+Sử dụng các utility như `border-s-indigo-500` và `border-e-lime-100` để thiết lập các [thuộc tính logic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts) `border-inline-start-color` và `border-inline-end-color`, ánh xạ tới border trái hoặc phải dựa trên hướng văn bản:
 
 <Figure>
 
@@ -239,9 +239,9 @@ Use utilities like `border-s-indigo-500` and `border-e-lime-100` to set the `bor
 
 </Figure>
 
-### Divider between children
+### Divider giữa các phần tử con
 
-Use utilities like `divide-indigo-500` and `divide-lime-100` to control the border color between child elements:
+Sử dụng các utility như `divide-indigo-500` và `divide-lime-100` để kiểm soát màu border giữa các phần tử con:
 
 <Figure>
 
@@ -266,11 +266,11 @@ Use utilities like `divide-indigo-500` and `divide-lime-100` to control the bord
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="border" name="border color" value="#243c5a" />
 
-### Applying on focus
+### Áp dụng khi focus
 
 <TargetingSpecificStates property="border-color" variant="focus">
 
@@ -298,10 +298,10 @@ Use utilities like `divide-indigo-500` and `divide-lime-100` to control the bord
 
 </TargetingSpecificStates>
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="border-color" defaultClass="border-blue-500" featuredClass="border-green-500" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors utility="border" />

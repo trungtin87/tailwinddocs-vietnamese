@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "position";
-export const description = "Utilities for controlling how an element is positioned in the document.";
+export const description = "Các tiện ích để kiểm soát cách một phần tử được định vị trong tài liệu.";
 
 <ApiTable
   rows={[
@@ -16,11 +16,11 @@ export const description = "Utilities for controlling how an element is position
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Statically positioning elements
+### Định vị tĩnh các phần tử
 
-Use the `static` utility to position an element according to the normal flow of the document:
+Sử dụng tiện ích `static` để định vị một phần tử theo luồng bình thường của tài liệu:
 
 <Figure>
 
@@ -51,11 +51,11 @@ Use the `static` utility to position an element according to the normal flow of 
 
 </Figure>
 
-With statically positioned elements, any [offsets](/docs/top-right-bottom-left) will be ignored and the element will not act as a position reference for absolutely positioned children.
+Với các phần tử được định vị tĩnh, mọi [offset](/docs/top-right-bottom-left) sẽ bị bỏ qua và phần tử sẽ không đóng vai trò là tham chiếu vị trí cho các phần tử con được định vị tuyệt đối.
 
-### Relatively positioning elements
+### Định vị tương đối các phần tử
 
-Use the `relative` utility to position an element according to the normal flow of the document:
+Sử dụng tiện ích `relative` để định vị một phần tử theo luồng bình thường của tài liệu:
 
 <Figure>
 
@@ -86,11 +86,11 @@ Use the `relative` utility to position an element according to the normal flow o
 
 </Figure>
 
-With relatively position elements, any [offsets](/docs/top-right-bottom-left) are calculated relative to the element's normal position and the element will act as a position reference for absolutely positioned children.
+Với các phần tử được định vị tương đối, mọi [offset](/docs/top-right-bottom-left) được tính toán tương đối so với vị trí bình thường của phần tử và phần tử sẽ đóng vai trò là tham chiếu vị trí cho các phần tử con được định vị tuyệt đối.
 
-### Absolutely positioning elements
+### Định vị tuyệt đối các phần tử
 
-Use the `absolute` utility to position an element _outside_ of the normal flow of the document, causing neighboring elements to act as if the element doesn't exist:
+Sử dụng tiện ích `absolute` để định vị một phần tử _bên ngoài_ luồng bình thường của tài liệu, khiến các phần tử lân cận hoạt động như thể phần tử đó không tồn tại:
 
 <Figure>
 
@@ -153,11 +153,11 @@ Use the `absolute` utility to position an element _outside_ of the normal flow o
 
 </Figure>
 
-With absolutely positioned elements, any [offsets](/docs/top-right-bottom-left) are calculated relative to the nearest parent that has a position other than `static`, and the element will act as a position reference for other absolutely positioned children.
+Với các phần tử được định vị tuyệt đối, mọi [offset](/docs/top-right-bottom-left) được tính toán tương đối so với phần tử cha gần nhất có vị trí khác `static`, và phần tử sẽ đóng vai trò là tham chiếu vị trí cho các phần tử con được định vị tuyệt đối khác.
 
-### Fixed positioning elements
+### Định vị cố định các phần tử
 
-Use the `fixed` utility to position an element relative to the browser window:
+Sử dụng tiện ích `fixed` để định vị một phần tử tương đối so với cửa sổ trình duyệt:
 
 <Figure hint="Scroll this element to see the fixed positioning in action">
 
@@ -237,11 +237,11 @@ Use the `fixed` utility to position an element relative to the browser window:
 
 </Figure>
 
-With fixed positioned elements, any [offsets](/docs/top-right-bottom-left) are calculated relative to the viewport and the element will act as a position reference for absolutely positioned children:
+Với các phần tử được định vị cố định, mọi [offset](/docs/top-right-bottom-left) được tính toán tương đối so với khung nhìn (viewport) và phần tử sẽ đóng vai trò là tham chiếu vị trí cho các phần tử con được định vị tuyệt đối:
 
-### Sticky positioning elements
+### Định vị dính các phần tử
 
-Use the `sticky` utility to position an element as `relative` until it crosses a specified threshold, then treat it as `fixed` until its parent is off screen:
+Sử dụng tiện ích `sticky` để định vị một phần tử là `relative` cho đến khi nó vượt qua một ngưỡng xác định, sau đó coi nó là `fixed` cho đến khi phần tử cha của nó ra khỏi màn hình:
 
 <Figure hint="Scroll this element to see the sticky positioning in action">
 
@@ -392,8 +392,8 @@ Use the `sticky` utility to position an element as `relative` until it crosses a
 
 </Figure>
 
-With sticky positioned elements, any [offsets](/docs/top-right-bottom-left) are calculated relative to the element's normal position and the element will act as a position reference for absolutely positioned children.
+Với các phần tử được định vị dính, mọi [offset](/docs/top-right-bottom-left) được tính toán tương đối so với vị trí bình thường của phần tử và phần tử sẽ đóng vai trò là tham chiếu vị trí cho các phần tử con được định vị tuyệt đối.
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="position" defaultClass="relative" featuredClass="absolute" />

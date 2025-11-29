@@ -6,7 +6,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "justify-self";
-export const description = "Utilities for controlling how an individual grid item is aligned along its inline axis.";
+export const description = "Các tiện ích để kiểm soát cách một mục lưới (grid item) riêng lẻ được căn chỉnh dọc theo trục inline của nó.";
 
 <ApiTable
   rows={[
@@ -20,11 +20,11 @@ export const description = "Utilities for controlling how an individual grid ite
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Auto
+### Tự động
 
-Use the `justify-self-auto` utility to align an item based on the value of the grid's `justify-items` property:
+Sử dụng tiện ích `justify-self-auto` để căn chỉnh một mục dựa trên giá trị thuộc tính `justify-items` của lưới:
 
 <Figure>
 
@@ -55,9 +55,9 @@ Use the `justify-self-auto` utility to align an item based on the value of the g
 
 </Figure>
 
-### Start
+### Đầu (Start)
 
-Use the `justify-self-start` utility to align a grid item to the start of its inline axis:
+Sử dụng tiện ích `justify-self-start` để căn chỉnh một mục lưới về phía đầu trục inline của nó:
 
 <Figure>
 
@@ -88,11 +88,11 @@ Use the `justify-self-start` utility to align a grid item to the start of its in
 
 </Figure>
 
-### Center
+### Giữa (Center)
 
-Use the `justify-self-center` or `justify-self-center-safe` utilities to align a grid item along the center of its inline axis:
+Sử dụng các tiện ích `justify-self-center` hoặc `justify-self-center-safe` để căn chỉnh một mục lưới dọc theo trung tâm trục inline của nó:
 
-<Figure hint="Resize the container to see the alignment behavior">
+<Figure hint="Thay đổi kích thước container để xem hành vi căn chỉnh">
 
 <Example resizable>
   {
@@ -153,13 +153,13 @@ Use the `justify-self-center` or `justify-self-center-safe` utilities to align a
 
 </Figure>
 
-When there is not enough space available, the `justify-self-center-safe` utility will align the item to the start of the container instead of the end.
+Khi không có đủ không gian, tiện ích `justify-self-center-safe` sẽ căn chỉnh mục về phía đầu của container thay vì phía cuối.
 
-### End
+### Cuối (End)
 
-Use the `justify-self-end` or `justify-self-end-safe` utilities to align a grid item to the end of its inline axis:
+Sử dụng các tiện ích `justify-self-end` hoặc `justify-self-end-safe` để căn chỉnh một mục lưới về phía cuối trục inline của nó:
 
-<Figure hint="Resize the container to see the alignment behavior">
+<Figure hint="Thay đổi kích thước container để xem hành vi căn chỉnh">
 
 <Example resizable>
   {
@@ -218,11 +218,11 @@ Use the `justify-self-end` or `justify-self-end-safe` utilities to align a grid 
 
 </Figure>
 
-When there is not enough space available, the `justify-self-end-safe` utility will align the item to the start of the container instead of the end.
+Khi không có đủ không gian, tiện ích `justify-self-end-safe` sẽ căn chỉnh mục về phía đầu của container thay vì phía cuối.
 
-### Stretch
+### Kéo dãn (Stretch)
 
-Use the `justify-self-stretch` utility to stretch a grid item to fill the grid area on its inline axis:
+Sử dụng tiện ích `justify-self-stretch` để kéo dãn một mục lưới để lấp đầy vùng lưới trên trục inline của nó:
 
 <Figure>
 
@@ -277,6 +277,6 @@ Use the `justify-self-stretch` utility to stretch a grid item to fill the grid a
 
 </Figure>
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="justify-self" defaultClass="justify-self-start" featuredClass="justify-self-end" />

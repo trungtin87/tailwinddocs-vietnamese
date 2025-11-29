@@ -5,7 +5,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "box-sizing";
-export const description = "Utilities for controlling how the browser should calculate an element's total size.";
+export const description = "Các tiện ích để kiểm soát cách trình duyệt tính toán tổng kích thước của một phần tử.";
 
 <ApiTable
   rows={[
@@ -14,13 +14,13 @@ export const description = "Utilities for controlling how the browser should cal
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Including borders and padding
+### Bao gồm border và padding
 
-Use the `box-border` utility to set an element's `box-sizing` to `border-box`, telling the browser to include the element's borders and padding when you give it a height or width.
+Sử dụng tiện ích `box-border` để đặt `box-sizing` của phần tử thành `border-box`, yêu cầu trình duyệt bao gồm border và padding của phần tử khi bạn đặt chiều cao hoặc chiều rộng.
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will be rendered as 100px &times; 100px, with an internal content area of 88px &times; 88px:
+Điều này có nghĩa là một phần tử 100px &times; 100px với border 2px và padding 4px ở tất cả các cạnh sẽ được hiển thị là 100px &times; 100px, với vùng nội dung bên trong là 88px &times; 88px:
 
 <Figure>
 
@@ -92,13 +92,13 @@ This means a 100px &times; 100px element with a 2px border and 4px of padding on
 
 </Figure>
 
-Tailwind makes this the default for all elements in our [preflight base styles](/docs/preflight).
+Tailwind đặt đây làm mặc định cho tất cả các phần tử trong [preflight base styles](/docs/preflight) của chúng tôi.
 
-### Excluding borders and padding
+### Loại trừ border và padding
 
-Use the `box-content` utility to set an element's `box-sizing` to `content-box`, telling the browser to add borders and padding on top of the element's specified width or height.
+Sử dụng tiện ích `box-content` để đặt `box-sizing` của phần tử thành `content-box`, yêu cầu trình duyệt thêm border và padding vào chiều rộng hoặc chiều cao đã chỉ định của phần tử.
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will actually be rendered as 112px &times; 112px, with an internal content area of 100px &times; 100px:
+Điều này có nghĩa là một phần tử 100px &times; 100px với border 2px và padding 4px ở tất cả các cạnh sẽ thực sự được hiển thị là 112px &times; 112px, với vùng nội dung bên trong là 100px &times; 100px:
 
 <Figure>
 

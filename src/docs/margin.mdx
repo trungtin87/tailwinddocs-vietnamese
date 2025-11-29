@@ -6,7 +6,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "margin";
-export const description = "Utilities for controlling an element's margin.";
+export const description = "Các tiện ích để kiểm soát margin của một phần tử.";
 
 <ApiTable
   rows={[
@@ -98,11 +98,11 @@ export const description = "Utilities for controlling an element's margin.";
 ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use `m-<number>` utilities like `m-4` and `m-8` to control the margin on all sides of an element:
+Sử dụng các tiện ích `m-<number>` như `m-4` và `m-8` để kiểm soát margin trên tất cả các phía của một phần tử:
 
 <Figure>
 
@@ -126,9 +126,9 @@ Use `m-<number>` utilities like `m-4` and `m-8` to control the margin on all sid
 
 </Figure>
 
-### Adding margin to a single side
+### Thêm margin vào một phía
 
-Use `mt-<number>`, `mr-<number>`, `mb-<number>`, and `ml-<number>` utilities like `ml-2` and `mt-6` to control the margin on one side of an element:
+Sử dụng các tiện ích `mt-<number>`, `mr-<number>`, `mb-<number>`, và `ml-<number>` như `ml-2` và `mt-6` để kiểm soát margin trên một phía của một phần tử:
 
 <Figure>
 
@@ -173,9 +173,9 @@ Use `mt-<number>`, `mr-<number>`, `mb-<number>`, and `ml-<number>` utilities lik
 
 </Figure>
 
-### Adding horizontal margin
+### Thêm margin theo chiều ngang
 
-Use `mx-<number>` utilities like `mx-4` and `mx-8` to control the horizontal margin of an element:
+Sử dụng các tiện ích `mx-<number>` như `mx-4` và `mx-8` để kiểm soát margin theo chiều ngang của một phần tử:
 
 <Figure>
 
@@ -199,9 +199,9 @@ Use `mx-<number>` utilities like `mx-4` and `mx-8` to control the horizontal mar
 
 </Figure>
 
-### Adding vertical margin
+### Thêm margin theo chiều dọc
 
-Use `my-<number>` utilities like `my-4` and `my-8` to control the vertical margin of an element:
+Sử dụng các tiện ích `my-<number>` như `my-4` và `my-8` để kiểm soát margin theo chiều dọc của một phần tử:
 
 <Figure>
 
@@ -225,9 +225,9 @@ Use `my-<number>` utilities like `my-4` and `my-8` to control the vertical margi
 
 </Figure>
 
-### Using negative values
+### Sử dụng giá trị âm
 
-To use a negative margin value, prefix the class name with a dash to convert it to a negative value:
+Để sử dụng giá trị margin âm, thêm tiền tố dấu gạch ngang vào tên class để chuyển đổi nó thành giá trị âm:
 
 <Figure>
 
@@ -250,9 +250,9 @@ To use a negative margin value, prefix the class name with a dash to convert it 
 
 </Figure>
 
-### Using logical properties
+### Sử dụng các thuộc tính logic
 
-Use `ms-<number>` or `me-<number>` utilities like `ms-4` and `me-8` to set the `margin-inline-start` and `margin-inline-end` logical properties:
+Sử dụng các tiện ích `ms-<number>` hoặc `me-<number>` như `ms-4` và `me-8` để thiết lập các thuộc tính logic `margin-inline-start` và `margin-inline-end`:
 
 <Figure>
 
@@ -260,7 +260,7 @@ Use `ms-<number>` or `me-<number>` utilities like `ms-4` and `me-8` to set the `
   {
     <div className="grid grid-cols-2 place-items-center gap-x-4">
       <div className="flex flex-col items-start gap-y-4" dir="ltr">
-        <p className="text-sm font-medium">Left-to-right</p>
+        <p className="text-sm font-medium">Trái sang phải</p>
         <div className="relative flex rounded-lg font-mono text-sm leading-6 font-bold text-white">
           <Stripes border className="absolute min-h-full w-full rounded-lg" />
           <div className="relative ms-8 rounded-lg bg-indigo-500 p-4">ms-8</div>
@@ -271,7 +271,7 @@ Use `ms-<number>` or `me-<number>` utilities like `ms-4` and `me-8` to set the `
         </div>
       </div>
       <div className="flex flex-col items-start gap-y-4" dir="rtl">
-        <p className="text-sm font-medium">Right-to-left</p>
+        <p className="text-sm font-medium">Phải sang trái</p>
         <div className="relative flex rounded-lg font-mono text-sm leading-6 font-bold text-white">
           <Stripes border className="absolute min-h-full w-full rounded-lg" />
           <div className="relative ms-8 rounded-lg bg-indigo-500 p-4">ms-8</div>
@@ -303,9 +303,9 @@ Use `ms-<number>` or `me-<number>` utilities like `ms-4` and `me-8` to set the `
 
 </Figure>
 
-### Adding space between children
+### Thêm khoảng cách giữa các phần tử con
 
-Use `space-x-<number>` or `space-y-<number>` utilities like `space-x-4` and `space-y-8` to control the space between elements:
+Sử dụng các tiện ích `space-x-<number>` hoặc `space-y-<number>` như `space-x-4` và `space-y-8` để kiểm soát khoảng cách giữa các phần tử:
 
 <Figure>
 
@@ -335,9 +335,9 @@ Use `space-x-<number>` or `space-y-<number>` utilities like `space-x-4` and `spa
 
 </Figure>
 
-#### Reversing children order
+#### Đảo ngược thứ tự phần tử con
 
-If your elements are in reverse order (using say `flex-row-reverse` or `flex-col-reverse`), use the `space-x-reverse` or `space-y-reverse` utilities to ensure the space is added to the correct side of each element:
+Nếu các phần tử của bạn theo thứ tự đảo ngược (ví dụ sử dụng `flex-row-reverse` hoặc `flex-col-reverse`), hãy sử dụng các tiện ích `space-x-reverse` hoặc `space-y-reverse` để đảm bảo khoảng cách được thêm vào đúng phía của mỗi phần tử:
 
 <Figure>
 
@@ -367,22 +367,22 @@ If your elements are in reverse order (using say `flex-row-reverse` or `flex-col
 
 </Figure>
 
-#### Limitations
+#### Hạn chế
 
-The space utilities are really just a shortcut for adding margin to all-but-the-last-item in a group, and aren't designed to handle complex cases like grids, layouts that wrap, or situations where the children are rendered in a complex custom order rather than their natural DOM order.
+Các tiện ích space thực sự chỉ là một phím tắt để thêm margin vào tất cả-trừ-phần-tử-cuối-cùng trong một nhóm, và không được thiết kế để xử lý các trường hợp phức tạp như lưới, layout bao bọc (wrap), hoặc các tình huống mà các phần tử con được render theo thứ tự tùy chỉnh phức tạp thay vì thứ tự DOM tự nhiên của chúng.
 
-For those situations, it's better to use the [gap utilities](/docs/gap) when possible, or add margin to every element with a matching negative margin on the parent.
+Đối với những tình huống đó, tốt hơn là sử dụng các [tiện ích gap](/docs/gap) khi có thể, hoặc thêm margin vào mọi phần tử với margin âm tương ứng trên phần tử cha.
 
-Additionally, the space utilities are not designed to work together with the [divide utilities](/docs/border-width#between-children). For those situations, consider adding margin/padding utilities to the children instead.
+Ngoài ra, các tiện ích space không được thiết kế để hoạt động cùng với các [tiện ích divide](/docs/border-width#between-children). Đối với những tình huống đó, hãy cân nhắc thêm các tiện ích margin/padding vào các phần tử con thay thế.
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utilities={["m", "mx", "mb"]} name="margin" variable="margin" value="5px" />
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="margin" defaultClass="mt-4" featuredClass="mt-8" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utilities={["m", "mx", "my", "ms", "me", "mt", "mr", "mb", "ml"]} />

@@ -10,7 +10,7 @@ import { Figure } from "@/components/figure.tsx";
 import colors from "./utils/colors";
 
 export const title = "color";
-export const description = "Utilities for controlling the text color of an element.";
+export const description = "Các tiện ích để kiểm soát màu văn bản của một phần tử.";
 
 <ApiTable
   rows={[
@@ -23,11 +23,11 @@ export const description = "Utilities for controlling the text color of an eleme
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `text-blue-600` and `text-sky-400` to control the text color of an element:
+Sử dụng các tiện ích như `text-blue-600` và `text-sky-400` để kiểm soát màu văn bản của một phần tử:
 
 <Figure>
 
@@ -46,9 +46,9 @@ Use utilities like `text-blue-600` and `text-sky-400` to control the text color 
 
 </Figure>
 
-### Changing the opacity
+### Thay đổi độ mờ
 
-Use the color opacity modifier to control the text color opacity of an element:
+Sử dụng modifier độ mờ màu để kiểm soát độ mờ màu văn bản của một phần tử:
 
 <Figure>
 
@@ -76,15 +76,15 @@ Use the color opacity modifier to control the text color opacity of an element:
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="p" utility="text" name="text color" variable="color" value="#50d71e" />
 
-### Applying on hover
+### Áp dụng khi hover
 
 <TargetingSpecificStates property="color">
 
-<Figure hint="Hover over the text to see the expected behavior">
+<Figure hint="Di chuột qua văn bản để thấy hành vi mong đợi">
 
 <Example>
   {
@@ -120,6 +120,6 @@ Use the color opacity modifier to control the text color opacity of an element:
 
 <ResponsiveDesign element="p" property="color" defaultClass="text-blue-600" featuredClass="text-green-600" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourThemeColors element="p" utility="text" />

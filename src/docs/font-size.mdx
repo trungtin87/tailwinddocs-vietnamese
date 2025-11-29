@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "font-size";
-export const description = "Utilities for controlling the font size of an element.";
+export const description = "Các tiện ích để kiểm soát kích thước font chữ của một phần tử.";
 
 <ApiTable
   rows={[
@@ -56,11 +56,11 @@ export const description = "Utilities for controlling the font size of an elemen
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `text-sm` and `text-lg` to set the font size of an element:
+Sử dụng các tiện ích như `text-sm` và `text-lg` để đặt kích thước font chữ của một phần tử:
 
 <Figure>
 
@@ -112,9 +112,9 @@ Use utilities like `text-sm` and `text-lg` to set the font size of an element:
 
 </Figure>
 
-### Setting the line-height
+### Đặt line-height
 
-Use utilities like `text-sm/6` and `text-lg/7` to set the font size and line-height of an element at the same time:
+Sử dụng các tiện ích như `text-sm/6` và `text-lg/7` để đặt kích thước font chữ và line-height của một phần tử cùng một lúc:
 
 <Figure>
 
@@ -158,7 +158,7 @@ Use utilities like `text-sm/6` and `text-lg/7` to set the font size and line-hei
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="p" utility="text" name="font size" value="14px" variable="text-size" dataType="length" />
 
@@ -166,11 +166,11 @@ Use utilities like `text-sm/6` and `text-lg/7` to set the font size and line-hei
 
 <ResponsiveDesign element="p" property="font-size" defaultClass="text-sm" featuredClass="text-base" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourTheme utility="text" name="font size" customValue="0.625rem" customName="tiny">
 
-You can also provide default `line-height`, `letter-spacing`, and `font-weight` values for a font size:
+Bạn cũng có thể cung cấp các giá trị mặc định cho `line-height`, `letter-spacing`, và `font-weight` cho một kích thước font chữ:
 
 ```css
 @theme {

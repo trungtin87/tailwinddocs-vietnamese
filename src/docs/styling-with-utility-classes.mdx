@@ -97,7 +97,7 @@ Nhưng sử dụng utility classes có nhiều lợi thế quan trọng so với
 - **Hover, focus, và các trạng thái khác** — inline styles không thể nhắm mục tiêu các trạng thái như hover hoặc focus, nhưng các [biến thể trạng thái](/docs/hover-focus-and-other-states) của Tailwind giúp dễ dàng style các trạng thái đó bằng utility classes.
 - **Media queries** — bạn không thể sử dụng media queries trong inline styles, nhưng bạn có thể sử dụng các [biến thể phản hồi](/docs/responsive-design) của Tailwind để xây dựng các giao diện phản hồi hoàn toàn một cách dễ dàng.
 
-This component is fully responsive and includes a button with hover and active styles, and is built entirely with utility classes:
+Thành phần này hoàn toàn phản hồi và bao gồm một nút với các kiểu hover và active, và được xây dựng hoàn toàn bằng các utility classes:
 
 <Figure>
 
@@ -169,7 +169,7 @@ This component is fully responsive and includes a button with hover and active s
 
 Các tiền tố này được gọi là [biến thể](/docs/hover-focus-and-other-states) trong Tailwind, và chúng chỉ áp dụng các kiểu từ một utility class khi điều kiện cho biến thể đó khớp.
 
-Here's what the generated CSS looks like for the `hover:bg-sky-700` class:
+Dưới đây là CSS được tạo trông như thế nào cho class `hover:bg-sky-700`:
 
 ```css
 /* [!code filename: Generated CSS] */
@@ -798,11 +798,11 @@ Nếu bạn cần tái sử dụng một số kiểu trên nhiều file, chiến
         alt="Beach"
       />
       <div className="mt-4">
-          <div className="text-xs font-bold text-sky-500">Private Villa</div>
-          <div className="mt-1 font-bold text-gray-700">
-            <a href="#" className="hover:underline">Relaxing All-Inclusive Resort in Cancun</a>
-          </div>
-          <div className="mt-2 text-sm text-gray-600">$299 USD per night</div>
+        <div className="text-xs font-bold text-sky-500">Private Villa</div>
+        <div className="mt-1 font-bold text-gray-700">
+          <a href="#" className="hover:underline">Relaxing All-Inclusive Resort in Cancun</a>
+        </div>
+        <div className="mt-2 text-sm text-gray-600">$299 USD per night</div>
       </div>
     </div>
   </div>
@@ -831,15 +831,15 @@ export function VacationCard({ img, imgAlt, eyebrow, title, pricing, url }) {
 
 </Figure>
 
-Now you can use this component in as many places as you like, while still having a single source of truth for the styles so they can easily be updated together in one place.
+Bây giờ bạn có thể sử dụng component này ở bao nhiêu nơi tùy thích, trong khi vẫn có một nguồn sự thật duy nhất cho các kiểu để chúng có thể dễ dàng được cập nhật cùng nhau ở một nơi.
 
-### Using custom CSS
+### Sử dụng custom CSS
 
-If you're using a templating language like ERB or Twig instead of something like React or Vue, creating a template partial for something as small as a button can feel like overkill compared to a simple CSS class like `btn`.
+Nếu bạn đang sử dụng một ngôn ngữ tạo mẫu như ERB hoặc Twig thay vì một cái gì đó như React hoặc Vue, việc tạo một template partial cho một cái gì đó nhỏ như một nút có thể cảm thấy quá mức cần thiết so với một class CSS đơn giản như `btn`.
 
-While it's highly recommended that you create proper template partials for more complex components, writing some custom CSS is totally fine when a template partial feels heavy-handed.
+Mặc dù chúng tôi thực sự khuyên bạn nên tạo các template partial thích hợp cho các thành phần phức tạp hơn, việc viết một số CSS tùy chỉnh là hoàn toàn ổn khi một template partial cảm thấy nặng nề.
 
-Here's what a `btn-primary` class might look like, using [theme variables](/docs/theme#with-custom-css) to keep the design consistent:
+Dưới đây là một class `btn-primary` có thể trông như thế nào, sử dụng [các biến theme](/docs/theme#with-custom-css) để giữ cho thiết kế nhất quán:
 
 <Figure>
 
@@ -889,13 +889,13 @@ Here's what a `btn-primary` class might look like, using [theme variables](/docs
 
 </Figure>
 
-Again though, for anything that's more complicated than just a single HTML element, we highly recommend using template partials so the styles and structure can be encapsulated in one place.
+Tuy nhiên, một lần nữa, đối với bất cứ điều gì phức tạp hơn chỉ là một phần tử HTML đơn lẻ, chúng tôi thực sự khuyên bạn nên sử dụng các template partial để các kiểu và cấu trúc có thể được đóng gói ở một nơi.
 
-## Managing style conflicts
+## Quản lý xung đột kiểu
 
-### Conflicting utility classes
+### Xung đột utility classes
 
-When you add two classes that target the same CSS property, the class that appears later in the stylesheet wins. So in this example, the element will receive `display: grid` even though `flex` comes last in the actual `class` attribute:
+Khi bạn thêm hai class nhắm mục tiêu cùng một thuộc tính CSS, class xuất hiện sau trong stylesheet sẽ thắng. Vì vậy, trong ví dụ này, phần tử sẽ nhận `display: grid` mặc dù `flex` đứng cuối cùng trong thuộc tính `class` thực tế:
 
 <CodeExampleStack>
 
@@ -919,7 +919,7 @@ When you add two classes that target the same CSS property, the class that appea
 
 </CodeExampleStack>
 
-In general, you should just never add two conflicting classes to the same element — only ever add the one you actually want to take effect:
+Nói chung, bạn không bao giờ nên thêm hai class xung đột vào cùng một phần tử — chỉ thêm class mà bạn thực sự muốn có hiệu lực:
 
 ```jsx
 // [!code filename:example.jsx]
@@ -929,11 +929,11 @@ export function Example({ gridLayout }) {
 }
 ```
 
-Using component-based libraries like React or Vue, this often means exposing specific props for styling customizations instead of letting consumers add extra classes from outside of a component, since those styles will often conflict.
+Sử dụng các thư viện dựa trên component như React hoặc Vue, điều này thường có nghĩa là hiển thị các prop cụ thể cho các tùy chỉnh kiểu thay vì để người tiêu dùng thêm các class bổ sung từ bên ngoài component, vì các kiểu đó thường sẽ xung đột.
 
-### Using the important modifier
+### Sử dụng modifier important
 
-When you really need to force a specific utility class to take effect and have no other means of managing the specificity, you can add `!` to the end of the class name to make all of the declarations `!important`:
+Khi bạn thực sự cần buộc một utility class cụ thể có hiệu lực và không có cách nào khác để quản lý độ đặc hiệu, bạn có thể thêm `!` vào cuối tên class để làm cho tất cả các khai báo trở thành `!important`:
 
 <CodeExampleStack>
 
@@ -959,9 +959,9 @@ When you really need to force a specific utility class to take effect and have n
 
 </CodeExampleStack>
 
-### Using the important flag
+### Sử dụng cờ important
 
-If you're adding Tailwind to a project that has existing complex CSS with high specificity rules, you can use the `important` flag when importing Tailwind to mark _all_ utilities as `!important`:
+Nếu bạn đang thêm Tailwind vào một dự án có CSS phức tạp hiện có với các quy tắc độ đặc hiệu cao, bạn có thể sử dụng cờ `important` khi nhập Tailwind để đánh dấu _tất cả_ các tiện ích là `!important`:
 
 <CodeExampleStack>
 
@@ -989,9 +989,9 @@ If you're adding Tailwind to a project that has existing complex CSS with high s
 
 </CodeExampleStack>
 
-### Using the prefix option
+### Sử dụng tùy chọn prefix
 
-If your project has class names that conflict with Tailwind CSS utilities, you can prefix all Tailwind-generated classes and CSS variables using the `prefix` option:
+Nếu dự án của bạn có tên class xung đột với các tiện ích Tailwind CSS, bạn có thể thêm tiền tố cho tất cả các class và biến CSS do Tailwind tạo ra bằng cách sử dụng tùy chọn `prefix`:
 
 <CodeExampleStack>
 
@@ -1018,3 +1018,5 @@ If your project has class names that conflict with Tailwind CSS utilities, you c
 ```
 
 </CodeExampleStack>
+
+

@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "line-height";
-export const description = "Utilities for controlling the leading, or line height, of an element.";
+export const description = "Các tiện ích để kiểm soát leading, hoặc line height, của một phần tử.";
 
 <ApiTable
   rows={[
@@ -18,11 +18,11 @@ export const description = "Utilities for controlling the leading, or line heigh
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use font size utilities like `text-sm/6` and `text-lg/7` to set the font size and line-height of an element at the same time:
+Sử dụng các tiện ích font size như `text-sm/6` và `text-lg/7` để đặt font size và line-height của một phần tử cùng một lúc:
 
 <Figure>
 
@@ -65,11 +65,11 @@ Use font size utilities like `text-sm/6` and `text-lg/7` to set the font size an
 
 </Figure>
 
-Each font size utility also sets a default line height when one isn't provided. You can learn more about these values and how to customize them in the [font-size documentation](/docs/font-size).
+Mỗi tiện ích font size cũng đặt một line height mặc định khi không được cung cấp. Bạn có thể tìm hiểu thêm về các giá trị này và cách tùy chỉnh chúng trong [tài liệu font-size](/docs/font-size).
 
-### Setting independently
+### Đặt độc lập
 
-Use `leading-<number>` utilities like `leading-6` and `leading-7` to set the line height of an element independent of the font-size:
+Sử dụng các tiện ích `leading-<number>` như `leading-6` và `leading-7` để đặt line height của một phần tử độc lập với font-size:
 
 <Figure>
 
@@ -113,9 +113,9 @@ Use `leading-<number>` utilities like `leading-6` and `leading-7` to set the lin
 
 </Figure>
 
-### Removing the leading
+### Loại bỏ leading
 
-Use the `leading-none` utility to set the line height of an element equal to its font size:
+Sử dụng tiện ích `leading-none` để đặt line height của một phần tử bằng với font size của nó:
 
 <Figure>
 
@@ -134,7 +134,7 @@ Use the `leading-none` utility to set the line height of an element equal to its
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="p" utility="leading" name="line height" variable="line-height" value="1.5" />
 
@@ -142,6 +142,6 @@ Use the `leading-none` utility to set the line height of an element equal to its
 
 <ResponsiveDesign element="p" property="line-height" defaultClass="leading-5" featuredClass="leading-6" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utility="leading" />

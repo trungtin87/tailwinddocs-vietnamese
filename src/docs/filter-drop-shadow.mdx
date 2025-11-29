@@ -10,7 +10,7 @@ import { Figure } from "@/components/figure.tsx";
 import colors from "./utils/colors";
 
 export const title = "filter: drop-shadow()";
-export const description = "Utilities for applying drop-shadow filters to an element.";
+export const description = "Các tiện ích để áp dụng bộ lọc drop-shadow cho một phần tử.";
 
 <ApiTable
   rows={[
@@ -34,11 +34,11 @@ export const description = "Utilities for applying drop-shadow filters to an ele
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `drop-shadow-sm` and `drop-shadow-xl` to add a drop shadow to an element:
+Sử dụng các tiện ích như `drop-shadow-sm` và `drop-shadow-xl` để thêm drop shadow vào một phần tử:
 
 <Figure>
 
@@ -91,11 +91,11 @@ Use utilities like `drop-shadow-sm` and `drop-shadow-xl` to add a drop shadow to
 
 </Figure>
 
-This is useful for applying shadows to irregular shapes, like text and SVG elements. For applying shadows to regular elements, you probably want to use [box shadow](/docs/box-shadow) instead.
+Điều này hữu ích để áp dụng bóng cho các hình dạng không đều, như văn bản và các phần tử SVG. Để áp dụng bóng cho các phần tử thông thường, bạn có thể muốn sử dụng [box shadow](/docs/box-shadow) thay thế.
 
-### Changing the opacity
+### Thay đổi độ mờ (opacity)
 
-Use the opacity modifier to adjust the opacity of the drop shadow:
+Sử dụng opacity modifier để điều chỉnh độ mờ của drop shadow:
 
 <Figure>
 
@@ -142,11 +142,11 @@ Use the opacity modifier to adjust the opacity of the drop shadow:
 
 </Figure>
 
-The default drop shadow opacities are quite low (15% or less), so increasing the opacity (to like 50%) will make the drop shadows more pronounced.
+Độ mờ mặc định của drop shadow khá thấp (15% hoặc ít hơn), vì vậy việc tăng độ mờ (ví dụ lên 50%) sẽ làm cho drop shadow rõ ràng hơn.
 
-### Setting the shadow color
+### Đặt màu bóng
 
-Use utilities like `drop-shadow-indigo-500` and `drop-shadow-cyan-500/50` to change the color of a drop shadow:
+Sử dụng các tiện ích như `drop-shadow-indigo-500` và `drop-shadow-cyan-500/50` để thay đổi màu của drop shadow:
 
 <Figure>
 
@@ -183,11 +183,11 @@ Use utilities like `drop-shadow-indigo-500` and `drop-shadow-cyan-500/50` to cha
 
 </Figure>
 
-By default colored shadows have an opacity of 100% but you can adjust this using the opacity modifier.
+Theo mặc định, bóng màu có độ mờ là 100% nhưng bạn có thể điều chỉnh điều này bằng cách sử dụng opacity modifier.
 
-### Removing a drop shadow
+### Loại bỏ drop shadow
 
-Use the `drop-shadow-none` utility to remove an existing drop shadow from an element:
+Sử dụng tiện ích `drop-shadow-none` để loại bỏ drop shadow hiện có khỏi một phần tử:
 
 <Figure>
 
@@ -200,7 +200,7 @@ Use the `drop-shadow-none` utility to remove an existing drop shadow from an ele
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="svg" utility="drop-shadow" value="0_35px_35px_rgba(0,0,0,0.25)" name="drop shadow" />
 
@@ -213,9 +213,9 @@ Use the `drop-shadow-none` utility to remove an existing drop shadow from an ele
   featuredClass="drop-shadow-xl"
 />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
-### Customizing drop shadows
+### Tùy chỉnh drop shadows
 
 <CustomizingYourTheme
   element="svg"
@@ -225,6 +225,6 @@ Use the `drop-shadow-none` utility to remove an existing drop shadow from an ele
   customValue="0 35px 35px rgba(0, 0, 0, 0.25)"
 />
 
-### Customizing shadow colors
+### Tùy chỉnh màu bóng
 
 <CustomizingYourThemeColors element="svg" utility="drop-shadow" />

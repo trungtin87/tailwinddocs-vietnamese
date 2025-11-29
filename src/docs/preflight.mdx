@@ -1,11 +1,11 @@
 export const title = "Preflight";
-export const description = "An opinionated set of base styles for Tailwind projects.";
+export const description = "Một tập hợp các style cơ bản có quan điểm (opinionated) cho các dự án Tailwind.";
 
-## Overview
+## Tổng quan
 
-Built on top of [modern-normalize](https://github.com/sindresorhus/modern-normalize), Preflight is a set of base styles for Tailwind projects that are designed to smooth over cross-browser inconsistencies and make it easier for you to work within the constraints of your design system.
+Được xây dựng dựa trên [modern-normalize](https://github.com/sindresorhus/modern-normalize), Preflight là một tập hợp các style cơ bản cho các dự án Tailwind được thiết kế để làm mượt các sự không nhất quán giữa các trình duyệt và giúp bạn làm việc dễ dàng hơn trong các ràng buộc của hệ thống thiết kế của mình.
 
-When you import `tailwindcss` into your project, Preflight is automatically injected into the `base` layer:
+Khi bạn import `tailwindcss` vào dự án của mình, Preflight sẽ tự động được đưa vào layer `base`:
 
 ```css
 /* [!code filename:CSS] */
@@ -17,13 +17,13 @@ When you import `tailwindcss` into your project, Preflight is automatically inje
 @import "tailwindcss/utilities.css" layer(utilities);
 ```
 
-While most of the styles in Preflight are meant to go unnoticed—they simply make things behave more like you'd expect them to—some are more opinionated and can be surprising when you first encounter them.
+Trong khi hầu hết các style trong Preflight được thiết kế để không bị chú ý—chúng chỉ đơn giản làm cho mọi thứ hoạt động giống như bạn mong đợi—một số style có quan điểm hơn và có thể gây ngạc nhiên khi bạn lần đầu gặp chúng.
 
-For a complete reference of all the styles applied by Preflight, [see the stylesheet](https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css).
+Để có tài liệu tham khảo đầy đủ về tất cả các style được áp dụng bởi Preflight, [hãy xem stylesheet](https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css).
 
-### Margins are removed
+### Margin bị loại bỏ
 
-Preflight removes all of the default margins from all elements including headings, blockquotes, paragraphs, etc:
+Preflight loại bỏ tất cả margin mặc định khỏi tất cả các phần tử bao gồm tiêu đề, blockquote, đoạn văn, v.v.:
 
 ```css
 /* [!code filename:CSS] */
@@ -37,11 +37,11 @@ Preflight removes all of the default margins from all elements including heading
 }
 ```
 
-This makes it harder to accidentally rely on margin values applied by the user-agent stylesheet that are not part of your spacing scale.
+Điều này làm cho việc vô tình dựa vào các giá trị margin được áp dụng bởi stylesheet của user-agent mà không phải là một phần của thang đo khoảng cách của bạn trở nên khó khăn hơn.
 
-### Border styles are reset
+### Style border được reset
 
-In order to make it easy to add a border by simply adding the `border` class, Tailwind overrides the default border styles for all elements with the following rules:
+Để dễ dàng thêm border bằng cách chỉ cần thêm class `border`, Tailwind ghi đè các style border mặc định cho tất cả các phần tử bằng các quy tắc sau:
 
 ```css
 /* [!code filename:CSS] */
@@ -55,11 +55,11 @@ In order to make it easy to add a border by simply adding the `border` class, Ta
 }
 ```
 
-Since the `border` class only sets the `border-width` property, this reset ensures that adding that class always adds a solid `1px` border that uses `currentColor`.
+Vì class `border` chỉ đặt thuộc tính `border-width`, việc reset này đảm bảo rằng việc thêm class đó luôn thêm một border `1px` solid sử dụng `currentColor`.
 
-This can cause some unexpected results when integrating certain third-party libraries, like [Google maps](https://github.com/tailwindlabs/tailwindcss/issues/484) for example.
+Điều này có thể gây ra một số kết quả không mong muốn khi tích hợp một số thư viện bên thứ ba, ví dụ như [Google maps](https://github.com/tailwindlabs/tailwindcss/issues/484).
 
-When you run into situations like this, you can work around them by overriding the Preflight styles with your own custom CSS:
+Khi bạn gặp phải các tình huống như thế này, bạn có thể khắc phục chúng bằng cách ghi đè các style Preflight bằng CSS tùy chỉnh của riêng bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -70,9 +70,9 @@ When you run into situations like this, you can work around them by overriding t
 }
 ```
 
-### Headings are unstyled
+### Tiêu đề không có style
 
-All heading elements are completely unstyled by default, and have the same font size and weight as normal text:
+Tất cả các phần tử tiêu đề hoàn toàn không có style theo mặc định, và có cùng kích thước font và độ đậm như văn bản bình thường:
 
 ```css
 /* [!code filename:CSS] */
@@ -87,16 +87,16 @@ h6 {
 }
 ```
 
-The reason for this is two-fold:
+Lý do cho điều này gồm hai phần:
 
-- **It helps you avoid accidentally deviating from your type scale**. By default, browsers assign sizes to headings that don't exist in Tailwind's default type scale, and aren't guaranteed to exist in your own type scale.
-- **In UI development, headings should often be visually de-emphasized**. Making headings unstyled by default means any styling you apply to headings happens consciously and deliberately.
+- **Nó giúp bạn tránh vô tình đi chệch khỏi thang đo kiểu chữ của mình**. Theo mặc định, các trình duyệt gán kích thước cho các tiêu đề không tồn tại trong thang đo kiểu chữ mặc định của Tailwind, và không được đảm bảo tồn tại trong thang đo kiểu chữ của riêng bạn.
+- **Trong phát triển UI, các tiêu đề thường nên được giảm nhấn mạnh về mặt trực quan**. Việc làm cho các tiêu đề không có style theo mặc định có nghĩa là bất kỳ style nào bạn áp dụng cho các tiêu đề đều diễn ra một cách có ý thức và chủ ý.
 
-You can always add default header styles to your project by [adding your own base styles](/docs/adding-custom-styles#adding-base-styles).
+Bạn luôn có thể thêm các style tiêu đề mặc định vào dự án của mình bằng cách [thêm các style cơ bản của riêng bạn](/docs/adding-custom-styles#adding-base-styles).
 
-### Lists are unstyled
+### Danh sách không có style
 
-Ordered and unordered lists are unstyled by default, with no bullets or numbers:
+Danh sách có thứ tự và không có thứ tự không có style theo mặc định, không có dấu đầu dòng hoặc số:
 
 ```css
 /* [!code filename:CSS] */
@@ -107,7 +107,7 @@ menu {
 }
 ```
 
-If you'd like to style a list, you can do so using the [list-style-type](/docs/list-style-type) and [list-style-position](/docs/list-style-position) utilities:
+Nếu bạn muốn style một danh sách, bạn có thể làm như vậy bằng cách sử dụng các tiện ích [list-style-type](/docs/list-style-type) và [list-style-position](/docs/list-style-position):
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -118,11 +118,11 @@ If you'd like to style a list, you can do so using the [list-style-type](/docs/l
 </ul>
 ```
 
-You can always add default list styles to your project by [adding your own base styles](/docs/adding-custom-styles#adding-base-styles).
+Bạn luôn có thể thêm các style danh sách mặc định vào dự án của mình bằng cách [thêm các style cơ bản của riêng bạn](/docs/adding-custom-styles#adding-base-styles).
 
-#### Accessibility considerations
+#### Cân nhắc về khả năng truy cập
 
-Unstyled lists are [not announced as lists by VoiceOver](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/). If your content is truly a list but you would like to keep it unstyled, [add a "list" role](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) to the element:
+Danh sách không có style [không được VoiceOver thông báo là danh sách](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/). Nếu nội dung của bạn thực sự là một danh sách nhưng bạn muốn giữ nó không có style, hãy [thêm role "list"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) vào phần tử:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -133,9 +133,9 @@ Unstyled lists are [not announced as lists by VoiceOver](https://unfetteredthoug
 </ul>
 ```
 
-### Images are block-level
+### Hình ảnh là block-level
 
-Images and other replaced elements (like `svg`, `video`, `canvas`, and others) are `display: block` by default:
+Hình ảnh và các phần tử được thay thế khác (như `svg`, `video`, `canvas`, và các phần tử khác) là `display: block` theo mặc định:
 
 ```css
 /* [!code filename:CSS] */
@@ -152,18 +152,18 @@ object {
 }
 ```
 
-This helps to avoid unexpected alignment issues that you often run into using the browser default of `display: inline`.
+Điều này giúp tránh các vấn đề căn chỉnh không mong muốn mà bạn thường gặp phải khi sử dụng mặc định trình duyệt là `display: inline`.
 
-If you ever need to make one of these elements `inline` instead of `block`, simply use the `inline` utility:
+Nếu bạn cần làm cho một trong những phần tử này là `inline` thay vì `block`, chỉ cần sử dụng tiện ích `inline`:
 
 ```html
 <!-- [!code filename:HTML] -->
 <img class="inline" src="..." alt="..." />
 ```
 
-### Images are constrained
+### Hình ảnh bị giới hạn
 
-Images and videos are constrained to the parent width in a way that preserves their intrinsic aspect ratio:
+Hình ảnh và video bị giới hạn theo chiều rộng của cha theo cách bảo toàn tỷ lệ khung hình nội tại của chúng:
 
 ```css
 /* [!code filename:CSS] */
@@ -174,14 +174,14 @@ video {
 }
 ```
 
-This prevents them from overflowing their containers and makes them responsive by default. If you ever need to override this behavior, use the `max-w-none` utility:
+Điều này ngăn chúng tràn ra khỏi container và làm cho chúng responsive theo mặc định. Nếu bạn cần ghi đè hành vi này, hãy sử dụng tiện ích `max-w-none`:
 
 ```html
 <!-- [!code filename:HTML] -->
 <img class="max-w-none" src="..." alt="..." />
 ```
 
-#### Elements with a `hidden` attribute stay hidden
+#### Các phần tử có thuộc tính `hidden` vẫn bị ẩn
 
 ```css
 /* [!code filename:CSS] */
@@ -190,11 +190,11 @@ This prevents them from overflowing their containers and makes them responsive b
 }
 ```
 
-This enforces that elements with a `hidden` attribute stay invisible unless using `hidden="until-found"`. Remove the `hidden` attribute if you want an element to be visible to the user.
+Điều này bắt buộc các phần tử có thuộc tính `hidden` vẫn vô hình trừ khi sử dụng `hidden="until-found"`. Xóa thuộc tính `hidden` nếu bạn muốn một phần tử hiển thị với người dùng.
 
-## Extending Preflight
+## Mở rộng Preflight
 
-If you'd like to add your own base styles on top of Preflight, add them to the `base` CSS layer in your CSS using `@layer base`:
+Nếu bạn muốn thêm các style cơ bản của riêng mình lên trên Preflight, hãy thêm chúng vào layer CSS `base` trong CSS của bạn bằng cách sử dụng `@layer base`:
 
 ```css
 /* [!code filename:CSS] */
@@ -215,13 +215,13 @@ If you'd like to add your own base styles on top of Preflight, add them to the `
 }
 ```
 
-Learn more in the [adding base styles documentation](/docs/adding-custom-styles#adding-base-styles).
+Tìm hiểu thêm trong [tài liệu thêm style cơ bản](/docs/adding-custom-styles#adding-base-styles).
 
-## Disabling Preflight
+## Vô hiệu hóa Preflight
 
-If you'd like to completely disable Preflight—perhaps because you're integrating Tailwind into an existing project or you'd prefer to define your own base styles—you can do so by importing only the parts of Tailwind that you need.
+Nếu bạn muốn vô hiệu hóa hoàn toàn Preflight—có thể vì bạn đang tích hợp Tailwind vào một dự án hiện có hoặc bạn muốn định nghĩa các style cơ bản của riêng mình—bạn có thể làm như vậy bằng cách chỉ import các phần của Tailwind mà bạn cần.
 
-By default, this is what `@import "tailwindcss";` injects:
+Theo mặc định, đây là những gì `@import "tailwindcss";` đưa vào:
 
 ```css
 /* [!code filename:CSS] */
@@ -232,7 +232,7 @@ By default, this is what `@import "tailwindcss";` injects:
 @import "tailwindcss/utilities.css" layer(utilities);
 ```
 
-To disable Preflight, simply omit its import while keeping everything else:
+Để vô hiệu hóa Preflight, chỉ cần bỏ qua import của nó trong khi giữ lại mọi thứ khác:
 
 ```css
 /* [!code filename:CSS] */
@@ -243,9 +243,9 @@ To disable Preflight, simply omit its import while keeping everything else:
 @import "tailwindcss/utilities.css" layer(utilities);
 ```
 
-When importing Tailwind CSS' files individually, features like `source()`, `theme()`, and `prefix()` should go on their respective imports.
+Khi import các file của Tailwind CSS riêng lẻ, các tính năng như `source()`, `theme()`, và `prefix()` nên được đặt trên các import tương ứng của chúng.
 
-For example, source detection affects generated utilities, so `source(…)` should be added to the `utilities.css` import:
+Ví dụ, phát hiện nguồn ảnh hưởng đến các tiện ích được tạo ra, vì vậy `source(…)` nên được thêm vào import `utilities.css`:
 
 ```css
 /* [!code filename:CSS] */
@@ -256,7 +256,7 @@ For example, source detection affects generated utilities, so `source(…)` shou
 @import "tailwindcss/utilities.css" layer(utilities) source(none); /* [!code ++] */
 ```
 
-The same goes for `important`, which also affects utilities:
+Tương tự đối với `important`, cũng ảnh hưởng đến các tiện ích:
 
 ```css
 /* [!code filename:CSS] */
@@ -267,7 +267,7 @@ The same goes for `important`, which also affects utilities:
 @import "tailwindcss/utilities.css" layer(utilities) important; /* [!code ++] */
 ```
 
-Similarly, `theme(static)` and `theme(inline)` affect the generated theme variables and should be placed on the `theme.css` import:
+Tương tự, `theme(static)` và `theme(inline)` ảnh hưởng đến các biến theme được tạo ra và nên được đặt trên import `theme.css`:
 
 ```css
 /* [!code filename:CSS] */
@@ -278,7 +278,7 @@ Similarly, `theme(static)` and `theme(inline)` affect the generated theme variab
 @import "tailwindcss/utilities.css" layer(utilities);
 ```
 
-Finally, using a prefix with `prefix(tw)` affects the utilities and variables, so it should go on both imports:
+Cuối cùng, sử dụng prefix với `prefix(tw)` ảnh hưởng đến các tiện ích và biến, vì vậy nó nên đi trên cả hai import:
 
 ```css
 /* [!code filename:CSS] */

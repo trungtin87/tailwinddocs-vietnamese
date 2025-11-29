@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "overflow-wrap";
-export const description = "Utilities for controlling line breaks within words in an overflowing element.";
+export const description = "Các tiện ích để kiểm soát ngắt dòng trong các từ trong một phần tử bị tràn.";
 
 <ApiTable
   rows={[
@@ -14,11 +14,11 @@ export const description = "Utilities for controlling line breaks within words i
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Wrapping mid-word
+### Ngắt giữa từ
 
-Use the `wrap-break-word` utility to allow line breaks between letters in a word if needed:
+Sử dụng tiện ích `wrap-break-word` để cho phép ngắt dòng giữa các chữ cái trong một từ nếu cần thiết:
 
 <Figure>
 
@@ -40,9 +40,9 @@ Use the `wrap-break-word` utility to allow line breaks between letters in a word
 
 </Figure>
 
-### Wrapping anywhere
+### Ngắt ở bất kỳ đâu
 
-The `wrap-anywhere` utility behaves similarly to `wrap-break-word`, except that the browser factors in mid-word line breaks when calculating the intrinsic size of the element:
+Tiện ích `wrap-anywhere` hoạt động tương tự như `wrap-break-word`, ngoại trừ việc trình duyệt tính đến các ngắt dòng giữa từ khi tính toán kích thước nội tại của phần tử:
 
 <Figure>
 
@@ -99,11 +99,11 @@ The `wrap-anywhere` utility behaves similarly to `wrap-break-word`, except that 
 
 </Figure>
 
-This is useful for wrapping text inside of `flex` containers, where you would usually need to set `min-width: 0` on the child element to allow it to shrink below its content size.
+Điều này hữu ích để ngắt văn bản bên trong các container `flex`, nơi bạn thường cần đặt `min-width: 0` trên phần tử con để cho phép nó thu nhỏ dưới kích thước nội dung của nó.
 
-### Wrapping normally
+### Ngắt bình thường
 
-Use the `wrap-normal` utility to only allow line breaks at natural wrapping points, like spaces, hyphens, and punctuation:
+Sử dụng tiện ích `wrap-normal` để chỉ cho phép ngắt dòng tại các điểm ngắt tự nhiên, như khoảng trắng, dấu gạch nối và dấu câu:
 
 <Figure>
 

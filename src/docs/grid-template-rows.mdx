@@ -5,7 +5,7 @@ import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "grid-template-rows";
-export const description = "Utilities for specifying the rows in a grid layout.";
+export const description = "Các tiện ích để chỉ định các hàng trong bố cục grid.";
 
 <ApiTable
   rows={[
@@ -17,11 +17,11 @@ export const description = "Utilities for specifying the rows in a grid layout."
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Specifying the grid rows
+### Chỉ định các hàng grid
 
-Use `grid-rows-<number>` utilities like `grid-rows-2` and `grid-rows-4` to create grids with _n_ equally sized rows:
+Sử dụng các tiện ích `grid-rows-<number>` như `grid-rows-2` và `grid-rows-4` để tạo các grid với _n_ hàng có kích thước bằng nhau:
 
 <Figure>
 
@@ -55,9 +55,9 @@ Use `grid-rows-<number>` utilities like `grid-rows-2` and `grid-rows-4` to creat
 
 </Figure>
 
-### Implementing a subgrid
+### Triển khai subgrid
 
-Use the `grid-rows-subgrid` utility to adopt the row tracks defined by the item's parent:
+Sử dụng tiện ích `grid-rows-subgrid` để áp dụng các row track được định nghĩa bởi phần tử cha của item:
 
 <Figure>
 
@@ -99,7 +99,7 @@ Use the `grid-rows-subgrid` utility to adopt the row tracks defined by the item'
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="grid-rows" name="rows" value="200px_minmax(900px,1fr)_100px" />
 

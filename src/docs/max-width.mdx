@@ -6,7 +6,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "max-width";
-export const description = "Utilities for setting the maximum width of an element.";
+export const description = "Các utility để thiết lập chiều rộng tối đa của một phần tử.";
 
 <ApiTable
   rows={[
@@ -54,11 +54,11 @@ export const description = "Utilities for setting the maximum width of an elemen
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use `max-w-<number>` utilities like `max-w-24` and `max-w-64` to set an element to a fixed maximum width based on the spacing scale:
+Sử dụng các utility `max-w-<number>` như `max-w-24` và `max-w-64` để thiết lập chiều rộng tối đa cố định cho một phần tử dựa trên thang khoảng cách:
 
 <Figure hint="Resize the example to see the expected behavior">
 
@@ -110,9 +110,9 @@ Use `max-w-<number>` utilities like `max-w-24` and `max-w-64` to set an element 
 
 </Figure>
 
-### Using a percentage
+### Sử dụng phần trăm
 
-Use `max-w-full` or `max-w-<fraction>` utilities like `max-w-1/2` and `max-w-2/5` to give an element a percentage-based maximum width:
+Sử dụng `max-w-full` hoặc các utility `max-w-<fraction>` như `max-w-1/2` và `max-w-2/5` để thiết lập chiều rộng tối đa dựa trên phần trăm cho một phần tử:
 
 <Figure hint="Resize the example to see the expected behavior">
 
@@ -149,9 +149,9 @@ Use `max-w-full` or `max-w-<fraction>` utilities like `max-w-1/2` and `max-w-2/5
 
 </Figure>
 
-### Using the container scale
+### Sử dụng thang container
 
-Use utilities like `max-w-sm` and `max-w-xl` to set an element to a fixed maximum width based on the container scale:
+Sử dụng các utility như `max-w-sm` và `max-w-xl` để thiết lập chiều rộng tối đa cố định cho một phần tử dựa trên thang container:
 
 <Figure hint="Resize the example to see the expected behavior">
 
@@ -181,9 +181,9 @@ Use utilities like `max-w-sm` and `max-w-xl` to set an element to a fixed maximu
 
 </Figure>
 
-### Using breakpoints container
+### Sử dụng breakpoints container
 
-Use the `container` utility to set the maximum width of an element to match the `min-width` of the current breakpoint. This is useful if you'd prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport:
+Sử dụng utility `container` để thiết lập chiều rộng tối đa của một phần tử khớp với `min-width` của breakpoint hiện tại. Điều này hữu ích nếu bạn muốn thiết kế cho một tập hợp kích thước màn hình cố định thay vì cố gắng điều chỉnh viewport hoàn toàn linh hoạt:
 
 ```html
 <!-- [!code classes:container] -->
@@ -192,7 +192,7 @@ Use the `container` utility to set the maximum width of an element to match the 
 </div>
 ```
 
-Note that unlike containers you might have used in other frameworks, Tailwind's container does not center itself automatically and does not have any built-in horizontal padding. Use `mx-auto` and the `px-<number>` utilities to add these:
+Lưu ý rằng không giống như container bạn có thể đã sử dụng trong các framework khác, `container` của Tailwind không tự động căn giữa và không có padding ngang tích hợp sẵn. Sử dụng `mx-auto` và các utility `px-<number>` để thêm những thứ này:
 
 ```html
 <!-- [!code classes:mx-auto,px-4] -->
@@ -201,14 +201,14 @@ Note that unlike containers you might have used in other frameworks, Tailwind's 
 </div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="max-w" value="220px" name="maximum width" variable="max-width" />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="max-width" defaultClass="max-w-sm" featuredClass="max-w-lg" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utility="max-w" />

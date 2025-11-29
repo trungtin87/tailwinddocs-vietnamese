@@ -5,7 +5,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "overflow";
 export const description =
-  "Utilities for controlling how an element handles content that is too large for the container.";
+  "Các tiện ích để kiểm soát cách một phần tử xử lý nội dung quá lớn so với container.";
 
 <ApiTable
   rows={[
@@ -27,11 +27,11 @@ export const description =
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Showing content that overflows
+### Hiển thị nội dung bị tràn
 
-Use the `overflow-visible` utility to prevent content within an element from being clipped:
+Sử dụng tiện ích `overflow-visible` để ngăn nội dung bên trong một phần tử bị cắt:
 
 <Figure>
 
@@ -59,11 +59,11 @@ Use the `overflow-visible` utility to prevent content within an element from bei
 
 </Figure>
 
-Note that any content that overflows the bounds of the element will then be visible.
+Lưu ý rằng bất kỳ nội dung nào tràn ra ngoài giới hạn của phần tử sau đó sẽ hiển thị.
 
-### Hiding content that overflows
+### Ẩn nội dung bị tràn
 
-Use the `overflow-hidden` utility to clip any content within an element that overflows the bounds of that element:
+Sử dụng tiện ích `overflow-hidden` để cắt bất kỳ nội dung nào bên trong một phần tử tràn ra ngoài giới hạn của phần tử đó:
 
 <Figure>
 
@@ -91,9 +91,9 @@ Use the `overflow-hidden` utility to clip any content within an element that ove
 
 </Figure>
 
-### Scrolling if needed
+### Cuộn nếu cần thiết
 
-Use the `overflow-auto` utility to add scrollbars to an element in the event that its content overflows the bounds of that element:
+Sử dụng tiện ích `overflow-auto` để thêm thanh cuộn vào một phần tử trong trường hợp nội dung của nó tràn ra ngoài giới hạn của phần tử đó:
 
 <Figure hint="Scroll vertically">
 
@@ -153,11 +153,11 @@ Use the `overflow-auto` utility to add scrollbars to an element in the event tha
 
 </Figure>
 
-Unlike `overflow-scroll`, which always shows scrollbars, this utility will only show them if scrolling is necessary.
+Không giống như `overflow-scroll`, luôn hiển thị thanh cuộn, tiện ích này sẽ chỉ hiển thị chúng nếu việc cuộn là cần thiết.
 
-### Scrolling horizontally if needed
+### Cuộn ngang nếu cần thiết
 
-Use the `overflow-x-auto` utility to allow horizontal scrolling if needed:
+Sử dụng tiện ích `overflow-x-auto` để cho phép cuộn ngang nếu cần thiết:
 
 <Figure hint="Scroll horizontally">
 
@@ -233,9 +233,9 @@ Use the `overflow-x-auto` utility to allow horizontal scrolling if needed:
 
 </Figure>
 
-### Scrolling vertically if needed
+### Cuộn dọc nếu cần thiết
 
-Use the `overflow-y-auto` utility to allow vertical scrolling if needed:
+Sử dụng tiện ích `overflow-y-auto` để cho phép cuộn dọc nếu cần thiết:
 
 <Figure hint="Scroll vertically">
 
@@ -295,9 +295,9 @@ Use the `overflow-y-auto` utility to allow vertical scrolling if needed:
 
 </Figure>
 
-### Scrolling horizontally always
+### Luôn cuộn ngang
 
-Use the `overflow-x-scroll` utility to allow horizontal scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system:
+Sử dụng tiện ích `overflow-x-scroll` để cho phép cuộn ngang và luôn hiển thị thanh cuộn trừ khi thanh cuộn luôn hiển thị bị vô hiệu hóa bởi hệ điều hành:
 
 <Figure hint="Scroll horizontally">
 
@@ -373,9 +373,9 @@ Use the `overflow-x-scroll` utility to allow horizontal scrolling and always sho
 
 </Figure>
 
-### Scrolling vertically always
+### Luôn cuộn dọc
 
-Use the `overflow-y-scroll` utility to allow vertical scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system:
+Sử dụng tiện ích `overflow-y-scroll` để cho phép cuộn dọc và luôn hiển thị thanh cuộn trừ khi thanh cuộn luôn hiển thị bị vô hiệu hóa bởi hệ điều hành:
 
 <Figure hint="Scroll vertically">
 
@@ -435,9 +435,9 @@ Use the `overflow-y-scroll` utility to allow vertical scrolling and always show 
 
 </Figure>
 
-### Scrolling in all directions
+### Cuộn theo mọi hướng
 
-Use the `overflow-scroll` utility to add scrollbars to an element:
+Sử dụng tiện ích `overflow-scroll` để thêm thanh cuộn vào một phần tử:
 
 <Figure hint="Scroll vertically and horizontally">
 
@@ -658,8 +658,9 @@ Use the `overflow-scroll` utility to add scrollbars to an element:
 
 </Figure>
 
-Unlike `overflow-auto`, which only shows scrollbars if they are necessary, this utility always shows them. Note that some operating systems (like macOS) hide unnecessary scrollbars regardless of this setting.
+Không giống như `overflow-auto`, chỉ hiển thị thanh cuộn nếu chúng cần thiết, tiện ích này luôn hiển thị chúng. Lưu ý rằng một số hệ điều hành (như macOS) ẩn các thanh cuộn không cần thiết bất kể cài đặt này.
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="overflow" defaultClass="overflow-auto" featuredClass="overflow-scroll" />
+

@@ -6,7 +6,7 @@ import Image from "next/image";
 import tshirtImage from "./img/t-shirt.jpg";
 
 export const title = "forced-color-adjust";
-export const description = "Utilities for opting in and out of forced colors.";
+export const description = "Các tiện ích để chọn tham gia hoặc không tham gia forced colors.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for opting in and out of forced colors.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Opting out of forced colors
+### Không tham gia forced colors
 
-Use the `forced-color-adjust-none` utility to opt an element out of the colors enforced by forced colors mode. This is useful in situations where enforcing a limited color palette will degrade usability.
+Sử dụng tiện ích `forced-color-adjust-none` để chọn không tham gia các màu được thực thi bởi chế độ forced colors. Điều này hữu ích trong các tình huống mà việc thực thi bảng màu hạn chế sẽ làm giảm khả năng sử dụng.
 
 <Figure hint="Try emulating `forced-colors: active` in your developer tools to see the changes">
 
@@ -114,11 +114,11 @@ Use the `forced-color-adjust-none` utility to opt an element out of the colors e
 
 </Figure>
 
-You can also use the [forced colors variant](/docs/hover-focus-and-other-states#forced-colors) to conditionally add styles when the user has enabled a forced color mode.
+Bạn cũng có thể sử dụng [forced colors variant](/docs/hover-focus-and-other-states#forced-colors) để thêm kiểu có điều kiện khi người dùng đã bật chế độ forced colors.
 
-### Restoring forced colors
+### Khôi phục forced colors
 
-Use the `forced-color-adjust-auto` utility to make an element adhere to colors enforced by forced colors mode:
+Sử dụng tiện ích `forced-color-adjust-auto` để làm cho một phần tử tuân thủ các màu được thực thi bởi chế độ forced colors:
 
 ```html
 <!-- [!code classes:lg:forced-color-adjust-auto] -->
@@ -141,7 +141,7 @@ Use the `forced-color-adjust-auto` utility to make an element adhere to colors e
 </form>
 ```
 
-This can be useful if you want to undo the `forced-color-adjust-none` utility, for example on a larger screen size.
+Điều này có thể hữu ích nếu bạn muốn hoàn tác tiện ích `forced-color-adjust-none`, ví dụ như trên kích thước màn hình lớn hơn.
 
 ### Responsive design
 

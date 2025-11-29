@@ -3,14 +3,14 @@ import { Iframe } from "@/components/iframe";
 import { Example } from "@/components/example";
 import { Figure } from "@/components/figure";
 
-export const title = "Dark mode";
-export const description = "Using variants to style your site in dark mode.";
+export const title = "Chế độ tối";
+export const description = "Sử dụng các variant để style trang web của bạn trong chế độ tối.";
 
-## Overview
+## Tổng quan
 
-Now that dark mode is a first-class feature of many operating systems, it's becoming more and more common to design a dark version of your website to go along with the default design.
+Bây giờ chế độ tối là một tính năng hạng nhất của nhiều hệ điều hành, việc thiết kế phiên bản tối của trang web của bạn để đi cùng với thiết kế mặc định ngày càng trở nên phổ biến.
 
-To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled:
+Để làm cho việc này dễ dàng nhất có thể, Tailwind bao gồm một variant `dark` cho phép bạn style trang web của mình khác đi khi chế độ tối được bật:
 
 <Figure>
 
@@ -105,11 +105,11 @@ To make this as easy as possible, Tailwind includes a `dark` variant that lets y
 
 </Figure>
 
-By default this uses the `prefers-color-scheme` CSS media feature, but you can also build sites that support [toggling dark mode manually](#toggling-dark-mode-manually) by overriding the dark variant.
+Theo mặc định, điều này sử dụng tính năng media CSS `prefers-color-scheme`, nhưng bạn cũng có thể xây dựng các trang web hỗ trợ [chuyển đổi chế độ tối thủ công](#toggling-dark-mode-manually) bằng cách ghi đè variant dark.
 
-## Toggling dark mode manually
+## Chuyển đổi chế độ tối thủ công
 
-If you want your dark theme to be driven by a CSS selector instead of the `prefers-color-scheme` media query, override the `dark` variant to use your custom selector:
+Nếu bạn muốn theme tối của mình được điều khiển bởi một CSS selector thay vì media query `prefers-color-scheme`, hãy ghi đè variant `dark` để sử dụng selector tùy chỉnh của bạn:
 
 ```css
 /* [!code filename:app.css] */
@@ -119,7 +119,7 @@ If you want your dark theme to be driven by a CSS selector instead of the `prefe
 @custom-variant dark (&:where(.dark, .dark *));
 ```
 
-Now instead of `dark:*` utilities being applied based on `prefers-color-scheme`, they will be applied whenever the `dark` class is present earlier in the HTML tree:
+Bây giờ thay vì các utility `dark:*` được áp dụng dựa trên `prefers-color-scheme`, chúng sẽ được áp dụng bất cứ khi nào class `dark` xuất hiện trước đó trong cây HTML:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -134,11 +134,11 @@ Now instead of `dark:*` utilities being applied based on `prefers-color-scheme`,
 </html>
 ```
 
-How you add the `dark` class to the `html` element is up to you, but a common approach is to use a bit of JavaScript that updates the `class` attribute and syncs that preference to somewhere like `localStorage`.
+Cách bạn thêm class `dark` vào phần tử `html` là tùy thuộc vào bạn, nhưng một cách tiếp cận phổ biến là sử dụng một chút JavaScript để cập nhật thuộc tính `class` và đồng bộ hóa tùy chọn đó đến một nơi nào đó như `localStorage`.
 
-### Using a data attribute
+### Sử dụng thuộc tính data
 
-To use a data attribute instead of a class to activate dark mode, just override the `dark` variant with an attribute selector instead:
+Để sử dụng một thuộc tính data thay vì một class để kích hoạt chế độ tối, chỉ cần ghi đè variant `dark` bằng một attribute selector thay thế:
 
 ```css
 /* [!code filename:app.css] */
@@ -148,7 +148,7 @@ To use a data attribute instead of a class to activate dark mode, just override 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 ```
 
-Now dark mode utilities will be applied whenever the `data-theme` attribute is set to `dark` somewhere up the tree:
+Bây giờ các utility chế độ tối sẽ được áp dụng bất cứ khi nào thuộc tính `data-theme` được đặt thành `dark` ở đâu đó phía trên cây:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -163,11 +163,11 @@ Now dark mode utilities will be applied whenever the `data-theme` attribute is s
 </html>
 ```
 
-### With system theme support
+### Với hỗ trợ theme hệ thống
 
-To build three-way theme toggles that support light mode, dark mode, and your system theme, use a custom dark mode selector and the [`window.matchMedia()` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) to detect the system theme and update the `html` element when needed.
+Để xây dựng các chuyển đổi theme ba chiều hỗ trợ chế độ sáng, chế độ tối và theme hệ thống của bạn, hãy sử dụng selector chế độ tối tùy chỉnh và [`window.matchMedia()` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) để phát hiện theme hệ thống và cập nhật phần tử `html` khi cần thiết.
 
-Here's a simple example of how you can support light mode, dark mode, as well as respecting the operating system preference:
+Dưới đây là một ví dụ đơn giản về cách bạn có thể hỗ trợ chế độ sáng, chế độ tối, cũng như tôn trọng tùy chọn hệ điều hành:
 
 ```js
 // [!code filename:spaghetti.js]
@@ -188,4 +188,4 @@ localStorage.theme = "dark";
 localStorage.removeItem("theme");
 ```
 
-Again you can manage this however you like, even storing the preference server-side in a database and rendering the class on the server — it's totally up to you.
+Một lần nữa, bạn có thể quản lý điều này theo bất kỳ cách nào bạn thích, thậm chí lưu trữ tùy chọn phía máy chủ trong cơ sở dữ liệu và render class trên máy chủ — hoàn toàn tùy thuộc vào bạn.

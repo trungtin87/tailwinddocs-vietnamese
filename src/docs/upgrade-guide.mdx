@@ -1,34 +1,34 @@
-export const title = "Upgrade guide";
-export const description = "Upgrading your Tailwind CSS projects from v3 to v4.";
+export const title = "Hướng dẫn nâng cấp";
+export const description = "Nâng cấp các dự án Tailwind CSS của bạn từ v3 lên v4.";
 
-Tailwind CSS v4.0 is a new major version of the framework, so while we've worked really hard to minimize breaking changes, some updates are necessary. This guide outlines all the steps required to upgrade your projects from v3 to v4.
+Tailwind CSS v4.0 là một phiên bản chính mới của framework, vì vậy mặc dù chúng tôi đã làm việc rất chăm chỉ để giảm thiểu các thay đổi gây phá vỡ, một số cập nhật là cần thiết. Hướng dẫn này phác thảo tất cả các bước cần thiết để nâng cấp các dự án của bạn từ v3 lên v4.
 
-**Tailwind CSS v4.0 is designed for Safari 16.4+, Chrome 111+, and Firefox 128+.** If you need to support older browsers, stick with v3.4 until your browser support requirements change.
+**Tailwind CSS v4.0 được thiết kế cho Safari 16.4+, Chrome 111+, và Firefox 128+.** Nếu bạn cần hỗ trợ các trình duyệt cũ hơn, hãy gắn bó với v3.4 cho đến khi yêu cầu hỗ trợ trình duyệt của bạn thay đổi.
 
-## Using the upgrade tool
+## Sử dụng công cụ nâng cấp
 
-If you'd like to upgrade a project from v3 to v4, you can use our upgrade tool to do the vast majority of the heavy lifting for you:
+Nếu bạn muốn nâng cấp một dự án từ v3 lên v4, bạn có thể sử dụng công cụ nâng cấp của chúng tôi để thực hiện phần lớn công việc nặng nhọc cho bạn:
 
 ```sh
   # [!code filename:Terminal]
 $ npx @tailwindcss/upgrade
 ```
 
-For most projects, the upgrade tool will automate the entire migration process including updating your dependencies, migrating your configuration file to CSS, and handling any changes to your template files.
+Đối với hầu hết các dự án, công cụ nâng cấp sẽ tự động hóa toàn bộ quá trình di chuyển bao gồm cập nhật các phụ thuộc của bạn, di chuyển tệp cấu hình của bạn sang CSS và xử lý mọi thay đổi đối với các tệp template của bạn.
 
-The upgrade tool requires Node.js 20 or higher, so ensure your environment is updated before running it.
+Công cụ nâng cấp yêu cầu Node.js 20 trở lên, vì vậy hãy đảm bảo môi trường của bạn được cập nhật trước khi chạy nó.
 
-**We recommend running the upgrade tool in a new branch**, then carefully reviewing the diff and testing your project in the browser to make sure all of the changes look correct. You may need to tweak a few things by hand in complex projects, but the tool will save you a ton of time either way.
+**Chúng tôi khuyên bạn nên chạy công cụ nâng cấp trong một nhánh mới**, sau đó xem xét cẩn thận diff và kiểm tra dự án của bạn trong trình duyệt để đảm bảo tất cả các thay đổi đều chính xác. Bạn có thể cần phải tinh chỉnh một vài thứ bằng tay trong các dự án phức tạp, nhưng công cụ sẽ giúp bạn tiết kiệm rất nhiều thời gian dù thế nào đi nữa.
 
-It's also a good idea to go over all of the [breaking changes](#changes-from-v3) in v4 and get a good understanding of what's changed, in case there are other things you need to update in your project that the upgrade tool doesn't catch.
+Cũng là một ý tưởng hay khi xem qua tất cả các [thay đổi gây phá vỡ](#changes-from-v3) trong v4 và hiểu rõ những gì đã thay đổi, trong trường hợp có những thứ khác bạn cần cập nhật trong dự án của mình mà công cụ nâng cấp không bắt được.
 
-## Upgrading manually
+## Nâng cấp thủ công
 
-### Using PostCSS
+### Sử dụng PostCSS
 
-In v3, the `tailwindcss` package was a PostCSS plugin, but in v4 the PostCSS plugin lives in a dedicated `@tailwindcss/postcss` package.
+Trong v3, gói `tailwindcss` là một plugin PostCSS, nhưng trong v4, plugin PostCSS nằm trong một gói `@tailwindcss/postcss` chuyên dụng.
 
-Additionally, in v4 imports and vendor prefixing is now handled for you automatically, so you can remove `postcss-import` and `autoprefixer` if they are in your project:
+Ngoài ra, trong v4, việc import và thêm tiền tố nhà cung cấp (vendor prefixing) hiện được xử lý tự động cho bạn, vì vậy bạn có thể xóa `postcss-import` và `autoprefixer` nếu chúng có trong dự án của bạn:
 
 ```js
 // [!code filename:postcss.config.mjs]
@@ -44,9 +44,9 @@ export default {
 };
 ```
 
-### Using Vite
+### Sử dụng Vite
 
-If you're using Vite, we recommend migrating from the PostCSS plugin to our new dedicated Vite plugin for improved performance and the best developer experience:
+Nếu bạn đang sử dụng Vite, chúng tôi khuyên bạn nên di chuyển từ plugin PostCSS sang plugin Vite chuyên dụng mới của chúng tôi để cải thiện hiệu suất và trải nghiệm nhà phát triển tốt nhất:
 
 ```ts
 // [!code filename:vite.config.ts]
@@ -62,9 +62,9 @@ export default defineConfig({
 });
 ```
 
-### Using Tailwind CLI
+### Sử dụng Tailwind CLI
 
-In v4, Tailwind CLI lives in a dedicated `@tailwindcss/cli` package. Update any of your build commands to use the new package instead:
+Trong v4, Tailwind CLI nằm trong một gói `@tailwindcss/cli` chuyên dụng. Cập nhật bất kỳ lệnh build nào của bạn để sử dụng gói mới thay thế:
 
 ```sh
 /* [!code filename:Terminal] */
@@ -74,21 +74,21 @@ npx tailwindcss -i input.css -o output.css
 npx @tailwindcss/cli -i input.css -o output.css
 ```
 
-## Changes from v3
+## Các thay đổi từ v3
 
-Here's a comprehensive list of all the breaking changes in Tailwind CSS v4.0.
+Dưới đây là danh sách đầy đủ tất cả các thay đổi gây phá vỡ trong Tailwind CSS v4.0.
 
-Our [upgrade tool](#using-the-upgrade-tool) will handle most of these changes for you automatically, so we highly recommend using it if you can.
+[Công cụ nâng cấp](#using-the-upgrade-tool) của chúng tôi sẽ xử lý hầu hết các thay đổi này cho bạn một cách tự động, vì vậy chúng tôi thực sự khuyên bạn nên sử dụng nó nếu có thể.
 
-### Browser requirements
+### Yêu cầu trình duyệt
 
-Tailwind CSS v4.0 is designed for modern browsers and targets Safari 16.4, Chrome 111, and Firefox 128. We depend on modern CSS features like `@property` and `color-mix()` for core framework features, and Tailwind CSS v4.0 will not work in older browsers.
+Tailwind CSS v4.0 được thiết kế cho các trình duyệt hiện đại và nhắm mục tiêu Safari 16.4, Chrome 111, và Firefox 128. Chúng tôi phụ thuộc vào các tính năng CSS hiện đại như `@property` và `color-mix()` cho các tính năng cốt lõi của framework, và Tailwind CSS v4.0 sẽ không hoạt động trong các trình duyệt cũ hơn.
 
-If you need to support older browsers, we recommend sticking with v3.4 for now. We're actively exploring a compatibility mode to help people upgrade sooner that we hope to share more news on in the future.
+Nếu bạn cần hỗ trợ các trình duyệt cũ hơn, chúng tôi khuyên bạn nên gắn bó với v3.4 vào lúc này. Chúng tôi đang tích cực khám phá chế độ tương thích để giúp mọi người nâng cấp sớm hơn mà chúng tôi hy vọng sẽ chia sẻ thêm tin tức trong tương lai.
 
-### Removed @tailwind directives
+### Đã xóa các chỉ thị @tailwind
 
-In v4 you import Tailwind using a regular CSS `@import` statement, not using the `@tailwind` directives you used in v3:
+Trong v4, bạn import Tailwind bằng cách sử dụng câu lệnh `@import` CSS thông thường, không sử dụng các chỉ thị `@tailwind` bạn đã sử dụng trong v3:
 
 ```css
 /* [!code filename:CSS] */
@@ -100,17 +100,17 @@ In v4 you import Tailwind using a regular CSS `@import` statement, not using the
 @import "tailwindcss";
 ```
 
-### Removed deprecated utilities
+### Đã xóa các tiện ích không còn dùng
 
-We've removed any utilities that were deprecated in v3 and have been undocumented for several years. Here's a list of what's been removed along with the modern alternative:
+Chúng tôi đã xóa bất kỳ tiện ích nào đã bị phản đối trong v3 và không có tài liệu trong vài năm. Dưới đây là danh sách những gì đã bị xóa cùng với giải pháp thay thế hiện đại:
 
 {
 
 <table>
   <thead>
     <tr>
-      <th>Deprecated</th>
-      <th>Replacement</th>
+      <th>Đã phản đối</th>
+      <th>Thay thế</th>
     </tr>
   </thead>
   <tbody>
@@ -119,7 +119,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">bg-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">bg-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">bg-black/50</code>
       </td>
     </tr>
     <tr>
@@ -127,7 +127,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">text-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">text-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">text-black/50</code>
       </td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">border-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">border-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">border-black/50</code>
       </td>
     </tr>
     <tr>
@@ -143,7 +143,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">divide-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">divide-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">divide-black/50</code>
       </td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">ring-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">ring-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">ring-black/50</code>
       </td>
     </tr>
     <tr>
@@ -159,7 +159,7 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
         <code className="whitespace-nowrap">placeholder-opacity-*</code>
       </td>
       <td>
-        Use opacity modifiers like <code className="whitespace-nowrap">placeholder-black/50</code>
+        Sử dụng modifier độ mờ như <code className="whitespace-nowrap">placeholder-black/50</code>
       </td>
     </tr>
     <tr>
@@ -207,9 +207,9 @@ We've removed any utilities that were deprecated in v3 and have been undocumente
 
 }
 
-### Renamed utilities
+### Đổi tên các tiện ích
 
-We've renamed the following utilities in v4 to make them more consistent and predictable:
+Chúng tôi đã đổi tên các tiện ích sau trong v4 để làm cho chúng nhất quán và dễ đoán hơn:
 
 {
 
@@ -322,11 +322,11 @@ We've renamed the following utilities in v4 to make them more consistent and pre
 
 }
 
-#### Updated shadow, radius, and blur scales
+#### Cập nhật thang đo shadow, radius và blur
 
-We've renamed the default shadow, radius and blur scales to make sure every utility has a named value. The "bare" versions still work for backward compatibility, but the <code><em>{'<utility>'}</em>-sm</code> utilities will look different unless updated to their respective <code><em>{'<utility>'}</em>-xs</code> versions.
+Chúng tôi đã đổi tên các thang đo bóng, bán kính và độ mờ mặc định để đảm bảo mọi tiện ích đều có giá trị được đặt tên. Các phiên bản "trần" vẫn hoạt động để tương thích ngược, nhưng các tiện ích <code><em>{'<utility>'}</em>-sm</code> sẽ trông khác trừ khi được cập nhật thành các phiên bản <code><em>{'<utility>'}</em>-xs</code> tương ứng của chúng.
 
-To update your project for these changes, replace all the v3 utilities with their v4 versions:
+Để cập nhật dự án của bạn cho những thay đổi này, hãy thay thế tất cả các tiện ích v3 bằng các phiên bản v4 của chúng:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -341,9 +341,9 @@ To update your project for these changes, replace all the v3 utilities with thei
 <input class="shadow-sm" />
 ```
 
-#### Renamed outline utility
+#### Đổi tên tiện ích outline
 
-The `outline` utility now sets `outline-width: 1px` by default to be more consistent with border and ring utilities. Furthermore all `outline-<number>` utilities default `outline-style` to `solid`, omitting the need to combine them with `outline`:
+Tiện ích `outline` hiện đặt `outline-width: 1px` theo mặc định để nhất quán hơn với các tiện ích border và ring. Hơn nữa, tất cả các tiện ích `outline-<number>` mặc định `outline-style` thành `solid`, loại bỏ sự cần thiết phải kết hợp chúng với `outline`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -353,11 +353,11 @@ The `outline` utility now sets `outline-width: 1px` by default to be more consis
 <input class="outline-2" />
 ```
 
-The `outline-none` utility previously didn't actually set `outline-style: none`, and instead set an invisible outline that would still show up in forced colors mode for accessibility reasons.
+Tiện ích `outline-none` trước đây thực sự không đặt `outline-style: none`, mà thay vào đó đặt một outline vô hình vẫn sẽ hiển thị trong chế độ forced colors vì lý do truy cập.
 
-To make this more clear we've renamed this utility to `outline-hidden` and added a new `outline-none` utility that actually sets `outline-style: none`.
+Để làm rõ điều này hơn, chúng tôi đã đổi tên tiện ích này thành `outline-hidden` và thêm một tiện ích `outline-none` mới thực sự đặt `outline-style: none`.
 
-To update your project for this change, replace any usage of `outline-none` with `outline-hidden`:
+Để cập nhật dự án của bạn cho thay đổi này, hãy thay thế bất kỳ việc sử dụng `outline-none` nào bằng `outline-hidden`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -367,11 +367,11 @@ To update your project for this change, replace any usage of `outline-none` with
 <input class="focus:outline-hidden" />
 ```
 
-#### Default ring width change
+#### Thay đổi độ rộng ring mặc định
 
-In v3, the `ring` utility added a `3px` ring. We've changed this in v4 to be `1px` to make it consistent with borders and outlines.
+Trong v3, tiện ích `ring` đã thêm một ring `3px`. Chúng tôi đã thay đổi điều này trong v4 thành `1px` để làm cho nó nhất quán với border và outline.
 
-To update your project for this change, replace any usage of `ring` with `ring-3`:
+Để cập nhật dự án của bạn cho thay đổi này, hãy thay thế bất kỳ việc sử dụng `ring` nào bằng `ring-3`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -381,26 +381,26 @@ To update your project for this change, replace any usage of `ring` with `ring-3
 <input class="ring-3 ring-blue-500" />
 ```
 
-### Space-between selector
+### Selector space-between
 
-We've changed the selector used by the [`space-x-*` and `space-y-*` utilities](/docs/margin#adding-space-between-children) to address serious performance issues on large pages:
+Chúng tôi đã thay đổi selector được sử dụng bởi các [tiện ích `space-x-*` và `space-y-*`](/docs/margin#adding-space-between-children) để giải quyết các vấn đề hiệu suất nghiêm trọng trên các trang lớn:
 
 ```css
 /* [!code filename:CSS] */
-/* Before */
+/* Trước đây */
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   margin-top: 1rem;
 }
 
-/* Now */
+/* Bây giờ */
 .space-y-4 > :not(:last-child) {
   margin-bottom: 1rem;
 }
 ```
 
-You might see changes in your project if you were ever using these utilities with inline elements, or if you were adding other margins to child elements to tweak their spacing.
+Bạn có thể thấy những thay đổi trong dự án của mình nếu bạn đã từng sử dụng các tiện ích này với các phần tử nội dòng (inline), hoặc nếu bạn đang thêm các lề khác vào các phần tử con để tinh chỉnh khoảng cách của chúng.
 
-If this change causes any issues in your project, we recommend migrating to a flex or grid layout and using `gap` instead:
+Nếu thay đổi này gây ra bất kỳ vấn đề nào trong dự án của bạn, chúng tôi khuyên bạn nên di chuyển sang bố cục flex hoặc grid và sử dụng `gap` thay thế:
 
 {/* prettier-ignore */}
 ```html
@@ -412,9 +412,9 @@ If this change causes any issues in your project, we recommend migrating to a fl
 </div>
 ```
 
-### Using variants with gradients
+### Sử dụng các biến thể với gradient
 
-In v3, overriding part of a gradient with a variant would "reset" the entire gradient, so in this example the `to-*` color would be transparent in dark mode instead of yellow:
+Trong v3, việc ghi đè một phần của gradient bằng một biến thể sẽ "đặt lại" toàn bộ gradient, vì vậy trong ví dụ này, màu `to-*` sẽ trong suốt ở chế độ tối thay vì màu vàng:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -424,9 +424,9 @@ In v3, overriding part of a gradient with a variant would "reset" the entire gra
 </div>
 ```
 
-In v4, these values are preserved which is more consistent with how other utilities in Tailwind work.
+Trong v4, các giá trị này được bảo tồn, điều này nhất quán hơn với cách các tiện ích khác trong Tailwind hoạt động.
 
-This means you may need to explicitly use `via-none` if you want to "unset" a three-stop gradient back to a two-stop gradient in a specific state:
+Điều này có nghĩa là bạn có thể cần phải sử dụng `via-none` một cách rõ ràng nếu bạn muốn "hủy đặt" một gradient ba điểm dừng trở lại gradient hai điểm dừng ở một trạng thái cụ thể:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -436,11 +436,11 @@ This means you may need to explicitly use `via-none` if you want to "unset" a th
 </div>
 ```
 
-### Container configuration
+### Cấu hình container
 
-In v3, the `container` utility had several configuration options like `center` and `padding` that no longer exist in v4.
+Trong v3, tiện ích `container` có một số tùy chọn cấu hình như `center` và `padding` không còn tồn tại trong v4.
 
-To customize the `container` utility in v4, extend it using the `@utility` directive:
+Để tùy chỉnh tiện ích `container` trong v4, hãy mở rộng nó bằng cách sử dụng chỉ thị `@utility`:
 
 ```css
 /* [!code filename:CSS] */
@@ -450,11 +450,11 @@ To customize the `container` utility in v4, extend it using the `@utility` direc
 }
 ```
 
-### Default border color
+### Màu viền mặc định
 
-In v3, the `border-*` and `divide-*` utilities used your configured `gray-200` color by default. We've changed this to `currentColor` in v4 to make Tailwind less opinionated and match browser defaults.
+Trong v3, các tiện ích `border-*` và `divide-*` sử dụng màu `gray-200` đã cấu hình của bạn theo mặc định. Chúng tôi đã thay đổi điều này thành `currentColor` trong v4 để làm cho Tailwind ít áp đặt hơn và khớp với mặc định của trình duyệt.
 
-To update your project for this change, make sure you specify a color anywhere you're using a `border-*` or `divide-*` utility:
+Để cập nhật dự án của bạn cho thay đổi này, hãy đảm bảo bạn chỉ định một màu ở bất kỳ đâu bạn đang sử dụng tiện ích `border-*` hoặc `divide-*`:
 
 ```html
 <!-- [!code classes:border-gray-200] -->
@@ -463,7 +463,7 @@ To update your project for this change, make sure you specify a color anywhere y
 </div>
 ```
 
-Alternatively, add these base styles to your project to preserve the v3 behavior:
+Ngoài ra, hãy thêm các kiểu cơ sở này vào dự án của bạn để bảo tồn hành vi v3:
 
 ```css
 /* [!code filename:CSS] */
@@ -478,11 +478,11 @@ Alternatively, add these base styles to your project to preserve the v3 behavior
 }
 ```
 
-### Default ring width and color
+### Độ rộng và màu ring mặc định
 
-We've changed the width of the `ring` utility from 3px to 1px and changed the default color from `blue-500` to `currentColor` to make things more consistent the `border-*`, `divide-*`, and `outline-*` utilities.
+Chúng tôi đã thay đổi độ rộng của tiện ích `ring` từ 3px thành 1px và thay đổi màu mặc định từ `blue-500` thành `currentColor` để làm cho mọi thứ nhất quán hơn với các tiện ích `border-*`, `divide-*` và `outline-*`.
 
-To update your project for these changes, replace any use of `ring` with `ring-3`:
+Để cập nhật dự án của bạn cho những thay đổi này, hãy thay thế bất kỳ việc sử dụng `ring` nào bằng `ring-3`:
 
 ```html
 <!-- prettier-ignore -->
@@ -492,7 +492,7 @@ To update your project for these changes, replace any use of `ring` with `ring-3
 </button>
 ```
 
-Then make sure to add `ring-blue-500` anywhere you were depending on the default ring color:
+Sau đó, hãy đảm bảo thêm `ring-blue-500` ở bất kỳ đâu bạn phụ thuộc vào màu ring mặc định:
 
 ```html
 <!-- [!code classes:focus:ring-blue-500] -->
@@ -501,7 +501,7 @@ Then make sure to add `ring-blue-500` anywhere you were depending on the default
 </button>
 ```
 
-Alternatively, add these theme variables to your CSS to preserve the v3 behavior:
+Ngoài ra, hãy thêm các biến theme này vào CSS của bạn để bảo tồn hành vi v3:
 
 ```css
 /* [!code filename:CSS] */
@@ -511,17 +511,17 @@ Alternatively, add these theme variables to your CSS to preserve the v3 behavior
 }
 ```
 
-Note though that these variables are only supported for compatibility reasons, and are not considered idiomatic usage of Tailwind CSS v4.0.
+Tuy nhiên, lưu ý rằng các biến này chỉ được hỗ trợ vì lý do tương thích và không được coi là cách sử dụng thành ngữ của Tailwind CSS v4.0.
 
-### Preflight changes
+### Các thay đổi Preflight
 
-We've made a couple small changes to the base styles in Preflight in v4:
+Chúng tôi đã thực hiện một vài thay đổi nhỏ đối với các kiểu cơ sở trong Preflight trong v4:
 
-#### New default placeholder color
+#### Màu placeholder mặc định mới
 
-In v3, placeholder text used your configured `gray-400` color by default. We've simplified this in v4 to just use the current text color at 50% opacity.
+Trong v3, văn bản placeholder sử dụng màu `gray-400` đã cấu hình của bạn theo mặc định. Chúng tôi đã đơn giản hóa điều này trong v4 để chỉ sử dụng màu văn bản hiện tại ở độ mờ 50%.
 
-You probably won't even notice this change (it might even make your project look better), but if you want to preserve the v3 behavior, add this CSS to your project:
+Bạn có thể thậm chí sẽ không nhận thấy sự thay đổi này (nó thậm chí có thể làm cho dự án của bạn trông đẹp hơn), nhưng nếu bạn muốn bảo tồn hành vi v3, hãy thêm CSS này vào dự án của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -533,11 +533,11 @@ You probably won't even notice this change (it might even make your project look
 }
 ```
 
-#### Buttons use the default cursor
+#### Nút sử dụng con trỏ mặc định
 
-Buttons now use `cursor: default` instead of `cursor: pointer` to match the default browser behavior.
+Các nút hiện sử dụng `cursor: default` thay vì `cursor: pointer` để khớp với hành vi trình duyệt mặc định.
 
-If you'd like to continue using `cursor: pointer` by default, add these base styles to your CSS:
+Nếu bạn muốn tiếp tục sử dụng `cursor: pointer` theo mặc định, hãy thêm các kiểu cơ sở này vào CSS của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -549,11 +549,11 @@ If you'd like to continue using `cursor: pointer` by default, add these base sty
 }
 ```
 
-#### Dialog margins removed
+#### Đã xóa lề Dialog
 
-Preflight now resets margins on `<dialog>` elements to be consistent with how other elements are reset.
+Preflight hiện đặt lại lề trên các phần tử `<dialog>` để nhất quán với cách các phần tử khác được đặt lại.
 
-If you still want dialogs to be centered by default, add this CSS to your project:
+Nếu bạn vẫn muốn các hộp thoại được căn giữa theo mặc định, hãy thêm CSS này vào dự án của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -564,13 +564,13 @@ If you still want dialogs to be centered by default, add this CSS to your projec
 }
 ```
 
-#### Hidden attribute takes priority
+#### Thuộc tính hidden được ưu tiên
 
-Display classes like `block` or `flex` no longer take priority over the `hidden` attribute on an element. Remove the `hidden` attribute if you want an element to be visible to the user. Note that this does not apply to `hidden="until-found"`.
+Các lớp hiển thị như `block` hoặc `flex` không còn được ưu tiên hơn thuộc tính `hidden` trên một phần tử. Xóa thuộc tính `hidden` nếu bạn muốn một phần tử hiển thị cho người dùng. Lưu ý rằng điều này không áp dụng cho `hidden="until-found"`.
 
-### Using a prefix
+### Sử dụng tiền tố
 
-Prefixes now look like variants and are always at the beginning of the class name:
+Các tiền tố hiện trông giống như các biến thể và luôn ở đầu tên lớp:
 
 ```html
 <!-- [!code classes:tw:bg-red-500,tw:flex,tw:hover:bg-red-600] -->
@@ -579,7 +579,7 @@ Prefixes now look like variants and are always at the beginning of the class nam
 </div>
 ```
 
-When using a prefix, you should still configure your theme variables as if you aren't using a prefix:
+Khi sử dụng tiền tố, bạn vẫn nên cấu hình các biến theme của mình như thể bạn không sử dụng tiền tố:
 
 ```css {{ filename: "app.css" }}
 @import "tailwindcss" prefix(tw);
@@ -597,7 +597,7 @@ When using a prefix, you should still configure your theme variables as if you a
 }
 ```
 
-The generated CSS variables _will_ include a prefix to avoid conflicts with any existing variables in your project:
+Các biến CSS được tạo _sẽ_ bao gồm tiền tố để tránh xung đột với bất kỳ biến hiện có nào trong dự án của bạn:
 
 ```css {{ filename: "dist.css" }}
 :root {
@@ -613,9 +613,9 @@ The generated CSS variables _will_ include a prefix to avoid conflicts with any 
 }
 ```
 
-### The important modifier
+### Modifier important
 
-In v3 you could mark a utility as important by placing an `!` at the beginning of the utility name (but after any variants). In v4 you should place the `!` at the very end of the class name instead:
+Trong v3, bạn có thể đánh dấu một tiện ích là quan trọng bằng cách đặt dấu `!` ở đầu tên tiện ích (nhưng sau bất kỳ biến thể nào). Trong v4, bạn nên đặt dấu `!` ở cuối tên lớp thay thế:
 
 ```html
 <!-- [!code classes:bg-red-500!,flex!,hover:bg-red-600/50!] -->
@@ -624,13 +624,13 @@ In v3 you could mark a utility as important by placing an `!` at the beginning o
 </div>
 ```
 
-The old way is still supported for compatibility but is deprecated.
+Cách cũ vẫn được hỗ trợ để tương thích nhưng đã bị phản đối.
 
-### Adding custom utilities
+### Thêm các tiện ích tùy chỉnh
 
-In v3, any custom classes you defined within `@layer utilities` or `@layer components` would get picked up by Tailwind as a true utility class and would automatically work with variants like `hover`, `focus`, or `lg` with the difference being that `@layer components` would always come first in the generated stylesheet.
+Trong v3, bất kỳ lớp tùy chỉnh nào bạn đã xác định trong `@layer utilities` hoặc `@layer components` sẽ được Tailwind chọn làm lớp tiện ích thực sự và sẽ tự động hoạt động với các biến thể như `hover`, `focus` hoặc `lg` với sự khác biệt là `@layer components` sẽ luôn xuất hiện trước trong stylesheet được tạo.
 
-In v4 we are using native cascade layers and no longer hijacking the `@layer` at-rule, so we've introduced the `@utility` API as a replacement:
+Trong v4, chúng tôi đang sử dụng các lớp cascade gốc và không còn chiếm đoạt quy tắc at-rule `@layer` nữa, vì vậy chúng tôi đã giới thiệu API `@utility` như một sự thay thế:
 
 ```css
 /* [!code filename:CSS] */
@@ -646,7 +646,7 @@ In v4 we are using native cascade layers and no longer hijacking the `@layer` at
 }
 ```
 
-Custom utilities are now also sorted based on the amount of properties they define. This means that component utilities like this `.btn` can be overwritten by other Tailwind utilities without additional configuration:
+Các tiện ích tùy chỉnh hiện cũng được sắp xếp dựa trên lượng thuộc tính mà chúng xác định. Điều này có nghĩa là các tiện ích thành phần như `.btn` này có thể bị ghi đè bởi các tiện ích Tailwind khác mà không cần cấu hình thêm:
 
 ```css
 /* [!code filename:CSS] */
@@ -666,13 +666,13 @@ Custom utilities are now also sorted based on the amount of properties they defi
 }
 ```
 
-Learn more about registering custom utilities in the [adding custom utilities documentation](/docs/adding-custom-styles#adding-custom-utilities).
+Tìm hiểu thêm về đăng ký các tiện ích tùy chỉnh trong [tài liệu thêm các tiện ích tùy chỉnh](/docs/adding-custom-styles#adding-custom-utilities).
 
-### Variant stacking order
+### Thứ tự xếp chồng biến thể
 
-In v3, stacked variants were applied from right to left, but in v4 we've updated them to apply left to right to look more like CSS syntax.
+Trong v3, các biến thể xếp chồng được áp dụng từ phải sang trái, nhưng trong v4, chúng tôi đã cập nhật chúng để áp dụng từ trái sang phải để trông giống cú pháp CSS hơn.
 
-To update your project for this change, reverse the order of any order-sensitive stacked variants in your project:
+Để cập nhật dự án của bạn cho thay đổi này, hãy đảo ngược thứ tự của bất kỳ biến thể xếp chồng nhạy cảm với thứ tự nào trong dự án của bạn:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -687,13 +687,13 @@ To update your project for this change, reverse the order of any order-sensitive
 </ul>
 ```
 
-You likely have very few of these if any—the direct child variant (`*`) and any typography plugin variants (`prose-headings`) are the most likely ones you might be using, and even then it's only if you've stacked them with other variants.
+Bạn có thể có rất ít trong số này nếu có — biến thể con trực tiếp (`*`) và bất kỳ biến thể plugin typography nào (`prose-headings`) là những biến thể có khả năng nhất bạn có thể đang sử dụng, và ngay cả khi đó chỉ là nếu bạn đã xếp chồng chúng với các biến thể khác.
 
-### Variables in arbitrary values
+### Biến trong các giá trị tùy ý
 
-In v3 you were able to use CSS variables as arbitrary values without `var()`, but recent updates to CSS mean that this can often be ambiguous, so we've changed the syntax for this in v4 to use parentheses instead of square brackets.
+Trong v3, bạn có thể sử dụng các biến CSS làm giá trị tùy ý mà không cần `var()`, nhưng các cập nhật gần đây cho CSS có nghĩa là điều này thường có thể mơ hồ, vì vậy chúng tôi đã thay đổi cú pháp cho điều này trong v4 để sử dụng dấu ngoặc đơn thay vì dấu ngoặc vuông.
 
-To update your project for this change, replace usage of the old variable shorthand syntax with the new variable shorthand syntax:
+Để cập nhật dự án của bạn cho thay đổi này, hãy thay thế việc sử dụng cú pháp viết tắt biến cũ bằng cú pháp viết tắt biến mới:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -703,11 +703,11 @@ To update your project for this change, replace usage of the old variable shorth
 <div class="bg-(--brand-color)"></div>
 ```
 
-### Arbitrary values in grid and object-position utilities
+### Giá trị tùy ý trong các tiện ích grid và object-position
 
-Commas were previously replaced with spaces in the `grid-cols-*`, `grid-rows-*`, and `object-*` utilities inside arbitrary values. This special behavior existed in Tailwind CSS v3 for compatibility with v2. This compatibility no longer exists in v4.0 and underscores must be used to represent spaces.
+Dấu phẩy trước đây đã được thay thế bằng khoảng trắng trong các tiện ích `grid-cols-*`, `grid-rows-*` và `object-*` bên trong các giá trị tùy ý. Hành vi đặc biệt này tồn tại trong Tailwind CSS v3 để tương thích với v2. Khả năng tương thích này không còn tồn tại trong v4.0 và dấu gạch dưới phải được sử dụng để đại diện cho khoảng trắng.
 
-To update your project for this change, replace usage of commas that were intended to be spaces with underscores:
+Để cập nhật dự án của bạn cho thay đổi này, hãy thay thế việc sử dụng dấu phẩy được dự định là khoảng trắng bằng dấu gạch dưới:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -717,9 +717,9 @@ To update your project for this change, replace usage of commas that were intend
 <div class="grid-cols-[max-content_auto]"></div>
 ```
 
-### Hover styles on mobile
+### Kiểu hover trên di động
 
-In v4 we've updated the `hover` variant to only apply when the primary input device supports hover:
+Trong v4, chúng tôi đã cập nhật biến thể `hover` để chỉ áp dụng khi thiết bị đầu vào chính hỗ trợ hover:
 
 ```css
 /* [!code filename:CSS] */
@@ -730,20 +730,20 @@ In v4 we've updated the `hover` variant to only apply when the primary input dev
 }
 ```
 
-This can create problems if you've built your site in a way that depends on touch devices triggering hover on tap. If this is an issue for you, you can override the `hover` variant with your own variant that uses the old implementation:
+Điều này có thể tạo ra vấn đề nếu bạn đã xây dựng trang web của mình theo cách phụ thuộc vào các thiết bị cảm ứng kích hoạt hover khi chạm. Nếu đây là vấn đề đối với bạn, bạn có thể ghi đè biến thể `hover` bằng biến thể của riêng bạn sử dụng triển khai cũ:
 
 ```css
 /* [!code filename:CSS] */
 @custom-variant hover (&:hover);
 ```
 
-Generally though we recommend treating hover functionality as an enhancement, and not depending on it for your site to work since touch devices don't truly have the ability to hover.
+Tuy nhiên, nói chung, chúng tôi khuyên bạn nên coi chức năng hover là một cải tiến và không phụ thuộc vào nó để trang web của bạn hoạt động vì các thiết bị cảm ứng không thực sự có khả năng hover.
 
-### Transitioning outline-color
+### Chuyển tiếp outline-color
 
-The `transition` and `transition-color` utilities now include the `outline-color` property.
+Các tiện ích `transition` và `transition-color` hiện bao gồm thuộc tính `outline-color`.
 
-This means if you were adding an outline with a custom color on focus, you will see the color transition from the default color. To avoid this, make sure you set the outline color unconditionally, or explicitly set it for both states:
+Điều này có nghĩa là nếu bạn đang thêm một outline với màu tùy chỉnh khi focus, bạn sẽ thấy màu chuyển tiếp từ màu mặc định. Để tránh điều này, hãy đảm bảo bạn đặt màu outline vô điều kiện hoặc đặt rõ ràng cho cả hai trạng thái:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -753,13 +753,13 @@ This means if you were adding an outline with a custom color on focus, you will 
 <button class="outline-cyan-500 transition hover:outline-2"></button>
 ```
 
-### Disabling core plugins
+### Vô hiệu hóa core plugins
 
-In v3 there was a `corePlugins` option you could use to completely disable certain utilities in the framework. This is no longer supported in v4.
+Trong v3, có một tùy chọn `corePlugins` bạn có thể sử dụng để vô hiệu hóa hoàn toàn một số tiện ích nhất định trong framework. Điều này không còn được hỗ trợ trong v4.
 
-### Using the theme() function
+### Sử dụng hàm theme()
 
-Since v4 includes CSS variables for all of your theme values, we recommend using those variables instead of the `theme()` function whenever possible:
+Vì v4 bao gồm các biến CSS cho tất cả các giá trị theme của bạn, chúng tôi khuyên bạn nên sử dụng các biến đó thay vì hàm `theme()` bất cứ khi nào có thể:
 
 ```css
 /* [!code filename:CSS] */
@@ -771,7 +771,7 @@ Since v4 includes CSS variables for all of your theme values, we recommend using
 }
 ```
 
-For cases where you still need to use the `theme()` function (like in media queries where CSS variables aren't supported), you should use the CSS variable name instead of the old dot notation:
+Đối với các trường hợp bạn vẫn cần sử dụng hàm `theme()` (như trong media queries nơi các biến CSS không được hỗ trợ), bạn nên sử dụng tên biến CSS thay vì ký hiệu dấu chấm cũ:
 
 ```css
 /* [!code filename:CSS] */
@@ -781,26 +781,26 @@ For cases where you still need to use the `theme()` function (like in media quer
 }
 ```
 
-### Using a JavaScript config file
+### Sử dụng tệp cấu hình JavaScript
 
-JavaScript config files are still supported for backward compatibility, but they are no longer detected automatically in v4.
+Các tệp cấu hình JavaScript vẫn được hỗ trợ để tương thích ngược, nhưng chúng không còn được phát hiện tự động trong v4.
 
-If you still need to use a JavaScript config file, you can load it explicitly using the `@config` directive:
+Nếu bạn vẫn cần sử dụng tệp cấu hình JavaScript, bạn có thể tải nó một cách rõ ràng bằng cách sử dụng chỉ thị `@config`:
 
 ```css
 /* [!code filename:CSS] */
 @config "../../tailwind.config.js";
 ```
 
-The `corePlugins`, `safelist`, and `separator` options from the JavaScript-based config are not supported in v4.0. To safelist utilities in v4 use [`@source inline()`](/docs/detecting-classes-in-source-files#safelisting-specific-utilities).
+Các tùy chọn `corePlugins`, `safelist` và `separator` từ cấu hình dựa trên JavaScript không được hỗ trợ trong v4.0. Để safelist các tiện ích trong v4, hãy sử dụng [`@source inline()`](/docs/detecting-classes-in-source-files#safelisting-specific-utilities).
 
-### Theme values in JavaScript
+### Giá trị theme trong JavaScript
 
-In v3 we exported a `resolveConfig` function that you could use to turn your JavaScript-based config into a flat object that you could use in your other JavaScript.
+Trong v3, chúng tôi đã xuất một hàm `resolveConfig` mà bạn có thể sử dụng để biến cấu hình dựa trên JavaScript của mình thành một đối tượng phẳng mà bạn có thể sử dụng trong JavaScript khác của mình.
 
-We've removed this in v4 in hopes that people can use the CSS variables we generate directly instead, which is much simpler and will significantly reduce your bundle size.
+Chúng tôi đã xóa điều này trong v4 với hy vọng rằng mọi người có thể sử dụng trực tiếp các biến CSS mà chúng tôi tạo ra thay thế, điều này đơn giản hơn nhiều và sẽ giảm đáng kể kích thước gói của bạn.
 
-For example, the popular [Motion](https://motion.dev/docs/react-quick-start) library for React lets you animate to and from CSS variable values:
+Ví dụ, thư viện [Motion](https://motion.dev/docs/react-quick-start) phổ biến cho React cho phép bạn tạo hoạt ảnh đến và đi từ các giá trị biến CSS:
 
 ```jsx
 // [!code filename:JSX]
@@ -808,7 +808,7 @@ For example, the popular [Motion](https://motion.dev/docs/react-quick-start) lib
 <motion.div animate={{ backgroundColor: "var(--color-blue-500)" }} />
 ```
 
-If you need access to a resolved CSS variable value in JS, you can use `getComputedStyle` to get the value of a theme variable on the document root:
+Nếu bạn cần quyền truy cập vào giá trị biến CSS đã giải quyết trong JS, bạn có thể sử dụng `getComputedStyle` để lấy giá trị của một biến theme trên document root:
 
 ```js
 // [!code filename:spaghetti.js]
@@ -816,11 +816,11 @@ let styles = getComputedStyle(document.documentElement);
 let shadow = styles.getPropertyValue("--shadow-xl");
 ```
 
-### Using @apply with Vue, Svelte, or CSS modules
+### Sử dụng @apply với Vue, Svelte hoặc CSS modules
 
-In v4, stylesheets that are bundled separately from your main CSS file (e.g. CSS modules files, `<style>` blocks in Vue, Svelte, or Astro, etc.) do not have access to theme variables, custom utilities, and custom variants defined in other files.
+Trong v4, các stylesheet được đóng gói riêng biệt với tệp CSS chính của bạn (ví dụ: tệp CSS modules, khối `<style>` trong Vue, Svelte hoặc Astro, v.v.) không có quyền truy cập vào các biến theme, tiện ích tùy chỉnh và biến thể tùy chỉnh được xác định trong các tệp khác.
 
-To make these definitions available in these contexts, use [`@reference`](/docs/functions-and-directives#reference-directive) to import them without duplicating any CSS in your bundle:
+Để làm cho các định nghĩa này có sẵn trong các ngữ cảnh này, hãy sử dụng [`@reference`](/docs/functions-and-directives#reference-directive) để import chúng mà không sao chép bất kỳ CSS nào trong gói của bạn:
 
 ```html
 <!-- [!code filename:Vue] -->
@@ -838,7 +838,7 @@ To make these definitions available in these contexts, use [`@reference`](/docs/
 </style>
 ```
 
-Alternatively, you can use your CSS theme variables directly instead of using `@apply` at all, which will also improve performance since Tailwind won't need to process these styles:
+Ngoài ra, bạn có thể sử dụng trực tiếp các biến theme CSS của mình thay vì sử dụng `@apply` hoàn toàn, điều này cũng sẽ cải thiện hiệu suất vì Tailwind sẽ không cần xử lý các kiểu này:
 
 ```html
 <!-- [!code filename:Vue] -->
@@ -854,10 +854,11 @@ Alternatively, you can use your CSS theme variables directly instead of using `@
 </style>
 ```
 
-You can find more documentation on [using Tailwind with CSS modules](/docs/compatibility#css-modules).
+Bạn có thể tìm thêm tài liệu về [sử dụng Tailwind với CSS modules](/docs/compatibility#css-modules).
 
-### Using Sass, Less, and Stylus
+### Sử dụng Sass, Less và Stylus
 
-Tailwind CSS v4.0 is not designed to be used with CSS preprocessors like Sass, Less, or Stylus. Think of Tailwind CSS itself as your preprocessor — you shouldn't use Tailwind with Sass for the same reason you wouldn't use Sass with Stylus. Because of this it is not possible to use Sass, Less, or Stylus for your stylesheets or `<style>` blocks in Vue, Svelte, Astro, etc.
+Tailwind CSS v4.0 không được thiết kế để sử dụng với các bộ tiền xử lý CSS như Sass, Less hoặc Stylus. Hãy coi chính Tailwind CSS là bộ tiền xử lý của bạn — bạn không nên sử dụng Tailwind với Sass vì lý do tương tự như bạn sẽ không sử dụng Sass với Stylus. Do đó, không thể sử dụng Sass, Less hoặc Stylus cho các stylesheet hoặc khối `<style>` của bạn trong Vue, Svelte, Astro, v.v.
 
-Learn more in the [compatibility documentation](/docs/compatibility#sass-less-and-stylus).
+Tìm hiểu thêm trong [tài liệu tương thích](/docs/compatibility#sass-less-and-stylus).
+

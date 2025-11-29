@@ -5,7 +5,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "align-content";
-export const description = "Utilities for controlling how rows are positioned in multi-row flex and grid containers.";
+export const description = "Các utility để kiểm soát cách các hàng được định vị trong các container flex và grid nhiều hàng.";
 
 <ApiTable
   rows={[
@@ -21,11 +21,11 @@ export const description = "Utilities for controlling how rows are positioned in
   ]}
 />
 
-## Examples
+## Ví dụ
 
 ### Start
 
-Use `content-start` to pack rows in a container against the start of the cross axis:
+Sử dụng `content-start` để đóng gói các hàng trong một container về phía bắt đầu của trục chéo (cross axis):
 
 <Figure>
 
@@ -59,7 +59,7 @@ Use `content-start` to pack rows in a container against the start of the cross a
 
 ### Center
 
-Use `content-center` to pack rows in a container in the center of the cross axis:
+Sử dụng `content-center` để đóng gói các hàng trong một container ở giữa trục chéo:
 
 <Figure>
 
@@ -93,7 +93,7 @@ Use `content-center` to pack rows in a container in the center of the cross axis
 
 ### End
 
-Use `content-end` to pack rows in a container against the end of the cross axis:
+Sử dụng `content-end` để đóng gói các hàng trong một container về phía cuối của trục chéo:
 
 <Figure>
 
@@ -127,7 +127,7 @@ Use `content-end` to pack rows in a container against the end of the cross axis:
 
 ### Space between
 
-Use `content-between` to distribute rows in a container such that there is an equal amount of space between each line:
+Sử dụng `content-between` để phân phối các hàng trong một container sao cho có một khoảng cách bằng nhau giữa mỗi dòng:
 
 <Figure>
 
@@ -161,7 +161,7 @@ Use `content-between` to distribute rows in a container such that there is an eq
 
 ### Space around
 
-Use `content-around` to distribute rows in a container such that there is an equal amount of space around each line:
+Sử dụng `content-around` để phân phối các hàng trong một container sao cho có một khoảng cách bằng nhau xung quanh mỗi dòng:
 
 <Figure>
 
@@ -195,7 +195,7 @@ Use `content-around` to distribute rows in a container such that there is an equ
 
 ### Space evenly
 
-Use `content-evenly` to distribute rows in a container such that there is an equal amount of space around each item, but also accounting for the doubling of space you would normally see between each item when using `content-around`:
+Sử dụng `content-evenly` để phân phối các hàng trong một container sao cho có một khoảng cách bằng nhau xung quanh mỗi item, nhưng cũng tính đến việc gấp đôi khoảng cách mà bạn thường thấy giữa mỗi item khi sử dụng `content-around`:
 
 <Figure>
 
@@ -229,7 +229,7 @@ Use `content-evenly` to distribute rows in a container such that there is an equ
 
 ### Stretch
 
-Use `content-stretch` to allow content items to fill the available space along the container’s cross axis:
+Sử dụng `content-stretch` để cho phép các content item lấp đầy không gian có sẵn dọc theo trục chéo của container:
 
 <Figure>
 
@@ -263,7 +263,7 @@ Use `content-stretch` to allow content items to fill the available space along t
 
 ### Normal
 
-Use `content-normal` to pack content items in their default position as if no `align-content` value was set:
+Sử dụng `content-normal` để đóng gói các content item ở vị trí mặc định của chúng như thể không có giá trị `align-content` nào được thiết lập:
 
 <Figure>
 
@@ -295,6 +295,6 @@ Use `content-normal` to pack content items in their default position as if no `a
 
 </Figure>
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="align-content" defaultClass="grid content-start" featuredClass="content-around" />

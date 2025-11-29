@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "transition-delay";
-export const description = "Utilities for controlling the delay of CSS transitions.";
+export const description = "Các tiện ích để kiểm soát độ trễ của CSS transition.";
 
 <ApiTable
   rows={[
@@ -14,13 +14,13 @@ export const description = "Utilities for controlling the delay of CSS transitio
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `delay-150` and `delay-700` to set the transition delay of an element in milliseconds:
+Sử dụng các tiện ích như `delay-150` và `delay-700` để đặt độ trễ transition của một phần tử theo mili giây:
 
-<Figure hint="Hover each button to see the expected behavior">
+<Figure hint="Di chuột qua mỗi nút để thấy hành vi mong đợi">
 
 <Example>
   {
@@ -56,9 +56,9 @@ Use utilities like `delay-150` and `delay-700` to set the transition delay of an
 
 </Figure>
 
-### Supporting reduced motion
+### Hỗ trợ reduced motion
 
-For situations where the user has specified that they prefer reduced motion, you can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants:
+Trong các tình huống người dùng chỉ định rằng họ muốn giảm chuyển động, bạn có thể áp dụng có điều kiện animation và transition bằng cách sử dụng các variant `motion-safe` và `motion-reduce`:
 
 ```html
 <!-- [!code classes:motion-reduce:delay-0] -->
@@ -67,7 +67,7 @@ For situations where the user has specified that they prefer reduced motion, you
 </button>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue element="button" utility="delay" value="1s,250ms" name="transition delay" />
 

@@ -5,7 +5,7 @@ import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 import dedent from "dedent";
 
 export const title = "transition-property";
-export const description = "Utilities for controlling which CSS properties transition.";
+export const description = "Các tiện ích để kiểm soát các thuộc tính CSS nào sẽ chuyển đổi (transition).";
 
 <ApiTable
   rows={[
@@ -77,11 +77,11 @@ export const description = "Utilities for controlling which CSS properties trans
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `transition` and `transition-colors` to specify which properties should transition when they change:
+Sử dụng các tiện ích như `transition` và `transition-colors` để chỉ định các thuộc tính nào sẽ chuyển đổi khi chúng thay đổi:
 
 <Figure hint="Hover the button to see the expected behavior">
 
@@ -105,9 +105,9 @@ Use utilities like `transition` and `transition-colors` to specify which propert
 
 </Figure>
 
-### Supporting reduced motion
+### Hỗ trợ reduced motion
 
-For situations where the user has specified that they prefer reduced motion, you can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants:
+Đối với các tình huống mà người dùng đã chỉ định rằng họ thích giảm chuyển động (reduced motion), bạn có thể áp dụng các hoạt ảnh và chuyển đổi có điều kiện bằng cách sử dụng các biến thể `motion-safe` và `motion-reduce`:
 
 ```html
 <!-- [!code classes:motion-reduce:transition-none,motion-reduce:hover:transform-none] -->
@@ -117,7 +117,7 @@ For situations where the user has specified that they prefer reduced motion, you
 </button>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue
   element="button"

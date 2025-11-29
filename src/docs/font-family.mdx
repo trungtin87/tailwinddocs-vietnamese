@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "font-family";
-export const description = "Utilities for controlling the font family of an element.";
+export const description = "Các tiện ích để kiểm soát font family của một phần tử.";
 
 <ApiTable
   rows={[
@@ -22,11 +22,11 @@ export const description = "Utilities for controlling the font family of an elem
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use utilities like `font-sans` and `font-mono` to set the font family of an element:
+Sử dụng các tiện ích như `font-sans` và `font-mono` để đặt font family của một phần tử:
 
 <Figure>
 
@@ -64,7 +64,7 @@ Use utilities like `font-sans` and `font-mono` to set the font family of an elem
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="font" name="font family" value="Open_Sans" element="p" dataType="family-name" />
 
@@ -72,7 +72,7 @@ Use utilities like `font-sans` and `font-mono` to set the font family of an elem
 
 <ResponsiveDesign property="font-family" defaultClass="font-sans" featuredClass="font-serif" element="p" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourTheme
   utility="font"
@@ -81,7 +81,7 @@ Use utilities like `font-sans` and `font-mono` to set the font family of an elem
   customValue='"Oswald", sans-serif'
 >
 
-You can also provide default `font-feature-settings` and `font-variation-settings` values for a font family:
+Bạn cũng có thể cung cấp các giá trị mặc định `font-feature-settings` và `font-variation-settings` cho một font family:
 
 ```css
 @theme {
@@ -91,7 +91,7 @@ You can also provide default `font-feature-settings` and `font-variation-setting
 }
 ```
 
-If needed, use the [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) at-rule to load custom fonts:
+Nếu cần, hãy sử dụng at-rule [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) để tải các phông chữ tùy chỉnh:
 
 ```css
 @font-face {
@@ -103,7 +103,7 @@ If needed, use the [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS
 }
 ```
 
-If you're loading a font from a service like [Google Fonts](https://fonts.google.com/), make sure to put the `@import` at the very top of your CSS file:
+Nếu bạn đang tải phông chữ từ một dịch vụ như [Google Fonts](https://fonts.google.com/), hãy đảm bảo đặt `@import` ở ngay đầu file CSS của bạn:
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); /* [!code highlight] */
@@ -114,6 +114,6 @@ If you're loading a font from a service like [Google Fonts](https://fonts.google
 }
 ```
 
-Browsers require that `@import` statements come before any other rules, so URL imports need to be above imports like `@import "tailwindcss"` which are inlined in the compiled CSS.
+Các trình duyệt yêu cầu các câu lệnh `@import` phải đứng trước bất kỳ quy tắc nào khác, vì vậy các import URL cần phải nằm trên các import như `@import "tailwindcss"`, vốn được inline trong CSS đã biên dịch.
 
 </CustomizingYourTheme>

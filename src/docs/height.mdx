@@ -6,7 +6,7 @@ import { DynamicViewportExample } from "@/components/dynamic-viewport-example.ts
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "height";
-export const description = "Utilities for setting the height of an element.";
+export const description = "Các utility để thiết lập chiều cao của một phần tử.";
 
 <ApiTable
   rows={[
@@ -47,11 +47,11 @@ export const description = "Utilities for setting the height of an element.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use `h-<number>` utilities like `h-24` and `h-64` to set an element to a fixed height based on the spacing scale:
+Sử dụng các utility `h-<number>` như `h-24` và `h-64` để thiết lập chiều cao cố định cho một phần tử dựa trên thang khoảng cách:
 
 <Figure>
 
@@ -96,9 +96,9 @@ Use `h-<number>` utilities like `h-24` and `h-64` to set an element to a fixed h
 
 </Figure>
 
-### Using a percentage
+### Sử dụng phần trăm
 
-Use `h-full` or `h-<fraction>` utilities like `h-1/2` and `h-2/5` to give an element a percentage-based height:
+Sử dụng `h-full` hoặc các utility `h-<fraction>` như `h-1/2` và `h-2/5` để thiết lập chiều cao dựa trên phần trăm cho một phần tử:
 
 <Figure>
 
@@ -150,9 +150,9 @@ Use `h-full` or `h-<fraction>` utilities like `h-1/2` and `h-2/5` to give an ele
 
 </Figure>
 
-### Matching viewport
+### Khớp với viewport
 
-Use the `h-screen` utility to make an element span the entire height of the viewport:
+Sử dụng utility `h-screen` để làm cho một phần tử trải dài toàn bộ chiều cao của viewport:
 
 ```html
 <!-- [!code classes:h-screen] -->
@@ -161,9 +161,9 @@ Use the `h-screen` utility to make an element span the entire height of the view
 </div>
 ```
 
-### Matching dynamic viewport
+### Khớp với viewport động
 
-Use the `h-dvh` utility to make an element span the entire height of the viewport, which changes as the browser UI expands or contracts:
+Sử dụng utility `h-dvh` để làm cho một phần tử trải dài toàn bộ chiều cao của viewport, thay đổi khi giao diện trình duyệt mở rộng hoặc thu nhỏ:
 
 <Figure hint="Scroll the viewport to see the viewport height change">
 
@@ -180,9 +180,9 @@ Use the `h-dvh` utility to make an element span the entire height of the viewpor
 
 </Figure>
 
-### Matching large viewport
+### Khớp với viewport lớn
 
-Use the `h-lvh` utility to set an element's height to the largest possible height of the viewport:
+Sử dụng utility `h-lvh` để thiết lập chiều cao của một phần tử thành chiều cao lớn nhất có thể của viewport:
 
 <Figure hint="Scroll the viewport to see the viewport height change">
 
@@ -199,9 +199,9 @@ Use the `h-lvh` utility to set an element's height to the largest possible heigh
 
 </Figure>
 
-### Matching small viewport
+### Khớp với viewport nhỏ
 
-Use the `h-svh` utility to set an element's height to the smallest possible height of the viewport:
+Sử dụng utility `h-svh` để thiết lập chiều cao của một phần tử thành chiều cao nhỏ nhất có thể của viewport:
 
 <Figure hint="Scroll the viewport to see the viewport height change">
 
@@ -218,9 +218,9 @@ Use the `h-svh` utility to set an element's height to the smallest possible heig
 
 </Figure>
 
-### Setting both width and height
+### Thiết lập cả chiều rộng và chiều cao
 
-Use utilities like `size-px`, `size-4`, and `size-full` to set both the width and height of an element at the same time:
+Sử dụng các utility như `size-px`, `size-4`, và `size-full` để thiết lập cả chiều rộng và chiều cao của một phần tử cùng một lúc:
 
 <Figure>
 
@@ -247,14 +247,14 @@ Use utilities like `size-px`, `size-4`, and `size-full` to set both the width an
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="h" value="32rem" name="height" variable="height" />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="height" defaultClass="h-1/2" featuredClass="h-full" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utilities={["h", "size"]} />

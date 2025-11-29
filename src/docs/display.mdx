@@ -6,7 +6,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "display";
-export const description = "Utilities for controlling the display box type of an element.";
+export const description = "Các utility để kiểm soát kiểu hộp hiển thị của một phần tử.";
 
 <ApiTable
   rows={[
@@ -61,11 +61,11 @@ export const description = "Utilities for controlling the display box type of an
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Block and Inline
+### Block và Inline
 
-Use the `inline`, `inline-block`, and `block` utilities to control the flow of text and elements:
+Sử dụng các utility `inline`, `inline-block`, và `block` để kiểm soát luồng văn bản và các phần tử:
 
 <Figure>
 
@@ -115,7 +115,7 @@ Use the `inline`, `inline-block`, and `block` utilities to control the flow of t
 
 ### Flow Root
 
-Use the `flow-root` utility to create a block-level element with its own [block formatting context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context):
+Sử dụng utility `flow-root` để tạo một phần tử cấp block với [ngữ cảnh định dạng block](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context) riêng của nó:
 
 <Figure>
 
@@ -167,7 +167,7 @@ Use the `flow-root` utility to create a block-level element with its own [block 
 
 ### Flex
 
-Use the `flex` utility to create a block-level flex container:
+Sử dụng utility `flex` để tạo một flex container cấp block:
 
 <Figure>
 
@@ -203,7 +203,7 @@ Use the `flex` utility to create a block-level flex container:
 
 ### Inline Flex
 
-Use the `inline-flex` utility to create an inline flex container that flows with text:
+Sử dụng utility `inline-flex` để tạo một inline flex container chảy cùng với văn bản:
 
 <Figure>
 
@@ -242,7 +242,7 @@ Use the `inline-flex` utility to create an inline flex container that flows with
 
 ### Grid
 
-Use the `grid` utility to create a grid container:
+Sử dụng utility `grid` để tạo một grid container:
 
 <Figure>
 
@@ -276,7 +276,7 @@ Use the `grid` utility to create a grid container:
 
 ### Inline Grid
 
-Use the `inline-grid` utility to create an inline grid container:
+Sử dụng utility `inline-grid` để tạo một inline grid container:
 
 <Figure>
 
@@ -333,7 +333,7 @@ Use the `inline-grid` utility to create an inline grid container:
 
 ### Contents
 
-Use the `contents` utility to create a "phantom" container whose children act like direct children of the parent:
+Sử dụng utility `contents` để tạo một container "ảo" mà các phần tử con của nó hoạt động như các phần tử con trực tiếp của phần tử cha:
 
 <Figure>
 
@@ -369,7 +369,7 @@ Use the `contents` utility to create a "phantom" container whose children act li
 
 ### Table
 
-Use the `table`, `table-row`, `table-cell`, `table-caption`, `table-column`, `table-column-group`, `table-header-group`, `table-row-group`, and `table-footer-group` utilities to create elements that behave like their respective table elements:
+Sử dụng các utility `table`, `table-row`, `table-cell`, `table-caption`, `table-column`, `table-column-group`, `table-header-group`, `table-row-group`, và `table-footer-group` để tạo các phần tử hoạt động giống như các phần tử table tương ứng của chúng:
 
 <Figure>
 
@@ -464,7 +464,7 @@ Use the `table`, `table-row`, `table-cell`, `table-caption`, `table-column`, `ta
 
 ### Hidden
 
-Use the `hidden` utility to remove an element from the document:
+Sử dụng utility `hidden` để loại bỏ một phần tử khỏi tài liệu:
 
 <Figure>
 
@@ -492,11 +492,11 @@ Use the `hidden` utility to remove an element from the document:
 
 </Figure>
 
-To visually hide an element but keep it in the document, use the [visibility](/docs/visibility#making-elements-invisible) property instead.
+Để ẩn trực quan một phần tử nhưng vẫn giữ nó trong tài liệu, hãy sử dụng thuộc tính [visibility](/docs/visibility#making-elements-invisible) thay thế.
 
-### Screen-reader only
+### Chỉ dành cho trình đọc màn hình
 
-Use `sr-only` to hide an element visually without hiding it from screen readers:
+Sử dụng `sr-only` để ẩn một phần tử trực quan mà không ẩn nó khỏi trình đọc màn hình:
 
 ```html
 <!-- [!code classes:sr-only] -->
@@ -506,7 +506,7 @@ Use `sr-only` to hide an element visually without hiding it from screen readers:
 </a>
 ```
 
-Use `not-sr-only` to undo `sr-only`, making an element visible to sighted users as well as screen readers:
+Sử dụng `not-sr-only` để hoàn tác `sr-only`, làm cho một phần tử hiển thị với người dùng có thị lực cũng như trình đọc màn hình:
 
 ```html
 <!-- [!code classes:sm:not-sr-only] -->
@@ -516,8 +516,8 @@ Use `not-sr-only` to undo `sr-only`, making an element visible to sighted users 
 </a>
 ```
 
-This can be useful when you want to visually hide something on small screens but show it on larger screens for example.
+Điều này có thể hữu ích khi bạn muốn ẩn trực quan một thứ gì đó trên màn hình nhỏ nhưng hiển thị nó trên màn hình lớn hơn chẳng hạn.
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="display" defaultClass="flex" featuredClass="inline-flex" />

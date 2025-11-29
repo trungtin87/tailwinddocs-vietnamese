@@ -1,17 +1,17 @@
 import { CodeExampleStack } from "@/components/code-example";
 
-export const title = "Functions and directives";
-export const description = "A reference for the custom functions and directives Tailwind exposes to your CSS.";
+export const title = "Hàm và chỉ thị";
+export const description = "Tài liệu tham khảo cho các hàm và chỉ thị tùy chỉnh mà Tailwind cung cấp cho CSS của bạn.";
 
-## Directives
+## Chỉ thị
 
-Directives are custom Tailwind-specific [at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) you can use in your CSS that offer special functionality for Tailwind CSS projects.
+Chỉ thị là các [at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) tùy chỉnh đặc thù của Tailwind mà bạn có thể sử dụng trong CSS của mình, cung cấp chức năng đặc biệt cho các dự án Tailwind CSS.
 
 <h3 id="import-directive">
   <a href="#import-directive">@import</a>
 </h3>
 
-Use the `@import` directive to inline import CSS files, including Tailwind itself:
+Sử dụng chỉ thị `@import` để import nội tuyến các file CSS, bao gồm cả chính Tailwind:
 
 ```css
 /* [!code filename:CSS] */
@@ -22,7 +22,7 @@ Use the `@import` directive to inline import CSS files, including Tailwind itsel
   <a href="#theme-directive">@theme</a>
 </h3>
 
-Use the `@theme` directive to define your project's custom design tokens, like fonts, colors, and breakpoints:
+Sử dụng chỉ thị `@theme` để định nghĩa các token thiết kế tùy chỉnh cho dự án của bạn, như font chữ, màu sắc và breakpoint:
 
 ```css
 /* [!code filename:CSS] */
@@ -45,26 +45,26 @@ Use the `@theme` directive to define your project's custom design tokens, like f
 }
 ```
 
-Learn more about customizing your theme in the [theme variables documentation](/docs/theme).
+Tìm hiểu thêm về cách tùy chỉnh theme của bạn trong [tài liệu biến theme](/docs/theme).
 
 <h3 id="source-directive">
   <a href="#source-directive">@source</a>
 </h3>
 
-Use the `@source` directive to explicitly specify source files that aren't picked up by Tailwind's automatic content detection:
+Sử dụng chỉ thị `@source` để chỉ định rõ ràng các file nguồn mà tính năng tự động phát hiện nội dung của Tailwind không nhận diện được:
 
 ```css
 /* [!code filename:CSS] */
 @source "../node_modules/@my-company/ui-lib";
 ```
 
-Learn more about automatic content detection in the [detecting classes in source files documentation](/docs/detecting-classes-in-source-files).
+Tìm hiểu thêm về tự động phát hiện nội dung trong [tài liệu phát hiện class trong file nguồn](/docs/detecting-classes-in-source-files).
 
 <h3 id="utility-directive">
   <a href="#utility-directive">@utility</a>
 </h3>
 
-Use the `@utility` directive to add custom utilities to your project that work with variants like `hover`, `focus` and `lg`:
+Sử dụng chỉ thị `@utility` để thêm các tiện ích tùy chỉnh vào dự án của bạn, hoạt động với các variant như `hover`, `focus` và `lg`:
 
 ```css
 /* [!code filename:CSS] */
@@ -73,13 +73,13 @@ Use the `@utility` directive to add custom utilities to your project that work w
 }
 ```
 
-Learn more about registering custom utilities in the [adding custom utilities documentation](/docs/adding-custom-styles#adding-custom-utilities).
+Tìm hiểu thêm về đăng ký tiện ích tùy chỉnh trong [tài liệu thêm tiện ích tùy chỉnh](/docs/adding-custom-styles#adding-custom-utilities).
 
 <h3 id="variant-directive">
   <a href="#variant-directive">@variant</a>
 </h3>
 
-Use the `@variant` directive to apply a Tailwind variant to styles in your CSS:
+Sử dụng chỉ thị `@variant` để áp dụng một variant Tailwind vào các style trong CSS của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -93,28 +93,28 @@ Use the `@variant` directive to apply a Tailwind variant to styles in your CSS:
 }
 ```
 
-Learn more using variants in the [using variants documentation](/docs/adding-custom-styles#using-variants).
+Tìm hiểu thêm về sử dụng variant trong [tài liệu sử dụng variant](/docs/adding-custom-styles#using-variants).
 
 <h3 id="custom-variant-directive">
   <a href="#custom-variant-directive">@custom-variant</a>
 </h3>
 
-Use the `@custom-variant` directive to add a custom variant in your project:
+Sử dụng chỉ thị `@custom-variant` để thêm một variant tùy chỉnh vào dự án của bạn:
 
 ```css
 /* [!code filename:CSS] */
 @custom-variant theme-midnight (&:where([data-theme="midnight"] *));
 ```
 
-This lets you write utilities `theme-midnight:bg-black` and `theme-midnight:text-white`.
+Điều này cho phép bạn viết các tiện ích như `theme-midnight:bg-black` và `theme-midnight:text-white`.
 
-Learn more about adding custom variants in the [adding custom variants documentation](/docs/adding-custom-styles#adding-custom-variants).
+Tìm hiểu thêm về thêm variant tùy chỉnh trong [tài liệu thêm variant tùy chỉnh](/docs/adding-custom-styles#adding-custom-variants).
 
 <h3 id="apply-directive">
   <a href="#apply-directive">@apply</a>
 </h3>
 
-Use the `@apply` directive to inline any existing utility classes into your own custom CSS:
+Sử dụng chỉ thị `@apply` để inline bất kỳ utility class hiện có nào vào CSS tùy chỉnh của bạn:
 
 ```css
 /* [!code filename:CSS] */
@@ -134,15 +134,15 @@ Use the `@apply` directive to inline any existing utility classes into your own 
 }
 ```
 
-This is useful when you need to write custom CSS (like to override the styles in a third-party library) but still want to work with your design tokens and use the same syntax you’re used to using in your HTML.
+Điều này hữu ích khi bạn cần viết CSS tùy chỉnh (như để ghi đè style của thư viện bên thứ ba) nhưng vẫn muốn làm việc với các token thiết kế của mình và sử dụng cùng cú pháp mà bạn đã quen dùng trong HTML.
 
 <h3 id="reference-directive">
   <a href="#reference-directive">@reference</a>
 </h3>
 
-If you want to use `@apply` or `@variant` in the `<style>` block of a Vue or Svelte component, or within CSS modules, you will need to import your theme variables, custom utilities, and custom variants to make those values available in that context.
+Nếu bạn muốn sử dụng `@apply` hoặc `@variant` trong khối `<style>` của một component Vue hoặc Svelte, hoặc trong CSS modules, bạn sẽ cần import các biến theme, tiện ích tùy chỉnh và variant tùy chỉnh của mình để làm cho các giá trị đó khả dụng trong ngữ cảnh đó.
 
-To do this without duplicating any CSS in your output, use the `@reference` directive to import your main stylesheet for reference without actually including the styles:
+Để làm điều này mà không bị trùng lặp CSS trong output, hãy sử dụng chỉ thị `@reference` để import stylesheet chính của bạn để tham chiếu mà không thực sự bao gồm các style đó:
 
 ```html
 <!-- [!code filename:Vue] -->
@@ -160,7 +160,7 @@ To do this without duplicating any CSS in your output, use the `@reference` dire
 </style>
 ```
 
-If you’re just using the default theme with no customizations (e.g. by using things like `@theme`, `@custom-variant`, `@plugin`, etc…), you can import `tailwindcss` directly:
+Nếu bạn chỉ đang sử dụng theme mặc định mà không có tùy chỉnh nào (ví dụ: bằng cách sử dụng những thứ như `@theme`, `@custom-variant`, `@plugin`, v.v...), bạn có thể import `tailwindcss` trực tiếp:
 
 ```html
 <!-- [!code filename:Vue] -->
@@ -178,9 +178,9 @@ If you’re just using the default theme with no customizations (e.g. by using t
 </style>
 ```
 
-### Subpath Imports
+### Import đường dẫn con
 
-When using the CLI, Vite, or PostCSS the directives `@import`, `@reference`, `@plugin`, and `@config` all support [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) which work similarly to bundler and TypeScript path aliases:
+Khi sử dụng CLI, Vite, hoặc PostCSS, các chỉ thị `@import`, `@reference`, `@plugin`, và `@config` đều hỗ trợ [subpath imports](https://nodejs.org/api/packages.html#subpath-imports) hoạt động tương tự như bundler và TypeScript path aliases:
 
 ```json
 // [!code filename:package.json]
@@ -209,15 +209,15 @@ When using the CLI, Vite, or PostCSS the directives `@import`, `@reference`, `@p
 </style>
 ```
 
-## Functions
+## Hàm
 
-Tailwind provides the following build-time functions to make working with colors and the spacing scale easier.
+Tailwind cung cấp các hàm build-time sau để làm việc với màu sắc và thang đo khoảng cách dễ dàng hơn.
 
 <h3 id="alpha-function">
   <a href="#alpha-function">--alpha()</a>
 </h3>
 
-Use the `--alpha()` function to adjust the opacity of a color:
+Sử dụng hàm `--alpha()` để điều chỉnh độ mờ của một màu:
 
 <CodeExampleStack>
 
@@ -242,7 +242,7 @@ Use the `--alpha()` function to adjust the opacity of a color:
   <a href="#spacing-function">--spacing()</a>
 </h3>
 
-Use the `--spacing()` function to generate a spacing value based on your theme:
+Sử dụng hàm `--spacing()` để tạo ra một giá trị khoảng cách dựa trên theme của bạn:
 
 <CodeExampleStack>
 
@@ -263,7 +263,7 @@ Use the `--spacing()` function to generate a spacing value based on your theme:
 
 </CodeExampleStack>
 
-This can also be useful in arbitrary values, especially in combination with `calc()`:
+Điều này cũng có thể hữu ích trong các giá trị tùy ý, đặc biệt là khi kết hợp với `calc()`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -273,43 +273,43 @@ This can also be useful in arbitrary values, especially in combination with `cal
 </div>
 ```
 
-## Compatibility
+## Khả năng tương thích
 
-The following directives and functions exist solely for compatibility with Tailwind CSS v3.x.
+Các chỉ thị và hàm sau đây chỉ tồn tại để tương thích với Tailwind CSS v3.x.
 
-The `@config` and `@plugin` directives may be used in conjunction with `@theme`, `@utility`, and other CSS-driven features. This can be used to incrementally move over your theme, custom configuration, utilities, variants, and presets to CSS. Things defined in CSS will be merged where possible and otherwise take precedence over those defined in configs, presets, and plugins.
+Các chỉ thị `@config` và `@plugin` có thể được sử dụng kết hợp với `@theme`, `@utility`, và các tính năng hướng CSS khác. Điều này có thể được sử dụng để chuyển dần theme, cấu hình tùy chỉnh, tiện ích, variant và preset của bạn sang CSS. Những thứ được định nghĩa trong CSS sẽ được hợp nhất nếu có thể và nếu không sẽ được ưu tiên hơn những thứ được định nghĩa trong config, preset và plugin.
 
 <h3 id="config-directive">
   <a href="#config-directive">@config</a>
 </h3>
 
-Use the `@config` directive to load a legacy JavaScript-based configuration file:
+Sử dụng chỉ thị `@config` để tải một file cấu hình dựa trên JavaScript cũ:
 
 ```css
 /* [!code filename:CSS] */
 @config "../../tailwind.config.js";
 ```
 
-The `corePlugins`, `safelist`, and `separator` options from the JavaScript-based config are not supported in v4.0. To safelist utilities in v4 use [`@source inline()`](/docs/detecting-classes-in-source-files#safelisting-specific-utilities).
+Các tùy chọn `corePlugins`, `safelist`, và `separator` từ config dựa trên JavaScript không được hỗ trợ trong v4.0. Để safelist các tiện ích trong v4, hãy sử dụng [`@source inline()`](/docs/detecting-classes-in-source-files#safelisting-specific-utilities).
 
 <h3 id="plugin-directive">
   <a href="#plugin-directive">@plugin</a>
 </h3>
 
-Use the `@plugin` directive to load a legacy JavaScript-based plugin:
+Sử dụng chỉ thị `@plugin` để tải một plugin dựa trên JavaScript cũ:
 
 ```css
 /* [!code filename:CSS] */
 @plugin "@tailwindcss/typography";
 ```
 
-The `@plugin` directive accepts either a package name or a local path.
+Chỉ thị `@plugin` chấp nhận tên gói hoặc đường dẫn cục bộ.
 
 <h3 id="theme-function">
   <a href="#theme-function">theme()</a>
 </h3>
 
-Use the `theme()` function to access your Tailwind theme values using dot notation:
+Sử dụng hàm `theme()` để truy cập các giá trị theme Tailwind của bạn bằng ký hiệu dấu chấm:
 
 ```css
 /* [!code filename:CSS] */
@@ -319,4 +319,4 @@ Use the `theme()` function to access your Tailwind theme values using dot notati
 }
 ```
 
-This function is deprecated, and we recommend [using CSS theme variables](/docs/theme#using-your-theme-variables) instead.
+Hàm này đã bị phản đối, và chúng tôi khuyên bạn nên [sử dụng biến theme CSS](/docs/theme#using-your-theme-variables) thay thế.

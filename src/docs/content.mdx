@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "content";
-export const description = "Utilities for controlling the content of the before and after pseudo-elements.";
+export const description = "Các tiện ích để kiểm soát nội dung của các pseudo-element before và after.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for controlling the content of the before 
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `content-[<value>]` syntax, along with the `before` and `after` variants, to set the contents of the `::before` and `::after` pseudo-elements:
+Sử dụng cú pháp `content-[<value>]`, cùng với các biến thể `before` và `after`, để đặt nội dung của các pseudo-element `::before` và `::after`:
 
 <Figure>
 
@@ -50,9 +50,9 @@ a 5K display.</p>
 
 </Figure>
 
-### Referencing an attribute value
+### Tham chiếu giá trị thuộc tính
 
-Use the `content-[attr(<name>)]` syntax to reference a value stored in an attribute using the `attr()` CSS function:
+Sử dụng cú pháp `content-[attr(<name>)]` để tham chiếu giá trị được lưu trữ trong một thuộc tính bằng cách sử dụng hàm CSS `attr()`:
 
 <Figure>
 
@@ -74,9 +74,9 @@ Use the `content-[attr(<name>)]` syntax to reference a value stored in an attrib
 
 </Figure>
 
-### Using spaces and underscores
+### Sử dụng khoảng trắng và dấu gạch dưới
 
-Since whitespace denotes the end of a class in HTML, replace any spaces in an arbitrary value with an underscore:
+Vì khoảng trắng biểu thị sự kết thúc của một class trong HTML, hãy thay thế bất kỳ khoảng trắng nào trong giá trị tùy ý bằng dấu gạch dưới:
 
 <Figure>
 
@@ -91,7 +91,7 @@ Since whitespace denotes the end of a class in HTML, replace any spaces in an ar
 
 </Figure>
 
-If you need to include an actual underscore, you can do this by escaping it with a backslash:
+Nếu bạn cần bao gồm một dấu gạch dưới thực sự, bạn có thể làm điều này bằng cách escape nó bằng dấu gạch chéo ngược:
 
 <Figure>
 
@@ -106,16 +106,16 @@ If you need to include an actual underscore, you can do this by escaping it with
 
 </Figure>
 
-### Using a CSS variable
+### Sử dụng biến CSS
 
-Use the <code>content-{'(<custom-property>)'}</code> syntax to control the contents of the `::before` and `::after` pseudo-elements using a CSS variable:
+Sử dụng cú pháp <code>content-{'(<custom-property>)'}</code> để kiểm soát nội dung của các pseudo-element `::before` và `::after` bằng cách sử dụng biến CSS:
 
 ```html
 <!-- [!code classes:content-(--my-content)] -->
 <p class="content-(--my-content)"></p>
 ```
 
-This is just a shorthand for <code>content-{'[var(<custom-property>)]'}</code> that adds the `var()` function for you automatically.
+Đây chỉ là cách viết tắt cho <code>content-{'[var(<custom-property>)]'}</code> giúp thêm hàm `var()` cho bạn một cách tự động.
 
 ### Responsive design
 

@@ -7,7 +7,7 @@ import { Stripes } from "@/components/stripes.tsx";
 import { UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "columns";
-export const description = "Utilities for controlling the number of columns within an element.";
+export const description = "Các utility để kiểm soát số lượng cột trong một phần tử.";
 
 <ApiTable
   rows={[
@@ -31,11 +31,11 @@ export const description = "Utilities for controlling the number of columns with
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Setting by number
+### Thiết lập theo số lượng
 
-Use `columns-<number>` utilities like `columns-3` to set the number of columns that should be created for the content within an element:
+Sử dụng các utility `columns-<number>` như `columns-3` để thiết lập số lượng cột sẽ được tạo cho nội dung bên trong một phần tử:
 
 <Figure>
 
@@ -101,11 +101,11 @@ Use `columns-<number>` utilities like `columns-3` to set the number of columns t
 
 </Figure>
 
-The column width will automatically adjust to accommodate the specified number of columns.
+Độ rộng cột sẽ tự động điều chỉnh để phù hợp với số lượng cột đã chỉ định.
 
-### Setting by width
+### Thiết lập theo độ rộng
 
-Use utilities like `columns-xs` and `columns-sm` to set the ideal column width for the content within an element:
+Sử dụng các utility như `columns-xs` và `columns-sm` để thiết lập độ rộng cột lý tưởng cho nội dung bên trong một phần tử:
 
 <Figure desktopHint="Resize the example to see the expected behavior">
 
@@ -151,11 +151,11 @@ Use utilities like `columns-xs` and `columns-sm` to set the ideal column width f
 
 </Figure>
 
-When setting the column width, the number of columns automatically adjusts to ensure they don't get too narrow.
+Khi thiết lập độ rộng cột, số lượng cột sẽ tự động điều chỉnh để đảm bảo chúng không quá hẹp.
 
-### Setting the column gap
+### Thiết lập khoảng cách cột (gap)
 
-Use the `gap-<width>` utilities to specify the width between columns:
+Sử dụng các utility `gap-<width>` để chỉ định độ rộng giữa các cột:
 
 <Figure>
 
@@ -223,13 +223,13 @@ Use the `gap-<width>` utilities to specify the width between columns:
 
 </Figure>
 
-Learn more about the gap utilities in the [gap documentation](/docs/gap).
+Tìm hiểu thêm về các utility gap trong [tài liệu gap](/docs/gap).
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="columns" value="30vw" />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="columns" breakpoint="sm" featuredClass="aspect-square">
 
@@ -299,7 +299,7 @@ Learn more about the gap utilities in the [gap documentation](/docs/gap).
 
 </ResponsiveDesign>
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourTheme
   utility="columns"

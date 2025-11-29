@@ -6,7 +6,7 @@ import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "align-self";
 export const description =
-  "Utilities for controlling how an individual flex or grid item is positioned along its container's cross axis.";
+  "Các utility để kiểm soát cách một flex hoặc grid item riêng lẻ được định vị dọc theo trục chéo của container của nó.";
 
 <ApiTable
   rows={[
@@ -22,11 +22,11 @@ export const description =
   ]}
 />
 
-## Examples
+## Ví dụ
 
 ### Auto
 
-Use the `self-auto` utility to align an item based on the value of the container's `align-items` property:
+Sử dụng utility `self-auto` để căn chỉnh một item dựa trên giá trị của thuộc tính `align-items` của container:
 
 <Figure>
 
@@ -60,7 +60,7 @@ Use the `self-auto` utility to align an item based on the value of the container
 
 ### Start
 
-Use the `self-start` utility to align an item to the start of the container's cross axis, despite the container's `align-items` value:
+Sử dụng utility `self-start` để căn chỉnh một item về phía bắt đầu của trục chéo của container, bất kể giá trị `align-items` của container:
 
 <Figure>
 
@@ -94,7 +94,7 @@ Use the `self-start` utility to align an item to the start of the container's cr
 
 ### Center
 
-Use the `self-center` utility to align an item along the center of the container's cross axis, despite the container's `align-items` value:
+Sử dụng utility `self-center` để căn chỉnh một item dọc theo trung tâm của trục chéo của container, bất kể giá trị `align-items` của container:
 
 <Figure>
 
@@ -128,7 +128,7 @@ Use the `self-center` utility to align an item along the center of the container
 
 ### End
 
-Use the `self-end` utility to align an item to the end of the container's cross axis, despite the container's `align-items` value:
+Sử dụng utility `self-end` để căn chỉnh một item về phía cuối của trục chéo của container, bất kể giá trị `align-items` của container:
 
 <Figure>
 
@@ -162,7 +162,7 @@ Use the `self-end` utility to align an item to the end of the container's cross 
 
 ### Stretch
 
-Use the `self-stretch` utility to stretch an item to fill the container's cross axis, despite the container's `align-items` value:
+Sử dụng utility `self-stretch` để kéo giãn một item để lấp đầy trục chéo của container, bất kể giá trị `align-items` của container:
 
 <Figure>
 
@@ -196,7 +196,7 @@ Use the `self-stretch` utility to stretch an item to fill the container's cross 
 
 ### Baseline
 
-Use the `self-baseline` utility to align an item such that its baseline aligns with the baseline of the flex container's cross axis:
+Sử dụng utility `self-baseline` để căn chỉnh một item sao cho đường cơ sở của nó thẳng hàng với đường cơ sở của trục chéo của flex container:
 
 <Figure>
 
@@ -230,7 +230,7 @@ Use the `self-baseline` utility to align an item such that its baseline aligns w
 
 ### Last baseline
 
-Use the `self-baseline-last` utility to align an item along the container's cross axis such that its baseline aligns with the last baseline in the container:
+Sử dụng utility `self-baseline-last` để căn chỉnh một item dọc theo trục chéo của container sao cho đường cơ sở của nó thẳng hàng với đường cơ sở cuối cùng trong container:
 
 <Figure>
 
@@ -287,8 +287,8 @@ Use the `self-baseline-last` utility to align an item along the container's cros
 
 </Figure>
 
-This is useful for ensuring that text items align with each other, even if they have different heights.
+Điều này hữu ích để đảm bảo rằng các item văn bản thẳng hàng với nhau, ngay cả khi chúng có chiều cao khác nhau.
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="align-self" defaultClass="self-auto" featuredClass="self-end" />

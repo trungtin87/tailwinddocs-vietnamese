@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { UsingACustomValue, ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "z-index";
-export const description = "Utilities for controlling the stack order of an element.";
+export const description = "Các tiện ích để kiểm soát thứ tự xếp chồng của một phần tử.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for controlling the stack order of an elem
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `z-<number>` utilities like `z-10` and `z-50` to control the stack order (or three-dimensional positioning) of an element, regardless of the order it has been displayed:
+Sử dụng các tiện ích `z-<number>` như `z-10` và `z-50` để kiểm soát thứ tự xếp chồng (hoặc định vị ba chiều) của một phần tử, bất kể thứ tự nó được hiển thị:
 
 <Figure>
 
@@ -56,9 +56,9 @@ Use the `z-<number>` utilities like `z-10` and `z-50` to control the stack order
 
 </Figure>
 
-### Using negative values
+### Sử dụng giá trị âm
 
-To use a negative z-index value, prefix the class name with a dash to convert it to a negative value:
+Để sử dụng giá trị z-index âm, hãy thêm dấu gạch ngang trước tên class để chuyển đổi nó thành giá trị âm:
 
 <Figure>
 
@@ -95,7 +95,7 @@ To use a negative z-index value, prefix the class name with a dash to convert it
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="z" name="stack order" value="calc(var(--index)+1)" />
 

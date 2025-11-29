@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "text-wrap";
-export const description = "Utilities for controlling how text wraps within an element.";
+export const description = "Các tiện ích để kiểm soát cách văn bản xuống dòng trong một phần tử.";
 
 <ApiTable
   rows={[
@@ -15,11 +15,11 @@ export const description = "Utilities for controlling how text wraps within an e
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Allowing text to wrap
+### Cho phép văn bản xuống dòng
 
-Use the `text-wrap` utility to wrap overflowing text onto multiple lines at logical points in the text:
+Sử dụng tiện ích `text-wrap` để ngắt văn bản tràn xuống nhiều dòng tại các điểm hợp lý trong văn bản:
 
 <Figure>
 
@@ -45,9 +45,9 @@ Use the `text-wrap` utility to wrap overflowing text onto multiple lines at logi
 
 </Figure>
 
-### Preventing text from wrapping
+### Ngăn chặn văn bản xuống dòng
 
-Use the `text-nowrap` utility to prevent text from wrapping, allowing it to overflow if necessary:
+Sử dụng tiện ích `text-nowrap` để ngăn văn bản xuống dòng, cho phép nó tràn ra ngoài nếu cần thiết:
 
 <Figure>
 
@@ -77,9 +77,9 @@ Use the `text-nowrap` utility to prevent text from wrapping, allowing it to over
 
 </Figure>
 
-### Balanced text wrapping
+### Cân bằng văn bản xuống dòng
 
-Use the `text-balance` utility to distribute the text evenly across each line:
+Sử dụng tiện ích `text-balance` để phân phối văn bản đều trên mỗi dòng:
 
 <Figure>
 
@@ -107,11 +107,11 @@ Use the `text-balance` utility to distribute the text evenly across each line:
 
 </Figure>
 
-For performance reasons browsers limit text balancing to blocks that are ~6 lines or less, making it best suited for headings.
+Vì lý do hiệu suất, các trình duyệt giới hạn việc cân bằng văn bản trong các khối có khoảng 6 dòng trở xuống, làm cho nó phù hợp nhất cho các tiêu đề.
 
-### Pretty text wrapping
+### Xuống dòng văn bản đẹp mắt
 
-Use the `text-pretty` utility to prefer better text wrapping and layout at the expense of speed. Behavior varies across browsers but often involves approaches like preventing orphans (a single word on its own line) at the end of a text block:
+Sử dụng tiện ích `text-pretty` để ưu tiên bố cục và xuống dòng văn bản tốt hơn, chấp nhận giảm tốc độ. Hành vi thay đổi tùy theo trình duyệt nhưng thường bao gồm các phương pháp như ngăn chặn orphans (một từ đơn lẻ trên dòng riêng của nó) ở cuối khối văn bản:
 
 <Figure>
 

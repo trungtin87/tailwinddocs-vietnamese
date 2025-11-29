@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "scroll-padding";
-export const description = "Utilities for controlling an element's scroll offset within a snap container.";
+export const description = "Các tiện ích để kiểm soát scroll offset của một phần tử bên trong một snap container.";
 
 <ApiTable
   rows={[
@@ -26,13 +26,13 @@ export const description = "Utilities for controlling an element's scroll offset
   ])}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `scroll-pt-<number>`, `scroll-pr-<number>`, `scroll-pb-<number>`, and `scroll-pl-<number>` utilities like `scroll-pl-4` and `scroll-pt-6` to set the scroll offset of an element within a snap container:
+Sử dụng các tiện ích `scroll-pt-<number>`, `scroll-pr-<number>`, `scroll-pb-<number>`, và `scroll-pl-<number>` như `scroll-pl-4` và `scroll-pt-6` để thiết lập scroll offset của một phần tử bên trong một snap container:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -97,16 +97,16 @@ Use the `scroll-pt-<number>`, `scroll-pr-<number>`, `scroll-pb-<number>`, and `s
 
 </Figure>
 
-### Using logical properties
+### Sử dụng các thuộc tính logic
 
-Use the `scroll-ps-<number>` and `scroll-pe-<number>` utilities to set the `scroll-padding-inline-start` and `scroll-padding-inline-end` logical properties, which map to either the left or right side based on the text direction:
+Sử dụng các tiện ích `scroll-ps-<number>` và `scroll-pe-<number>` để thiết lập các thuộc tính logic `scroll-padding-inline-start` và `scroll-padding-inline-end`, ánh xạ tới phía bên trái hoặc bên phải dựa trên hướng văn bản:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
     <>
-      <p className="mb-4 pt-8 pl-6 text-sm font-medium">Left-to-right</p>
+      <p className="mb-4 pt-8 pl-6 text-sm font-medium">Trái sang phải</p>
       <div className="relative" dir="ltr">
         <Stripes border className="absolute start-0 top-0 bottom-10 w-6" />
         <div className="flex w-full snap-x scroll-ps-6 gap-8 overflow-x-auto pb-10">
@@ -142,7 +142,7 @@ Use the `scroll-ps-<number>` and `scroll-pe-<number>` utilities to set the `scro
           </div>
         </div>
       </div>
-      <p className="mt-4 mb-4 pl-6 text-sm font-medium">Right-to-left</p>
+      <p className="mt-4 mb-4 pl-6 text-sm font-medium">Phải sang trái</p>
       <div className="relative" dir="rtl">
         <Stripes border className="absolute start-0 top-0 bottom-10 w-6" />
         <div className="flex w-full snap-x scroll-ps-6 gap-8 overflow-x-auto pb-10">
@@ -183,8 +183,6 @@ Use the `scroll-ps-<number>` and `scroll-pe-<number>` utilities to set the `scro
 </Example>
 
 ```html
-<!-- [!code word:dir="ltr"] -->
-<!-- [!code word:dir="rtl"] -->
 <!-- [!code classes:scroll-ps-6] -->
 <div dir="ltr">
   <div class="snap-x scroll-ps-6 ...">
@@ -201,9 +199,9 @@ Use the `scroll-ps-<number>` and `scroll-pe-<number>` utilities to set the `scro
 
 </Figure>
 
-### Using negative values
+### Sử dụng giá trị âm
 
-To use a negative scroll padding value, prefix the class name with a dash to convert it to a negative value:
+Để sử dụng giá trị scroll padding âm, thêm tiền tố dấu gạch ngang vào tên class để chuyển đổi nó thành giá trị âm:
 
 ```html
 <!-- [!code classes:-scroll-ps-6] -->
@@ -212,7 +210,7 @@ To use a negative scroll padding value, prefix the class name with a dash to con
 </div>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue
   utilities={["scroll-pl", "scroll-pe"]}
@@ -221,11 +219,11 @@ To use a negative scroll padding value, prefix the class name with a dash to con
   variable="scroll-padding"
 />
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="scroll-padding" defaultClass="scroll-p-8" featuredClass="scroll-p-0" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale
   utilities={[

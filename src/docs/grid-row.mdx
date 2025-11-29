@@ -5,7 +5,7 @@ import { ResponsiveDesign, UsingACustomValue } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "grid-row";
-export const description = "Utilities for controlling how elements are sized and placed across grid rows.";
+export const description = "Các tiện ích để kiểm soát cách các phần tử được định kích thước và đặt trên các hàng grid.";
 
 <ApiTable
   rows={[
@@ -31,11 +31,11 @@ export const description = "Utilities for controlling how elements are sized and
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Spanning rows
+### Kéo dài qua các hàng
 
-Use `row-span-<number>` utilities like `row-span-2` and `row-span-4` to make an element span _n_ rows:
+Sử dụng các tiện ích `row-span-<number>` như `row-span-2` và `row-span-4` để làm cho một phần tử kéo dài qua _n_ hàng:
 
 <Figure>
 
@@ -65,9 +65,9 @@ Use `row-span-<number>` utilities like `row-span-2` and `row-span-4` to make an 
 
 </Figure>
 
-### Starting and ending lines
+### Dòng bắt đầu và kết thúc
 
-Use `row-start-<number>` or `row-end-<number>` utilities like `row-start-2` and `row-end-3` to make an element start or end at the _nth_ grid line:
+Sử dụng các tiện ích `row-start-<number>` hoặc `row-end-<number>` như `row-start-2` và `row-end-3` để làm cho một phần tử bắt đầu hoặc kết thúc tại dòng grid thứ _n_:
 
 <Figure>
 
@@ -95,9 +95,9 @@ Use `row-start-<number>` or `row-end-<number>` utilities like `row-start-2` and 
 
 </Figure>
 
-These can also be combined with the `row-span-<number>` utilities to span a specific number of rows.
+Các tiện ích này cũng có thể được kết hợp với các tiện ích `row-span-<number>` để kéo dài qua một số lượng hàng cụ thể.
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue
   utilities={["row", "row-span", "row-start", "row-end"]}

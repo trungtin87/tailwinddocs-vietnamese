@@ -3,7 +3,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "pointer-events";
-export const description = "Utilities for controlling whether an element responds to pointer events.";
+export const description = "Các tiện ích để kiểm soát xem một phần tử có phản hồi các sự kiện con trỏ hay không.";
 
 <ApiTable
   rows={[
@@ -12,13 +12,13 @@ export const description = "Utilities for controlling whether an element respond
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Ignoring pointer events
+### Bỏ qua các sự kiện con trỏ
 
-Use the `pointer-events-none` utility to make an element ignore pointer events, like `:hover` and `click` events:
+Sử dụng tiện ích `pointer-events-none` để làm cho một phần tử bỏ qua các sự kiện con trỏ, như sự kiện `:hover` và `click`:
 
-<Figure hint="Click the search icons to see the expected behavior">
+<Figure hint="Nhấp vào các biểu tượng tìm kiếm để thấy hành vi mong đợi">
 
 <Example>
   {
@@ -88,11 +88,11 @@ Use the `pointer-events-none` utility to make an element ignore pointer events, 
 
 </Figure>
 
-The pointer events will still trigger on child elements and pass-through to elements that are "beneath" the target.
+Các sự kiện con trỏ vẫn sẽ kích hoạt trên các phần tử con và đi qua các phần tử nằm "bên dưới" mục tiêu.
 
-### Restoring pointer events
+### Khôi phục các sự kiện con trỏ
 
-Use the `pointer-events-auto` utility to revert to the default browser behavior for pointer events:
+Sử dụng tiện ích `pointer-events-auto` để quay lại hành vi trình duyệt mặc định cho các sự kiện con trỏ:
 
 ```html
 <div class="pointer-events-none md:pointer-events-auto ...">

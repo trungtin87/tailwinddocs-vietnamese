@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "scroll-snap-type";
-export const description = "Utilities for controlling how strictly snap points are enforced in a snap container.";
+export const description = "Các tiện ích để kiểm soát mức độ nghiêm ngặt của các điểm snap trong một snap container.";
 
 <ApiTable
   rows={[
@@ -17,13 +17,13 @@ export const description = "Utilities for controlling how strictly snap points a
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Horizontal scroll snapping
+### Scroll snapping theo chiều ngang
 
-Use the `snap-x` utility to enable horizontal scroll snapping within an element:
+Sử dụng tiện ích `snap-x` để kích hoạt scroll snapping theo chiều ngang bên trong một phần tử:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -108,13 +108,13 @@ Use the `snap-x` utility to enable horizontal scroll snapping within an element:
 
 </Figure>
 
-For scroll snapping to work, you need to also set the [scroll snap alignment](/docs/scroll-snap-align) on the children.
+Để scroll snapping hoạt động, bạn cũng cần thiết lập [căn chỉnh scroll snap](/docs/scroll-snap-align) trên các phần tử con.
 
-### Mandatory scroll snapping
+### Scroll snapping bắt buộc
 
-Use the `snap-mandatory` utility to force a snap container to always come to rest on a snap point:
+Sử dụng tiện ích `snap-mandatory` để buộc một snap container luôn dừng lại tại một điểm snap:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -199,11 +199,11 @@ Use the `snap-mandatory` utility to force a snap container to always come to res
 
 </Figure>
 
-### Proximity scroll snapping
+### Scroll snapping lân cận
 
-Use the `snap-proximity` utility to make a snap container come to rest on snap points that are close in proximity:
+Sử dụng tiện ích `snap-proximity` để làm cho một snap container dừng lại tại các điểm snap nằm gần đó:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -279,6 +279,6 @@ Use the `snap-proximity` utility to make a snap container come to rest on snap p
 
 </Figure>
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="scroll-snap-type" defaultClass="snap-none" featuredClass="snap-x" />

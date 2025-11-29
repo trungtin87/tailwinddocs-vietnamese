@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "word-break";
-export const description = "Utilities for controlling word breaks in an element.";
+export const description = "Các tiện ích để kiểm soát việc ngắt từ trong một phần tử.";
 
 <ApiTable
   rows={[
@@ -14,11 +14,11 @@ export const description = "Utilities for controlling word breaks in an element.
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Normal
+### Bình thường
 
-Use the `break-normal` utility to only add line breaks at normal word break points:
+Sử dụng tiện ích `break-normal` để chỉ thêm ngắt dòng tại các điểm ngắt từ bình thường:
 
 <Figure>
 
@@ -40,9 +40,9 @@ Use the `break-normal` utility to only add line breaks at normal word break poin
 
 </Figure>
 
-### Break All
+### Ngắt tất cả
 
-Use the `break-all` utility to add line breaks whenever necessary, without trying to preserve whole words:
+Sử dụng tiện ích `break-all` để thêm ngắt dòng bất cứ khi nào cần thiết, mà không cố bảo toàn từ nguyên vẹn:
 
 <Figure>
 
@@ -64,9 +64,9 @@ Use the `break-all` utility to add line breaks whenever necessary, without tryin
 
 </Figure>
 
-### Break Keep
+### Giữ nguyên
 
-Use the `break-keep` utility to prevent line breaks from being applied to Chinese/Japanese/Korean (CJK) text:
+Sử dụng tiện ích `break-keep` để ngăn chặn ngắt dòng khỏi việc được áp dụng cho văn bản Tiếng Trung/Nhật/Hàn (CJK):
 
 <Figure>
 
@@ -87,7 +87,7 @@ Use the `break-keep` utility to prevent line breaks from being applied to Chines
 
 </Figure>
 
-For non-CJK text the `break-keep` utility has the same behavior as the `break-normal` utility.
+Đối với văn bản không phải CJK, tiện ích `break-keep` có hành vi giống như tiện ích `break-normal`.
 
 ### Responsive design
 

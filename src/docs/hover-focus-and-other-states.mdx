@@ -5,20 +5,20 @@ import { Figure } from "@/components/figure.tsx";
 import { Iframe } from "@/components/iframe.tsx";
 import { TipGood, TipBad, TipInfo } from "@/components/tips";
 
-export const title = "Hover, focus, and other states";
-export const description = "Using utilities to style elements on hover, focus, and more.";
+export const title = "Hover, focus và các trạng thái khác";
+export const description = "Sử dụng các utility để tạo kiểu cho các phần tử khi hover, focus và nhiều hơn nữa.";
 
-Every utility class in Tailwind can be applied _conditionally_ by adding a variant to the beginning of the class name that describes the condition you want to target.
+Mọi utility class trong Tailwind đều có thể được áp dụng _có điều kiện_ bằng cách thêm một biến thể vào đầu tên class để mô tả điều kiện bạn muốn nhắm đến.
 
-For example, to apply the `bg-sky-700` class on hover, use the `hover:bg-sky-700` class:
+Ví dụ, để áp dụng class `bg-sky-700` khi hover, hãy sử dụng class `hover:bg-sky-700`:
 
-<Figure hint="Hover over this button to see the background color change">
+<Figure hint="Di chuột qua nút này để xem màu nền thay đổi">
 
 <Example>
   {
     <div className="grid place-items-center">
       <button className="rounded-full bg-sky-500 px-5 py-2 text-sm leading-5 font-semibold text-white hover:bg-sky-700">
-        Save changes
+        Lưu thay đổi
       </button>
     </div>
   }
@@ -26,17 +26,17 @@ For example, to apply the `bg-sky-700` class on hover, use the `hover:bg-sky-700
 
 ```html
 <!-- [!code classes:hover:bg-sky-700] -->
-<button class="bg-sky-500 hover:bg-sky-700 ...">Save changes</button>
+<button class="bg-sky-500 hover:bg-sky-700 ...">Lưu thay đổi</button>
 ```
 
 </Figure>
 
 <details className="mb-10 rounded-xl border border-gray-200 px-6 py-3 prose open:pb-5 dark:prose-dark dark:border-gray-800">
-<summary className="font-medium cursor-default select-none text-gray-900 dark:text-gray-200">How does this compare to traditional CSS?</summary>
+<summary className="font-medium cursor-default select-none text-gray-900 dark:text-gray-200">Điều này so sánh như thế nào với CSS truyền thống?</summary>
 
-When writing CSS the traditional way, a single class name would do different things based on the current state:
+Khi viết CSS theo cách truyền thống, một tên class duy nhất sẽ làm những việc khác nhau dựa trên trạng thái hiện tại:
 
-<TipBad>{<>Traditionally the same class name applies different styles on hover</>}</TipBad>
+<TipBad>{<>Theo cách truyền thống, cùng một tên class áp dụng các kiểu khác nhau khi hover</>}</TipBad>
 
 ```css
 .btn-primary {
@@ -48,9 +48,9 @@ When writing CSS the traditional way, a single class name would do different thi
 }
 ```
 
-In Tailwind, rather than adding the styles for a hover state to an existing class, you add another class to the element that _only_ does something on hover:
+Trong Tailwind, thay vì thêm các kiểu cho trạng thái hover vào một class hiện có, bạn thêm một class khác vào phần tử mà _chỉ_ làm điều gì đó khi hover:
 
-<TipGood>{<>In Tailwind, separate classes are used for the default state and the hover state</>}</TipGood>
+<TipGood>{<>Trong Tailwind, các class riêng biệt được sử dụng cho trạng thái mặc định và trạng thái hover</>}</TipGood>
 
 ```css
 .bg-sky-500 {
@@ -62,36 +62,36 @@ In Tailwind, rather than adding the styles for a hover state to an existing clas
 }
 ```
 
-Notice how `hover:bg-sky-700` _only_ defines styles for the `:hover` state? It does nothing by default, but as soon as you hover over an element with that class, the background color will change to `sky-700`.
+Lưu ý cách `hover:bg-sky-700` _chỉ_ định nghĩa các kiểu cho trạng thái `:hover`? Nó không làm gì theo mặc định, nhưng ngay khi bạn di chuột qua một phần tử có class đó, màu nền sẽ thay đổi thành `sky-700`.
 
-This is what we mean when we say a utility class can be applied _conditionally_ — by using variants you can control exactly how your design behaves in different states, without ever leaving your HTML.
+Đây là ý nghĩa khi chúng tôi nói rằng một utility class có thể được áp dụng _có điều kiện_ — bằng cách sử dụng các biến thể, bạn có thể kiểm soát chính xác cách thiết kế của mình hoạt động trong các trạng thái khác nhau, mà không cần rời khỏi HTML của bạn.
 
 </details>
 
-Tailwind includes variants for just about everything you'll ever need, including:
+Tailwind bao gồm các biến thể cho hầu hết mọi thứ bạn cần, bao gồm:
 
-- [Pseudo-classes](#pseudo-classes), like `:hover`, `:focus`, `:first-child`, and `:required`
-- [Pseudo-elements](#pseudo-elements), like `::before`, `::after`, `::placeholder`, and `::selection`
-- [Media and feature queries](#media-and-feature-queries), like responsive breakpoints, dark mode, and `prefers-reduced-motion`
-- [Attribute selectors](#attribute-selectors), like `[dir="rtl"]` and `[open]`
-- [Child selectors](#child-selectors), like `& > *` and `& *`
+- [Pseudo-classes](#pseudo-classes), như `:hover`, `:focus`, `:first-child`, và `:required`
+- [Pseudo-elements](#pseudo-elements), như `::before`, `::after`, `::placeholder`, và `::selection`
+- [Media và feature queries](#media-and-feature-queries), như responsive breakpoints, dark mode, và `prefers-reduced-motion`
+- [Attribute selectors](#attribute-selectors), như `[dir="rtl"]` và `[open]`
+- [Child selectors](#child-selectors), như `& > *` và `& *`
 
-These variants can even be stacked to target more specific situations, for example changing the background color in dark mode, at the medium breakpoint, on hover:
+Các biến thể này thậm chí có thể được xếp chồng để nhắm đến các tình huống cụ thể hơn, ví dụ như thay đổi màu nền ở chế độ tối, tại breakpoint medium, khi hover:
 
 ```html
 <!-- [!code classes:dark:md:hover:bg-fuchsia-600] -->
-<button class="dark:md:hover:bg-fuchsia-600 ...">Save changes</button>
+<button class="dark:md:hover:bg-fuchsia-600 ...">Lưu thay đổi</button>
 ```
 
-In this guide you'll learn about every variant available in the framework, how to use them with your own custom classes, and even how to create your own.
+Trong hướng dẫn này, bạn sẽ tìm hiểu về mọi biến thể có sẵn trong framework, cách sử dụng chúng với các class tùy chỉnh của riêng bạn, và thậm chí cách tạo biến thể của riêng bạn.
 
 ## Pseudo-classes
 
-### :hover, :focus, and :active
+### :hover, :focus, và :active
 
-Style elements on hover, focus, and active using the `hover`, `focus`, and `active` variants:
+Tạo kiểu cho các phần tử khi hover, focus, và active bằng cách sử dụng các biến thể `hover`, `focus`, và `active`:
 
-<Figure hint="Try interacting with this button to see the hover, focus, and active states">
+<Figure hint="Thử tương tác với nút này để xem các trạng thái hover, focus, và active">
 
 <Example>
   {
@@ -100,7 +100,7 @@ Style elements on hover, focus, and active using the `hover`, `focus`, and `acti
         type="button"
         className="rounded-full bg-violet-500 px-5 py-2 text-sm leading-5 font-semibold text-white hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700"
       >
-        Save changes
+        Lưu thay đổi
       </button>
     </div>
   }
@@ -110,19 +110,19 @@ Style elements on hover, focus, and active using the `hover`, `focus`, and `acti
 <!-- [!code classes:hover:bg-violet-600,focus:outline-2,focus:outline-offset-2,focus:outline-violet-500,active:bg-violet-700] -->
 <!-- prettier-ignore -->
 <button class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700 ...">
-  Save changes
+  Lưu thay đổi
 </button>
 ```
 
 </Figure>
 
-Tailwind also includes variants for other interactive states like `:visited`, `:focus-within`, `:focus-visible`, and more.
+Tailwind cũng bao gồm các biến thể cho các trạng thái tương tác khác như `:visited`, `:focus-within`, `:focus-visible`, và nhiều hơn nữa.
 
-See the [pseudo-class reference](#pseudo-class-reference) for a complete list of available pseudo-class variants.
+Xem [tham chiếu pseudo-class](#pseudo-class-reference) để biết danh sách đầy đủ các biến thể pseudo-class có sẵn.
 
-### :first, :last, :odd, and :even
+### :first, :last, :odd, và :even
 
-Style an element when it is the first-child or last-child using the `first` and `last` variants:
+Tạo kiểu cho một phần tử khi nó là first-child hoặc last-child bằng cách sử dụng các biến thể `first` và `last`:
 
 <Figure>
 
@@ -185,7 +185,7 @@ Style an element when it is the first-child or last-child using the `first` and 
 <!-- [!code classes:first:pt-0,last:pb-0] -->
 <ul role="list">
   {#each people as person}
-    <!-- Remove top/bottom padding when first/last child -->
+    <!-- Loại bỏ padding trên/dưới khi là con đầu tiên/cuối cùng -->
     <li class="flex py-4 first:pt-0 last:pb-0">
       <img class="h-10 w-10 rounded-full" src={person.imageUrl} alt="" />
       <div class="ml-3 overflow-hidden">
@@ -199,7 +199,7 @@ Style an element when it is the first-child or last-child using the `first` and 
 
 </Figure>
 
-You can also style an element when it's an odd or even child using the `odd` and `even` variants:
+Bạn cũng có thể tạo kiểu cho một phần tử khi nó là con ở vị trí lẻ hoặc chẵn bằng cách sử dụng các biến thể `odd` và `even`:
 
 <Figure>
 
@@ -214,10 +214,10 @@ You can also style an element when it's an odd or even child using the `odd` and
                 <thead className="border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950">
                   <tr>
                     <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-900 dark:text-white">
-                      Name
+                      Tên
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-900 dark:text-white">
-                      Title
+                      Chức danh
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-900 dark:text-white">
                       Email
@@ -296,7 +296,7 @@ You can also style an element when it's an odd or even child using the `odd` and
   <!-- ... -->
   <tbody>
     {#each people as person}
-      <!-- Use different background colors for odd and even rows -->
+      <!-- Sử dụng màu nền khác nhau cho các hàng lẻ và chẵn -->
       <tr class="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900/50 dark:even:bg-gray-950">
         <td>{person.name}</td>
         <td>{person.title}</td>
@@ -309,7 +309,7 @@ You can also style an element when it's an odd or even child using the `odd` and
 
 </Figure>
 
-Use the `nth-*` and `nth-last-*` variants to style children based on their position in the list:
+Sử dụng các biến thể `nth-*` và `nth-last-*` để tạo kiểu cho các con dựa trên vị trí của chúng trong danh sách:
 
 ```html
 <!-- [!code classes:nth-3:underline,nth-last-5:underline,nth-of-type-4:underline,nth-last-of-type-6:underline] -->
@@ -327,17 +327,17 @@ Use the `nth-*` and `nth-last-*` variants to style children based on their posit
 </div>
 ```
 
-You can pass any number you want to these by default, and use arbitrary values for more complex expressions like `nth-[2n+1_of_li]`.
+Bạn có thể truyền bất kỳ số nào bạn muốn vào các biến thể này theo mặc định, và sử dụng các giá trị tùy ý cho các biểu thức phức tạp hơn như `nth-[2n+1_of_li]`.
 
-Tailwind also includes variants for other structural pseudo-classes like `:only-child`, `:first-of-type`, `:empty`, and more.
+Tailwind cũng bao gồm các biến thể cho các pseudo-class cấu trúc khác như `:only-child`, `:first-of-type`, `:empty`, và nhiều hơn nữa.
 
-See the [pseudo-class reference](#pseudo-class-reference) for a complete list of available pseudo-class variants.
+Xem [tham chiếu pseudo-class](#pseudo-class-reference) để biết danh sách đầy đủ các biến thể pseudo-class có sẵn.
 
-### :required and :disabled
+### :required và :disabled
 
-Style form elements in different states using variants like `required`, `invalid`, and `disabled`:
+Tạo kiểu cho các phần tử form ở các trạng thái khác nhau bằng cách sử dụng các biến thể như `required`, `invalid`, và `disabled`:
 
-<Figure hint="Try making the email address valid to see the styles change">
+<Figure hint="Thử làm cho địa chỉ email hợp lệ để xem các kiểu thay đổi">
 
 <Example className="py-0">
   {
@@ -345,7 +345,7 @@ Style form elements in different states using variants like `required`, `invalid
       <form>
         <div>
           <label htmlFor="username" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-            Username
+            Tên người dùng
           </label>
           <div className="mt-1">
             <input
@@ -375,7 +375,7 @@ Style form elements in different states using variants like `required`, `invalid
         </div>
         <div className="mt-6">
           <label htmlFor="password" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-            Password
+            Mật khẩu
           </label>
           <div className="mt-1">
             <input
@@ -390,7 +390,7 @@ Style form elements in different states using variants like `required`, `invalid
         </div>
         <div className="mt-6 text-right">
           <button className="rounded-md bg-sky-500 px-5 py-2.5 text-sm leading-5 font-semibold text-white hover:bg-sky-700">
-            Save changes
+            Lưu thay đổi
           </button>
         </div>
       </form>
@@ -410,15 +410,24 @@ Style form elements in different states using variants like `required`, `invalid
 
 </Figure>
 
+
 Using variants for this sort of thing can reduce the amount of conditional logic in your templates, letting you use the same set of classes regardless of what state an input is in and letting the browser apply the right styles for you.
+
+Sử dụng các biến thể cho những việc như thế này có thể giảm bớt lượng logic điều kiện trong template của bạn, cho phép bạn sử dụng cùng một tập hợp các class bất kể input đang ở trạng thái nào và để trình duyệt áp dụng các kiểu phù hợp cho bạn.
 
 Tailwind also includes variants for other form states like `:read-only`, `:indeterminate`, `:checked`, and more.
 
+Tailwind cũng bao gồm các biến thể cho các trạng thái form khác như `:read-only`, `:indeterminate`, `:checked`, và nhiều hơn nữa.
+
 See the [pseudo-class reference](#pseudo-class-reference) for a complete list of available pseudo-class variants.
+
+Xem [tham chiếu pseudo-class](#pseudo-class-reference) để biết danh sách đầy đủ các biến thể pseudo-class có sẵn.
 
 ### :has()
 
 Use the `has-*` variant to style an element based on the state or content of its descendants:
+
+Sử dụng biến thể `has-*` để tạo kiểu cho một phần tử dựa trên trạng thái hoặc nội dung của các phần tử con của nó:
 
 <Figure>
 
@@ -426,7 +435,7 @@ Use the `has-*` variant to style an element based on the state or content of its
   {
     <div className="mx-auto max-w-md border-x border-x-gray-200 px-4 py-6 text-gray-700 dark:border-x-gray-800 dark:bg-gray-950/10 dark:text-gray-200">
       <fieldset>
-        <legend className="text-base font-semibold text-gray-900 dark:text-white">Payment method</legend>
+        <legend className="text-base font-semibold text-gray-900 dark:text-white">Phương thức thanh toán</legend>
         <div className="mt-4 space-y-2">
           <label
             htmlFor="apple"
@@ -472,7 +481,7 @@ Use the `has-*` variant to style an element based on the state or content of its
                 d="M16.539 3.18591C16.0742 3.01652 15.5828 2.93152 15.088 2.93491C13.488 2.93491 12.358 3.74091 12.35 4.89791C12.34 5.74791 13.153 6.22691 13.768 6.51091C14.399 6.80291 14.61 6.98691 14.608 7.24791C14.604 7.64491 14.104 7.82491 13.639 7.82491C13 7.82491 12.651 7.73591 12.114 7.51291L11.915 7.41991L11.688 8.75191C12.077 8.91391 12.778 9.05291 13.502 9.06491C15.203 9.06491 16.315 8.26391 16.328 7.03291C16.342 6.35391 15.902 5.84091 14.976 5.41691C14.413 5.14191 14.064 4.95791 14.064 4.67891C14.064 4.43191 14.363 4.16791 14.988 4.16791C15.404 4.15785 15.8174 4.23589 16.201 4.39691L16.351 4.46391L16.578 3.17691L16.539 3.18591ZM20.691 3.04291H19.441C19.052 3.04291 18.759 3.14991 18.589 3.53591L16.185 8.98191H17.886L18.226 8.08891L20.302 8.09091C20.351 8.29991 20.501 8.98191 20.501 8.98191H22.001L20.691 3.04291ZM10.049 2.99291H11.67L10.656 8.93491H9.03705L10.049 2.99091V2.99291ZM5.93405 6.26791L6.10205 7.09291L7.68605 3.04291H9.40305L6.85205 8.97391H5.13905L3.73905 3.95191C3.71637 3.8691 3.66312 3.79798 3.59005 3.75291C3.08545 3.49225 2.55079 3.29444 1.99805 3.16391L2.02005 3.03891H4.62905C4.98305 3.05291 5.26805 3.16391 5.36305 3.54191L5.93305 6.27091L5.93405 6.26791ZM18.691 6.87391L19.337 5.21191C19.329 5.22991 19.47 4.86891 19.552 4.64591L19.663 5.15891L20.038 6.87291H18.69L18.691 6.87391Z"
               />
             </svg>
-            Credit Card
+            Thẻ tín dụng
             <input
               name="payment_method"
               id="credit-card"
@@ -502,11 +511,11 @@ Use the `has-*` variant to style an element based on the state or content of its
 
 </Figure>
 
-You can use `has-*` with a pseudo-class, like `has-[:focus]`, to style an element based on the state of its descendants. You can also use element selectors, like `has-[img]` or `has-[a]`, to style an element based on the content of its descendants.
+Bạn có thể sử dụng `has-*` với một pseudo-class, như `has-[:focus]`, để tạo kiểu cho một phần tử dựa trên trạng thái của các phần tử con. Bạn cũng có thể sử dụng các element selector, như `has-[img]` hoặc `has-[a]`, để tạo kiểu cho một phần tử dựa trên nội dung của các phần tử con.
 
-#### Styling based on the descendants of a group
+#### Tạo kiểu dựa trên các phần tử con của một nhóm
 
-If you need to style an element based on the descendants of a parent element, you can mark the parent with the `group` class and use the `group-has-*` variant to style the target element:
+Nếu bạn cần tạo kiểu cho một phần tử dựa trên các phần tử con của một phần tử cha, bạn có thể đánh dấu phần tử cha bằng class `group` và sử dụng biến thể `group-has-*` để tạo kiểu cho phần tử đích:
 
 <Figure>
 
@@ -531,7 +540,7 @@ If you need to style an element based on the descendants of a parent element, yo
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
         <p className="col-start-2 text-sm">
-          Product Designer at{" "}
+          Product Designer tại{" "}
           <a href="#" className="dark;text-blue-400 text-blue-500 underline">
             planeteria.tech
           </a>
@@ -554,7 +563,7 @@ If you need to style an element based on the descendants of a parent element, yo
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
-        <p className="col-start-2 text-sm">Just happy to be here.</p>
+        <p className="col-start-2 text-sm">Chỉ vui khi được ở đây.</p>
       </div>
       <div className="group grid grid-cols-[32px_1fr_auto] items-center gap-x-4 px-4 py-4">
         <img
@@ -574,7 +583,7 @@ If you need to style an element based on the descendants of a parent element, yo
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
         <p className="col-start-2 text-sm">
-          A multidisciplinary designer, working at the intersection of art and technology. <br />
+          Một nhà thiết kế đa ngành, làm việc tại giao điểm của nghệ thuật và công nghệ. <br />
           <br />
           <a href="#" className="dark;text-blue-400 text-blue-500 underline">
             alex-reed.com
@@ -598,7 +607,7 @@ If you need to style an element based on the descendants of a parent element, yo
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
-        <p className="col-start-2 text-sm">Pushing pixels. Slinging divs.</p>
+        <p className="col-start-2 text-sm">Đẩy pixel. Quăng div.</p>
       </div>
     </div>
   }
@@ -616,9 +625,9 @@ If you need to style an element based on the descendants of a parent element, yo
 
 </Figure>
 
-#### Styling based on the descendants of a peer
+#### Tạo kiểu dựa trên các phần tử con của một peer
 
-If you need to style an element based on the descendants of a sibling element, you can mark the sibling with the `peer` class and use the `peer-has-*` variant to style the target element:
+Nếu bạn cần tạo kiểu cho một phần tử dựa trên các phần tử con của một phần tử anh em, bạn có thể đánh dấu phần tử anh em bằng class `peer` và sử dụng biến thể `peer-has-*` để tạo kiểu cho phần tử đích:
 
 <Figure>
 
@@ -626,7 +635,7 @@ If you need to style an element based on the descendants of a sibling element, y
   {
     <div className="mx-auto max-w-md border-x border-x-gray-200 px-4 py-6 dark:border-x-gray-800 dark:bg-gray-950/10">
       <fieldset className="space-y-3">
-        <legend className="text-base font-semibold text-gray-900 dark:text-white">Today</legend>
+        <legend className="text-base font-semibold text-gray-900 dark:text-white">Hôm nay</legend>
         <div className="grid grid-cols-[1fr_24px] items-center gap-6">
           <label className="peer grid grid-cols-[auto_1fr] items-center gap-3 rounded-md px-2 hover:bg-gray-100 dark:hover:bg-white/5">
             <input
@@ -635,7 +644,7 @@ If you need to style an element based on the descendants of a sibling element, y
               defaultChecked
             />
             <span className="text-gray-700 select-none peer-checked:text-gray-400 peer-checked:line-through dark:text-gray-300">
-              Create a to do list
+              Tạo danh sách việc cần làm
             </span>
           </label>
           <div className="size-[26px] rounded-md p-1 peer-has-checked:hidden hover:bg-red-50 hover:text-pink-500">
@@ -651,7 +660,7 @@ If you need to style an element based on the descendants of a sibling element, y
               className="peer size-3.5 appearance-none rounded-sm border border-gray-300 accent-pink-500 checked:appearance-auto dark:border-gray-600 dark:accent-pink-600"
             />
             <span className="text-gray-700 select-none peer-checked:text-gray-400 peer-checked:line-through dark:text-gray-300">
-              Check off first item
+              Đánh dấu mục đầu tiên
             </span>
           </label>
           <div className="size-[26px] rounded-md p-1 peer-has-checked:hidden hover:bg-red-50 hover:text-pink-500">
@@ -667,7 +676,7 @@ If you need to style an element based on the descendants of a sibling element, y
               className="peer size-3.5 appearance-none rounded-sm border border-gray-300 accent-pink-500 checked:appearance-auto dark:border-gray-600 dark:accent-pink-600"
             />
             <span className="text-gray-700 select-none peer-checked:text-gray-400 peer-checked:line-through dark:text-gray-300">
-              Investigate race condition
+              Điều tra race condition
             </span>
           </label>
           <div className="block size-[26px] rounded-md p-1 peer-has-checked:hidden hover:bg-red-50 hover:text-pink-500">
@@ -696,11 +705,11 @@ If you need to style an element based on the descendants of a sibling element, y
 
 ### :not()
 
-Use the `not-` variant to style an element when a condition is not true.
+Sử dụng biến thể `not-` để tạo kiểu cho một phần tử khi một điều kiện không đúng.
 
-It's particularly powerful when combined with other pseudo-class variants, for example combining `not-focus:` with `hover:` to only apply hover styles when an element is not focused:
+Nó đặc biệt mạnh mẽ khi kết hợp với các biến thể pseudo-class khác, ví dụ kết hợp `not-focus:` với `hover:` để chỉ áp dụng kiểu hover khi một phần tử không được focus:
 
-<Figure hint="Try focusing on the button and then hovering over it">
+<Figure hint="Thử focus vào nút và sau đó di chuột qua nó">
 
 <Example>
   {
@@ -710,7 +719,7 @@ It's particularly powerful when combined with other pseudo-class variants, for e
         className="rounded-full bg-indigo-600 px-5 py-2 text-sm leading-5 font-semibold text-white hover:not-focus:bg-indigo-700 focus:outline focus:outline-violet-300 active:bg-violet-700"
         tabIndex="0"
       >
-        Save changes
+        Lưu thay đổi
       </button>
     </div>
   }
@@ -725,7 +734,7 @@ It's particularly powerful when combined with other pseudo-class variants, for e
 
 </Figure>
 
-You can also combine the `not-` variant with media query variants like `forced-colors` or `supports` to only style an element when something about the user's environment is not true:
+Bạn cũng có thể kết hợp biến thể `not-` với các biến thể media query như `forced-colors` hoặc `supports` để chỉ tạo kiểu cho một phần tử khi một điều kiện nào đó về môi trường của người dùng không đúng:
 
 ```html
 <!-- [!code classes:not-supports-[display:grid]:flex] -->
@@ -734,11 +743,11 @@ You can also combine the `not-` variant with media query variants like `forced-c
 </div>
 ```
 
-### Styling based on parent state
+### Tạo kiểu dựa trên trạng thái cha
 
-When you need to style an element based on the state of some _parent_ element, mark the parent with the `group` class, and use `group-*` variants like `group-hover` to style the target element:
+Khi bạn cần tạo kiểu cho một phần tử dựa trên trạng thái của một phần tử _cha_ nào đó, hãy đánh dấu phần tử cha bằng class `group`, và sử dụng các biến thể `group-*` như `group-hover` để tạo kiểu cho phần tử đích:
 
-<Figure hint="Hover over the card to see both text elements change color">
+<Figure hint="Di chuột qua thẻ để xem cả hai phần tử văn bản thay đổi màu sắc">
 
 <Example>
   {
@@ -762,10 +771,10 @@ When you need to style an element based on the state of some _parent_ element, m
           />
         </svg>
         {/* This is not an h3 because we're converting h3's to links in MDX files */}
-        <div className="text-sm font-semibold text-gray-900 group-hover:text-white dark:text-white">New project</div>
+        <div className="text-sm font-semibold text-gray-900 group-hover:text-white dark:text-white">Dự án mới</div>
       </div>
       <p className="text-sm text-gray-500 group-hover:text-white dark:text-gray-400">
-        Create a new project from a variety of starting templates.
+        Tạo một dự án mới từ nhiều mẫu bắt đầu khác nhau.
       </p>
     </a>
   }
@@ -789,11 +798,11 @@ When you need to style an element based on the state of some _parent_ element, m
 
 </Figure>
 
-This pattern works with every pseudo-class variant, for example `group-focus`, `group-active`, or even `group-odd`.
+Mẫu này hoạt động với mọi biến thể pseudo-class, ví dụ như `group-focus`, `group-active`, hoặc thậm chí `group-odd`.
 
-#### Differentiating nested groups
+#### Phân biệt các nhóm lồng nhau
 
-When nesting groups, you can style something based on the state of a _specific_ parent group by giving that parent a unique group name using a `group/{name}` class, and including that name in variants using classes like `group-hover/{name}`:
+Khi lồng các group, bạn có thể tạo kiểu cho một cái gì đó dựa trên trạng thái của một nhóm cha _cụ thể_ bằng cách đặt cho nhóm cha đó một tên duy nhất sử dụng class `group/{name}`, và bao gồm tên đó trong các biến thể sử dụng các class như `group-hover/{name}`:
 
 <Figure>
 
@@ -824,7 +833,7 @@ When nesting groups, you can style something based on the state of a _specific_ 
             href="#"
             className="group/edit invisible relative flex items-center rounded-full py-1 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 transition group-hover/item:visible hover:bg-gray-200 dark:text-gray-400"
           >
-            <span className="font-semibold transition group-hover/edit:text-gray-700">Call</span>
+            <span className="font-semibold transition group-hover/edit:text-gray-700">Gọi</span>
             <svg
               className="mt-px h-5 w-5 text-gray-400 transition group-hover/edit:translate-x-0.5 group-hover/edit:text-gray-500"
               viewBox="0 0 20 20"
@@ -858,7 +867,7 @@ When nesting groups, you can style something based on the state of a _specific_ 
             href="#"
             className="group/edit invisible relative flex items-center rounded-full py-1 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 transition group-hover/item:visible hover:bg-gray-200 dark:text-gray-400"
           >
-            <span className="font-semibold transition group-hover/edit:text-gray-700">Call</span>
+            <span className="font-semibold transition group-hover/edit:text-gray-700">Gọi</span>
             <svg
               className="mt-px h-5 w-5 text-gray-400 transition group-hover/edit:translate-x-0.5 group-hover/edit:text-gray-500"
               viewBox="0 0 20 20"
@@ -892,7 +901,7 @@ When nesting groups, you can style something based on the state of a _specific_ 
             href="#"
             className="group/edit invisible relative flex items-center rounded-full py-1 pr-3 pl-4 text-sm whitespace-nowrap text-gray-500 transition group-hover/item:visible hover:bg-gray-200 dark:text-gray-400"
           >
-            <span className="font-semibold transition group-hover/edit:text-gray-700">Call</span>
+            <span className="font-semibold transition group-hover/edit:text-gray-700">Gọi</span>
             <svg
               className="mt-px h-5 w-5 text-gray-400 transition group-hover/edit:translate-x-0.5 group-hover/edit:text-gray-500"
               viewBox="0 0 20 20"
@@ -933,11 +942,11 @@ When nesting groups, you can style something based on the state of a _specific_ 
 
 </Figure>
 
-Groups can be named however you like and don’t need to be configured in any way — just name your groups directly in your markup and Tailwind will automatically generate the necessary CSS.
+Các nhóm có thể được đặt tên theo bất kỳ cách nào bạn thích và không cần phải cấu hình theo bất kỳ cách nào — chỉ cần đặt tên cho các nhóm của bạn trực tiếp trong markup và Tailwind sẽ tự động tạo ra CSS cần thiết.
 
-#### Arbitrary groups
+#### Nhóm tùy ý
 
-You can create one-off `group-*` variants on the fly by providing your own selector as an [arbitrary value](/docs/adding-custom-styles#using-arbitrary-values) between square brackets:
+Bạn có thể tạo các biến thể `group-*` dùng một lần ngay lập tức bằng cách cung cấp selector của riêng bạn dưới dạng một [giá trị tùy ý](/docs/adding-custom-styles#using-arbitrary-values) giữa các dấu ngoặc vuông:
 
 <CodeExampleGroup
   filenames={["HTML", "Generated CSS"]}
@@ -947,7 +956,7 @@ You can create one-off `group-*` variants on the fly by providing your own selec
       <!-- [!code classes:group-[.is-published]:block] -->
       <div class="group is-published">
         <div class="hidden group-[.is-published]:block">
-          Published
+          Đã xuất bản
         </div>
       </div>
     `}
@@ -963,7 +972,7 @@ You can create one-off `group-*` variants on the fly by providing your own selec
   />
 </CodeExampleGroup>
 
-For more control, you can use the `&` character to mark where `.group` should end up in the final selector relative to the selector you are passing in:
+Để kiểm soát nhiều hơn, bạn có thể sử dụng ký tự `&` để đánh dấu nơi `.group` sẽ xuất hiện trong selector cuối cùng so với selector mà bạn đang truyền vào:
 
 <CodeExampleGroup
   filenames={["HTML", "Generated CSS"]}
@@ -989,9 +998,9 @@ For more control, you can use the `&` character to mark where `.group` should en
   />
 </CodeExampleGroup>
 
-#### Implicit groups
+#### Nhóm ngầm định
 
-The `in-*` variant works similarly to `group` except you don't need to add `group` to the parent element:
+Biến thể `in-*` hoạt động tương tự như `group` ngoại trừ việc bạn không cần thêm `group` vào phần tử cha:
 
 {/* prettier-ignore */}
 ```html
@@ -1007,13 +1016,13 @@ The `in-*` variant works similarly to `group` except you don't need to add `grou
 </div>
 ```
 
-The `in-*` variant responds to state changes in any parent, so if you want more fine-grained control you'll need to use `group` instead.
+Biến thể `in-*` phản hồi các thay đổi trạng thái trong bất kỳ phần tử cha nào, vì vậy nếu bạn muốn kiểm soát chi tiết hơn, bạn sẽ cần sử dụng `group` thay thế.
 
-### Styling based on sibling state
+### Tạo kiểu dựa trên trạng thái anh em
 
-When you need to style an element based on the state of a _sibling_ element, mark the sibling with the `peer` class, and use `peer-*` variants like `peer-invalid` to style the target element:
+Khi bạn cần tạo kiểu cho một phần tử dựa trên trạng thái của một phần tử _anh em_ nào đó, hãy đánh dấu phần tử anh em bằng class `peer`, và sử dụng các biến thể `peer-*` như `peer-invalid` để tạo kiểu cho phần tử đích:
 
-<Figure hint="Try making the email address valid to see the warning disappear">
+<Figure hint="Thử làm cho địa chỉ email hợp lệ để xem cảnh báo biến mất">
 
 <Example className="py-0">
   {
@@ -1033,7 +1042,7 @@ When you need to style an element based on the state of a _sibling_ element, mar
               placeholder="you@example.com"
             />
             <p className="invisible mt-2 text-sm text-pink-600 peer-invalid:visible">
-              Please provide a valid email address.
+              Vui lòng cung cấp một địa chỉ email hợp lệ.
             </p>
           </div>
         </div>
@@ -1056,13 +1065,13 @@ When you need to style an element based on the state of a _sibling_ element, mar
 
 </Figure>
 
-This makes it possible to do all sorts of neat tricks, like [floating labels](https://www.youtube.com/watch?v=nJzKi6oIvBA) for example without any JS.
+Điều này giúp bạn có thể thực hiện đủ loại thủ thuật hay ho, ví dụ như [floating labels](https://www.youtube.com/watch?v=nJzKi6oIvBA) mà không cần bất kỳ JS nào.
 
-This pattern works with every pseudo-class variant, for example `peer-focus`, `peer-required`, and `peer-disabled`.
+Mẫu này hoạt động với mọi biến thể pseudo-class, ví dụ như `peer-focus`, `peer-required`, và `peer-disabled`.
 
-It's important to note that the `peer` marker can only be used on _previous_ siblings because of how the [subsequent-sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator) works in CSS:
+Điều quan trọng cần lưu ý là marker `peer` chỉ có thể được sử dụng trên các phần tử anh em _trước đó_ do cách hoạt động của [subsequent-sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator) trong CSS:
 
-<TipBad>{<>Won't work, only previous siblings can be marked as peers</>}</TipBad>
+<TipBad>{<>Sẽ không hoạt động, chỉ các phần tử anh em trước đó mới có thể được đánh dấu là peer</>}</TipBad>
 
 ```html
 <!-- [!code classes:peer-invalid:text-red-500] -->
@@ -1073,9 +1082,9 @@ It's important to note that the `peer` marker can only be used on _previous_ sib
 </label>
 ```
 
-#### Differentiating peers
+#### Phân biệt các peer
 
-When using multiple peers, you can style something on the state of a _specific_ peer by giving that peer a unique name using a `peer/{name}` class, and including that name in variants using classes like `peer-checked/{name}`:
+Khi sử dụng nhiều peer, bạn có thể tạo kiểu cho một cái gì đó dựa trên trạng thái của một peer _cụ thể_ bằng cách đặt cho peer đó một tên duy nhất sử dụng class `peer/{name}`, và bao gồm tên đó trong các biến thể sử dụng các class như `peer-checked/{name}`:
 
 <Figure>
 
@@ -1084,7 +1093,7 @@ When using multiple peers, you can style something on the state of a _specific_ 
     <div className="px-4">
       <fieldset className="mx-auto max-w-md border-x border-x-gray-200 p-8 text-sm text-gray-700 dark:border-x-gray-800 dark:bg-gray-950/10 dark:text-gray-100">
         <div className="mb-6 border-b border-gray-200 pb-2 text-base font-semibold dark:border-gray-800">
-          Published status
+          Trạng thái xuất bản
         </div>
         <input
           id="draft"
@@ -1094,7 +1103,7 @@ When using multiple peers, you can style something on the state of a _specific_ 
           defaultChecked
         />
         <label className="font-medium peer-checked/draft:text-sky-500" htmlFor="draft">
-          Draft
+          Bản nháp
         </label>
         <input
           id="published"
@@ -1103,13 +1112,13 @@ When using multiple peers, you can style something on the state of a _specific_ 
           name="status"
         />
         <label className="font-medium peer-checked/published:text-sky-500" htmlFor="published">
-          Published
+          Đã xuất bản
         </label>
         <div className="mt-4 hidden text-gray-500 peer-checked/draft:block dark:text-gray-400">
-          Drafts are only visible to administrators.
+          Bản nháp chỉ hiển thị cho quản trị viên.
         </div>
         <div className="mt-4 hidden text-gray-500 peer-checked/published:block dark:text-gray-400">
-          Your post will be publicly visible on your site.
+          Bài đăng của bạn sẽ hiển thị công khai trên trang web.
         </div>
       </fieldset>
     </div>
@@ -1138,12 +1147,11 @@ When using multiple peers, you can style something on the state of a _specific_ 
 
 </Figure>
 
-Peers can be named however you like and don’t need to be configured in any way — just name your peers directly in your markup and Tailwind will automatically generate the necessary CSS.
+Các peer có thể được đặt tên theo bất kỳ cách nào bạn thích và không cần phải cấu hình theo bất kỳ cách nào — chỉ cần đặt tên cho các peer của bạn trực tiếp trong markup và Tailwind sẽ tự động tạo ra CSS cần thiết.
 
-#### Arbitrary peers
+#### Peer tùy ý
 
-You can create one-off `peer-*` variants on the fly by providing your own selector as an [arbitrary value](/docs/adding-custom-styles#using-arbitrary-values) between square brackets:
-
+Bạn có thể tạo các biến thể `peer-*` dùng một lần ngay lập tức bằng cách cung cấp selector của riêng bạn dưới dạng một [giá trị tùy ý](/docs/adding-custom-styles#using-arbitrary-values) giữa các dấu ngoặc vuông:
 <CodeExampleGroup
   filenames={["HTML", "Generated CSS"]}
 >
@@ -1153,7 +1161,7 @@ You can create one-off `peer-*` variants on the fly by providing your own select
       <form>
         <label for="email">Email:</label>
         <input id="email" name="email" type="email" class="is-dirty peer" required />
-        <div class="peer-[.is-dirty]:peer-required:block hidden">This field is required.</div>
+        <div class="peer-[.is-dirty]:peer-required:block hidden">Trường này là bắt buộc.</div>
         <!-- ... -->
       </form>
     `}
@@ -1171,7 +1179,7 @@ You can create one-off `peer-*` variants on the fly by providing your own select
   />
 </CodeExampleGroup>
 
-For more control, you can use the `&` character to mark where `.peer` should end up in the final selector relative to the selector you are passing in:
+Để kiểm soát nhiều hơn, bạn có thể sử dụng ký tự `&` để đánh dấu nơi `.peer` sẽ xuất hiện trong selector cuối cùng so với selector mà bạn đang truyền vào:
 
 <CodeExampleGroup
   filenames={["HTML", "Generated CSS"]}
@@ -1200,11 +1208,11 @@ For more control, you can use the `&` character to mark where `.peer` should end
   />
 </CodeExampleGroup>
 
-## Pseudo-elements
+## Pseudo-element
 
-### ::before and ::after
+### ::before và ::after
 
-Style the `::before` and `::after` pseudo-elements using the `before` and `after` variants:
+Tạo kiểu cho các pseudo-element `::before` và `::after` bằng cách sử dụng các biến thể `before` và `after`:
 
 <Figure>
 
@@ -1241,7 +1249,7 @@ Style the `::before` and `::after` pseudo-elements using the `before` and `after
 
 </Figure>
 
-When using these variants, Tailwind will automatically add `content: ''` by default so you don't have to specify it unless you want a different value:
+Khi sử dụng các biến thể này, Tailwind sẽ tự động thêm `content: ''` theo mặc định để bạn không phải chỉ định nó trừ khi bạn muốn một giá trị khác:
 
 <Figure>
 
@@ -1250,11 +1258,11 @@ When using these variants, Tailwind will automatically add `content: ''` by defa
     <div className="px-6">
       <div className="mx-auto max-w-lg border-x border-x-gray-200 px-6 py-8 dark:border-x-gray-800 dark:bg-gray-950/10">
         <blockquote className="text-center text-2xl font-semibold text-gray-900 italic dark:text-white">
-          When you look{" "}
+          Khi bạn trông{" "}
           <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">
-            <span className="relative text-white dark:text-gray-950">annoyed</span>
+            <span className="relative text-white dark:text-gray-950">khó chịu</span>
           </span>{" "}
-          all the time, people think that you're busy.
+          mọi lúc, mọi người nghĩ rằng bạn đang bận rộn.
         </blockquote>
       </div>
     </div>
@@ -1278,9 +1286,9 @@ When using these variants, Tailwind will automatically add `content: ''` by defa
 
 </Figure>
 
-It's worth noting that you don't really need `::before` and `::after` pseudo-elements for most things in Tailwind projects — it's usually simpler to just use a real HTML element.
+Cần lưu ý rằng bạn thực sự không cần các pseudo-element `::before` và `::after` cho hầu hết mọi thứ trong các dự án Tailwind — thường đơn giản hơn là chỉ sử dụng một phần tử HTML thực.
 
-For example, here's the same design from above but using a `<span>` instead of the `::before` pseudo-element, which is a little easier to read and is actually less code:
+Ví dụ, đây là cùng một thiết kế từ phía trên nhưng sử dụng một `<span>` thay vì pseudo-element `::before`, dễ đọc hơn một chút và thực sự ít mã hơn:
 
 ```html
 <blockquote class="text-center text-2xl font-semibold text-gray-900 italic">
@@ -1294,11 +1302,11 @@ For example, here's the same design from above but using a `<span>` instead of t
 </blockquote>
 ```
 
-Save `before` and `after` for situations where it's important that the content of the pseudo-element is not actually in the DOM and can't be selected by the user.
+Dành `before` và `after` cho các tình huống mà điều quan trọng là nội dung của pseudo-element không thực sự nằm trong DOM và không thể được chọn bởi người dùng.
 
 ### ::placeholder
 
-Style the placeholder text of any input or textarea using the `placeholder` variant:
+Tạo kiểu cho văn bản placeholder của bất kỳ input hoặc textarea nào bằng cách sử dụng biến thể `placeholder`:
 
 <Figure>
 
@@ -1321,7 +1329,7 @@ Style the placeholder text of any input or textarea using the `placeholder` vari
             type="text"
             name="search"
             className="block w-full rounded-md border border-gray-300 py-2 pr-3 pl-9 text-gray-700 shadow-sm placeholder:text-gray-400 placeholder:italic focus:border-sky-500 focus:outline focus:outline-sky-500 sm:text-sm dark:border-gray-600 dark:text-white"
-            placeholder="Search for anything..."
+            placeholder="Tìm kiếm bất cứ thứ gì..."
           />
         </label>
       </form>
@@ -1343,7 +1351,7 @@ Style the placeholder text of any input or textarea using the `placeholder` vari
 
 ### ::file
 
-Style the button in file inputs using the `file` variant:
+Tạo kiểu cho nút trong các input file bằng cách sử dụng biến thể `file`:
 
 <Figure>
 
@@ -1360,7 +1368,7 @@ Style the button in file inputs using the `file` variant:
             />
           </div>
           <label className="block">
-            <span className="sr-only">Choose profile photo</span>
+            <span className="sr-only">Chọn ảnh hồ sơ</span>
             <input
               type="file"
               className="block w-full text-sm text-gray-500 file:mr-4 file:rounded-full file:border-0 file:bg-violet-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-violet-700 hover:file:bg-violet-100 dark:file:bg-violet-600 dark:file:text-violet-100 dark:hover:file:bg-violet-500"
@@ -1384,7 +1392,7 @@ Style the button in file inputs using the `file` variant:
 
 ### ::marker
 
-Style the counters or bullets in lists using the `marker` variant:
+Tạo kiểu cho các bộ đếm hoặc dấu đầu dòng trong danh sách bằng cách sử dụng biến thể `marker`:
 
 <Figure>
 
@@ -1392,11 +1400,11 @@ Style the counters or bullets in lists using the `marker` variant:
   {
     <div className="px-6">
       <div className="mx-auto max-w-sm border-x border-x-gray-200 px-8 py-8 dark:border-x-gray-800 dark:bg-gray-950/10">
-        <h2 className="text-base font-semibold text-gray-900 dark:text-gray-200">Ingredients</h2>
+        <h2 className="text-base font-semibold text-gray-900 dark:text-gray-200">Thành phần</h2>
         <ul role="list" className="mt-3 list-disc space-y-3 pl-5 text-gray-500 marker:text-sky-400 dark:text-gray-400">
-          <li>5 cups chopped Porcini mushrooms</li>
-          <li>1/2 cup of olive oil</li>
-          <li>3lb of celery</li>
+          <li>5 chén nấm Porcini cắt nhỏ</li>
+          <li>1/2 chén dầu ô liu</li>
+          <li>3lb cần tây</li>
         </ul>
       </div>
     </div>
@@ -1414,22 +1422,20 @@ Style the counters or bullets in lists using the `marker` variant:
 
 </Figure>
 
-We've designed the `marker` variant to be inheritable, so although you can use it directly on an `<li>` element, you can also use it on a parent to avoid repeating yourself.
+Chúng tôi đã thiết kế biến thể `marker` để có thể kế thừa, vì vậy mặc dù bạn có thể sử dụng trực tiếp trên phần tử `<li>`, bạn cũng có thể sử dụng nó trên phần tử cha để tránh lặp lại.
 
 ### ::selection
 
-Style the active text selection using the `selection` variant:
+Tạo kiểu cho lựa chọn văn bản đang hoạt động bằng cách sử dụng biến thể `selection`:
 
-<Figure hint="Try selecting some of this text with your mouse">
+<Figure hint="Thử chọn một số văn bản này bằng chuột của bạn">
 
 <Example className="py-0">
   {
     <div className="px-6">
       <div className="mx-auto max-w-lg border-x border-x-gray-200 px-6 py-8 text-gray-700 selection:bg-fuchsia-300 selection:text-fuchsia-900 dark:border-x-gray-800 dark:bg-gray-950/10 dark:text-gray-300">
         <p>
-          So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made
-          my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the
-          kinship of all living things but I tell you Jerry at that moment, I <em>was</em> a marine biologist.
+          Vì vậy, tôi bắt đầu đi xuống nước. Tôi sẽ không nói dối các chàng trai, tôi đã rất sợ hãi. Nhưng tôi vẫn tiếp tục, và khi tôi vượt qua những con sóng, một sự bình tĩnh kỳ lạ ập đến với tôi. Tôi không biết đó là sự can thiệp của thần thánh hay mối quan hệ họ hàng của tất cả các sinh vật sống nhưng tôi nói cho bạn biết Jerry, vào lúc đó, tôi <em>là</em> một nhà sinh vật học biển.
         </p>
       </div>
     </div>
@@ -1450,10 +1456,9 @@ Style the active text selection using the `selection` variant:
 
 </Figure>
 
-We've designed the `selection` variant to be inheritable, so you can add it anywhere in the tree and it will be applied to all descendant elements.
+Chúng tôi đã thiết kế biến thể `selection` để có thể kế thừa, vì vậy bạn có thể thêm nó vào bất kỳ đâu trong cây và nó sẽ được áp dụng cho tất cả các phần tử con.
 
-This makes it easy to set the selection color to match your brand across your entire site:
-
+Điều này giúp dễ dàng thiết lập màu lựa chọn để phù hợp với thương hiệu của bạn trên toàn bộ trang web:
 ```html
 <!-- [!code classes:selection:bg-pink-300] -->
 <html>
@@ -1466,9 +1471,9 @@ This makes it easy to set the selection color to match your brand across your en
 </html>
 ```
 
-### ::first-line and ::first-letter
+### ::first-line và ::first-letter
 
-Style the first line in a block of content using the `first-line` variant, and the first letter using the `first-letter` variant:
+Tạo kiểu cho dòng đầu tiên trong một khối nội dung bằng cách sử dụng biến thể `first-line`, và chữ cái đầu tiên bằng cách sử dụng biến thể `first-letter`:
 
 <Figure>
 
@@ -1478,11 +1483,11 @@ Style the first line in a block of content using the `first-line` variant, and t
       <div className="mx-auto max-w-lg border-x border-x-gray-200 px-6 py-8 font-serif text-gray-700 dark:border-x-gray-800 dark:bg-gray-950/10 dark:text-gray-200">
         <p
           className="first-letter:float-left first-letter:mr-3 first-letter:text-7xl first-letter:leading-none first-letter:font-bold first-letter:text-gray-900 first-line:tracking-widest first-line:uppercase dark:first-letter:text-white"
-          children={`Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole hell of a lot.`}
+          children={`Chà, để tôi nói cho cậu nghe điều này, chàng trai vui tính. Cậu biết cái con dấu nhỏ đó, cái có dòng chữ "Thư viện Công cộng New York" không? Chà, điều đó có thể không có ý nghĩa gì với cậu, nhưng điều đó có ý nghĩa rất lớn với tôi. Cả một vấn đề lớn đấy.`}
         />
         <p
           className="mt-6"
-          children={`Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene, flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior.`}
+          children={`Chắc chắn rồi, cứ tự nhiên, cười nếu cậu muốn. Tôi đã thấy kiểu người như cậu trước đây: Hào nhoáng, làm màu, coi thường quy tắc. Ừ, tôi biết cậu đang nghĩ gì. Tại sao gã này lại làm ầm ĩ lên về những cuốn sách thư viện cũ? Chà, để tôi gợi ý cho cậu, nhóc con.`}
         />
       </div>
     </div>
@@ -1518,7 +1523,7 @@ Style the first line in a block of content using the `first-line` variant, and t
 
 ### ::backdrop
 
-Style the backdrop of a [native `<dialog>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) using the `backdrop` variant:
+Tạo kiểu cho backdrop của một [phần tử `<dialog>` gốc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) bằng cách sử dụng biến thể `backdrop`:
 
 ```html
 <!-- [!code classes:backdrop:bg-gray-50] -->
@@ -1529,15 +1534,15 @@ Style the backdrop of a [native `<dialog>` element](https://developer.mozilla.or
 </dialog>
 ```
 
-If you're using native `<dialog>` elements in your project, you may also want to read about [styling open/closed states](/docs/hover-focus-and-other-states#openclosed-state) using the `open` variant.
+Nếu bạn đang sử dụng các phần tử `<dialog>` gốc trong dự án của mình, bạn cũng có thể muốn đọc về [tạo kiểu cho các trạng thái mở/đóng](/docs/hover-focus-and-other-states#openclosed-state) bằng cách sử dụng biến thể `open`.
 
-## Media and feature queries
+## Media và feature query
 
-### Responsive breakpoints
+### Responsive breakpoint
 
-To style an element at a specific breakpoint, use responsive variants like `md` and `lg`.
+Để tạo kiểu cho một phần tử tại một breakpoint cụ thể, hãy sử dụng các biến thể responsive như `md` và `lg`.
 
-For example, this will render a 3-column grid on mobile, a 4-column grid on medium-width screens, and a 6-column grid on large-width screens:
+Ví dụ, điều này sẽ hiển thị lưới 3 cột trên thiết bị di động, lưới 4 cột trên màn hình có chiều rộng trung bình và lưới 6 cột trên màn hình có chiều rộng lớn:
 
 ```html
 <!-- [!code classes:md:grid-cols-4,lg:grid-cols-6] -->
@@ -1546,7 +1551,7 @@ For example, this will render a 3-column grid on mobile, a 4-column grid on medi
 </div>
 ```
 
-To style an element based on the width of a parent element instead of the viewport, use variants like `@md` and `@lg`:
+Để tạo kiểu cho một phần tử dựa trên chiều rộng của một phần tử cha thay vì viewport, hãy sử dụng các biến thể như `@md` và `@lg`:
 
 ```html
 <!-- [!code classes:@container,@md:flex-row] -->
@@ -1557,13 +1562,13 @@ To style an element based on the width of a parent element instead of the viewpo
 </div>
 ```
 
-Check out the [Responsive design](/docs/responsive-design) documentation for an in-depth look at how these features work.
+Xem tài liệu [Responsive design](/docs/responsive-design) để có cái nhìn sâu sắc về cách các tính năng này hoạt động.
 
 ### prefers-color-scheme
 
-The `prefers-color-scheme` media query tells you whether the user prefers a light theme or dark theme, and is usually configured at the operating system level.
+Media query `prefers-color-scheme` cho bạn biết liệu người dùng thích giao diện sáng hay tối, và thường được cấu hình ở cấp hệ điều hành.
 
-Use utilities with no variant to target light mode, and use the `dark` variant to provide overrides for dark mode:
+Sử dụng các utility không có biến thể để nhắm mục tiêu chế độ sáng, và sử dụng biến thể `dark` để cung cấp các ghi đè cho chế độ tối:
 
 <Figure>
 
@@ -1571,7 +1576,7 @@ Use utilities with no variant to target light mode, and use the `dark` variant t
   {
     <div className="grid grid-cols-1 sm:grid-cols-2">
       <div className="p-8 pt-7">
-        <p className="mb-2 text-sm font-medium text-gray-500">Light mode</p>
+        <p className="mb-2 text-sm font-medium text-gray-500">Chế độ sáng</p>
         <div className="rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-gray-900/5">
           <div>
             <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
@@ -1592,15 +1597,14 @@ Use utilities with no variant to target light mode, and use the `dark` variant t
             </span>
           </div>
           {/* This is not an h3 because we're converting h3's to links in MDX files */}
-          <div className="mt-5 text-base font-medium tracking-tight text-gray-900">Writes upside-down</div>
+          <div className="mt-5 text-base font-medium tracking-tight text-gray-900">Viết lộn ngược</div>
           <p className="mt-2 text-sm text-gray-500">
-            The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer
-            space.
+            Bút Zero Gravity có thể được sử dụng để viết theo bất kỳ hướng nào, kể cả lộn ngược. Nó thậm chí còn hoạt động trong không gian vũ trụ.
           </p>
         </div>
       </div>
       <div className="border-l border-l-transparent bg-black/90 p-8 pt-7 dark:border-l-white/10 dark:bg-transparent">
-        <p className="mb-2 text-sm font-medium text-gray-400">Dark mode</p>
+        <p className="mb-2 text-sm font-medium text-gray-400">Chế độ tối</p>
         <div className="rounded-lg bg-gray-800 px-6 py-8 shadow-xl ring-1 ring-gray-900/5">
           <div>
             <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
@@ -1621,10 +1625,9 @@ Use utilities with no variant to target light mode, and use the `dark` variant t
             </span>
           </div>
           {/* This is not an h3 because we're converting h3's to links in MDX files */}
-          <div className="mt-5 text-base font-medium tracking-tight text-white">Writes upside-down</div>
+          <div className="mt-5 text-base font-medium tracking-tight text-white">Viết lộn ngược</div>
           <p className="mt-2 text-sm text-gray-400">
-            The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer
-            space.
+            Bút Zero Gravity có thể được sử dụng để viết theo bất kỳ hướng nào, kể cả lộn ngược. Nó thậm chí còn hoạt động trong không gian vũ trụ.
           </p>
         </div>
       </div>
@@ -1647,15 +1650,15 @@ Use utilities with no variant to target light mode, and use the `dark` variant t
 
 </Figure>
 
-Check out the [Dark Mode](/docs/dark-mode) documentation for an in-depth look at how this feature works.
+Xem tài liệu [Chế độ tối](/docs/dark-mode) để có cái nhìn sâu sắc về cách tính năng này hoạt động.
 
 ### prefers-reduced-motion
 
-The `prefers-reduced-motion` media query tells you if the user has requested that you minimize non-essential motion.
+Media query `prefers-reduced-motion` cho bạn biết liệu người dùng có yêu cầu bạn giảm thiểu chuyển động không cần thiết hay không.
 
-Use the `motion-reduce` variant to conditionally add styles when the user has requested reduced motion:
+Sử dụng biến thể `motion-reduce` để thêm các kiểu có điều kiện khi người dùng đã yêu cầu giảm chuyển động:
 
-<Figure hint="Try emulating &#96;prefers-reduced-motion: reduce&#96; in your developer tools to hide the spinner">
+<Figure hint="Thử giả lập `prefers-reduced-motion: reduce` trong công cụ dành cho nhà phát triển của bạn để ẩn spinner">
 
 <Example>
   {
@@ -1677,7 +1680,7 @@ Use the `motion-reduce` variant to conditionally add styles when the user has re
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
           ></path>
         </svg>
-        Processing...
+        Đang xử lý...
       </button>
     </div>
   }
@@ -1693,7 +1696,7 @@ Use the `motion-reduce` variant to conditionally add styles when the user has re
 
 </Figure>
 
-Tailwind also includes a `motion-safe` variant that only adds styles when the user has _not_ requested reduced motion. This can be useful when using the `motion-reduce` helper would mean having to "undo" a lot of styles:
+Tailwind cũng bao gồm một biến thể `motion-safe` chỉ thêm các kiểu khi người dùng _không_ yêu cầu giảm chuyển động. Điều này có thể hữu ích khi việc sử dụng helper `motion-reduce` có nghĩa là phải "hoàn tác" rất nhiều kiểu:
 
 ```html
 <!-- [!code classes:motion-reduce:hover:translate-y-0] -->
@@ -1711,11 +1714,11 @@ Tailwind also includes a `motion-safe` variant that only adds styles when the us
 
 ### prefers-contrast
 
-The `prefers-contrast` media query tells you if the user has requested more or less contrast.
+Media query `prefers-contrast` cho bạn biết liệu người dùng có yêu cầu độ tương phản nhiều hơn hay ít hơn hay không.
 
-Use the `contrast-more` variant to conditionally add styles when the user has requested more contrast:
+Sử dụng biến thể `contrast-more` để thêm các kiểu có điều kiện khi người dùng đã yêu cầu độ tương phản nhiều hơn:
 
-<Figure hint="Try emulating &#96;prefers-contrast: more&#96; in your developer tools to see the changes">
+<Figure hint="Thử giả lập `prefers-contrast: more` trong công cụ dành cho nhà phát triển của bạn để xem các thay đổi">
 
 <Example className="py-0">
   {
@@ -1723,7 +1726,7 @@ Use the `contrast-more` variant to conditionally add styles when the user has re
       <form>
         <div>
           <label htmlFor="contrast-example" className="block text-sm font-medium text-gray-700 dark:text-white">
-            Social Security Number
+            Số An sinh Xã hội
           </label>
           <div className="mt-1">
             <input
@@ -1734,7 +1737,7 @@ Use the `contrast-more` variant to conditionally add styles when the user has re
               placeholder="000-00-0000"
             />
             <p className="mt-2 text-sm text-gray-600 opacity-10 contrast-more:opacity-100 dark:text-gray-400">
-              We need this to steal your identity.
+              Chúng tôi cần cái này để đánh cắp danh tính của bạn.
             </p>
           </div>
         </div>
@@ -1742,249 +1745,191 @@ Use the `contrast-more` variant to conditionally add styles when the user has re
     </div>
   }
 </Example>
-
 ```html
-<!-- [!code classes:contrast-more:border-gray-400,contrast-more:placeholder-gray-500,contrast-more:opacity-100] -->
-<label class="block">
-  <span class="block text-sm font-medium text-gray-700">Social Security Number</span>
-  <input
-    class="border-gray-200 placeholder-gray-400 contrast-more:border-gray-400 contrast-more:placeholder-gray-500 ..."
-  />
-  <p class="text-gray-600 opacity-10 contrast-more:opacity-100 ...">We need this to steal your identity.</p>
-</label>
+<!-- [!code classes:contrast-more:border-gray-400] -->
+<!-- [!code classes:contrast-more:placeholder-gray-500] -->
+<!-- [!code classes:contrast-more:opacity-100] -->
+<form>
+  <label class="block">
+    <span class="block text-sm font-medium text-gray-700">Social Security Number</span>
+    <input
+      class="border-gray-200 placeholder-gray-400 contrast-more:border-gray-400 contrast-more:placeholder-gray-500 ..."
+    />
+    <p class="text-gray-600 opacity-10 contrast-more:opacity-100 ...">We need this to steal your identity.</p>
+  </label>
+</form>
 ```
 
 </Figure>
 
-Tailwind also includes a `contrast-less` variant you can use to conditionally add styles when the user has requested less contrast.
+Tailwind cũng bao gồm một biến thể `contrast-less` mà bạn có thể sử dụng để thêm các kiểu có điều kiện khi người dùng đã yêu cầu độ tương phản ít hơn.
 
 ### forced-colors
 
-The `forced-colors` media query indicates if the user is using a forced colors mode. These modes override your site's colors with a user defined palette for text, backgrounds, links and buttons.
+Media query `forced-colors` cho biết liệu người dùng có đang sử dụng chế độ màu bắt buộc hay không, điều này khá phổ biến đối với những người dùng có nhu cầu về khả năng truy cập.
 
-Use the `forced-colors` variant to conditionally add styles when the user has enabled a forced color mode:
+Sử dụng biến thể `forced-colors` để thêm các kiểu có điều kiện khi người dùng đã bật chế độ màu bắt buộc:
 
-<Figure hint="Try emulating &#96;forced-colors: active&#96; in your developer tools to see the changes">
+<Figure hint="Thử giả lập `forced-colors: active` trong công cụ dành cho nhà phát triển của bạn để xem các thay đổi">
 
-<Example className="py-0">
+<Example>
   {
-    <div className="mx-auto max-w-sm border-x border-x-gray-200 px-6 pt-6 pb-4 text-gray-900 dark:border-x-gray-800 dark:bg-gray-950/10 dark:text-white">
-      <form>
-        <legend> Choose a theme: </legend>
-        <div className="mt-4 grid grid-flow-col">
-          <label htmlFor="theme-1" className="text-sm font-medium text-gray-700 dark:text-white">
-            <div className="relative grid h-16 w-16 items-center justify-center rounded-xl border border-transparent bg-transparent text-white hover:bg-gray-50 has-checked:border-cyan-500 has-checked:bg-cyan-50 has-checked:text-cyan-50 dark:text-gray-800 dark:hover:bg-gray-800 dark:has-checked:bg-cyan-950 dark:has-checked:text-cyan-950 forced-colors:border-0">
-              <input
-                type="radio"
-                name="themes"
-                id="theme-1"
-                className="appearance-none forced-colors:appearance-auto"
-                defaultChecked
-              />
-              <p className="hidden forced-colors:block">Cyan</p>
-              <div className="absolute top-3 left-3 h-6 w-6 rounded-full bg-cyan-200 forced-colors:hidden"></div>
-              <div className="absolute right-3 bottom-3 h-6 w-6 rounded-full bg-cyan-500 ring-2 ring-current forced-colors:hidden"></div>
-            </div>
-          </label>
-          <label htmlFor="theme-2" className="text-sm font-medium text-gray-700 dark:text-white">
-            <div className="relative grid h-16 w-16 items-center justify-center rounded-xl border border-transparent bg-transparent text-white hover:bg-gray-50 has-checked:border-blue-500 has-checked:bg-blue-50 has-checked:text-blue-50 dark:text-gray-800 dark:hover:bg-gray-800 dark:has-checked:bg-blue-950 dark:has-checked:text-blue-950 forced-colors:border-0">
-              <input
-                type="radio"
-                name="themes"
-                id="theme-2"
-                className="appearance-none forced-colors:appearance-auto"
-              />
-              <p className="hidden forced-colors:block">Blue</p>
-              <div className="absolute top-3 left-3 h-6 w-6 rounded-full bg-blue-200 forced-colors:hidden"></div>
-              <div className="absolute right-3 bottom-3 h-6 w-6 rounded-full bg-blue-500 ring-2 ring-current forced-colors:hidden"></div>
-            </div>
-          </label>
-          <label htmlFor="theme-3" className="text-sm font-medium text-gray-700 dark:text-white">
-            <div className="relative grid h-16 w-16 items-center justify-center rounded-xl border border-transparent bg-transparent text-white hover:bg-gray-50 has-checked:border-indigo-500 has-checked:bg-indigo-50 has-checked:text-indigo-50 dark:text-gray-800 dark:hover:bg-gray-800 dark:has-checked:bg-indigo-950 dark:has-checked:text-indigo-950 forced-colors:border-0">
-              <input
-                type="radio"
-                name="themes"
-                id="theme-3"
-                className="appearance-none forced-colors:appearance-auto"
-              />
-              <p className="hidden forced-colors:block">Indigo</p>
-              <div className="absolute top-3 left-3 h-6 w-6 rounded-full bg-indigo-200 forced-colors:hidden"></div>
-              <div className="absolute right-3 bottom-3 h-6 w-6 rounded-full bg-indigo-500 ring-2 ring-current forced-colors:hidden"></div>
-            </div>
-          </label>
-          <label htmlFor="theme-4" className="text-sm font-medium text-gray-700 dark:text-white">
-            <div className="relative grid h-16 w-16 items-center justify-center rounded-xl border border-transparent bg-transparent text-white hover:bg-gray-50 has-checked:border-purple-500 has-checked:bg-purple-50 has-checked:text-purple-50 dark:text-gray-800 dark:hover:bg-gray-800 dark:has-checked:bg-purple-950 dark:has-checked:text-purple-950 forced-colors:border-0">
-              <input
-                type="radio"
-                name="themes"
-                id="theme-4"
-                className="appearance-none forced-colors:appearance-auto"
-              />
-              <p className="hidden forced-colors:block">Purple</p>
-              <div className="absolute top-3 left-3 h-6 w-6 rounded-full bg-purple-200 forced-colors:hidden"></div>
-              <div className="absolute right-3 bottom-3 h-6 w-6 rounded-full bg-purple-500 ring-2 ring-current forced-colors:hidden"></div>
-            </div>
-          </label>
-        </div>
-      </form>
+    <div className="flex items-center justify-center">
+      <button
+        type="button"
+        className="inline-flex items-center rounded-md bg-indigo-500 px-4 py-2 text-sm leading-6 font-semibold text-white shadow transition duration-150 ease-in-out hover:bg-indigo-400 forced-colors:block"
+      >
+        <svg
+          className="mr-2 -ml-1 h-5 w-5 forced-colors:hidden"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
+        </svg>
+        Điều chỉnh cài đặt
+      </button>
     </div>
   }
 </Example>
 
 ```html
-<!-- [!code classes:forced-colors:appearance-auto] -->
 <!-- [!code classes:forced-colors:block] -->
 <!-- [!code classes:forced-colors:hidden] -->
-<!-- [!code classes:forced-colors:hidden] -->
-<label>
-  <input type="radio" class="appearance-none forced-colors:appearance-auto" />
-  <p class="hidden forced-colors:block">Cyan</p>
-  <div class="bg-cyan-200 forced-colors:hidden ..."></div>
-  <div class="bg-cyan-500 forced-colors:hidden ..."></div>
-</label>
+<button>
+  <svg class="forced-colors:hidden ..." viewBox="0 0 20 20"><!-- ... --></svg>
+  Adjust settings
+</button>
 ```
 
 </Figure>
 
-Use the `not-forced-colors` variant to apply styles based when the user is _not_ using a forced colors mode:
-
-```html
-<!-- [!code classes:not-forced-colors:appearance-none] -->
-<div class="not-forced-colors:appearance-none ...">
-  <!-- ... -->
-</div>
-```
-
-Tailwind also includes a [forced color adjust](/docs/forced-color-adjust) utilities to opt in and out of forced colors.
+Tailwind cũng bao gồm một utility `forced-color-adjust` mà bạn có thể sử dụng để chọn không tham gia màu bắt buộc cho một phần tử cụ thể, điều này có thể hữu ích khi bạn cần sử dụng màu riêng của mình cho một cái gì đó như bộ chọn màu.
 
 ### inverted-colors
 
-Use the `inverted-colors` variant to conditionally add styles when the user has enabled an inverted color scheme:
+Media query `inverted-colors` cho bạn biết liệu người dùng có yêu cầu đảo ngược màu hay không, điều này đôi khi được sử dụng bởi những người dùng bị khiếm thị.
+
+Sử dụng biến thể `inverted-colors` để thêm các kiểu có điều kiện khi người dùng đã yêu cầu đảo ngược màu:
 
 ```html
-<!-- [!code classes:inverted-colors:shadow-none] -->
-<div class="shadow-xl inverted-colors:shadow-none ...">
+<!-- [!code classes:inverted-colors:outline] -->
+<button class="bg-black text-white inverted-colors:outline ...">
   <!-- ... -->
-</div>
+</button>
 ```
 
-### pointer and any-pointer
+### Hỗ trợ 3D Touch và con trỏ
 
-The `pointer` media query tells you whether the user has a primary pointing device, like a mouse, and the accuracy of that pointing device.
+Media query `pointer` cho bạn biết liệu người dùng đang sử dụng thiết bị trỏ có độ chính xác cao (như chuột) hay độ chính xác thấp (như ngón tay).
 
-Use the `pointer-fine` variant to target an accurate pointing device, like a mouse or trackpad, or the `pointer-coarse` variant to target a less accurate pointing device, like a touchscreen, which can be useful for providing larger click targets on touch devices:
-
-<Figure hint="Try emulating a touch device in your developer tools to see the changes">
-
-<Example>
-  {
-    <fieldset aria-label="Choose a memory option" className="mx-auto max-w-md">
-      <div className="flex items-center justify-between">
-        <div className="text-sm/6 font-medium text-gray-900 dark:text-white">RAM</div>
-        <a href="#" className="text-sm/6 font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
-          See performance specs
-        </a>
-      </div>
-      <div className="mt-4 grid grid-cols-6 gap-2 max-sm:grid-cols-3 pointer-coarse:mt-6 pointer-coarse:grid-cols-3 pointer-coarse:gap-4">
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="4 GB" className="sr-only" />
-          <span>4 GB</span>
-        </label>
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="8 GB" className="sr-only" defaultChecked />
-          <span>8 GB</span>
-        </label>
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="16 GB" className="sr-only" />
-          <span>16 GB</span>
-        </label>
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="32 GB" className="sr-only" />
-          <span>32 GB</span>
-        </label>
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="64 GB" className="sr-only" />
-          <span>64 GB</span>
-        </label>
-        <label className="flex items-center justify-center rounded-md bg-white p-2 text-sm font-semibold text-gray-900 uppercase ring-1 ring-gray-300 not-data-focus:not-has-checked:ring-inset hover:bg-gray-50 has-checked:bg-indigo-600 has-checked:text-white has-checked:ring-0 has-checked:hover:bg-indigo-500 has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-indigo-600 data-focus:ring-2 data-focus:ring-indigo-600 data-focus:ring-offset-2 data-focus:has-checked:ring-2 sm:flex-1 dark:bg-transparent dark:text-white dark:ring-white/20 dark:hover:bg-gray-950/50 pointer-coarse:p-4">
-          <input type="radio" name="memory-option" value="128 GB" className="sr-only" />
-          <span>128 GB</span>
-        </label>
-      </div>
-    </fieldset>
-  }
-</Example>
+Sử dụng các biến thể `pointer-fine` và `pointer-coarse` để thêm các kiểu có điều kiện dựa trên thiết bị trỏ của người dùng:
 
 ```html
-<!-- [!code classes:pointer-coarse:mt-6,pointer-coarse:grid-cols-3,pointer-coarse:gap-4,pointer-coarse:p-4] -->
-<fieldset aria-label="Choose a memory option">
-  <div class="flex items-center justify-between">
-    <div>RAM</div>
-    <a href="#"> See performance specs </a>
-  </div>
-  <div class="mt-4 grid grid-cols-6 gap-2 pointer-coarse:mt-6 pointer-coarse:grid-cols-3 pointer-coarse:gap-4">
-    <label class="p-2 pointer-coarse:p-4 ...">
-      <input type="radio" name="memory-option" value="4 GB" className="sr-only" />
-      <span>4 GB</span>
-    </label>
-    <!-- ... -->
-  </div>
-</fieldset>
+<!-- [!code classes:pointer-fine:hover:text-sky-500] -->
+<!-- [!code classes:pointer-coarse:p-2] -->
+<a href="#" class="pointer-coarse:p-2 pointer-fine:hover:text-sky-500">
+  <!-- ... -->
+</a>
 ```
 
-</Figure>
-
-While `pointer`only targets the primary pointing device, `any-pointer` is used to target any of the pointing devices that might be available. Use the `any-pointer-fine` and `any-pointer-coarse` variants to provide different styles if at least one connected pointing device meets the criteria.
-
-You can use `pointer-none` and `any-pointer-none` to target the absence of a pointing device.
+Tailwind cũng bao gồm các biến thể `pointer-none`, `any-pointer-fine`, `any-pointer-coarse`, và `any-pointer-none`.
 
 ### orientation
 
-Use the `portrait` and `landscape` variants to conditionally add styles when the viewport is in a specific orientation:
+Sử dụng các biến thể `portrait` và `landscape` để thêm các kiểu có điều kiện khi viewport ở một hướng cụ thể:
 
 ```html
-<!-- [!code classes:portrait:hidden,landscape:hidden] -->
+<!-- [!code classes:portrait:hidden] -->
+<!-- [!code classes:landscape:hidden] -->
 <div>
   <div class="portrait:hidden">
     <!-- ... -->
   </div>
   <div class="landscape:hidden">
-    <p>This experience is designed to be viewed in landscape. Please rotate your device to view the site.</p>
+    <!-- ... -->
   </div>
 </div>
 ```
 
 ### scripting
 
-Use the `noscript` variant to conditionally add styles based on whether the user has scripting, such as JavaScript, enabled:
+Media query `scripting` cho bạn biết liệu người dùng có bật JavaScript hay không.
+
+Sử dụng các biến thể `script` và `noscript` để thêm các kiểu có điều kiện khi JavaScript được bật hoặc tắt:
 
 ```html
-<!-- [!code classes:noscript:block] -->
+<!-- [!code classes:noscript:hidden] -->
 <div class="hidden noscript:block">
-  <p>This experience requires JavaScript to function. Please enable JavaScript in your browser settings.</p>
+  <!-- ... -->
 </div>
 ```
 
 ### print
 
-Use the `print` variant to conditionally add styles that only apply when the document is being printed:
+Sử dụng biến thể `print` để thêm các kiểu có điều kiện chỉ áp dụng khi tài liệu đang được in:
+
+<Figure>
+
+<Example className="py-0">
+  {
+    <div className="mx-auto max-w-sm border-x border-x-gray-200 bg-white px-8 py-12 dark:border-x-gray-800 dark:bg-gray-950/10">
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hóa đơn</h3>
+      <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">123 Đường Chính, Thị trấn Bất kỳ, Hoa Kỳ</p>
+      <div className="mt-6 border-t border-gray-200 dark:border-gray-800">
+        <table className="w-full text-left">
+          <thead>
+            <tr>
+              <th className="py-2 text-sm font-semibold text-gray-900 dark:text-white">Sản phẩm</th>
+              <th className="py-2 text-right text-sm font-semibold text-gray-900 dark:text-white">Giá</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="py-2 text-sm text-gray-500 dark:text-gray-400">
+                1 <span className="hidden sm:inline">x</span> Máy đánh chữ điện cổ điển
+              </td>
+              <td className="py-2 text-right text-sm text-gray-500 dark:text-gray-400">$295.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="mt-6 print:hidden">
+        <a
+          href="#"
+          className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none dark:border-gray-700 dark:bg-white/5 dark:text-gray-200 dark:hover:bg-white/10"
+        >
+          In hóa đơn
+        </a>
+      </div>
+    </div>
+  }
+</Example>
 
 ```html
 <!-- [!code classes:print:hidden] -->
-<!-- [!code classes:print:block] -->
 <div>
   <article class="print:hidden">
-    <h1>My Secret Pizza Recipe</h1>
-    <p>This recipe is a secret, and must not be shared with anyone</p>
+    <h1>Invoice</h1>
     <!-- ... -->
   </article>
-  <div class="hidden print:block">Are you seriously trying to print this? It's secret!</div>
+  <div class="hidden print:block">
+    Are you seriously printing a web page?
+  </div>
 </div>
 ```
 
+</Figure>
+
 ### @supports
 
-Use the `supports-[...]` variant to style things based on whether a certain feature is supported in the user's browser:
+At-rule `@supports` cho bạn biết liệu trình duyệt của người dùng có hỗ trợ một tính năng CSS cụ thể hay không.
+
+Sử dụng biến thể `supports-[...]` để tạo kiểu cho mọi thứ dựa trên việc một tính năng nhất định có được hỗ trợ hay không:
 
 ```html
 <!-- [!code classes:supports-[display:grid]:grid] -->
@@ -1992,212 +1937,454 @@ Use the `supports-[...]` variant to style things based on whether a certain feat
   <!-- ... -->
 </div>
 ```
-
-Under the hood the `supports-[...]` variant generates [`@supports rules`](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports) and takes anything you’d use with `@supports (...)` between the square brackets, like a property/value pair, and even expressions using `and` and `or`.
-
-For terseness, if you only need to check if a property is supported (and not a specific value), you can just specify the property name:
-
-```html
-<!-- [!code classes:supports-backdrop-filter:bg-black/25,supports-backdrop-filter:backdrop-blur] -->
-<div class="bg-black/75 supports-backdrop-filter:bg-black/25 supports-backdrop-filter:backdrop-blur ...">
-  <!-- ... -->
-</div>
-```
-
-Use the `not-supports-[...]` variant to style things based on whether a certain feature is not supported in the user's browser:
-
-```html
-<!-- [!code classes:not-supports-[display:grid]:flex] -->
-<div class="not-supports-[display:grid]:flex">
-  <!-- ... -->
-</div>
-```
-
-You can configure shortcuts for common `@supports` rules you're using in your project by creating a new variant in the `supports-*` namespace:
-
-```css
-@custom-variant supports-grid {
-  @supports (display: grid) {
-    @slot;
-  }
-}
-```
-
-You can then use these custom `supports-*` variants in your project:
-
-```html
-<!-- [!code classes:supports-grid:grid] -->
-<div class="supports-grid:grid">
-  <!-- ... -->
-</div>
-```
+Biến thể `supports-[...]` sử dụng [giá trị tùy ý](/docs/adding-custom-styles#using-arbitrary-values) ở bên dưới, nhưng bạn cũng có thể cấu hình các phím tắt của riêng mình trong file `tailwind.config.js`.
 
 ### @starting-style
 
-Use the `starting` variant to set the appearance of an element when it is first rendered in the DOM, or transitions from `display: none` to visible:
+At-rule `@starting-style` cho phép bạn định nghĩa các kiểu ban đầu của một phần tử trước khi nó được render lần đầu tiên.
 
-<Figure>
-
-<Example className="flex py-0">
-  {
-    <Iframe className="h-[340px] w-full">
-      <div className="grid h-full items-center justify-center">
-        <button
-          popoverTarget="my-popover"
-          className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
-        >
-          Check for updates
-        </button>
-        <div
-          popover="auto"
-          id="my-popover"
-          className="relative inset-y-0 mx-auto my-auto transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left opacity-0 shadow-xl transition-all [transition-behavior:allow-discrete] duration-500 sm:w-full sm:max-w-96 sm:p-6 dark:bg-gray-800 [&:is([open],:popover-open)]:opacity-100 [@starting-style]:[&:is([open],:popover-open)]:opacity-0"
-        >
-          <div>
-            <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-indigo-50 dark:bg-indigo-600/10">
-              <svg
-                className="size-5 text-indigo-400 dark:text-indigo-600"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-                data-slot="icon"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9H9Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="mt-3 text-center sm:mt-5">
-              <h3 className="text-base font-semibold text-gray-900 dark:text-white" id="modal-title">
-                Update available
-              </h3>
-              <div className="mt-2">
-                <p className="text-sm text-gray-500 dark:text-gray-200">
-                  A new software update is available: <span className="font-semibold">v2.0.4.</span>
-                  <br />
-                  Click the button below to install it.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-5">
-            <button
-              type="button"
-              className="inline-flex w-full justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:col-start-2"
-            >
-              Install
-            </button>
-          </div>
-        </div>
-      </div>
-    </Iframe>
-  }
-</Example>
+Sử dụng biến thể `starting` để thiết lập các kiểu ban đầu cho một phần tử mà bạn muốn chuyển đổi (transition) vào:
 
 ```html
-<!-- [!code classes:starting:open:opacity-0] -->
-<div>
-  <button popovertarget="my-popover">Check for updates</button>
-  <div popover id="my-popover" class="opacity-0 starting:open:opacity-0 ...">
-    <!-- ... -->
+<!-- [!code classes:starting:opacity-0] -->
+<!-- [!code classes:starting:-translate-y-2] -->
+<div class="transition-all duration-500 starting:opacity-0 starting:-translate-y-2">
+  <!-- ... -->
+</div>
+```
+
+Điều này đặc biệt hữu ích để chuyển đổi các phần tử đang được thêm vào DOM, hoặc khi chuyển đổi thuộc tính `display`.
+
+## Attribute selector
+
+### Trạng thái ARIA
+
+Sử dụng biến thể `aria-*` để tạo kiểu có điều kiện cho mọi thứ dựa trên các thuộc tính ARIA.
+
+Ví dụ, bạn có thể sử dụng biến thể `aria-checked` để áp dụng các kiểu khi thuộc tính `aria-checked="true"` hiện diện:
+
+```html
+<!-- [!code classes:aria-checked:bg-sky-700] -->
+<!-- [!code classes:aria-checked:text-white] -->
+<div aria-checked="true" class="bg-gray-600 aria-checked:bg-sky-700 aria-checked:text-white">
+  <!-- ... -->
+</div>
+```
+
+Tailwind bao gồm các biến thể cho tất cả các thuộc tính ARIA boolean phổ biến nhất theo mặc định:
+
+| Variant | CSS |
+| --- | --- |
+| `aria-busy` | `&[aria-busy="true"]` |
+| `aria-checked` | `&[aria-checked="true"]` |
+| `aria-disabled` | `&[aria-disabled="true"]` |
+| `aria-expanded` | `&[aria-expanded="true"]` |
+| `aria-hidden` | `&[aria-hidden="true"]` |
+| `aria-pressed` | `&[aria-pressed="true"]` |
+| `aria-readonly` | `&[aria-readonly="true"]` |
+| `aria-required` | `&[aria-required="true"]` |
+| `aria-selected` | `&[aria-selected="true"]` |
+
+Bạn có thể tùy chỉnh các biến thể `aria-*` nào có sẵn bằng cách chỉnh sửa `theme.aria` trong file `tailwind.config.js` của bạn:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      aria: {
+        asc: 'sort="ascending"',
+        desc: 'sort="descending"',
+      },
+    },
+  },
+};
+```
+
+Nếu bạn cần sử dụng một biến thể `aria` dùng một lần mà không hợp lý để đưa vào theme của bạn, bạn có thể sử dụng một giá trị tùy ý để tạo ra một biến thể `aria` ngay lập tức:
+
+```html
+<!-- [!code classes:aria-[sort=ascending]:bg-[url('/img/down-arrow.svg')]] -->
+<!-- [!code classes:aria-[sort=descending]:bg-[url('/img/up-arrow.svg')]] -->
+<th
+  aria-sort="ascending"
+  class="aria-[sort=ascending]:bg-[url('/img/down-arrow.svg')] aria-[sort=descending]:bg-[url('/img/up-arrow.svg')]"
+>
+  Invoice #
+</th>
+```
+
+### Thuộc tính Data
+
+Sử dụng biến thể `data-*` để tạo kiểu có điều kiện cho mọi thứ dựa trên các thuộc tính data.
+
+Vì không có các thuộc tính data chuẩn theo định nghĩa, nên theo mặc định chúng tôi chỉ hỗ trợ các giá trị tùy ý ngay lập tức, ví dụ:
+
+```html
+<!-- [!code classes:data-[checked]:bg-indigo-500] -->
+<!-- [!code classes:data-[checked]:text-white] -->
+<div data-checked class="data-[checked]:bg-indigo-500 data-[checked]:text-white">
+  <!-- ... -->
+</div>
+```
+
+Bạn có thể cấu hình các phím tắt cho các selector thuộc tính data phổ biến trong phần `theme.data` của file `tailwind.config.js` của bạn:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    data: {
+      checked: 'ui~="checked"',
+    },
+  },
+};
+```
+
+```html
+<!-- [!code classes:data-checked:underline] -->
+<div data-ui="checked active" class="data-checked:underline">
+  <!-- ... -->
+</div>
+```
+
+### Hỗ trợ RTL
+
+Sử dụng các biến thể `rtl` và `ltr` để thêm các kiểu trong các chế độ phải-sang-trái hoặc trái-sang-phải tương ứng khi xây dựng các layout đa hướng:
+
+```html
+<!-- [!code classes:rtl:ml-0] -->
+<!-- [!code classes:rtl:mr-2] -->
+<div class="group flex items-center">
+  <img class="shrink-0 h-12 w-12 rounded-full" src="..." alt="" />
+  <div class="ltr:ml-3 rtl:mr-3">
+    <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">...</p>
+    <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700">...</p>
   </div>
 </div>
 ```
 
-</Figure>
+Lưu ý rằng biến thể `ltr` sẽ không hoạt động trừ khi thuộc tính `dir` được thiết lập rõ ràng là `ltr` trong HTML của bạn.
 
-## Attribute selectors
+Hãy nhớ rằng đối với rất nhiều thứ như margin, padding, border radius, và positioning, bạn có thể sử dụng [các thuộc tính logic](/docs/margin#using-logical-properties) thay thế, chúng sẽ tự động xử lý cả hai hướng cho bạn.
 
-### ARIA states
+### Trạng thái Mở/Đóng
 
-Use the `aria-*` variant to conditionally style things based on [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes).
-
-For example, to apply the `bg-sky-700` class when the `aria-checked` attribute is set to `true`, use the `aria-checked:bg-sky-700` class:
+Sử dụng biến thể `open` để thêm các kiểu có điều kiện khi một phần tử `<details>` hoặc `<dialog>` đang ở trạng thái mở:
 
 ```html
-<!-- [!code classes:aria-checked:bg-sky-700] -->
-<div aria-checked="true" class="bg-gray-600 aria-checked:bg-sky-700">
+<!-- [!code classes:open:bg-white] -->
+<!-- [!code classes:open:ring-1] -->
+<!-- [!code classes:open:ring-black/5] -->
+<div class="max-w-lg mx-auto p-8">
+  <details class="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg" open>
+    <summary class="text-sm leading-6 text-slate-900 dark:text-white font-semibold select-none">
+      Why do they call it Ovaltine?
+    </summary>
+    <div class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+      <p>The mug is round. The jar is round. They should call it Roundtine.</p>
+    </div>
+  </details>
+</div>
+```
+
+## Biến thể tùy chỉnh
+
+### Sử dụng biến thể tùy ý
+
+Giống như các giá trị tùy ý cho phép bạn sử dụng các giá trị tùy chỉnh với các utility class của mình, các biến thể tùy ý cho phép bạn viết các modifier selector tùy chỉnh trực tiếp trong HTML của bạn.
+
+Các biến thể tùy ý chỉ là các chuỗi định dạng đại diện cho selector, được bao bọc trong các dấu ngoặc vuông. Ví dụ, biến thể tùy ý này nhắm mục tiêu một phần tử chỉ khi nó là phần tử con thứ ba:
+
+```html
+<!-- [!code classes:[&:nth-child(3)]:underline] -->
+<ul role="list">
+  {#each items as item}
+    <li class="[&:nth-child(3)]:underline">{item}</li>
+  {/each}
+</ul>
+```
+
+Chuỗi định dạng giống như những gì bạn sẽ sử dụng với [addVariant plugin API](/docs/plugins#adding-variants), với `&` đại diện cho selector được sửa đổi.
+
+Bạn cũng có thể sử dụng các at-rule như `@media` hoặc `@supports` trong các biến thể tùy ý:
+
+```html
+<!-- [!code classes:[@media(min-width:900px)]:block] -->
+<div class="flex [@media(min-width:900px)]:block">
   <!-- ... -->
 </div>
 ```
 
-By default we've included variants for the most common boolean ARIA attributes:
+Bạn thậm chí có thể xếp chồng các biến thể tùy ý để kết hợp chúng:
 
-{
+```html
+<!-- [!code classes:[&_p]:mt-4] -->
+<div class="[@media(min-width:900px)]:[&_p]:mt-4">
+  <!-- ... -->
+</div>
+```
+### Tạo biến thể tùy chỉnh
 
-<table>
-  <thead>
-    <tr>
-      <th>Variant</th>
-      <th>CSS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-busy</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-busy="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-checked</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-checked="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-disabled</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-disabled="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-expanded</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-expanded="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-hidden</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-hidden="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-pressed</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-pressed="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-readonly</code>
+Nếu bạn thấy mình sử dụng cùng một biến thể tùy ý nhiều lần trong dự án của mình, có thể đáng để tạo một biến thể tùy chỉnh cho nó bằng cách sử dụng directive `@custom-variant` trong CSS của bạn:
+
+```css
+@custom-variant pointer-coarse (@media (pointer: coarse));
+@custom-variant pointer-fine (@media (pointer: fine));
+```
+
+Tìm hiểu thêm về cách tạo các biến thể tùy chỉnh trong [tài liệu biến thể tùy chỉnh](/docs/adding-custom-styles#custom-variants).
+
+### Tạo plugin
+
+Nếu bạn muốn chia sẻ một biến thể tùy chỉnh qua nhiều dự án, bạn cũng có thể định nghĩa các biến thể bằng cách sử dụng plugin API:
+
+```js
+// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
+module.exports = {
+  plugins: [
+    plugin(function({ addVariant }) {
+      addVariant('third', '&:nth-child(3)')
+    })
+  ]
+}
+```
+
+Tìm hiểu thêm về cách tạo plugin trong [tài liệu plugin](/docs/plugins#adding-variants).
+
+## Phụ lục
+
+### Tham chiếu nhanh
+
+Một bảng tham chiếu nhanh của mọi biến thể được bao gồm trong Tailwind theo mặc định.
+
+<div className="overflow-hidden rounded-lg border border-gray-200 shadow-sm dark:border-gray-800">
+  <table className="w-full text-left text-sm leading-6 text-gray-500 dark:text-gray-400">
+    <thead className="border-b border-gray-200 bg-gray-50 text-gray-900 dark:border-gray-800 dark:bg-white/5 dark:text-white">
+      <tr>
+        <th className="px-4 py-2 font-semibold">Variant</th>
+        <th className="px-4 py-2 font-semibold">CSS</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y divide-gray-200 dark:divide-gray-800">
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#hover" className="whitespace-nowrap">
+            hover
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:hover
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#focus" className="whitespace-nowrap">
+            focus
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:focus
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#focus-within" className="whitespace-nowrap">
+            focus-within
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:focus-within
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#focus-visible" className="whitespace-nowrap">
+            focus-visible
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:focus-visible
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#active" className="whitespace-nowrap">
+            active
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:active
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#visited" className="whitespace-nowrap">
+            visited
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:visited
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#target" className="whitespace-nowrap">
+            target
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:target
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#first" className="whitespace-nowrap">
+            first
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:first-child
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#last" className="whitespace-nowrap">
+            last
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:last-child
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#only" className="whitespace-nowrap">
+            only
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:only-child
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#odd" className="whitespace-nowrap">
+            odd
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:nth-child(odd)
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#even" className="whitespace-nowrap">
+            even
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:nth-child(even)
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#first-of-type" className="whitespace-nowrap">
+            first-of-type
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:first-of-type
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#last-of-type" className="whitespace-nowrap">
+            last-of-type
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:last-of-type
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#only-of-type" className="whitespace-nowrap">
+            only-of-type
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:only-of-type
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#empty" className="whitespace-nowrap">
+            empty
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:empty
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#disabled" className="whitespace-nowrap">
+            disabled
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:disabled
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#enabled" className="whitespace-nowrap">
+            enabled
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>:enabled
+          </code>
+        </td>
+      </tr>
       </td>
       <td>
         <code className="whitespace-nowrap before:content-none after:content-none">
@@ -2782,1730 +2969,13 @@ Like `*`, the `**` variant can be used to style children of an element. The main
       <ul
         role="list"
         className="mx-auto max-w-md border-x border-x-gray-200 p-2 **:data-avatar:size-12 **:data-avatar:rounded-full dark:border-x-gray-800 dark:bg-gray-950/10"
-      >
-        <li className="group/item relative flex items-center justify-between rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-white/5">
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <img
-                data-avatar
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-            </div>
-            <div className="w-full text-sm leading-6">
-              <a href="#" className="font-semibold text-gray-900 dark:text-white">
-                <span className="absolute inset-0 rounded-xl" aria-hidden="true"></span>Leslie Abbott
-              </a>
-              <div className="text-gray-500">Co-Founder / CEO</div>
-            </div>
-          </div>
-        </li>
-        <li className="group/item relative flex items-center justify-between rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-white/5">
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <img
-                data-avatar
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-            </div>
-            <div className="w-full text-sm leading-6">
-              <a href="#" className="font-semibold text-gray-900 dark:text-white">
-                <span className="absolute inset-0 rounded-xl" aria-hidden="true"></span>Hector Adams
-              </a>
-              <div className="text-gray-500">VP, Marketing</div>
-            </div>
-          </div>
-        </li>
-        <li className="group/item relative flex items-center justify-between rounded-xl p-4 hover:bg-gray-100 dark:hover:bg-white/5">
-          <div className="flex gap-4">
-            <div className="flex-shrink-0">
-              <img
-                data-avatar
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-            </div>
-            <div className="w-full text-sm leading-6">
-              <a href="#" className="font-semibold text-gray-900 dark:text-white">
-                <span className="absolute inset-0 rounded-xl" aria-hidden="true"></span>Blake Alexander
-              </a>
-              <div className="text-gray-500">Account Coordinator</div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  }
-</Example>
+### Tham chiếu Pseudo-class
 
-```svelte
-<!-- [!code classes:**:data-avatar:rounded-full,**:data-avatar:size-12] -->
-<ul class="**:data-avatar:size-12 **:data-avatar:rounded-full ...">
-  {#each items as item}
-    <li>
-      <img src={item.src} data-avatar />
-      <p>{item.name}</p>
-    </li>
-  {/each}
-</ul>
-```
-
-</Figure>
-
-## Custom variants
-
-### Using arbitrary variants
-
-Just like [arbitrary values](/docs/adding-custom-styles#using-arbitrary-values) let you use custom values with your utility classes, arbitrary variants let you write custom selector variants directly in your HTML.
-
-Arbitrary variants are just format strings that represent the selector, wrapped in square brackets. For example, this arbitrary variant changes the cursor to `grabbing` when the element has the `is-dragging` class:
-
-<CodeExampleGroup
-  filenames={["HTML", "Generated CSS"]}
->
-  <CodeBlock
-    example={svelte`
-      <!-- [!code classes:[&.is-dragging]:cursor-grabbing] -->
-      <ul role="list">
-        {#each items as item}
-          <li class="[&.is-dragging]:cursor-grabbing">{item}</li>
-        {/each}
-      </ul>
-    `}
-
-/>
-
-  <CodeBlock
-    example={css`
-      .\[\&\.is-dragging\]\:cursor-grabbing {
-        &.is-dragging {
-          cursor: grabbing;
-        }
-      }
-    `}
-  />
-</CodeExampleGroup>
-
-Arbitrary variants can be stacked with built-in variants or with each other, just like the rest of the variants in Tailwind:
-
-<CodeExampleGroup
-  filenames={["HTML", "Generated CSS"]}
->
-  <CodeBlock
-    example={svelte`
-      <!-- [!code classes:[&.is-dragging]:active:cursor-grabbing] -->
-      <ul role="list">
-        {#each items as item}
-          <li class="[&.is-dragging]:active:cursor-grabbing">{item}</li>
-        {/each}
-      </ul>
-    `}
-  />
-  <CodeBlock
-    example={css`
-      .\[\&\.is-dragging\]\:active\:cursor-grabbing {
-        &.is-dragging {
-          &:active {
-            cursor: grabbing;
-          }
-        }
-      }
-    `}
-  />
-</CodeExampleGroup>
-
-If you need spaces in your selector, you can use an underscore. For example, this arbitrary variant selects all `p` elements within the element where you've added the class:
-
-<CodeExampleGroup
-  filenames={["HTML", "Generated CSS"]}
->
-  <CodeBlock
-    example={html`
-      <!-- [!code classes:[&_p]:mt-4] -->
-      <div class="[&_p]:mt-4">
-        <p>Lorem ipsum...</p>
-        <ul>
-          <li>
-            <p>Lorem ipsum...</p>
-          </li>
-          <!-- ... -->
-        </ul>
-      </div>
-    `}
-  />
-  <CodeBlock
-    example={css`
-      .\[\&_p\]\:mt-4 {
-        & p {
-          margin-top: calc(var(--spacing) * 4);
-        }
-      }
-    `}
-  />
-</CodeExampleGroup>
-
-You can also use at-rules like `@media` or `@supports` in arbitrary variants:
-
-<CodeExampleGroup
-  filenames={["HTML", "Generated CSS"]}
->
-  <CodeBlock
-    example={html`
-      <!-- [!code classes:[@supports(display:grid)]:grid] -->
-      <div class="flex [@supports(display:grid)]:grid">
-        <!-- ... -->
-      </div>
-    `}
-  />
-  <CodeBlock
-    example={css`
-      .\[\@supports\(display\:grid\)\]\:grid {
-        @supports (display:grid) {
-          display: grid;
-        }
-      }
-    `}
-  />
-</CodeExampleGroup>
-
-With at-rule custom variants the `&` placeholder isn't necessary, just like when nesting with a preprocessor.
-
-### Registering a custom variant
-
-If you find yourself using the same arbitrary variant multiple times in your project, it might be worth creating a custom variant using the `@custom-variant` directive:
-
-```css
-@custom-variant theme-midnight (&:where([data-theme="midnight"] *));
-```
-
-Now you can use the `theme-midnight:<utility>` variant in your HTML:
-
-```html
-<!-- [!code classes:theme-midnight:bg-black] -->
-<html data-theme="midnight">
-  <button class="theme-midnight:bg-black ..."></button>
-</html>
-```
-
-Learn more about adding custom variants in the [adding custom variants documentation](/docs/adding-custom-styles#adding-custom-variants).
-
-## Appendix
-
-### Quick reference
-
-A quick reference table of every single variant included in Tailwind by default.
-
-{
-
-<div className="max-w-screen overflow-scroll">
-  <table>
-    <thead>
-      <tr>
-        <th>Variant</th>
-        <th>CSS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a href="#hover" className="whitespace-nowrap">
-            hover
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (hover: hover) {"{ "} <span className="text-gray-400">&</span>:hover {" }"}
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#focus" className="whitespace-nowrap">
-            focus
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:focus
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#focus-within" className="whitespace-nowrap">
-            focus-within
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:focus-within
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#focus-visible" className="whitespace-nowrap">
-            focus-visible
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:focus-visible
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#active" className="whitespace-nowrap">
-            active
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:active
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#visited" className="whitespace-nowrap">
-            visited
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:visited
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#target" className="whitespace-nowrap">
-            target
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:target
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#styling-direct-children" className="whitespace-nowrap">
-            *
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            :is(<span className="text-gray-400">&</span> {" > *"})
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#styling-all-descendants" className="whitespace-nowrap">
-            **
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            :is(<span className="text-gray-400">&</span> {" *"})
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#has" className="whitespace-nowrap">
-            has-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:has(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#styling-based-on-parent-state" className="whitespace-nowrap">
-            group-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:is(:where(.group)<span className="text-gray-400">...</span> *)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#styling-based-on-sibling-state" className="whitespace-nowrap">
-            peer-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:is(:where(.peer)<span className="text-gray-400">...</span> ~ *)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#implicit-groups" className="whitespace-nowrap">
-            in-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            :where(<span className="text-gray-400">...</span>) <span className="text-gray-400">&</span>
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#not" className="whitespace-nowrap">
-            not-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:not(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#styling-inert-elements" className="whitespace-nowrap">
-            inert
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:is([inert], [inert] *)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#first" className="whitespace-nowrap">
-            first
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:first-child
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#last" className="whitespace-nowrap">
-            last
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:last-child
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#only" className="whitespace-nowrap">
-            only
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:only-child
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#odd" className="whitespace-nowrap">
-            odd
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-child(odd)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#even" className="whitespace-nowrap">
-            even
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-child(even)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#first-of-type" className="whitespace-nowrap">
-            first-of-type
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:first-of-type
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#last-of-type" className="whitespace-nowrap">
-            last-of-type
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:last-of-type
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#only-of-type" className="whitespace-nowrap">
-            only-of-type
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:only-of-type
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#nth" className="whitespace-nowrap">
-            nth-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-child(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#nth-last" className="whitespace-nowrap">
-            nth-last-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-last-child(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#nth-of-type" className="whitespace-nowrap">
-            nth-of-type-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-of-type(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#nth-last-of-type" className="whitespace-nowrap">
-            nth-last-of-type-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:nth-last-of-type(<span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#empty" className="whitespace-nowrap">
-            empty
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:empty
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#disabled" className="whitespace-nowrap">
-            disabled
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:disabled
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#enabled" className="whitespace-nowrap">
-            enabled
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:enabled
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#checked" className="whitespace-nowrap">
-            checked
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:checked
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#indeterminate" className="whitespace-nowrap">
-            indeterminate
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:indeterminate
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#default" className="whitespace-nowrap">
-            default
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:default
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#optional" className="whitespace-nowrap">
-            optional
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:optional
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#required" className="whitespace-nowrap">
-            required
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:required
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#valid" className="whitespace-nowrap">
-            valid
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:valid
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#invalid" className="whitespace-nowrap">
-            invalid
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:invalid
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#user-valid" className="whitespace-nowrap">
-            user-valid
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:user-valid
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#user-invalid" className="whitespace-nowrap">
-            user-invalid
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:user-invalid
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#in-range" className="whitespace-nowrap">
-            in-range
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:in-range
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#out-of-range" className="whitespace-nowrap">
-            out-of-range
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:out-of-range
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#placeholder-shown" className="whitespace-nowrap">
-            placeholder-shown
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:placeholder-shown
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#placeholder-shown" className="whitespace-nowrap">
-            details-content
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:details-content
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#autofill" className="whitespace-nowrap">
-            autofill
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:autofill
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#read-only" className="whitespace-nowrap">
-            read-only
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:read-only
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#before-and-after" className="whitespace-nowrap">
-            before
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::before
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#before-and-after" className="whitespace-nowrap">
-            after
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::after
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#first-line-and-first-letter" className="whitespace-nowrap">
-            first-letter
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::first-letter
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#first-line-and-first-letter" className="whitespace-nowrap">
-            first-line
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::first-line
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#marker" className="whitespace-nowrap">
-            marker
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::marker, <span className="text-gray-400">&</span> *::marker
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#selection" className="whitespace-nowrap">
-            selection
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::selection
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#file" className="whitespace-nowrap">
-            file
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::file-selector-button
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#backdrop" className="whitespace-nowrap">
-            backdrop
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::backdrop
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#placeholder" className="whitespace-nowrap">
-            placeholder
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>::placeholder
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            sm
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {">="} 40rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            md
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {">="} 48rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            lg
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {">="} 64rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {">="} 80rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            2xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {">="} 96rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            min-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (width {">= "} <span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-sm
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {"<"} 40rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-md
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {"<"} 48rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-lg
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {"<"} 64rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {"<"} 80rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-2xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (width {"<"} 96rem)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            max-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (width {"< "} <span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @3xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 16rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @2xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 18rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 20rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @sm
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 24rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @md
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 28rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @lg
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 32rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 36rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @2xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 42rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @3xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 48rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @4xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 56rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @5xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 64rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @6xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 72rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @7xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">="} 80rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @min-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {">= "} <span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-3xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 16rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-2xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 18rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-xs
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 20rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-sm
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 24rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-md
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 28rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-lg
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 32rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 36rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-2xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 42rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-3xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 48rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-4xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 56rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-5xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 64rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-6xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 72rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-7xl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"<"} 80rem)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#responsive-breakpoints" className="whitespace-nowrap">
-            @max-[<span className="text-gray-400">...</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @container (width {"< "} <span className="text-gray-400">...</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#prefers-color-scheme" className="whitespace-nowrap">
-            dark
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (prefers-color-scheme: dark)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#prefers-reduced-motion" className="whitespace-nowrap">
-            motion-safe
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (prefers-reduced-motion: no-preference)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#prefers-reduced-motion" className="whitespace-nowrap">
-            motion-reduce
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (prefers-reduced-motion: reduce)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#prefers-contrast" className="whitespace-nowrap">
-            contrast-more
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (prefers-contrast: more)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#prefers-contrast" className="whitespace-nowrap">
-            contrast-less
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (prefers-contrast: less)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#forced-colors" className="whitespace-nowrap">
-            forced-colors
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (forced-colors: active)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#inverted-colors" className="whitespace-nowrap">
-            inverted-colors
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (inverted-colors: inverted)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            pointer-fine
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (pointer: fine)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            pointer-coarse
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (pointer: coarse)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            pointer-none
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (pointer: none)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            any-pointer-fine
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (any-pointer: fine)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            any-pointer-coarse
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (any-pointer: coarse)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#pointer-and-any-pointer" className="whitespace-nowrap">
-            any-pointer-none
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (any-pointer: none)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#orientation" className="whitespace-nowrap">
-            portrait
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (orientation: portrait)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#orientation" className="whitespace-nowrap">
-            landscape
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @media (orientation: landscape)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#scripting" className="whitespace-nowrap">
-            noscript
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media (scripting: none)</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#print" className="whitespace-nowrap">
-            print
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@media print</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#supports" className="whitespace-nowrap">
-            supports-[<span className="text-gray-400">&hellip;</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            @supports (<span className="text-gray-400">&hellip;</span>)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-busy
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-busy="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-checked
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-checked="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-disabled
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-disabled="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-expanded
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-expanded="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-hidden
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-hidden="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-pressed
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-pressed="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-readonly
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-readonly="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-required
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-required="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-selected
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-selected="true"]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#aria-states" className="whitespace-nowrap">
-            aria-[<span className="text-gray-400">&hellip;</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[aria-<span className="text-gray-400">&hellip;</span>]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#data-attributes" className="whitespace-nowrap">
-            data-[<span className="text-gray-400">&hellip;</span>]
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>[data-<span className="text-gray-400">&hellip;</span>]
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#rtl-support" className="whitespace-nowrap">
-            rtl
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#rtl-support" className="whitespace-nowrap">
-            ltr
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:where(:dir(ltr), [dir="ltr"], [dir="ltr"] *)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#openclosed-state" className="whitespace-nowrap">
-            open
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">
-            <span className="text-gray-400">&</span>:is([open], :popover-open, :open)
-          </code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#starting-style" className="whitespace-nowrap">
-            starting
-          </a>
-        </td>
-        <td>
-          <code className="whitespace-nowrap before:content-none after:content-none">@starting-style</code>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-}
-
-### Pseudo-class reference
-
-This is a comprehensive list of examples for all the pseudo-class variants included in Tailwind to complement the [pseudo-classes documentation](/docs/hover-focus-and-other-states#pseudo-classes) at the beginning of this guide.
+Đây là danh sách đầy đủ các ví dụ cho tất cả các biến thể pseudo-class được bao gồm trong Tailwind để bổ sung cho [tài liệu pseudo-class](/docs/hover-focus-and-other-states#pseudo-classes) ở đầu hướng dẫn này.
 
 #### :hover
 
-Style an element when the user hovers over it with the mouse cursor using the `hover` variant:
+Tạo kiểu cho một phần tử khi người dùng di chuột qua nó bằng cách sử dụng biến thể `hover`:
 
 ```html
 <!-- [!code classes:hover:bg-white] -->
@@ -4516,7 +2986,7 @@ Style an element when the user hovers over it with the mouse cursor using the `h
 
 #### :focus
 
-Style an element when it has focus using the `focus` variant:
+Tạo kiểu cho một phần tử khi nó được focus bằng cách sử dụng biến thể `focus`:
 
 ```html
 <!-- [!code classes:focus:border-blue-400] -->
@@ -4525,7 +2995,7 @@ Style an element when it has focus using the `focus` variant:
 
 #### :focus-within
 
-Style an element when it or one of its descendants has focus using the `focus-within` variant:
+Tạo kiểu cho một phần tử khi nó hoặc một trong các phần tử con của nó được focus bằng cách sử dụng biến thể `focus-within`:
 
 ```html
 <!-- [!code classes:focus-within:shadow-lg] -->
@@ -4536,7 +3006,7 @@ Style an element when it or one of its descendants has focus using the `focus-wi
 
 #### :focus-visible
 
-Style an element when it has been focused using the keyboard using the `focus-visible` variant:
+Tạo kiểu cho một phần tử khi nó được focus bằng bàn phím bằng cách sử dụng biến thể `focus-visible`:
 
 ```html
 <!-- [!code classes:focus-visible:outline-2] -->
@@ -4545,7 +3015,7 @@ Style an element when it has been focused using the keyboard using the `focus-vi
 
 #### :active
 
-Style an element when it is being pressed using the `active` variant:
+Tạo kiểu cho một phần tử khi nó đang được nhấn bằng cách sử dụng biến thể `active`:
 
 ```html
 <!-- [!code classes:active:bg-blue-600] -->
@@ -4554,7 +3024,7 @@ Style an element when it is being pressed using the `active` variant:
 
 #### :visited
 
-Style a link when it has already been visited using the `visited` variant:
+Tạo kiểu cho một liên kết khi nó đã được truy cập bằng cách sử dụng biến thể `visited`:
 
 ```html
 <!-- [!code classes:visited:text-purple-600] -->
@@ -4563,7 +3033,7 @@ Style a link when it has already been visited using the `visited` variant:
 
 #### :target
 
-Style an element if its ID matches the current URL fragment using the `target` variant:
+Tạo kiểu cho một phần tử nếu ID của nó khớp với URL fragment hiện tại bằng cách sử dụng biến thể `target`:
 
 ```html
 <!-- [!code classes:target:shadow-lg] -->
@@ -4574,7 +3044,7 @@ Style an element if its ID matches the current URL fragment using the `target` v
 
 #### :first-child
 
-Style an element if it's the first child using the `first` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con đầu tiên bằng cách sử dụng biến thể `first`:
 
 ```svelte
 <!-- [!code classes:first:pt-0] -->
@@ -4589,7 +3059,7 @@ Style an element if it's the first child using the `first` variant:
 
 #### :last-child
 
-Style an element if it's the last child using the `last` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con cuối cùng bằng cách sử dụng biến thể `last`:
 
 ```svelte
 <!-- [!code classes:last:pb-0] -->
@@ -4604,7 +3074,7 @@ Style an element if it's the last child using the `last` variant:
 
 #### :only-child
 
-Style an element if it's the only child using the `only` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con duy nhất bằng cách sử dụng biến thể `only`:
 
 ```svelte
 <!-- [!code classes:only:py-0] -->
@@ -4619,7 +3089,7 @@ Style an element if it's the only child using the `only` variant:
 
 #### :nth-child(odd)
 
-Style an element if it's an oddly numbered child using the `odd` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con có số thứ tự lẻ bằng cách sử dụng biến thể `odd`:
 
 ```svelte
 <!-- [!code classes:odd:bg-gray-100] -->
@@ -4634,7 +3104,7 @@ Style an element if it's an oddly numbered child using the `odd` variant:
 
 #### :nth-child(even)
 
-Style an element if it's an evenly numbered child using the `even` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con có số thứ tự chẵn bằng cách sử dụng biến thể `even`:
 
 ```svelte
 <!-- [!code classes:even:bg-gray-100] -->
@@ -4649,7 +3119,7 @@ Style an element if it's an evenly numbered child using the `even` variant:
 
 #### :first-of-type
 
-Style an element if it's the first child of its type using the `first-of-type` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con đầu tiên của loại đó bằng cách sử dụng biến thể `first-of-type`:
 
 ```svelte
 <!-- [!code classes:first-of-type:ml-6] -->
@@ -4665,7 +3135,7 @@ Style an element if it's the first child of its type using the `first-of-type` v
 
 #### :last-of-type
 
-Style an element if it's the last child of its type using the `last-of-type` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con cuối cùng của loại đó bằng cách sử dụng biến thể `last-of-type`:
 
 ```svelte
 <!-- [!code classes:last-of-type:mr-6] -->
@@ -4682,7 +3152,7 @@ Style an element if it's the last child of its type using the `last-of-type` var
 
 #### :only-of-type
 
-Style an element if it's the only child of its type using the `only-of-type` variant:
+Tạo kiểu cho một phần tử nếu nó là phần tử con duy nhất của loại đó bằng cách sử dụng biến thể `only-of-type`:
 
 ```svelte
 <!-- [!code classes:only-of-type:mx-6] -->
@@ -4699,7 +3169,7 @@ Style an element if it's the only child of its type using the `only-of-type` var
 
 #### :nth-child()
 
-Style an element at a specific position using the `nth` variant:
+Tạo kiểu cho một phần tử ở một vị trí cụ thể bằng cách sử dụng biến thể `nth`:
 
 ```svelte
 <!-- [!code classes:nth-3:mx-6,nth-[3n+1]:mx-7] -->
@@ -4716,7 +3186,7 @@ Style an element at a specific position using the `nth` variant:
 
 #### :nth-last-child()
 
-Style an element at a specific position from the end using the `nth-last` variant:
+Tạo kiểu cho một phần tử ở một vị trí cụ thể từ cuối lên bằng cách sử dụng biến thể `nth-last`:
 
 ```svelte
 <!-- [!code classes:nth-last-3:mx-6,nth-last-[3n+1]:mx-7] -->
@@ -4733,7 +3203,7 @@ Style an element at a specific position from the end using the `nth-last` varian
 
 #### :nth-of-type()
 
-Style an element at a specific position, of the same type using the `nth-of-type` variant:
+Tạo kiểu cho một phần tử ở một vị trí cụ thể, của cùng một loại bằng cách sử dụng biến thể `nth-of-type`:
 
 ```svelte
 <!-- [!code classes:nth-of-type-3:mx-6,nth-of-type-[3n+1]:mx-7] -->
@@ -4750,7 +3220,7 @@ Style an element at a specific position, of the same type using the `nth-of-type
 
 #### :nth-last-of-type()
 
-Style an element at a specific position from the end, of the same type using the `nth-last-of-type` variant:
+Tạo kiểu cho một phần tử ở một vị trí cụ thể từ cuối lên, của cùng một loại bằng cách sử dụng biến thể `nth-last-of-type`:
 
 ```svelte
 <!-- [!code classes:nth-last-of-type-3:mx-6,nth-last-of-type-[3n+1]:mx-7] -->
@@ -4767,7 +3237,7 @@ Style an element at a specific position from the end, of the same type using the
 
 #### :empty
 
-Style an element if it has no content using the `empty` variant:
+Tạo kiểu cho một phần tử nếu nó không có nội dung bằng cách sử dụng biến thể `empty`:
 
 ```svelte
 <!-- [!code classes:empty:hidden] -->
@@ -4780,7 +3250,7 @@ Style an element if it has no content using the `empty` variant:
 
 #### :disabled
 
-Style an input when it's disabled using the `disabled` variant:
+Tạo kiểu cho một input khi nó bị vô hiệu hóa bằng cách sử dụng biến thể `disabled`:
 
 ```html
 <!-- [!code classes:disabled:opacity-75] -->
@@ -4789,7 +3259,7 @@ Style an input when it's disabled using the `disabled` variant:
 
 #### :enabled
 
-Style an input when it's enabled using the `enabled` variant, most helpful when you only want to apply another style when an element is not disabled:
+Tạo kiểu cho một input khi nó được kích hoạt bằng cách sử dụng biến thể `enabled`, hữu ích nhất khi bạn chỉ muốn áp dụng một kiểu khác khi một phần tử không bị vô hiệu hóa:
 
 ```html
 <!-- [!code classes:enabled:hover:border-gray-400] -->
@@ -4798,7 +3268,7 @@ Style an input when it's enabled using the `enabled` variant, most helpful when 
 
 #### :checked
 
-Style a checkbox or radio button when it's checked using the `checked` variant:
+Tạo kiểu cho checkbox hoặc radio button khi nó được chọn bằng cách sử dụng biến thể `checked`:
 
 ```html
 <!-- [!code classes:checked:bg-blue-500] -->
@@ -4807,7 +3277,7 @@ Style a checkbox or radio button when it's checked using the `checked` variant:
 
 #### :indeterminate
 
-Style a checkbox or radio button in an indeterminate state using the `indeterminate` variant:
+Tạo kiểu cho checkbox hoặc radio button ở trạng thái không xác định bằng cách sử dụng biến thể `indeterminate`:
 
 ```html
 <!-- [!code classes:indeterminate:bg-gray-300] -->
@@ -4816,7 +3286,7 @@ Style a checkbox or radio button in an indeterminate state using the `indetermin
 
 #### :default
 
-Style an option, checkbox or radio button that was the default value when the page initially loaded using the `default` variant:
+Tạo kiểu cho option, checkbox hoặc radio button là giá trị mặc định khi trang được tải ban đầu bằng cách sử dụng biến thể `default`:
 
 ```html
 <!-- [!code classes:default:outline-2] -->
@@ -4825,7 +3295,7 @@ Style an option, checkbox or radio button that was the default value when the pa
 
 #### :optional
 
-Style an input when it's optional using the `optional` variant:
+Tạo kiểu cho một input khi nó là tùy chọn bằng cách sử dụng biến thể `optional`:
 
 ```html
 <!-- [!code classes:optional:border-red-500] -->
@@ -4834,7 +3304,7 @@ Style an input when it's optional using the `optional` variant:
 
 #### :required
 
-Style an input when it's required using the `required` variant:
+Tạo kiểu cho một input khi nó là bắt buộc bằng cách sử dụng biến thể `required`:
 
 ```html
 <!-- [!code classes:required:border-red-500] -->
@@ -4843,7 +3313,7 @@ Style an input when it's required using the `required` variant:
 
 #### :valid
 
-Style an input when it's valid using the `valid` variant:
+Tạo kiểu cho một input khi nó hợp lệ bằng cách sử dụng biến thể `valid`:
 
 ```html
 <!-- [!code classes:valid:border-green-500] -->
@@ -4852,7 +3322,7 @@ Style an input when it's valid using the `valid` variant:
 
 #### :invalid
 
-Style an input when it's invalid using the `invalid` variant:
+Tạo kiểu cho một input khi nó không hợp lệ bằng cách sử dụng biến thể `invalid`:
 
 ```html
 <!-- [!code classes:invalid:border-red-500] -->
@@ -4861,7 +3331,7 @@ Style an input when it's invalid using the `invalid` variant:
 
 #### :user-valid
 
-Style an input when it's valid and the user has interacted with it, using the `user-valid` variant:
+Tạo kiểu cho một input khi nó hợp lệ và người dùng đã tương tác với nó, bằng cách sử dụng biến thể `user-valid`:
 
 ```html
 <!-- [!code classes:user-valid:border-green-500] -->
@@ -4870,7 +3340,7 @@ Style an input when it's valid and the user has interacted with it, using the `u
 
 #### :user-invalid
 
-Style an input when it's invalid and the user has interacted with it, using the `user-invalid` variant:
+Tạo kiểu cho một input khi nó không hợp lệ và người dùng đã tương tác với nó, bằng cách sử dụng biến thể `user-invalid`:
 
 ```html
 <!-- [!code classes:user-invalid:border-red-500] -->
@@ -4879,7 +3349,7 @@ Style an input when it's invalid and the user has interacted with it, using the 
 
 #### :in-range
 
-Style an input when its value is within a specified range limit using the `in-range` variant:
+Tạo kiểu cho một input khi giá trị của nó nằm trong giới hạn phạm vi được chỉ định bằng cách sử dụng biến thể `in-range`:
 
 ```html
 <!-- [!code classes:in-range:border-green-500] -->
@@ -4888,7 +3358,7 @@ Style an input when its value is within a specified range limit using the `in-ra
 
 #### :out-of-range
 
-Style an input when its value is outside of a specified range limit using the `out-of-range` variant:
+Tạo kiểu cho một input khi giá trị của nó nằm ngoài giới hạn phạm vi được chỉ định bằng cách sử dụng biến thể `out-of-range`:
 
 ```html
 <!-- [!code classes:out-of-range:border-red-500] -->
@@ -4897,7 +3367,7 @@ Style an input when its value is outside of a specified range limit using the `o
 
 #### :placeholder-shown
 
-Style an input when the placeholder is shown using the `placeholder-shown` variant:
+Tạo kiểu cho một input khi placeholder được hiển thị bằng cách sử dụng biến thể `placeholder-shown`:
 
 ```html
 <!-- [!code classes:placeholder-shown:border-gray-500] -->
@@ -4906,19 +3376,19 @@ Style an input when the placeholder is shown using the `placeholder-shown` varia
 
 #### :details-content
 
-Style the content of a `<details>` element using the `details-content` variant:
+Tạo kiểu cho nội dung của một phần tử `<details>` bằng cách sử dụng biến thể `details-content`:
 
 ```html
 <!-- [!code classes:details-content:bg-gray-100] -->
 <details class="details-content:bg-gray-100 ...">
-  <summary>Details</summary>
-  This is a secret.
+  <summary>Chi tiết</summary>
+  Đây là một bí mật.
 </details>
 ```
 
 #### :autofill
 
-Style an input when it has been autofilled by the browser using the `autofill` variant:
+Tạo kiểu cho một input khi nó đã được trình duyệt tự động điền bằng cách sử dụng biến thể `autofill`:
 
 ```html
 <!-- [!code classes:autofill:bg-yellow-200] -->
@@ -4927,7 +3397,7 @@ Style an input when it has been autofilled by the browser using the `autofill` v
 
 #### :read-only
 
-Style an input when it is read-only using the `read-only` variant:
+Tạo kiểu cho một input khi nó là chỉ đọc bằng cách sử dụng biến thể `read-only`:
 
 ```html
 <!-- [!code classes:read-only:bg-gray-100] -->

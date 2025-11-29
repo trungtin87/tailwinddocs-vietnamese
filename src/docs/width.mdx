@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "width";
-export const description = "Utilities for setting the width of an element.";
+export const description = "Các utility để thiết lập chiều rộng của một phần tử.";
 
 <ApiTable
   rows={[
@@ -57,11 +57,11 @@ export const description = "Utilities for setting the width of an element.";
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use `w-<number>` utilities like `w-24` and `w-64` to set an element to a fixed width based on the spacing scale:
+Sử dụng các utility `w-<number>` như `w-24` và `w-64` để thiết lập chiều rộng cố định cho một phần tử dựa trên thang khoảng cách:
 
 <Figure>
 
@@ -94,9 +94,9 @@ Use `w-<number>` utilities like `w-24` and `w-64` to set an element to a fixed w
 
 </Figure>
 
-### Using a percentage
+### Sử dụng phần trăm
 
-Use `w-full` or `w-<fraction>` utilities like `w-1/2` and `w-2/5` to give an element a percentage-based width:
+Sử dụng `w-full` hoặc các utility `w-<fraction>` như `w-1/2` và `w-2/5` để thiết lập chiều rộng dựa trên phần trăm cho một phần tử:
 
 <Figure>
 
@@ -163,9 +163,9 @@ Use `w-full` or `w-<fraction>` utilities like `w-1/2` and `w-2/5` to give an ele
 
 </Figure>
 
-### Using the container scale
+### Sử dụng thang container
 
-Use utilities like `w-sm` and `w-xl` to set an element to a fixed width based on the container scale:
+Sử dụng các utility như `w-sm` và `w-xl` để thiết lập chiều rộng cố định cho một phần tử dựa trên thang container:
 
 <Figure>
 
@@ -198,9 +198,9 @@ Use utilities like `w-sm` and `w-xl` to set an element to a fixed width based on
 
 </Figure>
 
-### Matching the viewport
+### Khớp với viewport
 
-Use the `w-screen` utility to make an element span the entire width of the viewport:
+Sử dụng utility `w-screen` để làm cho một phần tử trải dài toàn bộ chiều rộng của viewport:
 
 ```html
 <!-- [!code classes:w-screen] -->
@@ -209,11 +209,11 @@ Use the `w-screen` utility to make an element span the entire width of the viewp
 </div>
 ```
 
-Alternatively, you can match the width of the large, small or dynamic viewports using the `w-lvw`, `w-svw`, and `w-dvw` utilities.
+Ngoài ra, bạn có thể khớp chiều rộng của viewport lớn, nhỏ hoặc động bằng cách sử dụng các utility `w-lvw`, `w-svw`, và `w-dvw`.
 
-### Resetting the width
+### Đặt lại chiều rộng
 
-Use the `w-auto` utility to remove an element's assigned width under a specific condition, like at a particular breakpoint:
+Sử dụng utility `w-auto` để xóa chiều rộng đã gán của một phần tử trong một điều kiện cụ thể, như tại một breakpoint cụ thể:
 
 ```html
 <!-- [!code classes:w-full,w-auto] -->
@@ -222,9 +222,9 @@ Use the `w-auto` utility to remove an element's assigned width under a specific 
 </div>
 ```
 
-### Setting both width and height
+### Thiết lập cả chiều rộng và chiều cao
 
-Use utilities like `size-px`, `size-4`, and `size-full` to set both the width and height of an element at the same time:
+Sử dụng các utility như `size-px`, `size-4`, và `size-full` để thiết lập cả chiều rộng và chiều cao của một phần tử cùng một lúc:
 
 <Figure>
 
@@ -251,14 +251,14 @@ Use utilities like `size-px`, `size-4`, and `size-full` to set both the width an
 
 </Figure>
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="w" value="5px" name="width" variable="width" />
 
-### Responsive design
+### Thiết kế phản hồi
 
 <ResponsiveDesign property="width" defaultClass="w-1/2" featuredClass="w-full" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utilities={["w", "size"]} />

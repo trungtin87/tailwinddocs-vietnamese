@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "scroll-margin";
-export const description = "Utilities for controlling the scroll offset around items in a snap container.";
+export const description = "Các tiện ích để kiểm soát scroll offset xung quanh các mục trong một snap container.";
 
 <ApiTable
   rows={[
@@ -26,13 +26,13 @@ export const description = "Utilities for controlling the scroll offset around i
   ])}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use the `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>`, and `scroll-ml-<number>` utilities like `scroll-ml-4` and `scroll-mt-6` to set the scroll offset around items within a snap container:
+Sử dụng các tiện ích `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>`, và `scroll-ml-<number>` như `scroll-ml-4` và `scroll-mt-6` để thiết lập scroll offset xung quanh các mục bên trong một snap container:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
@@ -100,9 +100,9 @@ Use the `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>`, and `s
 
 </Figure>
 
-### Using negative values
+### Sử dụng giá trị âm
 
-To use a negative scroll margin value, prefix the class name with a dash to convert it to a negative value:
+Để sử dụng giá trị scroll margin âm, thêm tiền tố dấu gạch ngang vào tên class để chuyển đổi nó thành giá trị âm:
 
 ```html
 <!-- [!code classes:-scroll-ml-6] -->
@@ -111,16 +111,16 @@ To use a negative scroll margin value, prefix the class name with a dash to conv
 </div>
 ```
 
-### Using logical properties
+### Sử dụng các thuộc tính logic
 
-Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scroll-margin-inline-start` and `scroll-margin-inline-end` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right side based on the text direction:
+Sử dụng các tiện ích `scroll-ms-<number>` và `scroll-me-<number>` để thiết lập các [thuộc tính logic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts) `scroll-margin-inline-start` và `scroll-margin-inline-end`, ánh xạ tới phía bên trái hoặc bên phải dựa trên hướng văn bản:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Cuộn trong lưới hình ảnh để xem hành vi mong đợi">
 
 <Example padding={false}>
   {
     <>
-      <p className="mb-4 pt-8 pl-6 text-sm font-medium">Left-to-right</p>
+      <p className="mb-4 pt-8 pl-6 text-sm font-medium">Trái sang phải</p>
       <div className="flex w-full snap-x gap-12 overflow-x-auto pb-10" dir="ltr">
         <div className="relative shrink-0 snap-start scroll-ms-6 first:ps-6 last:pr-[calc(100%-21.5rem)]">
           <Stripes border className="absolute start-0 top-0 bottom-0 w-6" />
@@ -158,7 +158,7 @@ Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scro
           />
         </div>
       </div>
-      <p className="mt-4 mb-4 pl-6 text-sm font-medium">Right-to-left</p>
+      <p className="mt-4 mb-4 pl-6 text-sm font-medium">Phải sang trái</p>
       <div className="flex w-full snap-x gap-12 overflow-x-auto pb-10" dir="rtl">
         <div className="relative shrink-0 snap-start scroll-ms-6 first:ps-6 last:pl-[calc(100%-21.5rem)]">
           <Stripes border className="absolute start-0 top-0 bottom-0 w-6" />
@@ -226,17 +226,17 @@ Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scro
 
 </Figure>
 
-For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus-and-other-states#rtl-support) to conditionally apply specific styles depending on the current text direction.
+Để kiểm soát nhiều hơn, bạn cũng có thể sử dụng các [modifier LTR và RTL](/docs/hover-focus-and-other-states#rtl-support) để áp dụng các style cụ thể tùy thuộc vào hướng văn bản hiện tại.
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utilities={["scroll-ml", "scroll-me"]} value="24rem" name="scroll margin" variable="scroll-margin" />
 
-### Responsive design
+### Thiết kế responsive
 
 <ResponsiveDesign property="scroll-margin" defaultClass="scroll-m-8" featuredClass="scroll-m-0" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale
   utilities={[

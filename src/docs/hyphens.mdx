@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "hyphens";
-export const description = "Utilities for controlling how words should be hyphenated.";
+export const description = "Các tiện ích để kiểm soát cách từ nên được ngắt dòng.";
 
 <ApiTable
   rows={[
@@ -14,11 +14,11 @@ export const description = "Utilities for controlling how words should be hyphen
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Preventing hyphenation
+### Ngăn chặn ngắt dòng
 
-Use the `hyphens-none` utility to prevent words from being hyphenated even if the line break suggestion `&shy;` is used:
+Sử dụng tiện ích `hyphens-none` để ngăn chặn từ khỏi việc ngắt dòng ngay cả khi gợi ý ngắt dòng `&shy;` được sử dụng:
 
 <Figure>
 
@@ -45,9 +45,9 @@ Use the `hyphens-none` utility to prevent words from being hyphenated even if th
 
 </Figure>
 
-### Manual hyphenation
+### Ngắt dòng thủ công
 
-Use the `hyphens-manual` utility to only set hyphenation points where the line break suggestion `&shy;` is used:
+Sử dụng tiện ích `hyphens-manual` để chỉ đặt điểm ngắt dòng ở nơi gợi ý ngắt dòng `&shy;` được sử dụng:
 
 <Figure>
 
@@ -74,11 +74,11 @@ Use the `hyphens-manual` utility to only set hyphenation points where the line b
 
 </Figure>
 
-This is the default browser behavior.
+Đây là hành vi mặc định của trình duyệt.
 
-### Automatic hyphenation
+### Ngắt dòng tự động
 
-Use the `hyphens-auto` utility to allow the browser to automatically choose hyphenation points based on the language:
+Sử dụng tiện ích `hyphens-auto` để cho phép trình duyệt tự động chọn điểm ngắt dòng dựa trên ngôn ngữ:
 
 <Figure>
 
@@ -105,7 +105,7 @@ Use the `hyphens-auto` utility to allow the browser to automatically choose hyph
 
 </Figure>
 
-The line break suggestion `&shy;` will be preferred over automatic hyphenation points.
+Gợi ý ngắt dòng `&shy;` sẽ được ưu tiên hơn các điểm ngắt dòng tự động.
 
 ### Responsive design
 

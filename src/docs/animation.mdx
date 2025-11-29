@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import dedent from "dedent";
 
 export const title = "animation";
-export const description = "Utilities for animating elements with CSS animations.";
+export const description = "Các tiện ích để tạo hiệu ứng động cho các phần tử với CSS animations.";
 
 <ApiTable
   rows={[
@@ -70,11 +70,11 @@ export const description = "Utilities for animating elements with CSS animations
 ]}
 />
 
-## Examples
+## Ví dụ
 
-### Adding a spin animation
+### Thêm hiệu ứng spin
 
-Use the `animate-spin` utility to add a linear spin animation to elements like loading indicators:
+Sử dụng tiện ích `animate-spin` để thêm hiệu ứng xoay tuyến tính vào các phần tử như chỉ báo đang tải:
 
 <Figure>
 
@@ -117,9 +117,9 @@ Use the `animate-spin` utility to add a linear spin animation to elements like l
 
 </Figure>
 
-### Adding a ping animation
+### Thêm hiệu ứng ping
 
-Use the `animate-ping` utility to make an element scale and fade like a radar ping or ripple of water—useful for things like notification badges:
+Sử dụng tiện ích `animate-ping` để làm cho một phần tử phóng to và mờ dần giống như tiếng ping radar hoặc gợn sóng nước—hữu ích cho những thứ như huy hiệu thông báo:
 
 <Figure>
 
@@ -153,9 +153,9 @@ Use the `animate-ping` utility to make an element scale and fade like a radar pi
 
 </Figure>
 
-### Adding a pulse animation
+### Thêm hiệu ứng pulse
 
-Use the `animate-pulse` utility to make an element gently fade in and out—useful for things like skeleton loaders:
+Sử dụng tiện ích `animate-pulse` để làm cho một phần tử mờ dần vào và ra một cách nhẹ nhàng—hữu ích cho những thứ như skeleton loaders:
 
 <Figure>
 
@@ -202,9 +202,9 @@ Use the `animate-pulse` utility to make an element gently fade in and out—usef
 
 </Figure>
 
-### Adding a bounce animation
+### Thêm hiệu ứng bounce
 
-Use the `animate-bounce` utility to make an element bounce up and down—useful for things like "scroll down" indicators:
+Sử dụng tiện ích `animate-bounce` để làm cho một phần tử nảy lên và xuống—hữu ích cho những thứ như chỉ báo "cuộn xuống":
 
 <Figure>
 
@@ -237,9 +237,9 @@ Use the `animate-bounce` utility to make an element bounce up and down—useful 
 
 </Figure>
 
-### Supporting reduced motion
+### Hỗ trợ reduced motion
 
-For situations where the user has specified that they prefer reduced motion, you can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants:
+Đối với các tình huống mà người dùng đã chỉ định rằng họ thích giảm chuyển động, bạn có thể áp dụng các hiệu ứng động và chuyển tiếp có điều kiện bằng cách sử dụng các biến thể `motion-safe` và `motion-reduce`:
 
 ```html
 <!-- [!code classes:motion-safe:animate-spin] -->
@@ -251,7 +251,7 @@ For situations where the user has specified that they prefer reduced motion, you
 </button>
 ```
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utility="animate" name="animation" value="wiggle_1s_ease-in-out_infinite" variable="animation" />
 
@@ -259,7 +259,7 @@ For situations where the user has specified that they prefer reduced motion, you
 
 <ResponsiveDesign property="animation" defaultClass="animate-none" featuredClass="animate-spin" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourTheme
   utility="animate"

@@ -7,7 +7,7 @@ import { Stripes } from "@/components/stripes.tsx";
 import { UsingACustomValue } from "@/components/content.tsx";
 
 export const title = "padding";
-export const description = "Utilities for controlling an element's padding.";
+export const description = "Các tiện ích để kiểm soát padding của một phần tử.";
 
 <ApiTable
   rows={[
@@ -28,11 +28,11 @@ export const description = "Utilities for controlling an element's padding.";
   ])}
 />
 
-## Examples
+## Ví dụ
 
-### Basic example
+### Ví dụ cơ bản
 
-Use `p-<number>` utilities like `p-4` and `p-8` to control the padding on all sides of an element:
+Sử dụng các tiện ích `p-<number>` như `p-4` và `p-8` để kiểm soát padding ở tất cả các phía của một phần tử:
 
 <Figure>
 
@@ -54,9 +54,9 @@ Use `p-<number>` utilities like `p-4` and `p-8` to control the padding on all si
 
 </Figure>
 
-### Adding padding to one side
+### Thêm padding vào một phía
 
-Use `pt-<number>`, `pr-<number>`, `pb-<number>`, and `pl-<number>` utilities like `pt-6` and `pr-4` to control the padding on one side of an element:
+Sử dụng các tiện ích `pt-<number>`, `pr-<number>`, `pb-<number>`, và `pl-<number>` như `pt-6` và `pr-4` để kiểm soát padding ở một phía của một phần tử:
 
 <Figure>
 
@@ -105,9 +105,9 @@ Use `pt-<number>`, `pr-<number>`, `pb-<number>`, and `pl-<number>` utilities lik
 
 </Figure>
 
-### Adding horizontal padding
+### Thêm padding theo chiều ngang
 
-Use `px-<number>` utilities like `px-4` and `px-8` to control the horizontal padding of an element:
+Sử dụng các tiện ích `px-<number>` như `px-4` và `px-8` để kiểm soát padding theo chiều ngang của một phần tử:
 
 <Figure>
 
@@ -130,9 +130,9 @@ Use `px-<number>` utilities like `px-4` and `px-8` to control the horizontal pad
 
 </Figure>
 
-### Adding vertical padding
+### Thêm padding theo chiều dọc
 
-Use `py-<number>` utilities like `py-4` and `py-8` to control the vertical padding of an element:
+Sử dụng các tiện ích `py-<number>` như `py-4` và `py-8` để kiểm soát padding theo chiều dọc của một phần tử:
 
 <Figure>
 
@@ -155,9 +155,9 @@ Use `py-<number>` utilities like `py-4` and `py-8` to control the vertical paddi
 
 </Figure>
 
-### Using logical properties
+### Sử dụng logical properties
 
-Use `ps-<number>` or `pe-<number>` utilities like `ps-4` and `pe-8` to set the `padding-inline-start` and `padding-inline-end` logical properties, which map to either the left or right side based on the text direction:
+Sử dụng các tiện ích `ps-<number>` hoặc `pe-<number>` như `ps-4` và `pe-8` để đặt các thuộc tính logic `padding-inline-start` và `padding-inline-end`, ánh xạ tới phía bên trái hoặc bên phải dựa trên hướng văn bản:
 
 <Figure>
 
@@ -208,9 +208,9 @@ Use `ps-<number>` or `pe-<number>` utilities like `ps-4` and `pe-8` to set the `
 
 </Figure>
 
-For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus-and-other-states#rtl-support) to conditionally apply specific styles depending on the current text direction.
+Để kiểm soát nhiều hơn, bạn cũng có thể sử dụng [LTR và RTL modifiers](/docs/hover-focus-and-other-states#rtl-support) để áp dụng các kiểu cụ thể tùy thuộc vào hướng văn bản hiện tại.
 
-### Using a custom value
+### Sử dụng giá trị tùy chỉnh
 
 <UsingACustomValue utilities={["p", "px", "pb"]} name="padding" variable="padding" value="5px" />
 
@@ -218,6 +218,6 @@ For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus
 
 <ResponsiveDesign property="padding" defaultClass="py-4" featuredClass="py-8" />
 
-## Customizing your theme
+## Tùy chỉnh theme của bạn
 
 <CustomizingYourSpacingScale utilities={["p", "px", "py", "ps", "pe", "pt", "pr", "pb", "pl"]} />

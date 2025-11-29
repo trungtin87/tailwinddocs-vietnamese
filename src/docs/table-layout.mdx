@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "table-layout";
-export const description = "Utilities for controlling the table layout algorithm.";
+export const description = "Các tiện ích để kiểm soát thuật toán bố cục table.";
 
 <ApiTable
   rows={[
@@ -13,11 +13,11 @@ export const description = "Utilities for controlling the table layout algorithm
   ]}
 />
 
-## Examples
+## Ví dụ
 
-### Sizing columns automatically
+### Tự động điều chỉnh kích thước cột
 
-Use the `table-auto` utility to automatically size table columns to fit the contents of its cells:
+Sử dụng tiện ích `table-auto` để tự động điều chỉnh kích thước các cột của table sao cho phù hợp với nội dung của các ô:
 
 <Figure>
 
@@ -110,9 +110,9 @@ Use the `table-auto` utility to automatically size table columns to fit the cont
 
 </Figure>
 
-### Using fixed column widths
+### Sử dụng chiều rộng cột cố định
 
-Use the `table-fixed` utility to ignore the content of the table cells and use fixed widths for each column:
+Sử dụng tiện ích `table-fixed` để bỏ qua nội dung của các ô trong table và sử dụng chiều rộng cố định cho mỗi cột:
 
 <Figure>
 
@@ -205,7 +205,7 @@ Use the `table-fixed` utility to ignore the content of the table cells and use f
 
 </Figure>
 
-You can manually set the widths for some columns and the rest of the available width will be divided evenly amongst columns without an explicit width. The widths set in the first row will set the column width for the whole table.
+Bạn có thể thủ công đặt chiều rộng cho một số cột và phần chiều rộng còn lại sẽ được chia đều cho các cột không có chiều rộng rõ ràng. Chiều rộng được đặt ở hàng đầu tiên sẽ thiết lập chiều rộng cột cho toàn bộ table.
 
 ### Responsive design
 
