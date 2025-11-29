@@ -32,7 +32,7 @@ jobs:
         name: Install pnpm
         with:
           version: 9.14.0
-          run_install: false
+          run_install: true
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -41,7 +41,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Setup Pages
         id: setup_pages
