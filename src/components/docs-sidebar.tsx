@@ -1,7 +1,7 @@
 import { NavList, NavListHeading, NavListItem, NavListItems } from "@/components/nav-list";
 import clsx from "clsx";
 import Link, { LinkProps } from "next/link";
-import index from "../app/(docs)/docs/index";
+import index from "../app/(docs)/docs/navigation";
 import { DocsSidebarLink } from "./docs-sidebar-link";
 
 export function TopNavLink(props: { href: string } & React.ComponentPropsWithoutRef<"a">) {
