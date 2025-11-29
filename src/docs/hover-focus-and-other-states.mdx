@@ -2385,37 +2385,42 @@ Một bảng tham chiếu nhanh của mọi biến thể được bao gồm tron
           </code>
         </td>
       </tr>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-readonly="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-required</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-required="true"]
-        </code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code className="before:content-none after:content-none">aria-selected</code>
-      </td>
-      <td>
-        <code className="whitespace-nowrap before:content-none after:content-none">
-          <span className="text-gray-400">&</span>[aria-selected="true"]
-        </code>
-      </td>
-    </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <a href="#aria-readonly" className="whitespace-nowrap">
+            aria-readonly
+          </a>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>[aria-readonly="true"]
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <code className="before:content-none after:content-none">aria-required</code>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>[aria-required="true"]
+          </code>
+        </td>
+      </tr>
+      <tr>
+        <td className="px-4 py-2 font-mono font-medium text-sky-500 dark:text-sky-400">
+          <code className="before:content-none after:content-none">aria-selected</code>
+        </td>
+        <td className="px-4 py-2 font-mono text-xs text-violet-600 dark:text-violet-400">
+          <code className="whitespace-nowrap before:content-none after:content-none">
+            <span className="text-gray-400">&</span>[aria-selected="true"]
+          </code>
+        </td>
+      </tr>
   </tbody>
 </table>
 
-}
+</div>
 
 You can customize which `aria-*` variants are available by creating a new variant:
 
@@ -2968,7 +2973,36 @@ Like `*`, the `**` variant can be used to style children of an element. The main
     <div className="px-4">
       <ul
         role="list"
-        className="mx-auto max-w-md border-x border-x-gray-200 p-2 **:data-avatar:size-12 **:data-avatar:rounded-full dark:border-x-gray-800 dark:bg-gray-950/10"
+        className="mx-auto max-w-md border-x border-x-gray-200 p-2 **:data-avatar:size-12 **:data-avatar:rounded-full dark:border-x-gray-800 dark:bg-gray-950/10">
+        <li className="flex items-center gap-4 p-4">
+          <img className="size-10 rounded-full bg-gray-100" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" data-avatar />
+          <div className="text-sm/6 font-medium text-gray-900 dark:text-white">Kristen Ramos</div>
+        </li>
+        <li className="flex items-center gap-4 p-4">
+          <img className="size-10 rounded-full bg-gray-100" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" data-avatar />
+          <div className="text-sm/6 font-medium text-gray-900 dark:text-white">Ted Fox</div>
+        </li>
+      </ul>
+    </div>
+  }
+</Example>
+
+```html
+<!-- [!code classes:*:data-avatar:size-12] -->
+<!-- [!code classes:*:data-avatar:rounded-full] -->
+<ul class="**:data-avatar:size-12 **:data-avatar:rounded-full ...">
+  <li>
+    <img data-avatar src="..." class="bg-gray-200" />
+    <span>Kristen Ramos</span>
+  </li>
+  <li>
+    <img data-avatar src="..." class="bg-gray-200" />
+    <span>Ted Fox</span>
+  </li>
+</ul>
+```
+
+</Figure>
 ### Tham chiếu Pseudo-class
 
 Đây là danh sách đầy đủ các ví dụ cho tất cả các biến thể pseudo-class được bao gồm trong Tailwind để bổ sung cho [tài liệu pseudo-class](/docs/hover-focus-and-other-states#pseudo-classes) ở đầu hướng dẫn này.
@@ -2980,7 +3014,7 @@ Tạo kiểu cho một phần tử khi người dùng di chuột qua nó bằng 
 ```html
 <!-- [!code classes:hover:bg-white] -->
 <div class="bg-black hover:bg-white ...">
-  <!-- ... -->
+<!-- ... -->
 </div>
 ```
 

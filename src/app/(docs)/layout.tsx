@@ -8,13 +8,12 @@ import { DocsSidebarAutoscroll } from "@/components/docs-sidebar-autoscroll";
 
 export default async function Layout({
   children,
-  breadcrumb,
-}: React.PropsWithChildren<{ breadcrumb: React.ReactNode }>) {
+}: React.PropsWithChildren) {
   return (
     <div>
       <div className="fixed inset-x-0 top-0 z-10 border-b border-gray-950/5 dark:border-white/10">
         <Header />
-        <MobileNav header={<Header />} breadcrumb={breadcrumb}>
+        <MobileNav header={<Header />}>
           <DocsSidebar />
         </MobileNav>
       </div>

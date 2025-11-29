@@ -6,11 +6,9 @@ import { IconButton } from "./icon-button";
 
 export function MobileNav({
   header,
-  breadcrumb,
   children,
 }: React.PropsWithChildren<{
   header: React.ReactNode;
-  breadcrumb: React.ReactNode;
 }>) {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -33,8 +31,6 @@ export function MobileNav({
         </svg>
       </IconButton>
 
-      {breadcrumb}
-
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 lg:hidden">
         <div className="fixed inset-x-0 top-28 bottom-0 bg-white/90 dark:bg-gray-950/80" />
         <DialogPanel className="fixed inset-y-0 left-0 flex w-full flex-col sm:max-w-xs">
@@ -55,8 +51,6 @@ export function MobileNav({
                   />
                 </svg>
               </IconButton>
-
-              {breadcrumb}
             </div>
           </div>
           <div className="min-h-0 shrink overflow-y-auto border-r border-gray-950/5 dark:border-white/10">
