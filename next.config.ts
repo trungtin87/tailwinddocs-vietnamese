@@ -6,7 +6,7 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/**/*": ["./src/docs/*.mdx"],
   },
-  // output: "export", // Temporarily disabled for local dev
+  output: "export", // Temporarily disabled for local dev
   basePath: "/tailwinddocs-vietnamese",
   images: {
     unoptimized: true,
