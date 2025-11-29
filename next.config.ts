@@ -12,7 +12,7 @@ const nextConfig = {
     unoptimized: true,
   },
   experimental: {
-    mdxRs: true,
+    mdxRs: false,
     turbo: {
       rules: {
         // Support import .svg as react components in dev builds
