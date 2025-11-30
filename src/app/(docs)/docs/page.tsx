@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
 
 export default function DocsRootPage() {
-  redirect('/docs/installation')
+  redirect('/docs/installation/using-vite')
 }
